@@ -29,6 +29,8 @@ ii. PS sensitivity at fixed z: 127, 331 (Fig)
 iii. Various covariance analyses: constraints on different physical processes (Liu/Pober analysis). but
 please -- keep this down to a couple of incisive figures and fiducial models. wall paper doesn't sell very well. 
 iv. Imaging large scale structure: simulation (Fig) 
+    a) Imaging as a probe of non-Gaussianity and topology of reionization (Fig from Watkinson & Pritchard)
+    [Not sure if this belongs here, should discuss: b) Bayesian imaging (Figs from Paul Sutter).  Perhaps a broader impact on the radio community too?]
 v. Dark ages: getting into 'real cosmology' (linear structure evolution)  (Fig)
 vi. 21cm forest: perhaps a paragraph on possibilities of small scale structure, if we can find radio galaxy? (Fig) 
 vii. Cross-correlation science: perhaps montage Fig showing HI(Tb), galaxies, dark matter... at given epoch
