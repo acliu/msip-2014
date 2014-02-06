@@ -12,7 +12,7 @@ D. Brief summary of timeline: science along the way, major results before end-de
 II. Science: keep science up-front
 A. General intro 
 i.physical concepts: reionization and dark ages
-ii. Current knowledge: various constraints, 1st galaxy studies...
+ii. Current knowledge: various constrai	nts, 1st galaxy studies...
 iii. Important role of 21cm studies highlighted in NWNH
 a. Typical ideal sim results: T_B vs. z 'cube' and corresponding power spectrum evolution (Fig)
 b. introduce some of the important parameters/processes explored: when? how?
