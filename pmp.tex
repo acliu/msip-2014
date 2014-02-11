@@ -68,6 +68,9 @@ Academia Sinica Institute for Astronomy and Astrophysics (Taipei, Taiwan) & Scie
 
 Figure \ref{fig:org} shows the partners and governance. The Executive Board is the
 governing board under this proposal and has authority over the science requirements
+\footnote{{\em Requirements} are the science and operational level requirements as
+specified and managed by the Board.  {\em Specifications} are the system requirements
+specified by the System Owners.}
 and the scope of the science goals. It consists of one voting representative from
 each of the funded partners, which typically will be the senior scientific partner at
 the institution. The Board is Chaired by the Project Director. Though generally
@@ -100,19 +103,42 @@ US-SA
 
 
 \section{Management}
-Figure \ref{fig:org} also shows the management structure. A project manager has
+Figure \ref{fig:org} also shows the management structure.   A project manager has
 overall responsibility for planning and tracking to achieve the agreed upon
 milestones and budget. The project manager will brief the Executive Board at each
-meeting to summarize the state of the project.
+meeting to summarize the state of the project.  
 
+\subsection{Structure and Ownership}
 The project comprises Components, which are the physical deliverables, and Systems,
 which are logical groupings to achieve a function. Systems may be hardware, software
-or both. Systems need not be disjoint collections of components. Each System has an
-Owner, who is responsible for the System meeting its specifications. The project
-manager serves as the Owner of the hardware Components, working with the System
-Owners to meet functional specifications.
+or both. Systems need not be disjoint collections of Components. Each System has an
+{\em Owner}, who is responsible for the System meeting its specifications and satisfying
+its interface requirements.
 
-oversight, tools (RSD, ICD, WBS, Trace), common repo, meetings, owners, change control, wiki
+Components will likely span multiple Systems. The project
+manager serves as the Owner of the South Africa-based hardware Components, the data
+manager is the Owner of the US-based hardware Components and the analysis manager is 
+the Owner of the analysis software.  The Component Owners work with the System Owners 
+to meet the Components functional specifications.  In practice there is a great deal of overlap
+between the Components and Systems, making this arrangement practical but it also allows
+a mechanism to ensure more ``eyes'' on the overall system.
+
+\subsection{Tools}
+The architecture, requirements/specifications, interfaces, budget, work breakdown structure
+(WBS) and system documenation are in a common shared repository, along with collaboration
+documentation.  This shared repository is referred to as the \textbf{Project Book}.  Architecture, requirements/ 
+specifications and interfaces information reside in a \LaTeX-based database with full traceability
+and python scripts for flow-down throughout the documentation.  Budget and WBS are in Microsoft
+Excel and Microsoft Project with python script readers for flow-down throughout the documentation.
+An executive script ensures that all scripts are executed and formatted \LaTeX pdf documentation
+files are produced and up-to-date.  These include auto-generated architecture, requirement/specification 
+and interface control documentation and budget and WBS summary documents.  
+In addition to the auto-generated reports, System and  Component Owners write the narrative 
+documentation referencing the database items ({\em e.g.} requirements, interfaces, etc).
+
+meetings,  wiki
+
+\subsection{Change Control}
 
 \section{Construction}
 plan, schedule, contract summary, milestone summary
