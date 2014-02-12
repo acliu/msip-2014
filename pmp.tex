@@ -70,11 +70,10 @@ Figure \ref{fig:org} shows the partners and governance. The Executive Board is t
 governing board under this proposal and has authority over the science requirements
 \footnote{{\em Requirements} are the science and operational level requirements as
 specified and managed by the Board.  {\em Specifications} are the system requirements
-specified by the System Owners.}
-and the scope of the science goals. It consists of one voting representative from
-each of the funded partners, which typically will be the senior scientific partner at
-the institution. The Board is Chaired by the Project Director. Though generally
-operating on concensus, if matters come to a vote a ``T-2''\footnote{T-2 means that 2
+specified by the System Owners.}, the Scope of the science goals and Milestones. It consists 
+of one voting representative from each of the funded partners, which typically will be the 
+senior scientific partner at the institution. The Board is Chaired by the Project Director. Though 
+generally operating on concensus, if matters come to a vote a ``T-2''\footnote{T-2 means that 2
 or more must vote against to defeat a motion.} supermajority will be required. The
 Executive Board will meet at least quarterly, with at least one face-to-face meeting
 per year. The Board is responsible for producing the NSF annual report.
@@ -88,7 +87,7 @@ the Board deems advisable and is willing to serve. Under the auspices of the Sci
 Panel, one face-to-face workshop will be held per year, rotating its location among
 the partners.
 
-The Collaboration Working Group is comprises individuals named by the partner
+The Collaboration Working Group comprises individuals named by the partner
 institutions and will meet approximately weekly to review the project. It is Chaired
 by the Project Director or designate and will discuss any and all relevant aspects of
 the project. It represents the primary method of frequent communication between the
@@ -103,20 +102,33 @@ US-SA
 
 
 \section{Management}
-Figure \ref{fig:org} also shows the management structure.   A project manager has
+Figure \ref{fig:org} also shows the management structure.   A Project Manager has
 overall responsibility for planning and tracking to achieve the agreed upon
-milestones and budget. The project manager will brief the Executive Board at each
-meeting to summarize the state of the project.  
+milestones and budget. The Project Manager will brief the Executive Board at each
+meeting to summarize the state of the project.  David DeBoer from Berkeley will serve
+as the Project Manager.
+
+The Site Manager/Liaison
+
+The Data Manager has responsibility for ensuring data quality as archived at the KAPB and 
+Penn.  James Aguirre from Penn will serve as the Data Manager.
+
+The Analysis Manager has responsibility for ensuring that the analysis pipelines are super terrific.
+Miguel Morales from Washington will serve as the Analysis Manager.
+
+The Project Engineer has responsibilty for ensuring that Components and Systems meet their overall
+Specifications and that Interfaces are properly addressed.  Bob Goeke from MIT will serve as the
+Project Engineer.
 
 \subsection{Structure and Ownership}
-The project comprises Components, which are the physical deliverables, and Systems,
+The project comprises {\em Components}, which are the physical deliverables, and {\em Systems},
 which are logical groupings to achieve a function. Systems may be hardware, software
 or both. Systems need not be disjoint collections of Components. Each System has an
 {\em Owner}, who is responsible for the System meeting its specifications and satisfying
 its interface requirements.
 
-Components will likely span multiple Systems. The project
-manager serves as the Owner of the South Africa-based hardware Components, the data
+Components will likely span multiple Systems. The Project
+Manager serves as the Owner of the South Africa-based hardware Components, the data
 manager is the Owner of the US-based hardware Components and the analysis manager is 
 the Owner of the analysis software.  The Component Owners work with the System Owners 
 to meet the Components functional specifications.  In practice there is a great deal of overlap
@@ -124,37 +136,44 @@ between the Components and Systems, making this arrangement practical but it als
 a mechanism to ensure more ``eyes'' on the overall system.
 
 \subsection{Tools}
-The architecture, requirements/specifications, interfaces, budget, work breakdown structure
+The architecture, requirements/specifications, interfaces, budget, milestones, work breakdown structure
 (WBS) and system documenation are in a common shared repository, along with collaboration
 documentation.  This shared repository is referred to as the \textbf{Project Book}.  Architecture, requirements/ 
-specifications and interfaces information reside in a \LaTeX-based database with full traceability
+specifications, interface and milestone information reside in a \LaTeX-based database with full traceability
 and python scripts for flow-down throughout the documentation.  Budget and WBS are in Microsoft
 Excel and Microsoft Project with python script readers for flow-down throughout the documentation.
-An executive script ensures that all scripts are executed and formatted \LaTeX pdf documentation
-files are produced and up-to-date.  These include auto-generated architecture, requirement/specification 
-and interface control documentation and budget and WBS summary documents.  
-In addition to the auto-generated reports, System and  Component Owners write the narrative 
-documentation referencing the database items ({\em e.g.} requirements, interfaces, etc).
 
-meetings,  wiki
+An executive script ensures that all scripts are executed and up-to-date formatted \LaTeX pdf documentation
+files are produced.  These include auto-generated architecture, requirement/specification, 
+interface control, milestone documentation and budget and WBS summary documents, as well as
+flow-down files into the architecture for traceability. 
+In addition to the auto-generated reports, System and  Component Owners write the narrative 
+documentation referencing the database items as variables ({\em e.g.} requirements, interfaces, etc).
+
+Frequent telecons with modern conferencing systems are absolutely essential collaboration tools.
+Berkeley provides full access to the Blue Jeans network-conferencing system for hosting meetings, including
+video, simple and effective desktop sharing, and multiple access methods.  Other partners have access to Webex,
+which is also used.  These tools are routinely and effectively used by the partners already.
+
+wiki
 
 \subsection{Change Control}
-Change requests are initiated by an e-mail to the project manager indicating the proposed change
-and reasons why it is necessary.  Changes may be of the architecuture, requirements/ specifications
-and/or interface.  The project manager will investiage the impact of a change and
-make a recommendation as to whether it is acceptable or not.  This recommendation is provided to
-different bodies, depending on the scope of the change.
+Change requests are initiated by an e-mail to the Project Manager indicating the proposed change
+and reasons why it is necessary.  Changes may be of the Architecture, Scope, Requirements/ Specifications
+Milestones and/or Interface as documented in the Project Book.  The Project Manager will investigate the 
+impact of the proposed change and make a recommendation as to whether it is acceptable or not.  This 
+recommendation is provided to different bodies, depending on the scope of the change.  The Project Manager 
+may initiate a change request by appropriately formulating and sending on a recommendation.
 
-As mentioned above, the Executive Board controls Requirements-level change requests.  This will
-typically be done via e-mail to retain a record of the change.  If accepted, the Board will instruct
-the project manager to make the change within the management system and communicate this
-change to the partners.
+As mentioned above, the Executive Board controls Requirements, Scope and Milestone change requests
+and they receive recommendations regarding these items.  If accepted, the Board will instruct the Project Manager to 
+propagate the change within the management system and communicate this change to the partners.
 
 Other change request recommendations will be provided to the impacted Owners of Systems and
-Components and accepted on a consensus basis.  In the event that consensus is not reached,
-the project director remains the final arbiter.  The project director may overrule consensus by
-approval of the Executive Board.  If accepted, the project manager will institute the change and
-communicate appropriately throughout the project.
+Components and accepted on a consensus basis of the impacted Owners and Project Manager.  
+In the event that consensus is not reached, the Project Director remains the final arbiter.  The Project 
+Director may overrule consensus by approval of the Executive Board.  If accepted, the Project Manager 
+will institute the change and communicate appropriately throughout the project.
 
 \section{Construction}
 plan, schedule, contract summary, milestone summary
