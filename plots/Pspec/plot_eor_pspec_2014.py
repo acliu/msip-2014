@@ -116,18 +116,57 @@ HERA127 = {}
 HERA331 = {}
 HERA547 = {}
 
-for f in glob.glob('../dillon/*csv'):
-    print 'hello'
-    try: H = eval(os.path.basename(f)[:-len('.csv')])
-    except(NameError): continue
-    d1 = n.loadtxt(f,skiprows=7,delimiter=',',usecols=(0,1))
-    d2 = n.loadtxt(f,skiprows=5,delimiter=',',usecols=(3,4))
-    d3 = n.loadtxt(f,skiprows=5,delimiter=',',usecols=(6,7))
-    for cut,dat in zip(['1','2','3'],[d1,d2,d3]):
-        ks,ds = dat[:,0], dat[:,1]
-        H[cut] = {}
-        for k,d in zip(ks,ds):
-            H[cut][k] = d / 1.4 # fudge factor rescaling 8.5 to 7.3
+# Kinda dumb, but I'm going to read in these files "by hand" (ACL)
+
+
+
+midHERA127 = n.load('../pspec_errs/hera127_mid_z9.0_nf0.37_B0.014.npz')
+#sillyInf = midHERA127['err'][0]
+HERA127['mid'] = {}
+for k,d in zip(midHERA127['ks'],midHERA127['err']):
+    if d == n.inf:
+        HERA127['mid'][k] = 10**20
+    else:
+        HERA127['mid'][k] = d * 2. # 2-sigma errors.
+
+midHERA331 = n.load('../pspec_errs/hera331_mid_z9.0_nf0.37_B0.014.npz')
+HERA331['mid'] = {}
+for k,d in zip(midHERA331['ks'],midHERA331['err']):
+    if d == n.inf:
+        HERA331['mid'][k] = 10**20
+    else:
+        HERA331['mid'][k] = d * 2. # 2-sigma errors.
+
+optHERA331 = n.load('../pspec_errs/hera331_opt_z9.0_nf0.37_B0.014.npz')
+HERA331['opt'] = {}
+for k,d in zip(optHERA331['ks'],optHERA331['err']):
+    if d == n.inf:
+        HERA331['opt'][k] = 10**20
+    else:
+        HERA331['opt'][k] = d * 2. # 2-sigma errors.
+
+cosmoSig = {}
+for k,d in zip(optHERA331['ks'],optHERA331['delta2']):
+    cosmoSig[k] = d # Cosmological signal
+
+#print optHERA331['ks']
+#print midHERA331['ks']
+#print optHERA331['err']
+#print HERA127['mid']
+#assert False
+
+#for f in glob.glob('../dillon/*csv'):
+#    print os.path.basename(f)[:-len('.csv')]
+#    try: H = eval(os.path.basename(f)[:-len('.csv')])
+#    except(NameError): continue
+#    d1 = n.loadtxt(f,skiprows=7,delimiter=',',usecols=(0,1))
+#    d2 = n.loadtxt(f,skiprows=5,delimiter=',',usecols=(3,4))
+#    d3 = n.loadtxt(f,skiprows=5,delimiter=',',usecols=(6,7))
+#    for cut,dat in zip(['1','2','3'],[d1,d2,d3]):
+#        ks,ds = dat[:,0], dat[:,1]
+#        H[cut] = {}
+#        for k,d in zip(ks,ds):
+#            H[cut][k] = d / 1.4 # fudge factor rescaling 8.5 to 7.3
 
 # XXX hack to approximate HERA-61 from HERA-127, noting that Jonnie has:
 #  37 2.18 2.76 10.87
@@ -173,23 +212,23 @@ import glob
 
 #for filename in glob.glob('lidz_mcquinn_k3pk/*hmass*dat'):
 #for cnt,filename in enumerate(glob.glob('lidz_mcquinn_k3pk/*hmass*.[36]*dat')):
-for cnt,filename in enumerate(glob.glob('../lidz_mcquinn_k3pk/power_21cm_z7.3*dat')):
-    print 'Reading', filename
-    d = n.array([map(float, L.split()) for L in open(filename).readlines()])
-    ks, pk = d[:,0], d[:,1]
+#for cnt,filename in enumerate(glob.glob('../lidz_mcquinn_k3pk/power_21cm_z7.3*dat')):
+#    print 'Reading', filename
+#    d = n.array([map(float, L.split()) for L in open(filename).readlines()])
+#    ks, pk = d[:,0], d[:,1]
     #ks = n.concatenate([[.01], ks])
     #pk = n.concatenate([[pk[0]], pk])
     #z_file = float(re_z.match(os.path.basename(filename)).groups()[0])
     #z = C.pspec.f2z(.164)
-    z = 7.3
-    print 'Setting redshift at', z
-    k3pk = ks**3 / (2*n.pi**2) * pk
-    label = 'Lidz et al. (2008)'
-    if cnt == 0: plot(dict(zip(ks,k3pk*mean_temp(z)**2)), 'k:', label=label, linewidth=1.5)
-    else: plot(dict(zip(ks,k3pk*mean_temp(z)**2)), 'k:', linewidth=1.5)
+#    z = 7.3
+#    print 'Setting redshift at', z
+#    k3pk = ks**3 / (2*n.pi**2) * pk
+#    label = 'Lidz et al. (2008)'
+#    if cnt == 0: plot(dict(zip(ks,k3pk*mean_temp(z)**2)), 'k:', label=label, linewidth=1.5)
+#    else: plot(dict(zip(ks,k3pk*mean_temp(z)**2)), 'k:', linewidth=1.5)
     
-tau_h = 100. + 15 # ns
-k_h = C.pspec.dk_deta(C.pspec.f2z(.164)) * tau_h
+#tau_h = 100. + 15 # ns
+#k_h = C.pspec.dk_deta(C.pspec.f2z(.164)) * tau_h
 
 #p.subplot(121)
 ##p.plot([k_h, k_h], [1e-10, 1e20], 'k--')
@@ -206,24 +245,31 @@ k_h = C.pspec.dk_deta(C.pspec.f2z(.164)) * tau_h
 #plot(PAPER_32, 'ko', label='PAPER-32 (Parsons et al. 2013)')
 #plot(GMRT2013, 'yv', label='GMRT (Paciga et al. 2013)')
 #plot(MWA2013, 'co', label='MWA (Dillon et al. 2013)')
-CUT = '2'
+#CUT = '2'
 #for color,H in zip(('m','orange','darkviolet','orangered'),['HERA37', 'HERA127', 'HERA331', 'HERA547']):
 #for cnt,(color,H) in enumerate(zip(('dodgerblue','red','black'),['HERA127', 'HERA331', 'HERA547'])):
-for cnt,(color,H) in enumerate(zip(('dodgerblue','red','black'),['HERA61', 'HERA331', 'HERA547'])):
-    CUT = str(cnt+1)
-    Hdict = eval(H)
-    plot(Hdict[CUT], color, linestyle='-', edge=True, linewidth=2, label=H.replace('HERA','HERA-').replace('547','568'))
+#for cnt,(color,H) in enumerate(zip(('dodgerblue','red'),['HERA127', 'HERA331'])):
+#    CUT = str(cnt+1)
+#    Hdict = eval(H)
+#    plot(Hdict[CUT], color, linestyle='-', edge=True, linewidth=2, label=H.replace('HERA','HERA-').replace('547','568'))
 
+plot(HERA127['mid'],'dodgerblue', linestyle='-', edge=True, linewidth=2, label='HERA-127, foreground avoidance')
+plot(HERA331['mid'],'red', linestyle='-', edge=True, linewidth=2, label='HERA-331, foreground avoidance')
+plot(HERA331['opt'],'black', linestyle='-', edge=True, linewidth=2, label='HERA-331, foreground modeling')
+plot(cosmoSig,'black', linestyle='--', label='Mesinger et al. 2011', linewidth=1.5)
 
 p.setp(p.gca().get_xticklabels(), fontsize=20)
 p.setp(p.gca().get_yticklabels(), fontsize=20)
 p.gca().set_yscale('log', nonposy='clip')
 p.gca().set_xscale('log', nonposy='clip')
+p.tick_params(axis='both', which='major', length=8)
+p.tick_params(axis='both', which='minor', length=4)
 p.xlabel(r'$k\ [h\ {\rm Mpc}^{-1}]$', fontsize=20)
 #p.ylabel(r'$k^3/2\pi^2\ P(k)\ [{\rm mK}^2]$')
 p.ylabel(r'$\Delta^2(k)\ [{\rm mK}^2]$', fontsize=20)
 p.ylim(3e-1**2,1e3)
-p.xlim(.02, 2.0)
-p.legend(loc='upper left', fontsize=20)
+p.xlim(.01, 2.0)
+p.legend(loc='best', fontsize=14)
 p.grid()
+#p.savefig('eor_pspec_2014.png', bbox='tight')
 p.show()
