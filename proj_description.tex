@@ -45,15 +45,85 @@
 \title{Hydrogen Epoch of Reionization Array: Characterizing Cosmic Dawn}
 
 \section{Overview} % 1 page ~ project summary? 
-% Parsons
+% Parsons, Carilli
 
-A. We propose HERA: next step in reionization roadmap
+% A statement of which of the four categories of MSIP is most appropriate
+%for this proposal as the first sentence (see section II. Program Description).
 
-B. Fulfill NWNH high-priority goals
+%A. We propose HERA: next step in reionization roadmap
+%B. Fulfill NWNH high-priority goals
+%C. New understanding/techniques => faster, better, cheaper
+%D. Brief summary of timeline: science along the way, major results before end-decade
 
-C. New understanding/techniques => faster, better, cheaper
+{\it For the Mid-Scale Science Projects category of the Mid-Scale
+Innovations Program}
 
-D. Brief summary of timeline: science along the way, major results before end-decade
+The Hydrogen Epoch of Reionization Arrays (HERA) roadmap is a staged
+program that uses the unique properties of the 21-cm line from neutral
+hydrogen to probe the Epoch of Reionization and the preceding Dark
+Ages.  During these epochs, roughly 0.3--1~Gyr after the Big Bang, the
+first stars and black holes warm and reionize the neutral
+intergalactic medium (IGM) that pervades the Universe following cosmic
+recombination. Direct observation of the large scale structure of
+reionization and its evolution with time, via the \HI 21-cm line, will
+have a profound impact on our understanding of the birth of the first
+galaxies and black holes, their influence on the intergalactic medium
+(IGM), and cosmology.  CMB comparison statement? 
+
+HERA was ranked the ``{\it top priority in the Radio, Millimeter, and
+Sub-millimeter category of recommended new facilities for mid-scale
+funding}" as part of the {\it New Worlds, New Horizons of Astronomy
+and Astrophysics} decadal survey (\citealt{astro2010}; hereafter
+NWNH).  The HERA roadmap initially envisioned a series of radio
+interferometers constructed throughout the decade, starting with the
+existing Donald C. Backer Precision Array to Probe the Epoch of
+Reionization (PAPER) and the Murchison Widefield Array (MWA)
+instruments aimed at characterizing foregrounds and laying the
+groundwork for a statistical detection of the HI 21cm signal through
+the power spectrum.  A second-generation HERA instrument would measure
+the evolution of the power spectrum in detail and reveal how early
+structure in the Universe formed. A third-generation instrument would
+image the typical structures during reionization.
+
+While receiving only a fraction of the funding for HERA phase I
+recommended in NWNH, the MWA and PAPER projects have made
+major strides in understanding the techniques required to disentangle
+the reionization signal from the strong radio continuum foreground
+confusion. Based on this new understanding of array response to the
+celestial signal, we are ready to build the next generation of HERA in
+stages of 127 and 331 elements, observing in the 50--225-MHz band.
+These stages increase the sensitivity by two orders of
+magnitude over to the current arrays, through the use of an
+optimal configuration of 14m diameter receptor elements, and a
+tailored analysis technique that mitigates foreground contamination.
+The proposed experiment delivers HERA-II science at a cost
+substantially below originally envision in NWNH:
+
+% might remove 1st phrase in 1st sentence in para above
+
+\vspace{-4pt}
+\begin{itemize}\setlength{\parskip}{0pt}\itemsep0pt
+
+\item HERA~127 will measure the rise and fall of the EoR power
+spectrum, constraining the timing and duration of reionization.
+
+\item HERA~331 will measure EoR fluctuations over a variety of spatial
+scales to determine the features and distribution of the first objects
+that dominate cosmic reionization. HERA~331 will also extend precision
+power-spectrum observations into the Dark Ages, and directly image the
+largest scale structures in the IGM during reionization.
+
+\end{itemize}
+\vspace{-4pt}
+
+The proposed program produces a sequence of dedicated experiments
+optimized to fulfill the NWNH goal of characterizing the evolution of
+the HI 21cm power spectrum during cosmic reionization. In
+its final stages, HERA will be capable of imaging the neutral
+IGM --- a task previously only considered for third-generation
+instruments. This proposal includes funding for both the
+telescope development and construction, as well as for the key
+scientific data analyses for each stage of the project.
 
 \section{Science} total = 8 pages
 
@@ -168,7 +238,27 @@ please -- keep this down to a couple of incisive figures and fiducial models. wa
 
 iv. Imaging large scale structure: simulation (Fig) 
 % Jacobs
-    
+\subsection{Imaging HI}
+With a nearly completely sampled aperture over 300m across, HERA will have the collecting area of Arecibo but with 500x the survey speed it presents the opportunity for directly imaging reionization.  After 100 hours on a single field (achievable in 200 nights, or just over one season) HERA will reach a surface brightness sensitivity of 50 $\mu$Jy compared with typical brightness temperatures of EoR models which often peak above 400 $\mu$Jy.
+
+In imaging, as in the measurement of the power spectrum, noise and foreground residual are comparable limiting factors. Using the foreground filtration methods developed for power spectrum estimation, we can remove foregrounds exactly as done for the power spectrum estimation --filter the ``wedge'' in power spectrum space-- before imaging.  This ``foreground avoidance'' scheme effectively limits the bandwidth (line of sight modes) over which the residuals can be imaged without signal loss.  In Figure \ref{fig:imaging} we demonstrate the sensitivity of imaging in this mode assuming a conservative 1MHz of effective bandwidth, 12Mpc along the line of sight.  The brightest structures in the redshift 8 input simulation are detectable at the SNR$>10$ level.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{plots/Imaging/HERA_FoV.jpg}
+\caption{The HERA stripe.  At 150MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50 $Gpc^3$.  The stripe includes the GOODs south field, one of the best studied regions of sky. \ref{fig:HERA_FoV}}
+\end{figure}
+
+With a resolution of 60Mpc and survey volume of 1Gpc in a single field of view HERA images will probe structure on scales well beyond any deep, high redshift field contemplated. For comparison, note that the entire Great Observatories Origins Deep Survey (GOODS), where 40\% of all objects at $z > 6$ have been found, is only (30Mpc ) 15\arcmin  across. Using deep HERA images it will be possible to make targeted observations of early galaxies known to be in the center of large scale bubbles, directly observe clouds responsible for Ly$\alpha$ absorption, and correlate large scale intensity surveys.
+
+
+ 
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{plots/Imaging/HERA_331_z8_SNR_annotated.jpg}
+\caption{\small
+With sensitivity highly concentrated at the largest scales, HERA is capable of directly imaging HI during reionization.  Shown here is a simulation of EoR emission (McQuinn 2009) as imaged by HERA with noise equivalent to 100 hours of observation and bandwidth equivalent to the moderate foreground model. %XXX are we using the language of pober et al? 
+Contours enclose regions with signal to noise above 10.  The regions detected on scales of $\sim$100 Mpc are bracket the size scales probed by deep galaxy surveys (cf. the GOODs-South survey volume where 40\% of all galaxies above redshift 7 have been detected.)  The GOODs field itself is located within the HERA stripe, just 3 degrees outside of the image shown here.
+\label{fig:imaging}}
+\end{figure}    
 a) Imaging as a probe of non-Gaussianity and topology of reionization (Fig from Watkinson \& Pritchard)
 [Not sure if this belongs here, should discuss: b) Bayesian imaging (Figs from Paul Sutter).  
 Perhaps a broader impact on the radio community too?]
