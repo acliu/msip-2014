@@ -229,23 +229,43 @@ Figures: F(HI) vs z;  HI Tb cube + PS evolution
 i. F(HI) vs. z: HERA vs. other techniques (Fig) -- emphasize constaints in unexplored territory
 % Bowman
 
-ii. PS sensitivity at fixed z: 127, 331 (Fig)
+
+\subsubsection{Detecting and characterizing the power spectrum}
+\emph{ii. PS sensitivity at fixed z: 127, 331 (Fig)}
 % Pober, Dillon
+\begin{figure}[t]\centering
+\includegraphics[width=\textwidth]{plots/Pspec/eor_pspec_2014.png}
+\caption{Power-spectrum sensitivities for three stages of
+HERA (solid) relative to a fiducial ionization model (dotted line; $\xHI=0.37$, $z=9.0$).  
+Sensitivity curves reflect a staged array size and
+a staged improvement in analysis software that expands the range
+of modes falling into the EoR Window \label{fig:PspecSensitivity}}
+\end{figure}
 
-iii. Various covariance analyses: constraints on different physical processes (Liu/Pober analysis). but
-please -- keep this down to a couple of incisive figures and fiducial models. wall paper doesn't sell very well. 
+A season of observing with HERA-127 will yield high-significance constraints on the 21 cm power spectrum across a wide range of k modes and redshifts.  In Figure we show the $z=9$ power spectrum predicted by the publicly available 21cmFAST software \citep{mesinger_et_al2011}, along with $2\sigma$ HERA sensitivities.  Using the conservative delay-spectrum approach employed in Parsons et al. 2014, we find that HERA-127 can achieve a $> 10\sigma$ detection of fiducial power spectra over a broad range of redshifts.  The subsequent observing season with HERA-331 can increase this detection significance to over $25\sigma$ using the same methods.  With detailed foreground modeling, a more sophisticated power spectrum estimator could increase the size of the ``EoR window", the region of Fourier space with minimal foreground contamination. This would allow for an overall detection significance of up to $90\sigma$, along with access to lower $k$ modes and therefore qualitatively different physics.  Such a high sensitivity measurement would also allow one to go beyond constraining parameters, testing rather than assuming the underlying theoretical framework.
+
+\subsubsection{Astrophysical parameters from the power spectrum}
+\emph{iii. Various covariance analyses: constraints on different physical processes (Liu/Pober analysis). but
+please -- keep this down to a couple of incisive figures and fiducial models. wall paper doesn't sell very well. }
 % Liu, Pober, Dillon
+The power spectrum measurements with HERA-331 are sensitive enough to place constraints on theoretical models that describe the reionization process.  To first order, the major features of the power spectrum (as simulated by 21cmFAST) can be parameterized by three terms: $\zeta$, the efficiency at which galaxies release ionizing photons into the IGM; $T_{\rm vir}$, the minimum virial temperature of halos that produce ionizing photons (a proxy for the minimum mass of the galaxies that drive reionization); and $R_{\rm mfp}$, the mean free path for ionizing photons traveling through the IGM, which is determined the prevalence of dense Lyman limit systems.  Current observations limit the value of these parameters to within an order-of-magnitude (or worse, in the case of $T_{\rm vir}$).  Figure \ref{fig:ErrorEllipses} shows the constraints on each of these parameters achievable with multi-redshift HERA-331 power spectrum observations.  We expect to constrain these parameters to better than 5\% with a conservative approach to foregrounds , and even better with explicit foreground modeling \citep{pober_et_al2014}.
 
-iv. Imaging large scale structure: simulation (Fig) 
+\begin{figure*}[t]\centering
+\includegraphics[width=\textwidth]{plots/Pspec/OPTMIDellipses.pdf}
+\caption{Pairwise $2\sigma$ error ellipses for $T_{\rm vir}$, $\zeta$, and $R_\textrm{mfp}$, in each case divided by their fiducial values.  HERA-331 projections using existing foreground avoidance techniques are shown in red, while projections using more advanced foreground modeling techniques are shown in black.  The former represent $\sim 5\%$ constraints, while the latter represent $\sim 1\%$ constraints.\label{fig:ErrorEllipses}}
+\end{figure*}
+
+
 % Jacobs
-\subsection{Imaging HI}
+\subsubsection{Imaging HI}
+iv. Imaging large scale structure: simulation (Fig) 
 With a nearly completely sampled aperture over 300m across, HERA will have the collecting area of Arecibo but with 500x the survey speed it presents the opportunity for directly imaging reionization.  After 100 hours on a single field (achievable in 200 nights, or just over one season) HERA will reach a surface brightness sensitivity of 50 $\mu$Jy compared with typical brightness temperatures of EoR models which often peak above 400 $\mu$Jy.
 
 In imaging, as in the measurement of the power spectrum, noise and foreground residual are comparable limiting factors. Using the foreground filtration methods developed for power spectrum estimation, we can remove foregrounds exactly as done for the power spectrum estimation --filter the ``wedge'' in power spectrum space-- before imaging.  This ``foreground avoidance'' scheme effectively limits the bandwidth (line of sight modes) over which the residuals can be imaged without signal loss.  In Figure \ref{fig:imaging} we demonstrate the sensitivity of imaging in this mode assuming a conservative 1MHz of effective bandwidth, 12Mpc along the line of sight.  The brightest structures in the redshift 8 input simulation are detectable at the SNR$>10$ level.
 
 \begin{figure}[t]\centering
 \includegraphics[width=\textwidth]{plots/Imaging/HERA_FoV.jpg}
-\caption{The HERA stripe.  At 150MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50 $Gpc^3$.  The stripe includes the GOODs south field, one of the best studied regions of sky. \ref{fig:HERA_FoV}}
+\caption{The HERA stripe.  At 150MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50 $Gpc^3$.  The stripe includes the GOODs south field, one of the best studied regions of sky. \label{fig:HERA_FoV}}
 \end{figure}
 
 With a resolution of 60Mpc and survey volume of 1Gpc in a single field of view HERA images will probe structure on scales well beyond any deep, high redshift field contemplated. For comparison, note that the entire Great Observatories Origins Deep Survey (GOODS), where 40\% of all objects at $z > 6$ have been found, is only (30Mpc ) 15\arcmin  across. Using deep HERA images it will be possible to make targeted observations of early galaxies known to be in the center of large scale bubbles, directly observe clouds responsible for Ly$\alpha$ absorption, and correlate large scale intensity surveys.
@@ -259,12 +279,15 @@ With sensitivity highly concentrated at the largest scales, HERA is capable of d
 Contours enclose regions with signal to noise above 10.  The regions detected on scales of $\sim$100 Mpc are bracket the size scales probed by deep galaxy surveys (cf. the GOODs-South survey volume where 40\% of all galaxies above redshift 7 have been detected.)  The GOODs field itself is located within the HERA stripe, just 3 degrees outside of the image shown here.
 \label{fig:imaging}}
 \end{figure}    
-a) Imaging as a probe of non-Gaussianity and topology of reionization (Fig from Watkinson \& Pritchard)
+
+\subsubsection{Imaging as a probe of non-gaussianity}
+\emph{a) Imaging as a probe of non-Gaussianity and topology of reionization (Fig from Watkinson \& Pritchard)
 [Not sure if this belongs here, should discuss: b) Bayesian imaging (Figs from Paul Sutter).  
-Perhaps a broader impact on the radio community too?]
+Perhaps a broader impact on the radio community too?]}
 % Morales, Tegmark
 
-v. Approaching Dark ages (z=20 to 30): early Xray heating? other (Fig - Liu models)
+\subsubsection{Early IGM heating}
+\emph{v. Approaching Dark ages (z=20 to 30): early Xray heating? other (Fig - Liu models)}
 % Liu, Dillon, Hewitt
 \begin{figure}[t]\centering
 \includegraphics{plots/Xray/HERA_II_compare_kp1_whoriz_20pt.pdf} 
