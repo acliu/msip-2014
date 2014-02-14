@@ -67,6 +67,7 @@ Academia Sinica Institute for Astronomy and Astrophysics (Taipei, Taiwan) & Scie
 \caption{Org chart showing the collaboration, governance and management.}
 \end{figure}
 
+\subsection{Executive Board}
 Figure \ref{fig:org} shows the governance and management of the proposed work. 
 The Executive Board serves as the governing board and has authority over the science 
 Requirements\footnote{{\em Requirements} are the science and operational level requirements as
@@ -77,8 +78,11 @@ senior scientific partner at the institution. The Board is chaired by the Projec
 generally operating on concensus, if matters come to a vote a ``T-2''\footnote{T-2 means that 2
 or more must vote against to defeat a motion.} supermajority will be required. The
 Executive Board will meet at least quarterly, with at least one face-to-face meeting
-per year. The Board is responsible for producing the NSF annual report.
+per year. The Board is responsible for producing the NSF annual report.  The Board has the
+authority to name and retract Collaborator status to partners.  An up-to-date list of Collaborators
+will be maintained on reionization.org.
 
+\subsection{Science Panel}
 A Science Panel, chaired by the Project Scientist or designate, will meet at least
 quarterly to provide advice on the science (scope, progress, support, ). The
 composition is determined by the Executive Board, and membership is open to anybody
@@ -86,25 +90,56 @@ the Board deems advisable and is willing to serve. Under the auspices of the Sci
 Panel, one face-to-face workshop will be held per year, rotating its location among
 the partners.
 
+\subsection{Collaboration Working Group}
 The Collaboration Working Group comprises individuals named by the partner
 institutions and will meet approximately weekly to review the project. It is chaired
 by the Project Director or designate and will discuss any and all relevant aspects of
 the project. It represents the primary method of frequent communication between the
 partners.
 
+Collaborators are expected to actively participate in HERA, as evidenced by participating
+regularly in the weekly Collaboration Working Group meeting and e-mail discussion
+threads.  Collaborators should actively assist in publications, in terms of submitting
+appropriate material and/or reviewing/editing draft publications.  Collaborators should
+seek out and attend appropriate conferences and present HERA/EOR papers.  This will
+be coordinated amongst the group to either strategically provide coverage or to encourage 
+a large number of team members to attend specific conferences.
+
+Each Collaborator should have a defined project role as fits their interests and organizations,
+actively pursue those activities, and communicate these activities to the group.  Collaborators
+are encouraged to participate in all aspects of the project, subject to the Publication Policy, 
+discussed in Section \ref{sec:publication} below.  In short, the activities should be transparent
+to the team.
+
+****ANY STUDENT CARVE-OUTS ETC?
+
 \subsection{Communication}
-Meetings (telecon Blue Jeans/Webex)  workshop, common repositories, web-site, wiki, email
-
-Berkeley provides full access to the Blue Jeans network-conferencing system for hosting meetings, including
-video, simple and effective desktop sharing, and multiple access methods.  Other partners have access to Webex,
-which is also used.  These tools are routinely and effectively used by the partners already.
-
-US-SA
-
-Conference side meetings etc
+The core standing meetings for the collaboration have been discussed above, and
+collaboration weekly meeting has been underway for some time. This generally is
+conducted by the local groups meeting face-to-face and linked together by a
+conferencing system. Berkeley provides full access to the Blue Jeans
+network-conferencing system for hosting meetings, including video, simple and
+effective desktop sharing, and multiple access methods (computer, phone, networked
+video system). Other partners have access to Webex,which is also used. These tools
+are routinely and effectively used by the partners already and are quite effective.
+Other side meetings also occur using these tools, including regular telecons
+specifically with South Africa The collaboration makes good use of side-meetings at
+professional conferences at which many of the team may be attending.
+In addition to meetings, the group obviously makes copious use of e-mail, both direct 
+and using a group listserver.  Other tools, such as wikis and web-sites are discussed below.
 
 \subsection{Publication}
+\label{sec:publication}
+Any paper reporting the detection of a 21cm EoR signature, or reporting a significant
+improvement in upper limits, will have the authorship of the full Collaboration, but
+excluding those Collaborators who choose not to be on the author list. The paper
+acknowledgment section is an appropriate mechanism for identifying individual
+contributions of authors.
 
+Other publications that either refer to a technique, related sensitivity analysis, system
+description, use of data for other science, etc are also encouraged.  The author list
+may vary, but broad collaboration acknowledgement is encouraged, and the list should
+be discussed prior to submission.
 
 \section{Management}
 Figure \ref{fig:org} also shows the management structure.   A Project Manager has
@@ -113,7 +148,9 @@ milestones and budget. The Project Manager will brief the Executive Board at eac
 meeting to summarize the state of the project.  David DeBoer from Berkeley will serve
 as the Project Manager.
 
-The Site Manager/Liaison
+The Site Liaison is a South African-based person responsible for coordinating activities
+between the Collaboration and the broader SKA-SA observatory group.  This link has 
+been key in effectively pursuing the PAPER activities in South Africa.  William Walbrugh
 
 The Data Manager has responsibility for ensuring data quality as archived at the KAPB and 
 Penn.  James Aguirre from Penn will serve as the Data Manager.
@@ -143,9 +180,9 @@ a mechanism to ensure more ``eyes'' on the overall system.
 \subsection{Management Tools}
 The architecture, requirements/specifications, interfaces, budget, milestones, work breakdown structure
 (WBS) and system documenation are in a common shared repository, along with collaboration
-documentation.  This shared repository is referred to as the \textbf{Project Book}.  Architecture, requirements/ 
+documentation.  This shared repository is referred to as the {\tt Project Book}.  Architecture, requirements/ 
 specifications, interface and milestone information reside in a \LaTeX-based database with full traceability
-and python scripts for flow-down throughout the documentation.  Budget and WBS are in Microsoft
+and python and shell scripts for flow-down throughout the documentation.  Budget and WBS are in Microsoft
 Excel and Microsoft Project with python script readers for flow-down throughout the documentation.
 
 An executive script ensures that all scripts are executed and up-to-date formatted \LaTeX pdf documentation
@@ -161,16 +198,29 @@ as discussed above, and liberal use of these systems will continued to be applie
 
 The Project Book remains the definitive record, but use of a wiki for posting material and hosting
 discussions etc is an important component.  The project has full access to wiki tools, and has been
-using collaborative wikis in the ongoing collaboration.
+using collaborative wikis in the ongoing collaboration.  The group has a public web-site at http://reionization.org, 
+in addition to PAPER and MWA project web-site.
 
 Additional common repositories host the software developed by the project.  This allows access to all members,
-as well as full revision control.
+as well as full revision control.  Git/Github is the primary repository tool.  Python is the primary coding/scripting
+tool.
 
-Schematics:  visio, technical
+Financial tracking is done via the Berkeley Financial System (BFS), supplemented with Excel spreadsheets.
 
-python, git/github
+Table \ref{tab:softwareTools} lists the primary software tools (management and technical).  Schematics:  visio, technical
+\begin{table}[h]
+\label{tab:softwareTools}
+\caption{Project Software Tools}
+\begin{tabular}{| p{1in} | p{5in} |}\hline
+\textbf{Category} & \textbf{Tools (primary is in bold font)} \\ \hline
+Documentation & \textbf{\LaTeX}, Word, {\tt ProjectBook}, pdf \\ \hline
+Finance & \textbf{BFS}, Excel \\ \hline
+Scripting & \textbf{Python}, shell \\ \hline
+Technical drawings & autocad (Draftsight), Autodesk Inventor \\ \hline
+Diagrams & \textbf{Visio}, Omnigraffle \\ \hline
+\end{tabular}
+\end{table}
 
-Financial BFS
 
 \subsection{Change Control}
 Change requests are initiated by an e-mail to the Project Manager indicating the proposed change
