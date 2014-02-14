@@ -404,11 +404,25 @@ wave contamination outside of the delay-space of interest for power spectrum
 measurements.  The node amplifies, filters, digitizes and transmits the signal data stream
 back to the central processing location (the Karoo Array Processing Building - KAPB).
 
+HERA leverages the technical heritage of PAPER, MWA and of CASPER\footnote{Collaboration for Astronomical
+Signal Processing and Electronics Research, a Berkeley-initiated worldwide open source community that is
+developing boards, firmware and software for the astronomical community} and incorporates a
+phased implementation to mitigate against risk.  The system, technology and phased approach is discussed below
+in more detail.
+
+\subsubsection{Element and Configuration}
 i. compact hex grid array
 % de Boer
 
+\subsubsection{Analog System}
 ii. 14m elements + broad band (active) dipole feed
 % de Boer, Bradley
+
+\subsubsection{Digital System}
+The advent of CASPER, initiated by two of the PIs of this proposal, has led to a resurgence of radio telescope 
+backend development.  Digital systems used to be the achilles heel of array correlator design, but is now
+generally viewed as a solved problem.  CASPER hardware evolves as groups develop hardware, software and
+techniques which get shared amongst the community.
 
 iii. Signal transport: RF to nodes, digitize at nodes. fiber to correlator. 
 % Wirtheimer?
@@ -416,6 +430,7 @@ iii. Signal transport: RF to nodes, digitize at nodes. fiber to correlator.
 iv. Digital stuff: emphasize 'solved problem'. Casper work. block diagrams...
 % Parsons
 
+\subsubsection{Data Handling}
 C. Post correlator data path
 % Aguirre, Moore
 
@@ -425,6 +440,7 @@ ii. transport to data centers
 
 iii. data centers: access? 
 
+\subsection{Analysis}
 D. Data analysis [Move up?]
 
 i. Calibration 
