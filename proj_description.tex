@@ -22,12 +22,16 @@
 \setlength{\footnotesep}{8pt}
 \pagestyle{empty}
 \citestyle{aa}
+\usepackage{enumitem}
+%\usepackage[font=small]{caption}
+
 
 \newcommand{\compress}{\vspace{-0.12in}}
 
 
 \def\kperp{k_{\bot}}
 \def\kpar{k_{\|}}
+\def\nwnh{{\sl NWNH}}
 
 \newcommand{\simgt}{\stackrel{>}{_{\sim}}}
 \def\kperp{k_{\bot}}
@@ -379,30 +383,69 @@ ii. direction dependent gains?
 \section{HERA design and project} % 8 pages
 
 \subsection{Lessons learned recap} % 0.5 page
-% Parsons, Morales
+The HERA collaboration has made significant progress on multiple approaches in dealing with
+foregrounds.
+Based on a ``delay-spectrum'' understanding of
+the mechanism for how instrumental responses modulate foregrounds on
+spectral scales of cosmological interest \citep{parsons_et_al2012b},
+PAPER has optimized its instrument to focus on regions in Fourier
+space that have weak coupling to foregrounds caused by the
+interferometer.  These regions are determined both by chromatic
+instrumental responses and by the inherent frequency structure of the
+foregrounds.  An `EoR window' has been identified in the Fourier
+(wavenumber) space of spectral and angular power spectra that is
+inherently free of continuum emission, without explicit continuum
+subtraction in either the image or spectral domain \citep{pober_et_al2013,morales_et_al2012,Datta_2010}
+This window allows for continuum
+`avoidance' rather than subtraction. Observations based on this new
+approach have already demonstrated that the extremely stringent level
+of foreground suppression needed to access the 21cm signal is largely
+in hand (as shown in Figure \ref{fig:pk_k3pk}), with upper limits
+that are beginning to rule out cold reionization scenarios.
 
-reemphasize design dictated by new understanding
+HERA-331 proposal targets a 331-element array that incorporates
+our proven foreground avoidance techniques while improving
+dramatically the sensitivity relative to current experiments.  With a
+new understanding of how antenna size and separation affect
+sensitivity and foreground isolation, it has become evident a revision
+of the PAPER antenna design can yield up to 20 times the sensitivity
+per element without substantially degrading foreground isolation.
+Where PAPER's elements lack collecting area and are smaller than
+strictly required for foreground isolation, and the majority of MWA
+and LOFAR elements are spaced too widely to avoid foregrounds,
+HERA-331 employs an extremely compact array of 14-m parabolic dishes
+with PAPER-style dipole feeds (see Figure \ref{fig:hera_dish}.  The
+short (4.5m) focal height of these dishes is central to limiting the
+path length of reflections whose time-delay gives rise to chromatic
+instrumental systematics.
 
-\subsection{Project Architecture}  % 6 pages
-% DeBoer to parse
-In terms of hardware, HERA is a straightforward system.  The element
-itself is a fixed zenith-pointing 14-meter segmented prime-focus paraboloid with a high screen
-to minimize cross-talk between elements (which are spaced 14.3 meters on a
-hexagonal grid.  Figure \ref{fig:configuration} shows the layout of the array.  The $f/D$ of
-the paraboloid is 0.32, so that the focal length, $f$, is less than 5 meters to meet the 
-standing wave specification at the delays of interest of more than 60 dB of attenuation at delays 
-greater than 15 ns.
+\begin{figure}[!ht]
+\centering
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=\textwidth]{plots/paper_element.jpg}
+		\caption{The PAPER element (provides a clean instrumental response as a function
+		of frequency \citep{parsons_et_al2010,parsons_et_al2012b}, which is crucial to
+		the foreground isolation shown in Figure \ref{fig:eor_pspec}.}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[height=1.75in]{plots/hera_dish.png}
+		\caption{A 14m dish designed around the feed dramatically improves sensitivity while
+		constraining the path length and amplitude of reflections to ensure that foreground 
+		isolation is not substantially degraded.}
+	\end{subfigure}
+\caption{PAPER and HERA elements}
+\label{fig:hera_dish}
+\end{figure}
 
-Figure \ref{fig:schematic} shows the schematic
-
-Figure \ref{fig:beampattern} shows the beampattern
-
-The active feed sends back the entire dual-polarization analog bandwidth on standard
-coaxial cable to an aggregation point called a ``node'', which services 
-about 15 antennas.  This cable length is kept short (35-m) to keep any standing
-wave contamination outside of the delay-space of interest for power spectrum
-measurements.  The node amplifies, filters, digitizes and transmits the signal data stream
-back to the central processing location (the Karoo Array Processing Building - KAPB).
+The size of HERA-331 dishes optimizes cost for a fixed sensitivity and
+level of foreground isolation.  The associated reduction in the number
+of antenna elements to achieve a given collecting area, combined with
+the fact that these dishes have no moving parts, are built from
+inexpensive materials, and follow a simple construction that can be
+contracted locally, makes the cost of building HERA-331 substantially
+cheaper than was anticipated in the roadmap submitted to \nwnh\ for this
+stage of the program.   
 
 HERA leverages the technical heritage of PAPER, MWA and of CASPER\footnote{Collaboration for Astronomical
 Signal Processing and Electronics Research, a Berkeley-initiated worldwide open source community that is
@@ -410,9 +453,374 @@ developing boards, firmware and software for the astronomical community} and inc
 phased implementation to mitigate against risk.  The system, technology and phased approach is discussed below
 in more detail.
 
+\vspace{-0.25in}
+\subsection{Instrument Design}
+\vspace{-6pt}
+\label{InstDes}
+HERA has a very straightforward insrument design.  The element
+itself is a fixed zenith-pointing 14-meter segmented prime-focus paraboloid with a high screen
+to minimize cross-talk between elements (which are spaced 14.3 meters on a
+hexagonal grid.   The $f/D$ of
+the paraboloid is 0.32, so that the focal length, $f$, is less than 5 meters to meet the 
+standing wave specification at the delays of interest of more than 60 dB of attenuation at delays 
+greater than 15 ns.
+
+
+The active feed sends back the entire dual-polarization analog bandwidth on standard
+coaxial cable to an aggregation point called a ``node'', which services 
+about 15 antennas.  This cable length is kept short (35-m) to keep any standing
+wave contamination outside of the delay-space of interest for power spectrum
+measurements.  The node amplifies, filters, digitizes and transmits the signal data stream
+back to the central processing location (the Karoo Array Processing Building - KAPB).
+Figure \ref{fig:blockDiagram} shows the system.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{plots/Engineering/HERA_high_level_block_diagram.jpg}
+\caption{Block diagram of the HERA system.}
+\label{fig:blockDiagram} 
+\end{figure}
+
+\vspace{-0.25in}
+\subsection{Parabolic Dish Element}
+\vspace{-6pt}
+
+The element is a fixed zenith-pointed mount, which dramatically simplifies design and operation.  
+Cost is a key design constraint for this experiment, which has components for construction materials, 
+assembly in a remote area, and operation over its lifetime.  As an experiment, the design lifetime is 5 years, 
+which helps constrain costs relative to a long-lived facility.  For a field-deployed instrument, one needs to 
+define limited well-constrained reference points for accuracy in construction.  The proper installation procedure 
+is therefore critical in construction.  The elements are also nearly abutting one another, which allows for sharing 
+of physical support infrastructure.
+
+Many competing factors set the area of the collecting element.  Among them are
+sensitivity, cost, minimum baseline, efficiency and delay values of internal reflections.
+Using the derived sensitivity for a redundant array \citep{parsons_et_al2012a} 
+and a reasonably complete costing model, one can compute the cost/performance for a 
+fixed sensitivity as a function of diameter.  
+Figure \ref{fig:nvsd} shows 
+this function normalized to a 14-meter antenna, indicating a fairly broad minimum 
+extending from about 14 to 22 meters.  Within this range, smaller elements are
+preferred because of increased field of view and lower timescales for systematics
+arising from reflections. 
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=0.9\textwidth]{plots/Engineering/nvsd.png}
+		\caption{Costing model for a fixed sensitivity and varying the diameter.}
+		\label{fig:nvsd} 
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=0.8\textwidth]{plots/Engineering/focalEff.png}
+		\caption{Analytical model efficiency of a parabolic element as a function of focal height and diameter.}
+		\label{fig:disheffic}
+	\end{subfigure}
+	\caption{Cost and performance plots to determine diameter.}
+\end{figure}
+
+Given the delay-spectrum technique developed for 21-cm EoR science, it is important 
+to ensure that internal reflections within the antenna structure
+are at a low enough level at delay values where the array has sensitivity to the EOR power spectrum.  
+That is, we don't want reflections that will modulate foregrounds to corrupt scales corresponding to 
+the desired $\kpar$, scattering foreground power into the EoR window.  Recent work characterizing 
+foregrounds suggests that the spectral structure of foregrounds observed with
+baseline separations of $8\lambda \approx 15$m are well-behaved to current limits \citep{parsons_et_al2013}. 
+This sets the upper limit for the dish diameter at about
+15m.  However, this requirement also sets restrictions on the focal length of
+the dish since the primary resonances in the dish will be the standing waves
+that arise between the primary reflector and the antenna feed, caused by
+imperfect impedance matches of the feed electronics and free space, as well as by the presence of any 
+metallic structure in the area.
+
+% FOLLOWING SEEMS TOO DETAILED FOR A PROPOSAL
+
+%To distinguish between measured sky delays and instrumental-induced delays at a required threshold ($R_T$) dB, 
+%we need sufficient attenuation of the reflected signals at a given focal length ($f$) at a specified delay ($\tau_{d}$).  Assuming a conservative simple model that the magnitude of the reflection is attenuated by $A$ dB at each reflection 
+%we see that for a delay length limit of $\delta_{d}=c\tau_{d}$ and focal length $f$,  the required focal length is
+%
+%\begin{equation}
+%f < \left(\frac{A}{R_T}\right)\delta_d.
+%\end{equation}
+%
+%Using nominal values of $R_T$ =  60dB (an order of
+%magnitude below where EoR is predicted to be below foregrounds) at delays
+%corresponding to the time it takes travel 15m and a net attenuation of 20 dB per reflection, 
+%we find that the focal length should be less than about 5 m.  Free-space loss effects would 
+%increase that value, loosening the constraint.
+%
+To maximize sensitivity, we wish to maximize the efficiency of the
+HERA element, while still thresholding the delays at which reflections couple
+back into the feeds. The design for the proposed HERA element is currently set
+at $14m$-diameter dish with a focal height of $4.5$ m, which currently gives us
+good total efficiency (see Fig \ref{fig:disheffic}) while staying within the delay-response constraint. 
+Analytical models of the beam pattern are shown in Figure \ref{fig:beam}.
+Full electromagnetic modeling will be coupled with 
+physical measurements of the prototype to validate and refine the element.
+
+%In addition to the constraints given by the element itself, the HERA element size is
+%also influenced by the location of the ``knee'' in the EoR power spectrum \citep{lidz_et_al2008}
+%The EoR power spectrum has an upward slope for low $k$-modes which levels off
+%around $k=0.15 h$/Mpc %(see fig blah). 
+%Working inside this $k$-mode would be beneficial due to the fact foregrounds are
+%less problematic. This poses a problem because without knowing the
+%width of our foregrounds, we can't say for sure which $k$-modes (in the power
+%spectrum) are corrupted. This uncertainty, coupled with increasing systematic affects for shorter 
+%baselines (hence smaller diameters), favors larger diameter antennas.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=0.85\textwidth]{plots/dish.png}
+		\caption{CAD model of 14m dish with screening and some supports removed to show detail.}
+		\label{fig:dish} 
+	\end{subfigure}
+\quad
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/hera_beam.png}
+		\caption{Analytical model beam patterns at 10m, 12m and 14m.}
+		\label{fig:beam} 
+	\end{subfigure}
+	\caption{HERA element and beam pattern.}
+\end{figure}
+
+%The $k$-mode for a $14m$ baseline is $k = 0.023$, given by $k_{H} =
+%\frac{B}{c}\frac{dk}{d\eta}$, where $B$ is the length of the baseline, 14m in
+%our case, $c$ is the speed of light, and $\frac{dk}{d\eta}$ is the cosmological
+%transfer function from delays to $k$-modes. In addition, narcissistic
+%reflections add into our $k$ budget as well. The $f$ and $D$ choices above provide a $k$ budget for
+%foreground widths to be within $\Delta{k}\sim{0.1}$. Testing these hypothesis
+%and again, finding a compromise between maximum sensitivity, foreground budget
+%will be key to testing and constructing the required element. Foreground width constraints
+%are still an area of active research \citep{pober_et_al2013}.
+
+The core defining elements in this design are the central hub and three tall support poles.  Three intermediate 
+support posts are installed between each pair of poles.  A 2$^{\prime\prime}$ PVC spar of 24.1$^{\prime}$ 
+terminates at each pole and post.  These spars are supported at each end and one point in the middle at the 
+proper height and angle.  The intervening PVC pipe essentially acts as a smoothing filter between those 
+points, noting also that a beam with point loads attains nearly the quadratic shape desired.  The CAD model is 
+shown in Figure \ref{fig:dish}.  
+
+The tall ($\sim$ 7m) poles provide locational accuracy (in all three dimensions) for the overall array installation.  
+Using conventional commercial pole-installation techniques the poles are installed first for the entire array.  
+Note that every pole except for the edge poles are shared by three antennas.  A standard theodolite can 
+then be used to mark a known level height on all three poles.  These locations are then used with tensioned 
+lines to define the center of that element and the hub is positioned at that location using a jig.
+
+The hub uses concentric commercially available ``sonotube'' forms (circular cardboard forms for concrete pillars) 
+and PVC sleeves to hold the PVC spars and PVC supports.  The retaining holes may be accurately cut into 
+the forms, sleeves installed and concrete poured to make a simple hub to the desired accuracy.  The jig holds 
+the concentric rings in place and allows it to be centered by tensioned lines while the concrete is poured.  
+When the concrete cures one can then transfer an accurate offset from the dish vertex back to the poles.
+The intermediate posts are then located by the support sub-assemblies attached to the poles and posts along 
+with the rim sub-assemblies.  These are positioned and a small pier is poured to locate them.  After spar support 
+pieces are installed on the posts, the spars themselves and the metal cloth can be installed.
+
+The feed is held off the three tall poles using tensioned lines to accurately locate it over the hub.  A precise 
+length of kevlar rope holds the feed down to the hub at a precise focal point.  The RF cables follow the line 
+down and out to the analog-to-digital converters and correlator.  
+
+To minimize cross-talk, metal screens are strung between every pole/post, which go to the level of the feed.  
+The dishes have a rim-to-rim spacing of 30cm to allow the screen to be slightly angled to minimize standing waves.
+
+
+\vspace{-0.25in}
+\subsection{Signal Path}
+\vspace{-6pt}
+
+The signal path inherits directly from PAPER's legacy,
+including the feed,  low noise amplifier, coaxial cable, and receiver.  The
+design of the collecting element was influenced by several criteria. It must deliver (1) a
+clean, smooth primary beam pattern in both polarizations with minimal
+sidelobe response, (2) a tightly bounded feed-point impedance of
+reasonable value, (3) a rugged structure that is physically and electrically stable
+over time, (4) manufacturability. For the feed, we use a dual-polarized
+version of the sleeved dipole design: a twin-resonance structure
+consisting of a pair of crossed dipoles made from copper tubing
+located between a pair of thin aluminum disks \citep{parsons_et_al2010} as
+shown in Fig. \ref{fig:element}.
+%\begin{figure}[!ht]\centering
+%
+%\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{plots/new_antenna_closeup.jpg}
+		\caption{Photograph of the PAPER antenna positioned above the trough reflector.}
+		\label{fig:element}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/recv_node.png}
+		\caption{Receiver modules in a node refrigerator.}
+		\label{fig:recv_node} 
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.3\textwidth}
+		\includegraphics[width=0.8\textwidth]{plots/Engineering/digital.png}
+		\caption{Digital equipment (ADC/correlator) in container.}
+		\label{fig:digital} 
+	\end{subfigure}
+	\caption{Photographs of existing instrument components to be used.}
+\end{figure}
+
+PAPER's front-end amplifier has a low noise figure with
+moderate gain, high dynamic range to tolerate RFI, unconditional
+stability to ensure oscillation-free operation, well-matched impedance
+to both the antenna and cable, well-understood temperature
+dependence, a mechanically rugged mechanical design, low
+susceptibility to electrostatic discharge, low power consumption, and
+low fabrication cost.  It is housed in a metal enclosure affixed to
+the antenna to form a very rugged, reliable, low-cost unit with
+excellent RF performance \citep{parsons_et_al2010}.
+
+The signal is transported to the central container via relatively
+inexpensive RG-6 75 Ohm coaxial cables having a polyethylene jacket.
+These cables are not buried and so were chosen to be very rugged,
+allowing
+PAPER to explore different array configurations by moving antenna elements.
+Dual-channel receiver boards (Fig. \ref{fig:recv_node}) add
+amplification and a band-limiting RF filter after cable transmission
+into the central hut.  Receiver boards are housed in a special
+enclosure with RFI shielding to prevent self-interference from the
+digital correlator and feedback to the antennas.
+HERA-61 also reuses the existing 128-input PAPER correlator (Fig. \ref{fig:digital})
+in the existing container.
+
+\vspace{-0.25in}
+\subsection{Prototype Construction and Testing}
+\vspace{-6pt}
+
+One prototype of the antenna has been constructed near the Radio Astronomy Lab in California. 
+This prototype serves as an important first construction test-bed and is currently being used to do 
+initial network analyzer measurements (Fig. \ref{fig:heracles}).
+This proposal calls for the construction of two additional prototype dishes alongside
+the PAPER array deployed at the NRAO site near Green Bank, WV.
+These dishes will be tested
+with a network analyzer in situ, and will be cross-correlated with PAPER elements using
+the correlator currently deployed on site, in order to measure
+the element performance and optimize the design.  The goal of this effort is to ensure
+that all signal reflections
+are attenuated by a factor of -60 dB by the time that they are capable of entering the signal path
+at a delays greater than 50 ns.  While signal reflections will be inevitable with such a dish
+design, the quality of the impedance match at the feed,
+the presence of structures that reduces resonances between
+the feed and the dish, and control of the focal height of the parabola are all aspects
+of the design that can
+be manipulated to help achieve this specification, ensuring that reionization modes above
+$k_\parallel=0.1h {\rm Mpc}^{-1}$ are not dominated by foreground contamination.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=\textwidth]{plots/heracles.png}
+		\caption{Picture of the existing construction prototype in California.}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/heraclesNA.png}
+		\caption{Initial reflection measurements from the prototype.}
+	\end{subfigure}
+	\caption{Prototype antenna and initial results.}
+	\label{fig:heracles}
+\end{figure}
+
+These additional prototypes will be important to finalize the specific construction techniques to be 
+used in the final antenna construction contract in South Africa.
+
+\vspace{-0.25in}
+\subsection{Array Construction}
+\vspace{-6pt}
+Construction of HERA-61 consists of five primary steps: 
+\begin{enumerate}[noitemsep,nolistsep]
+\item site preparation and surveying 
+\item pole installation by contracted labor with specialized utility pole equipment 
+\item hub placement and height adjustment
+\item remainder of construction of each element, following description above, using local labor 
+\item moving the feeds and cables from the existing PAPER dipoles to new ground screens by project staff
+\end{enumerate}
+
+The contractors and immediate supervisors will be based in South Africa.  Supervision staff 
+will be part of the extensive support infrastructure in place at the site to support South African SKA activities.
+As mentioned above, the tall poles are shared amongst the antennas in the tight configuration.  
+Therefore, 61 antennas requires only 75 poles rather than 61x3=183.  These are standard telephone/power 
+utility poles and a great deal of  expertise and infrastructure exists to install these in remote settings.  
+Figure \ref{fig:config} shows the configuration of the 61 antennas including the tall pole locations and \ref{fig:optics} shows a cross-section of an element.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.35\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/hex_61.png}
+		\caption{Configuration of the 61-element array.  Note the rectangular container to scale on right.}
+		\label{fig:config}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.6\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/optics.png}
+		\caption{Cross-section and optics of an element.}
+		\label{fig:optics}
+	\end{subfigure}
+	\caption{Configuration and optics.}
+	\label{fig:config_optics}
+\end{figure}
+
+Except for two custom metal assemblies, the remainder of the construction materials are standard wood, 
+metal and PVC parts.  The two custom assemblies are simple small welded metal assemblies for the end of 
+rim support pieces (quantity 12) and the feed and feed backplane (quantity 1).  The PVC and wood sub-assemblies 
+will be constructed off-site where material and labor is readily accessible and shipped to site.  The 
+construction of these sub-assemblies, pre-cut wood and PVC, and wire mesh pieces will be done on-site under 
+contract.  Project staff will then move over the existing PAPER feeds and cables and commission the array.  
+
+\vspace{-0.25in}
+\subsection{Commissioning}
+\vspace{-6pt}
+Note that since all of the electronics are already deployed and working, commissioning will consist of verifying the existing performance but within the new electromagnetic environment presented by the new ground screens.  Below is
+an explicit list of commissioning tasks:
+\begin{itemize}[noitemsep,nolistsep]
+\item equalization of signal levels and repairing of reflections and misbehaving signal paths due to cabling using auto-correlation data 
+\item measure system temperature from raw level of auto-correlation data as it varies diurnally.
+\item measure relative width of primary beam using source transits for XX and YY polarizations 
+\item use established sky model from PAPER and correlation with known PAPER feeds to 
+determine absolute gain as a function of direction for new dishes. 
+\item use redundancy to solve for phase and gain calibration parameters, measure stability of parameters versus 
+time 
+\item detailed characterization of cross-coupling and reflections between antennas using cross-correlation data and imaging 
+\item fold calibrated data on the basis of redundancy and multiple observing days to obtain a high-sensitivity delay spectrum capable of verifying absence of low-level reflections at higher delays. 
+\end{itemize}
+
+%%%%%%%%%%%%MRI VERSION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection{Element and Configuration}
-i. compact hex grid array
-% de Boer
+The element diameter of 14 meters is an optimization of cost, systematics-reduction, and the delay-contamination specification.  Figure \ref{fig:diameterOpt} shows the costing curve for a fixed sensitivity (normalized to 14 meters) 
+along with arrows indicating directions of increasing systematics and increasing delay-space contamination.  The 14-m
+chosen diameter is in the ``allowed'' window near the cost minimum, but biased towards smaller elements to increase
+the field-of-view.  Figure \ref{fig:beampattern} shows the beampattern.
+
+\begin{figure}[!ht]
+	\centering
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/nvsd.png}
+		\label{fig:diameterOpt}
+		\caption{Cost curve for dish diameter at a fixed sensitivity.  The arrows indicate the regions of 
+				increasing systematics and delay-space contamination.}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/focalEff.png}
+		\label{fig:focalEff}
+		\caption{Overall efficiency for elements of various diameter vs focal length.  The delay 
+				contamination specification is $f<5$m.}
+	\end{subfigure}
+	\label{fig:elementcharacteristics}
+	\caption{Variational analysis data for the element.}
+\end{figure}
+
+Figure \ref{fig:configuration} shows the layout of the array. 
+
+
 
 \subsubsection{Analog System}
 ii. 14m elements + broad band (active) dipole feed
@@ -425,7 +833,7 @@ generally viewed as a solved problem.  CASPER hardware evolves as groups develop
 techniques which get shared amongst the community.
 
 iii. Signal transport: RF to nodes, digitize at nodes. fiber to correlator. 
-% Wirtheimer?
+% Werthimer?
 
 iv. Digital stuff: emphasize 'solved problem'. Casper work. block diagrams...
 % Parsons
