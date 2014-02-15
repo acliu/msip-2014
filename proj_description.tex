@@ -457,13 +457,13 @@ in more detail.
 \subsection{Instrument Design}
 \vspace{-6pt}
 \label{InstDes}
-HERA has a very straightforward insrument design.  The element
+The HERA instrument design is very straightforward.  The element
 itself is a fixed zenith-pointing 14-meter segmented prime-focus paraboloid with a high screen
 to minimize cross-talk between elements (which are spaced 14.3 meters on a
 hexagonal grid.   The $f/D$ of
 the paraboloid is 0.32, so that the focal length, $f$, is less than 5 meters to meet the 
 standing wave specification at the delays of interest of more than 60 dB of attenuation at delays 
-greater than 15 ns.
+greater than 50 ns.
 
 
 The active feed sends back the entire dual-polarization analog bandwidth on standard
@@ -472,7 +472,7 @@ about 15 antennas.  This cable length is kept short (35-m) to keep any standing
 wave contamination outside of the delay-space of interest for power spectrum
 measurements.  The node amplifies, filters, digitizes and transmits the signal data stream
 back to the central processing location (the Karoo Array Processing Building - KAPB).
-Figure \ref{fig:blockDiagram} shows the system.
+Figure \ref{fig:blockDiagram} shows a block diagram of the system.
 
 \begin{figure}[h]
 \centering
@@ -482,60 +482,64 @@ Figure \ref{fig:blockDiagram} shows the system.
 \end{figure}
 
 \vspace{-0.25in}
-\subsection{Parabolic Dish Element}
+\subsubsection{Element and Configuration}
 \vspace{-6pt}
 
-The element is a fixed zenith-pointed mount, which dramatically simplifies design and operation.  
-Cost is a key design constraint for this experiment, which has components for construction materials, 
-assembly in a remote area, and operation over its lifetime.  As an experiment, the design lifetime is 5 years, 
-which helps constrain costs relative to a long-lived facility.  For a field-deployed instrument, one needs to 
-define limited well-constrained reference points for accuracy in construction.  The proper installation procedure 
-is therefore critical in construction.  The elements are also nearly abutting one another, which allows for sharing 
-of physical support infrastructure.
 
-Many competing factors set the area of the collecting element.  Among them are
-sensitivity, cost, minimum baseline, efficiency and delay values of internal reflections.
-Using the derived sensitivity for a redundant array \citep{parsons_et_al2012a} 
-and a reasonably complete costing model, one can compute the cost/performance for a 
-fixed sensitivity as a function of diameter.  
-Figure \ref{fig:nvsd} shows 
-this function normalized to a 14-meter antenna, indicating a fairly broad minimum 
-extending from about 14 to 22 meters.  Within this range, smaller elements are
-preferred because of increased field of view and lower timescales for systematics
-arising from reflections. 
+The element is a fixed zenith-pointed mount, which dramatically simplifies design and
+operation. Cost is a key design constraint for this experiment, which has components
+for construction materials, assembly in a remote area, and operation over its
+lifetime. As an experiment, the design lifetime is 6 years, which helps constrain
+costs relative to a long-lived facility. For a field-deployed instrument, one needs
+to define limited well-constrained reference points for accuracy in construction. The
+proper installation procedure is therefore critical in construction. The elements are
+also nearly abutting one another, which allows for sharing of physical support
+infrastructure.
+
+Given the delay-spectrum technique developed for 21-cm EoR science, it is important
+to ensure that internal reflections within the antenna structure are at a low enough
+level at delay values where the array has sensitivity to the EOR power spectrum. That
+is, we don't want reflections that will modulate foregrounds to corrupt scales
+corresponding to the desired $\kpar$, scattering foreground power into the EoR
+window. Recent work characterizing foregrounds suggests that the spectral structure
+of foregrounds observed with baseline separations of $8\lambda \approx 15$m are
+well-behaved to current limits \citep{parsons_et_al2013}. This sets the upper limit
+for the dish diameter at about 15m. However, this requirement also sets restrictions
+on the focal length of the dish since the primary resonances in the dish will be the
+standing waves that arise between the primary reflector and the antenna feed, caused
+by imperfect impedance matches of the feed electronics and free space, as well as by
+the presence of any metallic structure in the area.
+
+Many competing factors set the area of the collecting element. Among them are
+sensitivity, cost, minimum baseline, efficiency and delay values of internal
+reflections, as just mentioned. Using the derived sensitivity for a redundant array
+\citep{parsons_et_al2012a} and a reasonably complete costing model, one can compute
+the cost/performance for a fixed sensitivity as a function of diameter. Figure
+\ref{fig:nvsd} shows this function normalized to a 14-meter antenna, indicating a
+fairly broad minimum extending from about 14 to 22 meters. Arrows indicate the
+direction of increasing systematics and delay-space contamination. Within this range,
+smaller elements are preferred because of increased field of view and lower
+timescales for delay-space contamination arising from reflections.
 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=0.9\textwidth]{plots/Engineering/nvsd.png}
-		\caption{Costing model for a fixed sensitivity and varying the diameter.}
+		\caption{Costing model for a fixed sensitivity and varying the diameter.   The arrows indicate the regions of 
+				increasing systematics and delay-space contamination.}
 		\label{fig:nvsd} 
 	\end{subfigure}
 	\quad
 	\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=0.8\textwidth]{plots/Engineering/focalEff.png}
-		\caption{Analytical model efficiency of a parabolic element as a function of focal height and diameter.}
+		\caption{Analytical model efficiency of a parabolic element as a function of focal height and diameter.   The delay 
+				contamination specification is $f<5$m.}
 		\label{fig:disheffic}
 	\end{subfigure}
-	\caption{Cost and performance plots to determine diameter.}
+	\caption{Cost and performance variational analysis data for the element.}
 \end{figure}
 
-Given the delay-spectrum technique developed for 21-cm EoR science, it is important 
-to ensure that internal reflections within the antenna structure
-are at a low enough level at delay values where the array has sensitivity to the EOR power spectrum.  
-That is, we don't want reflections that will modulate foregrounds to corrupt scales corresponding to 
-the desired $\kpar$, scattering foreground power into the EoR window.  Recent work characterizing 
-foregrounds suggests that the spectral structure of foregrounds observed with
-baseline separations of $8\lambda \approx 15$m are well-behaved to current limits \citep{parsons_et_al2013}. 
-This sets the upper limit for the dish diameter at about
-15m.  However, this requirement also sets restrictions on the focal length of
-the dish since the primary resonances in the dish will be the standing waves
-that arise between the primary reflector and the antenna feed, caused by
-imperfect impedance matches of the feed electronics and free space, as well as by the presence of any 
-metallic structure in the area.
-
 % FOLLOWING SEEMS TOO DETAILED FOR A PROPOSAL
-
 %To distinguish between measured sky delays and instrumental-induced delays at a required threshold ($R_T$) dB, 
 %we need sufficient attenuation of the reflected signals at a given focal length ($f$) at a specified delay ($\tau_{d}$).  Assuming a conservative simple model that the magnitude of the reflection is attenuated by $A$ dB at each reflection 
 %we see that for a delay length limit of $\delta_{d}=c\tau_{d}$ and focal length $f$,  the required focal length is
@@ -549,7 +553,8 @@ metallic structure in the area.
 %corresponding to the time it takes travel 15m and a net attenuation of 20 dB per reflection, 
 %we find that the focal length should be less than about 5 m.  Free-space loss effects would 
 %increase that value, loosening the constraint.
-%
+%DETAILEND
+
 To maximize sensitivity, we wish to maximize the efficiency of the
 HERA element, while still thresholding the delays at which reflections couple
 back into the feeds. The design for the proposed HERA element is currently set
@@ -624,25 +629,23 @@ down and out to the analog-to-digital converters and correlator.
 To minimize cross-talk, metal screens are strung between every pole/post, which go to the level of the feed.  
 The dishes have a rim-to-rim spacing of 30cm to allow the screen to be slightly angled to minimize standing waves.
 
+====> There is nothing on the configuration yet.
 
 \vspace{-0.25in}
-\subsection{Signal Path}
+\subsubsection{Signal Path}
 \vspace{-6pt}
+The signal path will utilize the front-end and post-amplifier gain modules directly
+from PAPER, although additional studies will be carried out to improve the feed
+response below 100 MHz. The amplifier/baluns and post-amplifier modules already have
+the ability to work over an extended lower end. The front-end amplifier has a low
+noise figure with moderate gain, high dynamic range to tolerate RFI, unconditional
+stability to ensure oscillation-free operation, well-matched impedance to both the
+antenna and cable, well-understood temperature dependence, a mechanically rugged
+mechanical design, low susceptibility to electrostatic discharge, low power
+consumption, and low fabrication cost. It is housed in a metal enclosure affixed to
+the antenna to form a very rugged, reliable, low-cost unit with excellent RF
+performance \citep{parsons_et_al2010}.
 
-The signal path inherits directly from PAPER's legacy,
-including the feed,  low noise amplifier, coaxial cable, and receiver.  The
-design of the collecting element was influenced by several criteria. It must deliver (1) a
-clean, smooth primary beam pattern in both polarizations with minimal
-sidelobe response, (2) a tightly bounded feed-point impedance of
-reasonable value, (3) a rugged structure that is physically and electrically stable
-over time, (4) manufacturability. For the feed, we use a dual-polarized
-version of the sleeved dipole design: a twin-resonance structure
-consisting of a pair of crossed dipoles made from copper tubing
-located between a pair of thin aluminum disks \citep{parsons_et_al2010} as
-shown in Fig. \ref{fig:element}.
-%\begin{figure}[!ht]\centering
-%
-%\end{figure}
 
 \begin{figure}[h]
 	\centering
@@ -666,28 +669,16 @@ shown in Fig. \ref{fig:element}.
 	\caption{Photographs of existing instrument components to be used.}
 \end{figure}
 
-PAPER's front-end amplifier has a low noise figure with
-moderate gain, high dynamic range to tolerate RFI, unconditional
-stability to ensure oscillation-free operation, well-matched impedance
-to both the antenna and cable, well-understood temperature
-dependence, a mechanically rugged mechanical design, low
-susceptibility to electrostatic discharge, low power consumption, and
-low fabrication cost.  It is housed in a metal enclosure affixed to
-the antenna to form a very rugged, reliable, low-cost unit with
-excellent RF performance \citep{parsons_et_al2010}.
+The signal is transported to the node via a 35-meter run of 50 $\Omega$ coaxial
+cables. It will terminate on a bulkhead plate on the face of the RFI-tight and
+air-conditioned node. Inside, dual-channel post-amplifier modules (PAMs) (Fig.
+\ref{fig:recv_node}) amplify and band-limit the signal. Inside the RFI-tight node,
+the PAMs themselves are housed in RF-shielded boxes.
 
-The signal is transported to the central container via relatively
-inexpensive RG-6 75 Ohm coaxial cables having a polyethylene jacket.
-These cables are not buried and so were chosen to be very rugged,
-allowing
-PAPER to explore different array configurations by moving antenna elements.
-Dual-channel receiver boards (Fig. \ref{fig:recv_node}) add
-amplification and a band-limiting RF filter after cable transmission
-into the central hut.  Receiver boards are housed in a special
-enclosure with RFI shielding to prevent self-interference from the
-digital correlator and feedback to the antennas.
-HERA-61 also reuses the existing 128-input PAPER correlator (Fig. \ref{fig:digital})
-in the existing container.
+A new board called the Smart Network ADC Processor (SNAP) board, to be incorporated 
+into the CASPER suite of hardware and firmware, is currently in layout at NRAO.  SNAP
+takes the output from the PAMs, digitizes and channelizes it before putting it on optical fiber
+for transmission to the Karoo Array Processing Building.
 
 \vspace{-0.25in}
 \subsection{Prototype Construction and Testing}
@@ -793,32 +784,6 @@ time
 %%%%%%%%%%%%MRI VERSION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Element and Configuration}
-The element diameter of 14 meters is an optimization of cost, systematics-reduction, and the delay-contamination specification.  Figure \ref{fig:diameterOpt} shows the costing curve for a fixed sensitivity (normalized to 14 meters) 
-along with arrows indicating directions of increasing systematics and increasing delay-space contamination.  The 14-m
-chosen diameter is in the ``allowed'' window near the cost minimum, but biased towards smaller elements to increase
-the field-of-view.  Figure \ref{fig:beampattern} shows the beampattern.
-
-\begin{figure}[!ht]
-	\centering
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[width=\textwidth]{plots/Engineering/nvsd.png}
-		\label{fig:diameterOpt}
-		\caption{Cost curve for dish diameter at a fixed sensitivity.  The arrows indicate the regions of 
-				increasing systematics and delay-space contamination.}
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[width=\textwidth]{plots/Engineering/focalEff.png}
-		\label{fig:focalEff}
-		\caption{Overall efficiency for elements of various diameter vs focal length.  The delay 
-				contamination specification is $f<5$m.}
-	\end{subfigure}
-	\label{fig:elementcharacteristics}
-	\caption{Variational analysis data for the element.}
-\end{figure}
-
-Figure \ref{fig:configuration} shows the layout of the array. 
 
 
 
