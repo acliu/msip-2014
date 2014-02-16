@@ -307,20 +307,123 @@ d. note: xcorr further mitigates continuum systematics
 e. Anscillary science with PAPER 128: transients, solar 
 % de Boer
 
-\subsection{Where we are right now: PAPER, MWA}  % 2 pages
+%\subsection{Where we are right now: PAPER, MWA}  % 2 pages
+\section{Foregrounds \& Lessons Learned from PAPER and MWA} 
+% ARP: I think i prefer how the preproposal fused all of this in a section.  Very hard to talk about only 1 aspect at a time
 
-i. describe arrays, state design driven by new understandings as delineated below (Fig)
-% Parsons, Bowman
+The key challenge of 21-cm cosmological reionization experiments is 
+balancing the stringent sensitivity requirements needed to detect the faint 21cm reionization signal
+with the need to suppress
+foregrounds (see Figure~\ref{fig:twoFGViews}, left) that are $\sim$5 orders of magnitude brighter.
+A major breakthrough in 21-cm cosmology---what enables us to propose HERA now---is 
+the discovery of how 
+instrumentation and analysis can exploit the 
+spectral smoothness of foregrounds
+to open up an `EoR Window'.  
+% XXX better phrase for "EoR window"?
+These advances have been used to suppress foreground emission by 4
+orders of magnitude in PAPER observations,
+with results that begin ruling out certain reionization scenarios
+\citep{parsons_et_al2013}.
 
-ii. Using new techniqes, current best limits  (Fig)
-% Parsons, Morales
+Observations for 21-cm cosmology experiments are best understood in
+Fourier space.  Because the \HI emission is a
+narrow spectral line, the observed frequency of the emission can be mapped to
+redshift or line-of-sight distance to provide an observed volume $\{x,y,z\}$ in
+comoving Mpc. This observed volume is Fourier transformed into a 3D
+wavenumber cube $\k\equiv\{k_{x}, k_{y}, k_{z}\}$. For graphical simplicity, the angular
+wavenumbers are typically averaged ($\{k_{x},k_{y}\}\rightarrow\kperp$) to
+produce line-of-sight wavenumber $\kpar$ vs.\ angular $\kperp$. 
+%Interferometric measurements are of the angular Fourier modes in many
+%frequency channels (visibilities), so in the absence of widefield effects only
+%a Fourier transform in the frequency direction and a coordinate mapping is
+%needed to obtain the 3D $\{k_{x}, k_{y}, k_{z}\}$ measurements
+%\citep{morales_hewitt2004}.) 
+The expected statistical isotropy of the signal allows measurements in $\k$-space to be
+squared and averaged in shells to produce the spherical power spectrum
+shown in Figure \ref{fig:eor_pspec}.
+
+Recently, the MWA and PAPER teams have made substantial advances in understanding how smooth-spectrum 
+foreground emission interacts with the instrument to produce the EoR Window.
+Through a concerted theoretical and observational campaign
+\citep{morales_et_al2012,parsons_et_al2012b,vedantham_2012,Datta_2010,hazelton_et_al2013,pober_et_al2013,parsons_et_al2013,dillon_et_al2013b}
+we now understand that foreground contamination can be confined to a `wedge' in
+$\kpar$ vs.\ $\kperp$, as demonstrated by the PAPER observations in the
+righthand panel of of Figure \ref{fig:twoFGViews}. This wedge is the result of
+the smooth spectrum foregrounds 
+%XXX SF: I would make this more obvious.  I recommend replacing this sentence with something like (with my naive understanding): "This sharp division occurs because foregrounds have smooth spectra (which cause the sources to manifest at small $\kpar$), some of which is projected into the transverse direction ($\kperp$) through the instrument's well-understood chromatic properties."
+(low $\kpar$) interacting with the inherent
+chromaticity of an interferometer. 
+This leaves the region above the wedge free from 
+foreground emission---a window through which we can observe the EoR.
+
+Observations with PAPER and the MWA have confirmed the presence of the EoR Window
+\citep{pober_et_al2013,dillon_et_al2013b}, and recent PAPER observations
+have measured the foreground suppression within it
+to be at least 4 orders of magnitude 
+(8 in mK$^2$;
+\citealt{parsons_et_al2013}).
+This is a major advance---we can
+suppress foregrounds and we understand the instrumental and analysis
+characteristics needed to perform the EoR measurement.
+
+Understanding the origin of the EoR Window has enabled us to improve our
+instrumentation and analysis 
+tools to precisely measure the 21-cm
+signal. HERA's antennas (see \S \ref{PDsec}) are optimized 
+to yield $\sim$20
+times the sensitivity per element (relative to PAPER) without substantially degrading
+foreground isolation,
+and we have developed new imaging and
+analysis techniques to suppress polarized source contamination to below the EoR
+signal within the window \citep{bernardi_2013_trunc,moore_et_al2013}.
+Together, these advances provide the necessary foreground suppression and
+a game-changing level of sensitivity at a fraction of the
+cost anticipated in the HERA roadmap.
+
+\begin{figure}[t] \centering
+%\includegraphics[width=6.5in]{plots/MWApretty.png} \includegraphics[width=3.6
+%in]{plots/MWApretty.png}
+\includegraphics[height=2.3in]{plots/MWApretty_crop.png} 
+%\includegraphics[width=2.4 in]{plots/wedge_tall.png}
+\includegraphics[height=2.3in]{plots/wedge_tall_wide.png} \caption{\small Left:
+Foregrounds imaged on the MWA using FHD software.
+This image spans $\sim$$30^{\circ}$ and
+includes point-source and diffuse emission (the Vela and Puppis SNRs are in the
+bottom-right). Imaging methods provide a key capability for reducing
+polarization leakage and foreground systematics.  
+Right: Foreground contamination in line-of-sight $\kpar$ vs.\ angular $\kperp$
+as observed using PAPER \citep{pober_et_al2013}.
+Foregrounds are bright within a ``wedge" (lower right) and then fall 
+precipitously in the ``EoR window" (blue/black 
+region), where measurements are thermal-noise limited.  The wedge's location can 
+be estimated analytically (solid black line), but the foregrounds leak out by a margin 
+dictated by the chromatic properties of both the foregrounds and the instrument.
+%Bright foregrounds occupy
+%a wedge (lower right) that extends beyond a fundamental analytic limit
+%(solid black) by a margin dictated by the chromatic properties of the foregrounds
+%and the instrument, and then falls precipitously
+%in the EoR Window (blue
+%region), where measurements are currently thermal noise limited. 
+This insight has led to the
+first meaningful constraints on EoR via 21-cm emission
+\citep{parsons_et_al2013}.
+}\label{fig:twoFGViews} \end{figure}
+
+
+
+%i. describe arrays, state design driven by new understandings as delineated below (Fig)
+% ARP: check, above % Parsons, Bowman
+
+%ii. Using new techniqes, current best limits  (Fig)
+% ARP: check, above % Parsons, Morales
 
 iii. what will happen in next 2 years: hopefully detection, but no more
 
 %iv. LOFAR/MWA/PAPER 
 % Carilli
-% XXX ARP: suggest mentioning interplay of foregrounds and sensitivty
-% such that sensitivity to detect signal is dependent on amount of success in foreground removal 
+% XXX ARP: I think paragraph below should really emphasize concrete limitations of 
+% current experiments, and describe how HERA blows this wide open
 Three reionization path-finder array experiments are currently
 operational: LOFAR, MWA and PAPER. All three are designed to have the
 sensitivity to make the first statistical detection of the neutral
@@ -348,6 +451,7 @@ v. Move 'analysis' stuff here?
 \subsection{Foregrounds}  % 1.5pages
 % Parsons, Morales
 
+
 i. relative intensities (Fig: Continuum from MWA)
 
 ii. Details on Delay Spectrum approach
@@ -374,6 +478,9 @@ i. Interference: Karoo RFI plots  FIG
 
 i. Polarization 
 % Moore, Aguirre
+% XXX ARP: I'm worried about this section.  In my mind, this is the one risk we
+% haven't truly retired yet.  We need to tread very carefuly if we bring this
+% up in depth.
 
 D. Ionosphere: 
 
@@ -1006,7 +1113,6 @@ D. Casper open source: good example to build from
 \section{VI. Summary: why us and why now?} % 0.5 pages
 % Parsons
 
-that's obvious
 
 
 \clearpage
