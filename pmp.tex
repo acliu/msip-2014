@@ -6,6 +6,9 @@
 \usepackage{mdwlist}
 \usepackage{natbib}
 \usepackage{natbibspacing}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
 \setlength{\bibspacing}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
@@ -142,7 +145,14 @@ may vary, but broad collaboration acknowledgement is encouraged, and the list sh
 be discussed prior to submission.
 
 \section{Management}
-Figure \ref{fig:org} also shows the management structure.   A Project Manager has
+The project strives to get the right light level of management over a relatively tight-knit
+collaboration.  Most of the construction authority and budget is invested in one location
+with oversight by the key senior members of the collaboration.  The analysis and 
+scientific outcomes are widely spread over the collaboration and are defined at a 
+concrete level to assess progress.  General management principles are derived from
+PMBOK.
+
+Figure \ref{fig:org} shows the management structure.   A Project Manager has
 overall responsibility for planning and tracking to achieve the agreed upon
 milestones and budget. The Project Manager will brief the Executive Board at each
 meeting to summarize the state of the project.  David DeBoer from Berkeley will serve
@@ -179,15 +189,15 @@ a mechanism to ensure more ``eyes'' on the overall system.
 
 \subsection{Management Tools}
 The architecture, requirements/specifications, interfaces, budget, milestones, work breakdown structure
-(WBS) and system documenation are in a common shared repository, along with collaboration
-documentation.  This shared repository is referred to as the {\tt Project Book}.  Architecture, requirements/ 
-specifications, interface and milestone information reside in a \LaTeX-based database with full traceability
-and python and shell scripts for flow-down throughout the documentation.  Budget and WBS are in Microsoft
+(WBS), risk register and system documenation are in a common shared repository, along with collaboration
+documentation.  This shared repository is referred to as the {\tt ProjectBook}.  Architecture, requirements/ 
+specifications, interface, risk and milestone information reside in a \LaTeX-based database with full traceability
+and python and shell scripts for flow-down throughout the documentation in the {\tt ProjectBook}.  Budget and WBS are in Microsoft
 Excel and Microsoft Project with python script readers for flow-down throughout the documentation.
 
 An executive script ensures that all scripts are executed and up-to-date formatted \LaTeX pdf documentation
 files are produced.  These include auto-generated architecture, requirement/ specification, 
-interface control, and milestone documentation, budget and WBS summary documents, as well as
+interface control, risk register and milestone documentation, budget and WBS summary documents, as well as
 flow-down files into the architecture for traceability. 
 In addition to the auto-generated reports, System and  Component Owners write the narrative 
 documentation referencing the database items as variables ({\em e.g.} requirements, interfaces, etc).
@@ -196,7 +206,7 @@ Additional scripts may be written as needed to access the system for customized 
 Frequent telecons with modern conferencing systems are absolutely essential collaboration tools, 
 as discussed above, and liberal use of these systems will continued to be applied.
 
-The Project Book remains the definitive record, but use of a wiki for posting material and hosting
+The {\tt ProjectBook} remains the definitive record, but use of a wiki for posting material and hosting
 discussions etc is an important component.  The project has full access to wiki tools, and has been
 using collaborative wikis in the ongoing collaboration.  The group has a public web-site at http://reionization.org, 
 in addition to PAPER and MWA project web-site.
@@ -209,14 +219,16 @@ Financial tracking is done via the Berkeley Financial System (BFS), supplemented
 
 Table \ref{tab:softwareTools} lists the primary software tools (management and technical).  Schematics:  visio, technical
 \begin{table}[h]
+\centering
 \label{tab:softwareTools}
 \caption{Project Software Tools}
 \begin{tabular}{| p{1in} | p{5in} |}\hline
 \textbf{Category} & \textbf{Tools (primary is in bold font)} \\ \hline
 Documentation & \textbf{\LaTeX}, Word, {\tt ProjectBook}, pdf \\ \hline
 File sharing & \textbf{Github}, googledocs \\ \hline
-Scheduling & \textbf{MS Project}, ganttProject \\ \hline
-Finance & \textbf{BFS}, Excel \\ \hline
+Scheduling & \textbf{MS Project}, {\tt ProjectBook} (milestones), ganttProject \\ \hline
+Risk register & {\tt ProjectBook}\\ \hline
+Finance & \textbf{BFS}, Excel, {\tt ProjectBook} \\ \hline
 Scripting & \textbf{Python}, shell \\ \hline
 Technical drawings & autocad (Draftsight), Autodesk Inventor \\ \hline
 Diagrams & \textbf{Visio}, Omnigraffle \\ \hline
@@ -225,6 +237,7 @@ Diagrams & \textbf{Visio}, Omnigraffle \\ \hline
 
 
 \subsection{Change Control}
+\label{sec:changecontrol}
 Change requests are initiated by an e-mail to the Project Manager indicating the proposed change
 and reasons why it is necessary.  Changes may be of the Architecture, Scope, Requirements/ Specifications
 Milestones and/or Interface as documented in the Project Book.  The Project Manager will investigate the 
@@ -242,15 +255,140 @@ In the event that consensus is not reached, the Project Director remains the fin
 Director may overrule consensus by approval of the Executive Board.  If accepted, the Project Manager 
 will institute the change and communicate appropriately throughout the project.
 
-\section{Construction}
-plan, schedule, contract summary, milestone summary
+\section{Array Construction}
+\label{sec:construction}
+The primary construction location is in the South African Karoo Astronomy Reserve, where PAPER has been deployed
+and operated since 2009.  The South African SKA organization (``SKA-SA'') is a key partner and has a great deal of
+infrastructure and support on-site and for the site and a close working relationship exists between the partners.
+
+The project is phased and designed to maximize off-site sub-assemblies, which are then shipped to site for subsequent
+installation.  The on-site installation has an overall On-Site Manager (which rotates among a small number of expert
+staff) supervising two 6-8 member crews, each with a crew chief.  Primary sub-assemblies are the hub casts, pole/post end-caps 
+(which hold the surface support spars and rim pieces and contain locational markers), PVC support sub-assemblies 
+for the surface, feed, feed-backplane, central cone, node enclosure.XXX
+
+\begin{table}[tbh]
+\centering
+\label{tab:subassycontracts}
+\caption{Primary sub-assembly contracts}
+\begin{tabular}{| p{1.4in} | p{1.4in} | p{1.4in} | p{1.4in} |}\hline
+\textbf{Element} & \textbf{Analog} & \textbf{Digital} & \textbf{Node} \\ \hline
+%Element
+hub casts, pole/post endcaps, PVC surface support, feed, feed backplane, central cone &
+%Analog
+LNA/balun modules, post-amplifier modules, RF cables &
+%Digital
+SNAP boards &
+%Node
+Enclosure, power handling \\ \hline
+\end{tabular}
+\end{table}
+
+The ordered list of installation is given below. A number in square brackets denotes
+a separate contract (or sub-contract), while a single asterisk denotes work that may
+be done in parallel by the two teams. An additional team (or teams) may be added to
+pace the work, primarily in the 127-to-352 phase (when there will also be more
+experiences members of the team who may step up as crew chiefs). Double asterisks are
+activities done with US experts supported by local staff. The first installations
+will also involve US-based experts to train the on-site staff, particularly the crew
+chiefs.
+\begin{enumerate}[itemsep=-3pt]
+\item Sub-assembly contracts [1]
+\item Grounds preparation and power/fiber reticulation. [2]
+\item Pole installation [3]
+\item Hub installation using centering and hub jigs  [*]
+\item Rim/post installation using leveling jig and Total Station [*]
+\item Surface support installation [*]
+\item Mesh installation [*]
+\item Node enclosure [*]
+\item Feed installation [**]
+\item Node electronics [**]
+\item KAPB electronics [**]
+\item Commissioning [**]
+\end{enumerate}
+
+The overall schedule and milestones are summarized in Section \ref{sec:schedule}.
+
 
 \section{Analysis Management}
+\label{sec:analysis}
+One of the absolute key deliverables is an analysis pipeline that can yield the science.  This is the primary area of
+research and the greatest scientific risk.
 
-\section{Budget Overview}
+\section{Budget Summary}
+\label{sec:budget}
+A thorough ``bottoms-up'' costing exercise has been underway for sometime. The equipment
+costing is informed by the construction of a full-size prototype, which is currently
+being completed and is under test as features are added. It is informed by a costing
+done by the South African developers based on actuals at the Karoo site. It is
+informed by the extensive design and cost experience of CASPER hardware and the
+previous PAPER and MWA deployments, which have very similar analog and digital components.
+Included in the equipment cost is labor to produce sub-assemblies and install on-site.
+The equipment budget is summarized in Table \ref{tab:budgetsummary}
+\input{otherdocs/cost_pygen_1402181730}
 
-\section{WBS Overview}
+The staffing exercise has also been underway for sometime and is informed by a robust
+``bottoms-up'' work breakdown by task and by institution.
+\input{otherdocs/institutional_pygen_1402181730}
+
+
+\section{Schedule Summary}
+\label{sec:schedule}
+The schedule is primarily tracked by setting a fairly large number of high-level milestones that get tracked in the {\tt ProjectBook}.  These map to staff in a
+work breakdown schedule, which is tracked in MS Project.  The high-level milestones are listed below.
+
+\begin{itemize}[itemsep=-4pt,parsep=-3pt]
+\item Year 1:  Infrastructure, Prototyping, Contract Preparation (FY 2015).
+\begin{itemize}[itemsep=-4pt]
+\item Install basic infrastructure (ground leveling, power, network connectivity) for new infrastructure
+\item Incorporate existing PAPER-128 antennas, correlator, and housing container. 
+\item Install additional prototypes in Green Bank and test.
+\item Define final design package for element construction
+\item Start developing improved HERA baluns, receivers, feeds, nodes, and in-situ antenna calibration system. 
+\item Continue delay-spectrum, FHD, and optimal estimator software development.
+\item Develop polarization capable software for beam/leakage studies.
+\end{itemize}
+\item Year 2:  Hardware Commissioning and Deep Foreground Survey (FY 2016). 
+\begin{itemize}[itemsep=-4pt]
+\item Observations using PAPER antennas in an imaging configuration. 
+\item Determine on-sky beam response of HERA antennas to facilitate future source subtraction efforts. 
+\item Finalize site infrastructure (high-bandwidth optical network, surveying, trenching). 
+\item Commission new feeds, receivers, nodes, and calibration systems in Green Bank and SA. 
+\item Complete HERA-127 construction
+\item Initial delay-spectrum, FHD, and optimal estimator software ready for HERA 127 analysis.
+\item Full end-to-end simulations of analysis pipelines.
+\end{itemize}
+\item Year 3:  HERA 127 and Detecting the Rise and Fall of Reionization (FY 2017). 
+\begin{itemize}[itemsep=-4pt]
+\item HERA 127 complete. Science observations begin using the PAPER correlator. 
+\item Begin deployment of HERA 331. Install new node electronics and a 331-element, GPU-based correlator in the Karoo Array Processing Building (KAPB). 
+\item Install new data storage infrastructure in the KAPB. 
+\item Upgrade the UPenn analysis cluster. 
+\item Finish construction of HERA 331
+\item Apply proven delay-spectrum analysis techniques to HERA 127 observations to constrain the timing and duration of reionization. 
+\item Multi-pipeline analysis of HERA 127 observations to compare pipeline strengths/weaknesses.
+\end{itemize}
+\item Year 4:  HERA 331 and Measuring the Evolution of the First Galaxies (FY 2018). 
+\begin{itemize}[itemsep=-4pt]
+\item HERA 331 complete. Begin science observations Oct. 2017. 
+\item Begin multi-pipeline analysis of data to characterize the evolution of the power spectrum and determining properties of the first galaxies. 
+\item Continue analysis software development: optimize existing algorithms and develop imaging-based subtraction techniques for expanding the EoR window
+\item Create high-fidelity maps/data cubes of the HERA field for cross-correlation studies
+\item Cosmological simulations for extracting reionization physics from power spectrum measurements
+\end{itemize}
+\end{itemize}
 
 \section{Risk}
+\label{sec:risk}
+Risk manifests itself in two broad categories:  construction/array risks and analysis/science risks.  The risks to actually achieving the overall outcomes
+are primarily contained within the analysis/science risks.  Construction/array risks are more manifest, but are generally addressable by changes in budget
+(some reprioritization or de-scoping) or schedule (re-phasing, possibly leveraging more of the PAPER signal path early etc).
+
+\subsection{Analysis/Science}
+Phased, based on now well-understood but conservative delay-space approach.
+
+\subsection{Construction/Array}
+
+
 
 \end{document}
