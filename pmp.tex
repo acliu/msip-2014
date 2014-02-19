@@ -55,10 +55,10 @@ HERA includes key partners in South Africa and the UK and is finalizing a collab
 \begin{table}[h]
 \begin{tabular}{| p{.35\textwidth} | p{.6\textwidth} |}\hline
 \textbf{Institution (location)} & \textbf{Role} \\ \hline
-SKA-SA (Cape Town, SA) & Partner in site development, logistics, support, science \\ \hline
-University KwaZulu Natal (Durban, SA) & Partner in science and support \\ \hline
-Cavendish Laboratory (Cambridge, UK) & Partner in development etc \\ \hline
-Academia Sinica Institute for Astronomy and Astrophysics (Taipei, Taiwan) & Science, development \\ \hline
+SKA-SA (Cape Town, SA) & Partner in site development, logistics, support, science. They have been active in supporting PAPER.\\ \hline
+University KwaZulu Natal (Durban, SA) & Partner in science and support. They have been active in supporting PAPER.\\ \hline
+Cavendish Laboratory (Cambridge, UK) & Partner in development, construction, support and science.  They have been active in supporting PAPER. \\ \hline
+Academia Sinica Institute for Astronomy and Astrophysics (Taipei, Taiwan) & Science, development and construction (sub-assemblies). \\ \hline
 \end{tabular}
 \label{tab:otherpartners}
 \end{table}
@@ -66,16 +66,16 @@ Academia Sinica Institute for Astronomy and Astrophysics (Taipei, Taiwan) & Scie
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{plots/org.png}
-\label{fig:org}
 \caption{Org chart showing the collaboration, governance and management.}
+\label{fig:org}
 \end{figure}
 
 \subsection{Executive Board}
 Figure \ref{fig:org} shows the governance and management of the proposed work. 
 The Executive Board serves as the governing board and has authority over the science 
-Requirements\footnote{{\em Requirements} are the science and operational level requirements as
+requirements\footnote{{\em Requirements} are the science and operational level requirements as
 specified and managed by the Board.  {\em Specifications} are the system requirements
-specified by the System Owners.}, the Scope of the science goals and Milestones. It consists 
+specified by the System Owners.}, the scope of the science goals and milestones. It consists 
 of one voting representative from each of the funded partners, which typically will be the 
 senior scientific partner at the institution. The Board is chaired by the Project Director. Though 
 generally operating on concensus, if matters come to a vote a ``T-2''\footnote{T-2 means that 2
@@ -113,8 +113,6 @@ actively pursue those activities, and communicate these activities to the group.
 are encouraged to participate in all aspects of the project, subject to the Publication Policy, 
 discussed in Section \ref{sec:publication} below.  In short, the activities should be transparent
 to the team.
-
-****ANY STUDENT CARVE-OUTS ETC?
 
 \subsection{Communication}
 The core standing meetings for the collaboration have been discussed above, and
@@ -161,6 +159,8 @@ as the Project Manager.
 The Site Liaison is a South African-based person responsible for coordinating activities
 between the Collaboration and the broader SKA-SA observatory group.  This link has 
 been key in effectively pursuing the PAPER activities in South Africa.  William Walbrugh
+will continue to serve as the Site Liaison.  Anita Loots will serve as a higher-level
+support contact.
 
 The Data Manager has responsibility for ensuring data quality as archived at the KAPB and 
 Penn.  James Aguirre from Penn will serve as the Data Manager.
@@ -179,21 +179,24 @@ or both. Systems need not be disjoint collections of Components. Each System has
 {\em Owner}, who is responsible for the System meeting its specifications and satisfying
 its interface requirements.
 
-Components will likely span multiple Systems. The Project
-Manager serves as the Owner of the South Africa-based hardware Components, the data
-manager is the Owner of the US-based hardware Components and the analysis manager is 
-the Owner of the analysis software.  The Component Owners work with the System Owners 
-to meet the Components functional specifications.  In practice there is a great deal of overlap
-between the Components and Systems, making this arrangement practical but it also allows
-a mechanism to ensure more ``eyes'' on the overall system.
+Components will likely span multiple systems. The Project Manager serves as the owner
+of the South Africa-based hardware components, the data manager is the owner of the
+US-based hardware components and the analysis manager is the owner of the analysis
+software. Component owners work with system owners to meet the components' functional
+specifications. In practice there is a great deal of overlap between the components
+and systems, making this arrangement practical but it also allows a mechanism to
+ensure more ``eyes'' on the overall system as well as regularized reporting.
 
 \subsection{Management Tools}
-The architecture, requirements/specifications, interfaces, budget, milestones, work breakdown structure
-(WBS), risk register and system documenation are in a common shared repository, along with collaboration
-documentation.  This shared repository is referred to as the {\tt ProjectBook}.  Architecture, requirements/ 
-specifications, interface, risk and milestone information reside in a \LaTeX-based database with full traceability
-and python and shell scripts for flow-down throughout the documentation in the {\tt ProjectBook}.  Budget and WBS are in Microsoft
-Excel and Microsoft Project with python script readers for flow-down throughout the documentation.
+The architecture, requirements/specifications, interfaces, budget, milestones, work
+breakdown structure (WBS), risk register and system documenation are in a common
+shared repository, along with processing scripts and collaboration documentation.
+This shared repository is referred to as the {\tt ProjectBook}. Architecture,
+requirements/ specifications, interface, risk and milestone information reside in a
+\LaTeX-based database with full traceability and python and shell scripts for
+flow-down throughout the documentation in the {\tt ProjectBook}. Budget and WBS are
+in Microsoft Excel and Microsoft Project with python script readers for flow-down
+throughout the documentation.
 
 An executive script ensures that all scripts are executed and up-to-date formatted \LaTeX pdf documentation
 files are produced.  These include auto-generated architecture, requirement/ specification, 
@@ -334,8 +337,10 @@ The staffing exercise has also been underway for sometime and is informed by a r
 
 \section{Schedule Summary}
 \label{sec:schedule}
-The schedule is primarily tracked by setting a fairly large number of high-level milestones that get tracked in the {\tt ProjectBook}.  These map to staff in a
-work breakdown schedule, which is tracked in MS Project.  The high-level milestones are listed below.
+The schedule is primarily tracked by setting a fairly large number of high-level
+milestones that get tracked in the {\tt ProjectBook}. These map to staff in a work
+breakdown schedule, which is tracked in MS Project. The high-level milestones are
+listed below.
 
 \begin{itemize}[itemsep=-4pt,parsep=-3pt]
 \item Year 1:  Infrastructure, Prototyping, Contract Preparation (FY 2015).
@@ -380,15 +385,58 @@ work breakdown schedule, which is tracked in MS Project.  The high-level milesto
 
 \section{Risk}
 \label{sec:risk}
-Risk manifests itself in two broad categories:  construction/array risks and analysis/science risks.  The risks to actually achieving the overall outcomes
-are primarily contained within the analysis/science risks.  Construction/array risks are more manifest, but are generally addressable by changes in budget
-(some reprioritization or de-scoping) or schedule (re-phasing, possibly leveraging more of the PAPER signal path early etc).
+Risk manifests itself in two broad categories: construction/array risks and
+analysis/science risks. The risks to actually achieving the overall outcomes are
+primarily contained within the analysis/science risks. Construction/array risks are
+more manifest, but are generally addressable by changes in budget (some
+reprioritization or de-scoping) or schedule (re-phasing, possibly leveraging more of
+the PAPER signal path early etc).
+
+As mentioned above, risk is recorded and tracked in the {\tt ProjectBook} which has tools 
+to list and flowdown risk records into the documentation.  The risk register will be 
+maintained and updated if necessary and regular reports will be generated by the
+{\tt ProjectBook} scripting system.
 
 \subsection{Analysis/Science}
 Phased, based on now well-understood but conservative delay-space approach.
 
+Increased RFI as the SKA-SA construction activities continue to be on-going and 
+ramp up is a risk.  HERA will only observe at night, so active construction will be
+minimal during observing periods, and RFI will be more confined to workers quarters.
+The location of HERA is therefore closer to future arrays (which have stringent
+RFI requirements) and further from any construction camps.  The area resides in
+a robust spectrum management zone, and the SKA-SA is very committed to
+keeping the site RFI characteristics excellent.  They have a full-time RFI monitor
+who is fully supported by on-site staff and they are very proactive in monitoring
+and investigating issues.
+
 \subsection{Construction/Array}
+The primary risks associated with the construction and operation of the array relate
+to the remote location, both in construction and operation. This is largely mitigated
+by the amount of infrastructure and support provided by SKA-SA in their activities.
 
+The technology and construction itself is all very low risk, as it is either fairly standard and/or
+has been used by team members at location.  A new board under development (the Smart Networked
+ADC Processor, SNAP, is currently in layout) has some risk since it is not complete, however there
+is a robust fall-back to use the existing set of CASPER boards that are currently in use on-site for this
+purpose.  As mentioned above, the primary risk here is in cost of building in a remote location.
+There are two primary mitigations to this risk:  accruing additional partners who can help bear
+the cost risk and descoping the array.
 
+Delays in deplying the SNAP board and node can be 
+mitigated by initially using the existing PAPER-128 system, which can accommodate the first 
+HERA-127 phase.  Delays in deploying up-to a target (e.g. 127, 331, 352) can be handled by
+observing with the existing antennas while the reminder are deployed.  This means that the
+construction approach will be to produce smaller tranches of working elements on a node-by-node
+basis, rather than relying on completing every element on a full assembly line basis.
+
+To keep the construction low-cost the philosophy has been to maintain/repair rather
+than attempt to make it bullet-proof. This means that severe weather could damage the
+elements. Experience with the PAPER dipoles has been excellent in this regard, and no
+severe wind or water damage has been noticed. Given the readily accessible
+construction materials, damage is relatively cheap to fix. For minor damage, local
+staff can likely repair (and in a large array, we can handle some non-functional
+elements), while major damage would likely need a trip and assessment by US-based
+experts.
 
 \end{document}
