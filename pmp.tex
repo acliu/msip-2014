@@ -6,6 +6,9 @@
 \usepackage{mdwlist}
 \usepackage{natbib}
 \usepackage{natbibspacing}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
 \setlength{\bibspacing}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
@@ -209,6 +212,7 @@ Financial tracking is done via the Berkeley Financial System (BFS), supplemented
 
 Table \ref{tab:softwareTools} lists the primary software tools (management and technical).  Schematics:  visio, technical
 \begin{table}[h]
+\centering
 \label{tab:softwareTools}
 \caption{Project Software Tools}
 \begin{tabular}{| p{1in} | p{5in} |}\hline
@@ -242,14 +246,61 @@ In the event that consensus is not reached, the Project Director remains the fin
 Director may overrule consensus by approval of the Executive Board.  If accepted, the Project Manager 
 will institute the change and communicate appropriately throughout the project.
 
-\section{Construction}
+\section{Array Construction}
+The primary construction location is in the South African Karoo Astronomy Reserve, where PAPER has been deployed
+and operated since 2009.  The South African SKA organization (``SKA-SA'') is a key partner and has a great deal of
+infrastructure and support on-site and for the site and a close working relationship exists between the partners.
+
+The project is phased and designed to maximize off-site sub-assemblies, which are then shipped to site for subsequent
+installation.  The on-site installation has an overall On-Site Manager (which rotates among a small number of expert
+staff) supervising two 6-8 member crews, each with a crew chief.  Primary sub-assemblies are the hub casts, pole/post end-caps 
+(which hold the surface support spars and rim pieces and contain locational markers), PVC support sub-assemblies 
+for the surface, feed, feed-backplane, central cone, node enclosure.XXX
+
+\begin{table}[tbh]
+\centering
+\label{tab:subassycontracts}
+\caption{Primary sub-assembly contracts}
+\begin{tabular}{| p{1.4in} | p{1.4in} | p{1.4in} | p{1.4in} |}\hline
+\textbf{Element} & \textbf{Analog} & \textbf{Digital} & \textbf{Node} \\ \hline
+%Element
+hub casts, pole/post endcaps, PVC surface support, feed, feed backplane, central cone &
+%Analog
+LNA/balun modules, post-amplifier modules, RF cables &
+%Digital
+SNAP boards &
+%Node
+Enclosure, power handling \\ \hline
+\end{tabular}
+\end{table}
+
+The ordered list of installation is given below.  A number in square brackets denotes a separate contract (or sub-contract),
+while a single asterisk denotes work that may be done in parallel by the two teams.  An additional team (or teams) may be 
+added to pace the work, primarily in the 127-to-352 phase (when there will also be more experiences members of the team
+who may step up as crew chiefs).  Double asterisks are activities done with US experts supported by local staff.  The first
+installations will also involve US-based experts to train the on-site staff, particularly the crew chiefs.
+\begin{enumerate}[itemsep=-3pt]
+\item Sub-assembly contracts [1]
+\item Grounds preparation and power/fiber reticulation. [2]
+\item Pole installation [3]
+\item Hub installation using centering jig  [*]
+\item Rim/post installation using leveling jig and Total Station [*]
+\item Surface support installation [*]
+\item Mesh installation [*]
+\item Node enclosure [*]
+\item Feed installation [**]
+\item Node electronics [**]
+\item KAPB electronics [**]
+\item Commissioning [**]
+\end{enumerate}
+
 plan, schedule, contract summary, milestone summary
 
 \section{Analysis Management}
 
-\section{Budget Overview}
+\section{Budget Summary}
 
-\section{WBS Overview}
+\section{Schedule Summary}
 
 \section{Risk}
 
