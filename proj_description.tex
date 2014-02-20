@@ -313,12 +313,18 @@ redshift.
 %\emph{ii. PS sensitivity at fixed z: 127, 331 (Fig)}
 % Pober, Dillon
 \begin{figure}[t]\centering
-\includegraphics[height=3.25in]{plots/Pspec/eor_pspec_2014.png}
-\caption{Power-spectrum sensitivities for three stages of
+\includegraphics[width=3in]{plots/Pspec/eor_pspec_2014.png}
+\includegraphics[width=3in]{plots/Pspec/pk_k3pk.png}
+\caption{Left: Power-spectrum sensitivities for three stages of
 HERA (solid) relative to a fiducial ionization model (dotted line; $\xHI=0.37$, $z=9.0$).  
 Sensitivity curves reflect a staged array size and
 a staged improvement in analysis software that expands the range
-of modes falling into the EoR Window \label{fig:PspecSensitivity}}
+of modes falling into the EoR Window \label{fig:PspecSensitivity}
+Right: The current reigning upper limit on the 21~cm reionization power spectrum,
+obtained with a 32-element PAPER deployment \citep{parsons_et_al2013}.  These upper limits
+were used to constrain the brightness temperature of the IGM at $z\sim8$, showing
+a departure from adiabatic cooling that is presumed to be indicative of X-ray heating.
+}
 \end{figure}
 
 A season of observing with HERA-127 will yield high-significance constraints on the 21 cm power spectrum across a wide range of k modes and redshifts.  In Figure we show the $z=9$ power spectrum predicted by the publicly available 21cmFAST software \citep{mesinger_et_al2011}, along with $2\sigma$ HERA sensitivities.  Using the conservative delay-spectrum approach pioneered by PAPER (Parsons et al. 2014), we find that HERA-127 can achieve a $> 10\sigma$ detection of fiducial power spectra over a broad range of redshifts.  The subsequent observing season with HERA-331 can increase this detection significance to over $25\sigma$ using the same methods.  With detailed foreground modeling, the more sophisticated power spectrum estimator developed for the MWA could increase the size of the ``EoR window", the region of Fourier space with minimal foreground contamination. This would allow for an overall detection significance of up to $90\sigma$, along with access to lower $k$ modes and therefore qualitatively different physics.  Such a high 
@@ -510,7 +516,7 @@ HERA uses these lessons perform the science of reionization, at a much lower cos
 
 \begin{table}
 \centering
-\begin{tabular}{c||c||c|c} 
+\begin{tabular}{c||r||r|r} 
 Instrument & Collecting Area (m$^2$) & Foreground avoidance & Foreground modeling \\
 \hline
 PAPER & 528 & 1.93 & 8.86 \\
@@ -519,7 +525,7 @@ LOFAR NL Core & 35,762 & 2.76 & 17.37 \\
 \textbf{HERA-331} & \textbf{50,900} & \textbf{25.44} & \textbf{87.20} \\
 SKA1 Low Core & 833,190 & 97.92 & 284.85 \\
 \end{tabular}
-\caption{Power spectrum signal-to-noise at $z=9.5$ for various instruments.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
+\caption{Power spectrum signal-to-noise at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
 \label{tab:signif}
 \end{table}
 
