@@ -67,6 +67,7 @@ Academia Sinica Institute for Astronomy and Astrophysics (Taipei, Taiwan) & Scie
 \centering
 \includegraphics[width=\textwidth]{plots/org.png}
 \caption{Org chart showing the collaboration, governance and management.}
+% XXX do we need to add outreach in org chart?
 \label{fig:org}
 \end{figure}
 
@@ -122,7 +123,7 @@ conferencing system. Berkeley provides full access to the Blue Jeans
 network-conferencing system for hosting meetings, including video, simple and
 effective desktop sharing, and multiple access methods (computer, phone, networked
 video system). Other partners have access to Webex,which is also used. These tools
-are routinely and effectively used by the partners already and are quite effective.
+are routinely used by the partners already and are quite effective.
 Other side meetings also occur using these tools, including regular telecons
 specifically with South Africa The collaboration makes good use of side-meetings at
 professional conferences at which many of the team may be attending.
@@ -148,7 +149,7 @@ collaboration.  Most of the construction authority and budget is invested in one
 with oversight by the key senior members of the collaboration.  The analysis and 
 scientific outcomes are widely spread over the collaboration and are defined at a 
 concrete level to assess progress.  General management principles are derived from
-PMBOK.
+{\it A Guide to the Project Management Body of Knowledge} (PMBOK).
 
 Figure \ref{fig:org} shows the management structure.   A Project Manager has
 overall responsibility for planning and tracking to achieve the agreed upon
@@ -223,8 +224,8 @@ Financial tracking is done via the Berkeley Financial System (BFS), supplemented
 Table \ref{tab:softwareTools} lists the primary software tools (management and technical).  Schematics:  visio, technical
 \begin{table}[h]
 \centering
-\label{tab:softwareTools}
 \caption{Project Software Tools}
+\label{tab:softwareTools}
 \begin{tabular}{| p{1in} | p{5in} |}\hline
 \textbf{Category} & \textbf{Tools (primary is in bold font)} \\ \hline
 Documentation & \textbf{\LaTeX}, Word, {\tt ProjectBook}, pdf \\ \hline
@@ -264,6 +265,7 @@ The primary construction location is in the South African Karoo Astronomy Reserv
 and operated since 2009.  The South African SKA organization (``SKA-SA'') is a key partner and has a great deal of
 infrastructure and support on-site and for the site and a close working relationship exists between the partners.
 
+% XXX what does maximize mean below?
 The project is phased and designed to maximize off-site sub-assemblies, which are then shipped to site for subsequent
 installation.  The on-site installation has an overall On-Site Manager (which rotates among a small number of expert
 staff) supervising two 6-8 member crews, each with a crew chief.  Primary sub-assemblies are the hub casts, pole/post end-caps 
@@ -290,7 +292,7 @@ Enclosure, power handling \\ \hline
 The ordered list of installation is given below. A number in square brackets denotes
 a separate contract (or sub-contract), while a single asterisk denotes work that may
 be done in parallel by the two teams. An additional team (or teams) may be added to
-pace the work, primarily in the 127-to-352 phase (when there will also be more
+pace the work, primarily in the build-out from 127 to 352 antenna elements (when there will also be more
 experiences members of the team who may step up as crew chiefs). Double asterisks are
 activities done with US experts supported by local staff. The first installations
 will also involve US-based experts to train the on-site staff, particularly the crew
@@ -312,11 +314,70 @@ chiefs.
 
 The overall schedule and milestones are summarized in Section \ref{sec:schedule}.
 
+XXX discussion of testing and commissioning?
+XXX somthing about digital team doing first-pass commissioning
+
+
+\section{Management of Operations}
+\label{sec:operations}
+
+Because HERA is a fully-correlated, drift-scan instrument, there are no operational decisions
+that need to be made for observing.  Hence, HERA does not require a Time Allocation Committee.
+Managing routine operation of the HERA instrument consists of ensuring the functionality of all 
+subsystems and the flow of information between them.  (XXX the owner) will manage operations, drawing on the resources and information
+available through the monitor and control system.  System failures will be identified in real
+time and referred to the system owner for diagnosis, repair, and testing.
+
+XXX more?
 
 \section{Analysis Management}
 \label{sec:analysis}
+
 One of the absolute key deliverables is an analysis pipeline that can yield the science.  This is the primary area of
-research and the greatest scientific risk.
+research and the greatest scientific risk.  The HERA collaboration has established
+a three-tiered ranking system for grouping analysis development activities according to priority and risk.
+
+Tier 1 activities are lower risk, and are considered essential to project success.  Each analysis activity
+in this tier is led at a single institution, proceeds according to an established timeline, and is managed
+similarly to other essential systems in the project.  Examples of Tier 1 analysis activities include:
+establishing a real-time redundancy-based calibration pipeline, interfacing with existing synthesis imaging
+software packages to produce images and maps of foregrounds, developing a fully covariant treatment of
+the delay-spectrum power spectrum, and applying this pipeline to measuring the power spectrum of reionization
+outside of the foreground wedge at high significance.
+The Analysis Manager is responsible to evaluating
+and managing progress on Tier 1 analysis activities and reporting to the Project Manager.
+
+Tier 2 activities are higher risk, and augment the science case of the project.  Activities in
+this tier are spread among institutions, with complementary efforts proceeding in parallel to
+reduce risk.  Tier 2 activities proceed according to a more flexible timeline, and are incorporated
+into routine analysis pipelines as they become available.  Examples of Tier 2 analysis activities
+include:
+developing alternate imaging pipelines aimed at suppressing systematics within the foreground wedge
+to gain higher significance power spectrum detections over a broader range of scales, developing
+techniques to directly image reionization structures, and exploring whether HERA measurements at
+higher redshifts can be used to produce meaningful constraints on the state of the IGM during
+our cosmic dawn prior to reionization.  The Analysis Manager is responsible for managing and coordinating
+parallel Tier 2 analysis activities, and reporting progress to the Project Manager.
+
+Finally, Tier 3 includes analysis activities that are considered tangential or too risky to
+bin included in HERA's focused science case.
+Activities in these areas are not supported directly under this proposal, but may be pursued as
+contributed efforts by associated institutions.  Examples of Tier 3 analysis activities include
+ionospheric studies, surveying for transient events, other miscellaneous foreground studies, and
+examination of higher-order statistics of reionization.  While not directly supported by this proposal,
+these activities will nonetheless report progress to the Analysis manager to ensure
+robust communication of active analysis efforts within the HERA collaboration.
+
+Inheriting from the MWA, HERA will hold annual ``busy weeks'', organized by the Analysis Manager in
+conjuction with the annual project meetings.  These busy weeks gather a critical
+mass of collaborators engaged in the development of analysis software together in a manner conducive to
+transferring expertise and sharing software and science interactively.  Busy weeks will typically
+have a priority list of development activities, set by the Analysis Manager, that will be 
+focused on, with many collaborators contributing
+ideas and code toward these priority activities.
+
+\section{Outreach Management?}
+
 
 \section{Budget Summary}
 \label{sec:budget}
@@ -382,6 +443,10 @@ listed below.
 \item Cosmological simulations for extracting reionization physics from power spectrum measurements
 \end{itemize}
 \end{itemize}
+
+\section{WBS Summary}
+\label{sec:wbs}
+The labor estimate was generated from a very detailed ``bottom's up'' task summary, which maps to the milestones to generate the work breakdown structure.
 
 \section{Risk}
 \label{sec:risk}
