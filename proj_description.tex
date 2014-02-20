@@ -1250,15 +1250,7 @@ operate on this data.  This storage will then be used to move this
 data to the US.  This represents a compromise between bringing all raw
 data to the US and only working on the maximally compressed data.
 
-%Second, once data quality is assured, multi-day periods of data may be
-%binned in local sidereal time, and averaged. Averaging in this manner
-%will allow for a decrease in data volume by a factor of the number of
-%days included in each block, which is limited by the timescale of
-%calibration drifts, as averaging differently-calibrated data may
-%result in unwanted artifacts. This intermediate averaging scheme will
-%also generate an accurate sky model for the instrument once
-%calibration is applied.
-%
+
 
 
 %ii. transport to data centers
@@ -1284,7 +1276,10 @@ seasons of HERA, as well as the LST-averaged data.  The storage system
 is sized so that there is a factor of 4 overhead for work on the
 maximally-compressed data set, and a factor of 2 on the LST-averaged.
 The 500 TB data storage will be coupled to a 32-node cluster which
-performs the next round of calibration 
+performs the tasks of calibration and averaging to further reduce the
+data volume.  This cluster will support the bulk of the analysis
+requiring the full data set.  Subsets will be served off to
+collaborators from this system.
 
 Cost mitigation on data storage can be acheived in two ways. First,
 since there will be limited access to data on the 1.5 PB system in the
@@ -1323,6 +1318,11 @@ Beyond the construction and data-taking aspects of HERA, this proposal incorpora
 \subsubsection{Calibration}
 
 Building off the success of PAPER and MITEoR in such efforts, we will implement a real-time redundancy-based calibration pipeline.  The instantaneous calibration solutions provided by this pipeline allows one to quickly identify hardware misbehaviors, in addition to producing coarse real-time images.  The absolute calibration of these images will be fixed using a combination of self-calibration and absolute-calibration baluns.  Increasingly detailed imaging efforts will then allow the development of empirical beam models (based on both sky models and octocopter signals) to complement electromagnetic simulations.  This is particularly important for characterizing the polarization response, which may affect estimates of polarization leakage.
+
+Second, once data quality is assured, multi-day periods of data may be
+binned in local sidereal time, and averaged. This intermediate
+averaging scheme will also generate an accurate visibility-based sky
+model for the instrument once calibration is applied.
 
 \subsubsection{Continuum and removal}
 % Morales
