@@ -3,9 +3,10 @@
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{mdwlist}
+%\usepackage{mdwlist}
 \usepackage{natbib}
 \usepackage{natbibspacing}
+\usepackage{enumitem}
 \usepackage{caption}
 \usepackage{subcaption}
 \setlength{\bibspacing}{0pt}
@@ -19,7 +20,6 @@
 \setlength{\footnotesep}{8pt}
 \pagestyle{empty}
 \citestyle{aa}
-\usepackage{enumitem}
 %\usepackage[font=small]{caption}
 
 
@@ -702,25 +702,38 @@ short (4.5m) focal height of these dishes is central to limiting the
 path length of reflections whose time-delay gives rise to chromatic
 instrumental systematics.
 
-% AAARRGGHH!
-\begin{figure}[!ht]
-\centering
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[width=\textwidth]{plots/paper_element.jpg}
-		\caption{The PAPER element (provides a clean instrumental response as a function
-		of frequency \citep{parsons_et_al2010,parsons_et_al2012b}, which is crucial to
-		the foreground isolation shown in Figure \ref{fig:eor_pspec}.}
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[height=1.75in]{plots/hera_dish.png}
-		\caption{A 14m dish designed around the feed dramatically improves sensitivity while
-		constraining the path length and amplitude of reflections to ensure that foreground 
-		isolation is not substantially degraded.}
-	\end{subfigure}
-\caption{PAPER and HERA elements}
+\begin{figure}[t]\centering
+\includegraphics[width=6.5in]{plots/PAPER_and_MWA_and_HERA.jpg}
+\caption{\small
+The MWA (top left) and PAPER (bottom left) arrays, each currently deployed with 128 elements.
+The 14-m HERA element (right) dramatically improves sensitivity while 
+constraining the path length and amplitude of reflections to ensure that foreground
+isolation is not substantially degraded.
+%The core of HERA~331 consists of a redundant hexagonal array with
+%outrigger antennas (not shown) for imaging and foreground mitigation.
+}
 \label{fig:hera_dish}
 \end{figure}
+
+% AAARRGGHH!
+%\begin{figure}[!ht]
+%\centering
+%	\begin{subfigure}[b]{0.46\textwidth}
+%		\includegraphics[width=\textwidth]{plots/paper_element.jpg}
+%		\caption{The PAPER element (provides a clean instrumental response as a function
+%		of frequency \citep{parsons_et_al2010,parsons_et_al2012b}, which is crucial to
+%		the foreground isolation shown in Figure \ref{fig:eor_pspec}.}
+%	\end{subfigure}
+%	\quad
+%	\begin{subfigure}[b]{0.46\textwidth}
+%		\includegraphics[height=1.75in]{plots/hera_dish.png}
+%		\caption{A 14m dish designed around the feed dramatically improves sensitivity while
+%		constraining the path length and amplitude of reflections to ensure that foreground 
+%		isolation is not substantially degraded.}
+%	\end{subfigure}
+%\caption{PAPER and HERA elements}
+%\label{fig:hera_dish}
+%\end{figure}
 
 The size of HERA-331 dishes optimizes cost for a fixed sensitivity and
 level of foreground isolation.  The associated reduction in the number
