@@ -1250,9 +1250,6 @@ operate on this data.  This storage will then be used to move this
 data to the US.  This represents a compromise between bringing all raw
 data to the US and only working on the maximally compressed data.
 
-
-
-
 %ii. transport to data centers
 In order to transfer compressed data over the internet in a timely
 manner, a network speed of around the instantaneous compressed data
@@ -1267,6 +1264,15 @@ network-attached storage devices will be used to house data during
 trasnport by air-freight shipping. Shipping of these NAS devices will
 occur during all observing seasons as protection against network
 dropouts.
+
+Quality assurance (QA) of the data is performed by a computing cluster
+in the KAPB separate from the correlator, which monitors the status of
+the instrument and the data flow from correlator to storage, as well
+as transfer to the US.  This QA also includes the generation of RFI
+statistics, measuring instrument repeatability from day-to-day, and
+and preliminary calibration solutions.  This cluster maintains a
+database of observations logged and transferrred, together with
+metadata on obtained from the QA process.
 
 %iii. data centers: access?
 
