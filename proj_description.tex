@@ -1191,40 +1191,130 @@ These raw visibilities will be assembled in order by four servers
 and recorded to a XXX TB RAID storage system at full rate in the Miriad UV
 file format.
 
-\subsubsection{Data Storage, Compression, and Transfer}
-
-HERA's storage system in the KAPB will have the capacity to store all raw observations
-(XXX TB) for a 180-day observing season.  However, PAPER has implemented a data compression
-scheme (see Appendix A of \citealt{parsons_et_al2013}) that can be applied to HERA visibilities
-to reduce data volume by approximately a factor of 20 without impacting reionization science capabilities.
-This compression technique, which is based on delay/delay-rate filtering \citep{parsons_backer2009},
-is applied uniformly to all visibilities in the array, and does not require (or produce) detailed 
-calibration information.  As a result, this compression scheme is robust against gaps in
-real-time knowledge of the array, and minimally restrictive in how the data
-are analyzed and calibrated afterward.  As with PAPER, we plan to apply this compression
-automatically to HERA observations to reduce data volume, and lower the computational demand
-of subsequent analysis.
-
-Data compression, while not as computationally demanding as other data reduction schemes
-that have been proposed, does nonetheless incur a substantial computational burden.
-HERA does not plan to conduct daytime observations, owing to the level of interference
-introduced by the active Sun.  As a result, HERA's X-Engine servers will only operate
-at night, leaving them available to work on data compression during the
-daytime.  Leveraging the capacity and flexibility of their graphics cards for high-performance
-computing, these servers will read back the previous night's observations, perform RFI flagging,
-apply the necessary transformation and filtering, and will output compressed visibility data
-back to disk.
-
 % XXX need to discuss the plan for how data are shipped over to UPenn here. see below
 
-C. Post correlator data path
+%C. Post correlator data path
 % Aguirre, Moore
 
-i. local storage
+\subsubsection{Data Storage, Compression, and Transfer}
 
-ii. transport to data centers
+%i. local storage
+Table \ref{tab:data_vol} summarizes the actual data volume obtained
+during during three seasons of PAPER observations, as well as the
+transfer rates required to move the data, and calculates the same
+quantities for three stages of HERA buildout.  HERA will require two
+data storage facilities: local storage in the KAPB, and a US-based
+storage facility, located at UPenn. The KAPB 1.5 PB system on site
+will house all raw data (1.2 PB) in addition to all of the compressed
+data products. A 500 TB system at UPenn will be able to to house the
+various compressed data products forming the core of the analysis, as
+described below, and will serve these to the collaborating institions
+in the US.
 
-iii. data centers: access? 
+PAPER has implemented a data compression scheme (see Appendix A of
+\citealt{parsons_et_al2013}) that can be applied to HERA visibilities
+to reduce data volume by approximately a factor of 20 without
+impacting reionization science capabilities.  This compression
+technique, which is based on delay/delay-rate filtering
+\citep{parsons_backer2009}, is applied uniformly to all visibilities
+in the array, and does not require (or produce) detailed calibration
+information.  The net effect is to reduce the frequency and time
+resolution of the data, while not requiring real-time knowledge of the
+array performance and imposing minimal restrictions on how the data are
+analyzed and calibrated afterward.  As with PAPER, we plan to apply
+this compression automatically to HERA observations to reduce data
+volume, and lower the computational demand of subsequent analysis.
+
+Data compression, while not as computationally demanding as other data
+reduction schemes that have been proposed, does nonetheless incur a
+substantial computational burden.  HERA does not plan to conduct
+daytime observations, owing to the level of interference introduced by
+the active Sun.  As a result, HERA's X-Engine servers will only
+operate at night, leaving them available to work on data compression
+during the daytime.  Leveraging the capacity and flexibility of their
+graphics cards for high-performance computing, these servers will read
+back the previous night's observations, perform RFI flagging, apply
+the necessary transformation and filtering, and will output compressed
+visibility data back to disk.  HERA331's instantaneous raw data rate
+(1.3 Gbps) sets the requirement for network speeds between the HERA
+correlator and the storage. These speeds can be easily achieved with
+existing network switches.
+
+In addition to the maximally compressed data from delay/delay-rate
+filtering, which forms the core of the analysis effort, we will also
+compress the data in South Africa by averaging successive days at full
+frequency and time resolution, and transferring this data back the US.
+Portable storage will hold this LST-averaged data, compressed by a
+factor of $\sim 10$ from the raw data, with sufficient overhead to
+operate on this data.  This storage will then be used to move this
+data to the US.  This represents a compromise between bringing all raw
+data to the US and only working on the maximally compressed data.
+
+%Second, once data quality is assured, multi-day periods of data may be
+%binned in local sidereal time, and averaged. Averaging in this manner
+%will allow for a decrease in data volume by a factor of the number of
+%days included in each block, which is limited by the timescale of
+%calibration drifts, as averaging differently-calibrated data may
+%result in unwanted artifacts. This intermediate averaging scheme will
+%also generate an accurate sky model for the instrument once
+%calibration is applied.
+%
+
+
+%ii. transport to data centers
+In order to transfer compressed data over the internet in a timely
+manner, a network speed of around the instantaneous compressed data
+rate is required. Transfer speeds between the PAPER site and the
+United States have been measured to be up to 40 Mbps, which easily
+accomodates the first two seasons of HERA observations. Members of
+PAPER have negotiated with the IT staff in the SKASA office in Cape
+Town and the the South African internet provider (Tenet) to attain
+these fast transfer speeds, which will allow for data transfer via the
+internet. Once network capacity is exceeded, portable, inexpensive,
+network-attached storage devices will be used to house data during
+trasnport by air-freight shipping. Shipping of these NAS devices will
+occur during all observing seasons as protection against network
+dropouts.
+
+%iii. data centers: access?
+
+The data center at Penn builds on the existing system for PAPER.  This
+center will house all of the maximally compressed data from all
+seasons of HERA, as well as the LST-averaged data.  The storage system
+is sized so that there is a factor of 4 overhead for work on the
+maximally-compressed data set, and a factor of 2 on the LST-averaged.
+The 500 TB data storage will be coupled to a 32-node cluster which
+performs the next round of calibration 
+
+Cost mitigation on data storage can be acheived in two ways. First,
+since there will be limited access to data on the 1.5 PB system in the
+KAPB, fast disk speed is not a requirement, and slower, less expensive
+disks may constitute this system.  Second, since data volumes are less
+than or equal those currently being generated by PAPER until year 3 of
+the grant, purchasing the very large on-site storage for HERA-331 can
+be delayed to achieve the best price.  A similar consideration applies
+to the computational nodes.
+
+%\begin{table}
+%\include{data_volume_table}
+%\caption{\label{tab:data_vol} Summary of data volume and data rates for three completed PAPER observations, and each year of HERA observations.}
+%\end{table}
+%
+
+\begin{table}
+\begin{tabular}{| l | r r r r r r |}
+    \hline
+                                      & PSA32 & PSA64 & PSA128 & HERA37 & HERA127 & HERA331 \\ \hline
+               Total Volume, Raw (TB) &   8.0 &  31.9 &  127.1 &   16.1 &   187.6 &  1271.4 \\
+        Total Volume, Compressed (TB) &   0.4 &   1.6 &    6.3 &    0.8 &     9.3 &    63.0 \\
+               Daily Volume, Raw (TB) &  0.07 &  0.27 &    1.1 &    0.1 &     1.0 &     7.1 \\
+        Daily Volume, Compressed (GB) &  3.40 & 13.49 &   53.7 &    4.5 &    52.9 &   358.5 \\
+                Data Rate, Raw (Mbps) & 13.00 & 51.60 &  205.6 &   17.3 &   202.4 &  1371.6 \\
+         Data Rate, Compressed (Mbps) &  0.64 &  2.56 &   10.2 &    0.9 &    10.0 &    68.0 \\
+    \hline
+\end{tabular}
+\caption{\label{tab:data_vol} Summary of data volume and data rates for three completed PAPER observations, and each year of HERA observations.}
+\end{table}
 
 \subsection{Analysis and Science}
 
