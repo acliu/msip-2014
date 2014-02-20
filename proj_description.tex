@@ -313,12 +313,18 @@ redshift.
 %\emph{ii. PS sensitivity at fixed z: 127, 331 (Fig)}
 % Pober, Dillon
 \begin{figure}[t]\centering
-\includegraphics[height=3.25in]{plots/Pspec/eor_pspec_2014.png}
-\caption{Power-spectrum sensitivities for three stages of
+\includegraphics[width=3in]{plots/Pspec/eor_pspec_2014.png}
+\includegraphics[width=3in]{plots/Pspec/pk_k3pk.png}
+\caption{Left: Power-spectrum sensitivities for three stages of
 HERA (solid) relative to a fiducial ionization model (dotted line; $\xHI=0.37$, $z=9.0$).  
 Sensitivity curves reflect a staged array size and
 a staged improvement in analysis software that expands the range
-of modes falling into the EoR Window \label{fig:PspecSensitivity}}
+of modes falling into the EoR Window \label{fig:PspecSensitivity}
+Right: The current reigning upper limit on the 21~cm reionization power spectrum,
+obtained with a 32-element PAPER deployment \citep{parsons_et_al2013}.  These upper limits
+were used to constrain the brightness temperature of the IGM at $z\sim8$, showing
+a departure from adiabatic cooling that is presumed to be indicative of X-ray heating.
+}
 \end{figure}
 
 A season of observing with HERA-127 will yield high-significance constraints on the 21 cm power spectrum across a wide range of k modes and redshifts.  In Figure we show the $z=9$ power spectrum predicted by the publicly available 21cmFAST software \citep{mesinger_et_al2011}, along with $2\sigma$ HERA sensitivities.  Using the conservative delay-spectrum approach pioneered by PAPER (Parsons et al. 2014), we find that HERA-127 can achieve a $> 10\sigma$ detection of fiducial power spectra over a broad range of redshifts.  The subsequent observing season with HERA-331 can increase this detection significance to over $25\sigma$ using the same methods.  With detailed foreground modeling, the more sophisticated power spectrum estimator developed for the MWA could increase the size of the ``EoR window", the region of Fourier space with minimal foreground contamination. This would allow for an overall detection significance of up to $90\sigma$, along with access to lower $k$ modes and therefore qualitatively different physics.  Such a high 
@@ -510,7 +516,7 @@ HERA uses these lessons perform the science of reionization, at a much lower cos
 
 \begin{table}
 \centering
-\begin{tabular}{c||c||c|c} 
+\begin{tabular}{c||r||r|r} 
 Instrument & Collecting Area (m$^2$) & Foreground avoidance & Foreground modeling \\
 \hline
 PAPER & 528 & 1.93 & 8.86 \\
@@ -519,7 +525,7 @@ LOFAR NL Core & 35,762 & 2.76 & 17.37 \\
 \textbf{HERA-331} & \textbf{50,900} & \textbf{25.44} & \textbf{87.20} \\
 SKA1 Low Core & 833,190 & 97.92 & 284.85 \\
 \end{tabular}
-\caption{Power spectrum signal-to-noise at $z=9.5$ for various instruments.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
+\caption{Power spectrum signal-to-noise at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
 \label{tab:signif}
 \end{table}
 
@@ -1191,40 +1197,131 @@ These raw visibilities will be assembled in order by four servers
 and recorded to a XXX TB RAID storage system at full rate in the Miriad UV
 file format.
 
-\subsubsection{Data Storage, Compression, and Transfer}
-
-HERA's storage system in the KAPB will have the capacity to store all raw observations
-(XXX TB) for a 180-day observing season.  However, PAPER has implemented a data compression
-scheme (see Appendix A of \citealt{parsons_et_al2013}) that can be applied to HERA visibilities
-to reduce data volume by approximately a factor of 20 without impacting reionization science capabilities.
-This compression technique, which is based on delay/delay-rate filtering \citep{parsons_backer2009},
-is applied uniformly to all visibilities in the array, and does not require (or produce) detailed 
-calibration information.  As a result, this compression scheme is robust against gaps in
-real-time knowledge of the array, and minimally restrictive in how the data
-are analyzed and calibrated afterward.  As with PAPER, we plan to apply this compression
-automatically to HERA observations to reduce data volume, and lower the computational demand
-of subsequent analysis.
-
-Data compression, while not as computationally demanding as other data reduction schemes
-that have been proposed, does nonetheless incur a substantial computational burden.
-HERA does not plan to conduct daytime observations, owing to the level of interference
-introduced by the active Sun.  As a result, HERA's X-Engine servers will only operate
-at night, leaving them available to work on data compression during the
-daytime.  Leveraging the capacity and flexibility of their graphics cards for high-performance
-computing, these servers will read back the previous night's observations, perform RFI flagging,
-apply the necessary transformation and filtering, and will output compressed visibility data
-back to disk.
-
 % XXX need to discuss the plan for how data are shipped over to UPenn here. see below
 
-C. Post correlator data path
+%C. Post correlator data path
 % Aguirre, Moore
 
-i. local storage
+\subsubsection{Data Storage, Compression, and Transfer}
 
-ii. transport to data centers
+%i. local storage
+Table \ref{tab:data_vol} summarizes the actual data volume obtained
+during during three seasons of PAPER observations, as well as the
+transfer rates required to move the data, and calculates the same
+quantities for three stages of HERA buildout.  HERA will require two
+data storage facilities: local storage in the KAPB, and a US-based
+storage facility, located at UPenn. The KAPB 1.5 PB system on site
+will house all raw data (1.2 PB) in addition to all of the compressed
+data products. A 500 TB system at UPenn will be able to to house the
+various compressed data products forming the core of the analysis, as
+described below, and will serve these to the collaborating institions
+in the US.
 
-iii. data centers: access? 
+PAPER has implemented a data compression scheme (see Appendix A of
+\citealt{parsons_et_al2013}) that can be applied to HERA visibilities
+to reduce data volume by approximately a factor of 20 without
+impacting reionization science capabilities.  This compression
+technique, which is based on delay/delay-rate filtering
+\citep{parsons_backer2009}, is applied uniformly to all visibilities
+in the array, and does not require (or produce) detailed calibration
+information.  The net effect is to reduce the frequency and time
+resolution of the data, while not requiring real-time knowledge of the
+array performance and imposing minimal restrictions on how the data are
+analyzed and calibrated afterward.  As with PAPER, we plan to apply
+this compression automatically to HERA observations to reduce data
+volume, and lower the computational demand of subsequent analysis.
+
+Data compression, while not as computationally demanding as other data
+reduction schemes that have been proposed, does nonetheless incur a
+substantial computational burden.  HERA does not plan to conduct
+daytime observations, owing to the level of interference introduced by
+the active Sun.  As a result, HERA's X-Engine servers will only
+operate at night, leaving them available to work on data compression
+during the daytime.  Leveraging the capacity and flexibility of their
+graphics cards for high-performance computing, these servers will read
+back the previous night's observations, perform RFI flagging, apply
+the necessary transformation and filtering, and will output compressed
+visibility data back to disk.  HERA331's instantaneous raw data rate
+(1.3 Gbps) sets the requirement for network speeds between the HERA
+correlator and the storage. These speeds can be easily achieved with
+existing network switches.
+
+In addition to the maximally compressed data from delay/delay-rate
+filtering, which forms the core of the analysis effort, we will also
+compress the data in South Africa by averaging successive days at full
+frequency and time resolution, and transferring this data back the US.
+Portable storage will hold this LST-averaged data, compressed by a
+factor of $\sim 10$ from the raw data, with sufficient overhead to
+operate on this data.  This storage will then be used to move this
+data to the US.  This represents a compromise between bringing all raw
+data to the US and only working on the maximally compressed data.
+
+%ii. transport to data centers
+In order to transfer compressed data over the internet in a timely
+manner, a network speed of around the instantaneous compressed data
+rate is required. Transfer speeds between the PAPER site and the
+United States have been measured to be up to 40 Mbps, which easily
+accomodates the first two seasons of HERA observations. Members of
+PAPER have negotiated with the IT staff in the SKASA office in Cape
+Town and the the South African internet provider (Tenet) to attain
+these fast transfer speeds, which will allow for data transfer via the
+internet. Once network capacity is exceeded, portable, inexpensive,
+network-attached storage devices will be used to house data during
+trasnport by air-freight shipping. Shipping of these NAS devices will
+occur during all observing seasons as protection against network
+dropouts.
+
+Quality assurance (QA) of the data is performed by a computing cluster
+in the KAPB separate from the correlator, which monitors the status of
+the instrument and the data flow from correlator to storage, as well
+as transfer to the US.  This QA also includes the generation of RFI
+statistics, measuring instrument repeatability from day-to-day, and
+and preliminary calibration solutions.  This cluster maintains a
+database of observations logged and transferrred, together with
+metadata on obtained from the QA process.
+
+%iii. data centers: access?
+
+The data center at Penn builds on the existing system for PAPER.  This
+center will house all of the maximally compressed data from all
+seasons of HERA, as well as the LST-averaged data.  The storage system
+is sized so that there is a factor of 4 overhead for work on the
+maximally-compressed data set, and a factor of 2 on the LST-averaged.
+The 500 TB data storage will be coupled to a 32-node cluster which
+performs the tasks of calibration and averaging to further reduce the
+data volume.  This cluster will support the bulk of the analysis
+requiring the full data set.  Subsets will be served off to
+collaborators from this system.
+
+Cost mitigation on data storage can be acheived in two ways. First,
+since there will be limited access to data on the 1.5 PB system in the
+KAPB, fast disk speed is not a requirement, and slower, less expensive
+disks may constitute this system.  Second, since data volumes are less
+than or equal those currently being generated by PAPER until year 3 of
+the grant, purchasing the very large on-site storage for HERA-331 can
+be delayed to achieve the best price.  A similar consideration applies
+to the computational nodes.
+
+%\begin{table}
+%\include{data_volume_table}
+%\caption{\label{tab:data_vol} Summary of data volume and data rates for three completed PAPER observations, and each year of HERA observations.}
+%\end{table}
+%
+
+\begin{table}
+\begin{tabular}{| l | r r r r r r |}
+    \hline
+                                      & PSA32 & PSA64 & PSA128 & HERA37 & HERA127 & HERA331 \\ \hline
+               Total Volume, Raw (TB) &   8.0 &  31.9 &  127.1 &   16.1 &   187.6 &  1271.4 \\
+        Total Volume, Compressed (TB) &   0.4 &   1.6 &    6.3 &    0.8 &     9.3 &    63.0 \\
+               Daily Volume, Raw (TB) &  0.07 &  0.27 &    1.1 &    0.1 &     1.0 &     7.1 \\
+        Daily Volume, Compressed (GB) &  3.40 & 13.49 &   53.7 &    4.5 &    52.9 &   358.5 \\
+                Data Rate, Raw (Mbps) & 13.00 & 51.60 &  205.6 &   17.3 &   202.4 &  1371.6 \\
+         Data Rate, Compressed (Mbps) &  0.64 &  2.56 &   10.2 &    0.9 &    10.0 &    68.0 \\
+    \hline
+\end{tabular}
+\caption{\label{tab:data_vol} Summary of data volume and data rates for three completed PAPER observations, and each year of HERA observations.}
+\end{table}
 
 \subsection{Analysis and Science}
 
@@ -1233,6 +1330,11 @@ Beyond the construction and data-taking aspects of HERA, this proposal incorpora
 \subsubsection{Calibration}
 
 Building off the success of PAPER and MITEoR in such efforts, we will implement a real-time redundancy-based calibration pipeline.  The instantaneous calibration solutions provided by this pipeline allows one to quickly identify hardware misbehaviors, in addition to producing coarse real-time images.  The absolute calibration of these images will be fixed using a combination of self-calibration and absolute-calibration baluns.  Increasingly detailed imaging efforts will then allow the development of empirical beam models (based on both sky models and octocopter signals) to complement electromagnetic simulations.  This is particularly important for characterizing the polarization response, which may affect estimates of polarization leakage.
+
+Second, once data quality is assured, multi-day periods of data may be
+binned in local sidereal time, and averaged. This intermediate
+averaging scheme will also generate an accurate visibility-based sky
+model for the instrument once calibration is applied.
 
 \subsubsection{Continuum and removal}
 % Morales
@@ -1260,15 +1362,48 @@ i. FFT correlator
 
 ii. other
 
-\subsection{Five year Schedule and deliverables} % 0.5 page
+\subsection{Four-Year Schedule and deliverables} % 0.5 page
 % De Boer
 
-i. stages and science
-
-ii. first science within 3 or 4 years
-
-iii. main science results before end of decade
-
+\begin{itemize}[noitemsep,nolistsep]
+\item{Year 1:} Infrastructure, Prototyping, Contract Preparation (FY 2015).      
+\begin{itemize}[noitemsep,nolistsep]
+\item Install basic infrastructure (ground leveling, power, network connectivity) for new infrastructure
+\item Incorporate existing PAPER-128 antennas, correlator, and housing container.
+\item Install additional prototypes in Green Bank and test.
+\item Define final design package for element construction
+\item Start developing improved HERA baluns, receivers, feeds, nodes, and in-situ antenna calibration system.
+\item Continue delay-spectrum, FHD, and optimal estimator software development.
+\item Develop polarization capable software for beam/leakage studies.
+\end{itemize}
+\item{Year 2:} Hardware Commissioning and Deep Foreground Survey (FY 2016).  
+\begin{itemize}[noitemsep,nolistsep]
+\item Observations using PAPER antennas in an imaging configuration.
+\item Determine on-sky beam response of HERA antennas to facilitate future source subtraction efforts.
+\item Finalize site infrastructure (high-bandwidth optical network, surveying, trenching).
+\item Commission new feeds, receivers, nodes, and calibration systems in Green Bank and SA.
+\item Complete HERA-127 construction
+\item Initial delay-spectrum, FHD, and optimal estimator software ready for HERA 127 analysis.
+\item Full end-to-end simulations of analysis pipelines.
+\end{itemize}
+\item{Year 3:} HERA 127 and Detecting the Rise and Fall of Reionization (FY 2017).  
+\begin{itemize}[noitemsep,nolistsep]
+\item HERA 127 complete. Science observations begin using the PAPER correlator.
+\item Begin deployment of HERA 331. Install new node electronics and a 331-element, GPU-based correlator in the Karoo Array Processing Building (KAPB).
+\item Install new data storage infrastructure in the KAPB.
+\item Upgrade the UPenn analysis cluster.
+\item Finish construction of HERA 331
+\item Apply proven delay-spectrum analysis techniques to HERA 127 observations to constrain the timing and duration of reionization.
+\item Multi-pipeline analysis of HERA 127 observations to compare pipeline strengths/weaknesses.
+\end{itemize}
+\item{Year 4:} HERA 331 and Measuring the Evolution of the First Galaxies (FY 2018).           
+\begin{itemize}[noitemsep,nolistsep]
+\item HERA 331 complete. Begin science observations Oct. 2017.\item Begin multi-pipeline analysis of data to characterize the evolution of the power spectrum and determining properties of the first galaxies. 
+\item Continue analysis software development: optimize existing algorithms and develop imaging-based subtraction techniques for expanding the EoR window
+\item Create high-fidelity maps/data cubes of the HERA field for cross-correlation studies
+\item Cosmological simulations for extracting reionization physics from power spectrum measurements
+\end{itemize}
+\end{itemize}
 
 \section{Broader Impacts} % 1 page
 % Aguirre
