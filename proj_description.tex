@@ -407,6 +407,17 @@ e. Anscillary science with PAPER 128: transients, solar
 %\section{Foregrounds \& Lessons Learned from PAPER and MWA} 
 % ARP: I think i prefer how the preproposal fused all of this in a section.  Very hard to talk about only 1 aspect at a time
 
+
+\begin{figure}[t]\centering
+\includegraphics[width=6in]{plots/waterfall_filtered.png}
+\caption{\small 
+Waterfall plots illustrating, as a function of time and frequency, PAPER visibilities
+measured on a 30-m baseline before (left) and after (right) the application of a 
+filter that removes forground emission within the wedge.  Color scale indicates amplitude in $\log_{10}({\rm Jy})$.
+This filter has been shown to suppress
+foreground systematics by 4 orders of magnitude, leaving residuals demonstrably noise-dominated.
+}\label{fig:waterfall} \end{figure}
+
 The key challenge of 21~cm cosmological reionization experiments is 
 balancing the collecting area needed to detect the faint 21~cm reionization signal
 with the precision needed to suppress
@@ -417,7 +428,7 @@ instrumentation and analysis can exploit the
 spectral smoothness of foregrounds
 to open up an `EoR Window'.  These advances have been pioneered by the MWA and PAPER teams \citep{morales_et_al2012,parsons_et_al2012b,vedantham_2012,Datta_2010,hazelton_et_al2013,pober_et_al2013,parsons_et_al2013,dillon_et_al2013b}, and enable us to design a targeted HERA instrument that can reveal the details of reionization (Figure \ref{fig:x_i_vs_z}) and image the largest structures (Figure \ref{fig:imaging}).
 % XXX better phrase for "EoR window"?
-These advances have been used to suppress foreground emission by 4
+As illustrated in Figure \ref{fig:waterfall}, these advances have been used to suppress foreground emission by 4
 orders of magnitude in PAPER observations,
 with results that begin ruling out certain reionization scenarios
 \citep{parsons_et_al2013}.
@@ -451,7 +462,10 @@ the smooth spectrum foregrounds
 (low $\kpar$) interacting with the inherent
 chromaticity of an interferometer. 
 This leaves the region above the wedge free from 
-foreground emission---a window through which we can observe the EoR. We now understand the source of the EoR window, how we can increase the 21~cm signal region, and have seen the window in observations with both PAPER and the MWA.
+foreground emission---a window through which we can observe the EoR. 
+As demonstrated in the right-hand panel of Figure \ref{fig:waterfall}, removal of emission within
+this wedge directly suppresses foregrounds by at least 4 orders of magnitude.
+We now understand the source of the EoR window, how we can increase the 21~cm signal region, and have seen the window in observations with both PAPER and the MWA.
 
 \subsection{HERA technical heritage}
 By drawing on the technical and analysis heritage of PAPER and the MWA, HERA can perform the science envisioned in NWNH at a fraction of the expected cost. The key technical characteristics of PAPER and the MWA are:
