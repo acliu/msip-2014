@@ -1202,20 +1202,27 @@ ii. transport to data centers
 
 iii. data centers: access? 
 
-\subsection{Analysis}
-D. Data analysis [Move up?]
+\subsection{Analysis and Science}
 
-i. Calibration 
-% Aguirre, Morales
+Beyond the construction and data-taking aspects of HERA, this proposal incorporates a full data analysis effort, culminating in the publication of a suite of science papers connecting observations to the theory of cosmic dawn.
 
-ii. Continuum and removal
+\subsubsection{Calibration}
+
+Building off the success of PAPER and MITEoR in such efforts, we will implement a real-time redundancy-based calibration pipeline.  The instantaneous calibration solutions provided by this pipeline allows one to quickly identify hardware misbehaviors, in addition to producing coarse real-time images.  The absolute calibration of these images will be fixed using a combination of self-calibration and absolute-calibration baluns.  Increasingly detailed imaging efforts will then allow the development of empirical beam models (based on both sky models and octocopter signals) to complement electromagnetic simulations.  This is particularly important for characterizing the polarization response, which may affect estimates of polarization leakage.
+
+\subsubsection{Continuum and removal}
 % Morales
 
-iii. Delay spectrum analysis
-% Pober
+A high dynamic range imaging pipeline based on the Fast Holographic Deconvolution (FHD) pipeline of the MWA will be adapted for HERA.  The result will be sky maps with full Stokes information.  
 
-iv. Other (related) approaches: Bayes, z-variance,
-% Liu, Carilli
+% should probably also mention GSM updates here.
+
+
+\subsubsection{Power spectrum and related measurements}
+
+In early power spectrum measurements, we will employ the conservative delay-spectrum approach to power spectrum estimation used in PAPER.  This visibility-based approach, when coupled with a foreground-avoidance strategy, will be sufficient for an unambiguous early detection of the $21~\textrm{cm}$ power spectrum should results from current-generation experiments prove marginal (see Figure \ref{fig:PspecSensitivity} and Table \ref{tab:signif}).  Further development plans will target the incorporation of optimal quadratic estimators in both visibility and image spaces, incorporating a fully covariant description of the foreground wedge.  This will enable statistical foreground mitigation techniques in addition to those based on foreground modeling (for example, from FHD).  Finally, we plan to explore Bayesian techniques for power spectrum estimation, building on the considerable progress already made on Gibbs-sampling imaging for interferometers \cite{sutter_et_al2014}.
+
+To provide verification of our power spectrum constraints, we also plan to develop a simulator of the full HERA instruments, incorporating foregrounds 
 
 v. HI imaging
 % Jacobs
