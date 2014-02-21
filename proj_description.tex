@@ -7,8 +7,9 @@
 \usepackage{natbib}
 \usepackage{natbibspacing}
 \usepackage{enumitem}
-\usepackage{caption}
-\usepackage{subcaption}
+%\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{float}
 \setlength{\bibspacing}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
@@ -45,23 +46,28 @@
 
 %\title{Hydrogen Epoch of Reionization Array: Characterizing Cosmic Dawn}
 \title{HERA: Illuminating Our Early Universe}
+{\it For the Mid-Scale Science Projects category of the Mid-Scale
+Innovations Program}
 
-\section{Overview} % 1 page ~ project summary? 
+\begin{figure}[H]\centering
+\includegraphics[width=6in]{plots/hera_array.png}
+\caption{The proposed array of 331 14~m-diameter zenith-pointing dishes in the Karoo Radio Astronomy Reserve
+in the Northern Cape of South Africa.
+}\label{fig:hera_array} \end{figure}
+
 % Parsons, Carilli
-
 % A statement of which of the four categories of MSIP is most appropriate
 %for this proposal as the first sentence (see section II. Program Description).
-
 %A. We propose HERA: next step in reionization roadmap
 %B. Fulfill NWNH high-priority goals
 %C. New understanding/techniques => faster, better, cheaper
 %D. Brief summary of timeline: science along the way, major results before end-decade
 
-{\it For the Mid-Scale Science Projects category of the Mid-Scale
-Innovations Program}
+\vspace{-0.4in}
+\section{Overview of this Proposal} % 1 page ~ project summary? 
 
 The Hydrogen Epoch of Reionization Arrays (HERA) roadmap is a staged
-program that uses the unique properties of the 21~cm line from neutral
+plan for using the unique properties of the 21~cm line from neutral
 hydrogen to probe our cosmic dawn, from the birth of the first 
 stars and black holes, through the full reionization of the primordial
 intergalactic medium (IGM). 
@@ -107,27 +113,25 @@ on the power spectrum of 21~cm emission from reionization \citep{parsons_et_al20
 Current generation HERA experiements are fully constructed and have been engaged in observations
 that will soon reach the sensitivity limits of these instruments.  Meanwhile,
 the principles that have yielded this breakthrough in foreground removal
-have given us new insight into critical aspects of instrumentation for
-21~cm reionization experiments.  With these insights, we have designed a new 14~m diameter antenna element 
+have given us new insight into how
+21~cm reionization experiments should be designed.  With these insights, we have developed a new 14~m diameter antenna element 
 that is optimized both for
 sensitivity and for minimizing foreground systematics.  
-By placing these elements on a hexagonal grid that is maximally compact,
-and by minimizing the physical length of the analog signal path, 
-we have produced a scalable design for a next-generation HERA instrument that is capable of delivering
-the sensitivity and the foreground removal capability that will be transformative for
+We place these elements on a hexagonal grid that is maximally compact,
+and minimize the length of the analog signal path, 
+producing a scalable design that can deliver
+levels of sensitivity and foreground removal that are transformative for
 the studying reionization.  
-With this instrument, the field of 21~cm reionization
-to move well past the first detection of the cosmological signal to a detailed characterization of 
-its power spectrum that can constrain reionization parameters at the $\sim$10\% level \citep{pober_et_al2014}.
+An instrument based on this design can move the field of 21~cm reionization
+well past the first detection of the cosmological signal to the detailed characterization of 
+its power spectrum, constraining reionization parameters at the $\sim$10\% level \citep{pober_et_al2014}.
 
 Using this scalable design, we are now ready to build the instrument
 that delivers HERA-II science
 a cost that is substantially below what was originally envisioned in NWNH.
 We propose to build the next generation of HERA,
 observing in the 50--225~MHz band, in two stages:
-
-\vspace{-4pt}
-\begin{itemize}\setlength{\parskip}{0pt}\itemsep0pt
+\begin{itemize}[noitemsep,nolistsep]
 
 \item HERA~127 will measure the rise and fall of the EoR power
 spectrum, constraining the timing and duration of reionization.
@@ -139,10 +143,7 @@ power-spectrum observations back to the end of the 'Dark Ages' ($z \sim 20$
 to 30), when the first stars and black holes warm the primordial IGM. Ultimately,
 HERA-331 will have the sensitivity to
 image directly the largest scale structures in the IGM during reionization.
-
 \end{itemize}
-\vspace{-4pt}
-
 The proposed program produces a sequence of dedicated experiments
 optimized to fulfill the NWNH goal of characterizing the evolution of
 the HI 21~cm power spectrum during cosmic reionization. In
@@ -157,6 +158,13 @@ risks associated with external funding contingencies, but leaves room for
 collaborators to leverage outside resources for augmenting the science
 output of HERA in meaningful ways.
 
+% XXX document map here?
+
+%  ___     _                 
+% / __| __(_)___ _ _  __ ___ 
+% \__ \/ _| / -_) ' \/ _/ -_)
+% |___/\__|_\___|_||_\__\___|
+
 \section{Science} %total = 8 pages
 
 \subsection{Introduction}    % 1 page + 1 fig = simulated Tb cube + PS evolution
@@ -170,14 +178,14 @@ output of HERA in meaningful ways.
 %c. reemphasize that current knowledge is nil, yet demand is high
 %d. emphasize unique (only?) probe of dark ages
 
-The {\it cosmic dawn}, or the period beginning with the the birth of the first stars and culminating with the full
-reionization of the intergalactic medium (IGM) some 500 Myrs later, represents one of the last unexplored phases in 
+The {\it cosmic dawn}, the period beginning with the the birth of the first stars and culminating with the full
+reionization of the IGM some 500 Myrs later, represents one of the last unexplored phases in 
 the history of structure formation. During this period, a wealth of astrophysical and cosmological phenomena are at 
-work. The characteristics of the IGM depend on (for example) the cosmic density field, the formation sites of the 
+work. The characteristics of the IGM depend on the cosmic density field, the formation sites of the 
 first luminous sources (e.g., their typical masses and clustering), their constituents (e.g., exotic Population III 
 stars, more normal stars, stellar remnants, or supermassive black holes) their ultraviolet luminosities (which affect 
 the IGM's ionization state), the efficiency and abundance of X-ray sources (which affect the IGM temperature), and 
-even exotic effects like the relative velocity of baryons and dark matter.  Exploring these early structures and their 
+even more exotic effects like the relative velocity of baryons and dark matter.  Exploring these early structures and their 
 effects on each other and their environments was one of the top three ``{\it priority science objectives chosen by 
 the [NWNH] survey committee for the decade 2012-2021.}"
 
@@ -345,6 +353,7 @@ approach to foregrounds, and even better with explicit foreground modeling \cite
 
 % Jacobs
 \subsubsection{Imaging HI}
+\label{sec:imaging_HI}
 %iv. Imaging large scale structure: simulation (Fig) 
 With a nearly completely sampled aperture over 300~m across, HERA will have the collecting area of Arecibo but 
 with 500x the survey speed it presents the opportunity for directly imaging reionization.  After 100 hours on a 
@@ -408,17 +417,16 @@ Beyond a focus on individual objects, it may also be possible to cross-correlate
 
 %b. CMB pol 
 %Cross-correlations with the optical depth measurements \citep{sarkar_et_al2009,meerburg_et_al2013}
-
 % CMB omitted because most studies look way too optimistic.  Probably not going to happen.  ACL
-
 % c. CO/CII IM: optimistic or wrong timescale? 
-
-
-
 %e. Anscillary science with PAPER 128: transients, solar 
 % de Boer
-
 %\clearpage
+
+%  _                           
+% | |   ___ ______ ___ _ _  ___
+% | |__/ -_|_-<_-</ _ \ ' \(_-<
+% |____\___/__/__/\___/_||_/__/
 
 \section{Why build HERA now, and the lessons from MWA \& PAPER}
 %\subsection{Where we are right now: PAPER, MWA}  % 2 pages
@@ -439,6 +447,7 @@ foreground systematics by 4 orders of magnitude, leaving residuals demonstrably 
 The key challenge of 21~cm cosmological reionization experiments is 
 balancing the collecting area needed to detect the faint 21~cm reionization signal
 with the precision needed to suppress
+% XXX this figure doesn't really quantify # of orders of magnitude
 foregrounds that are $\sim$5 orders of magnitude brighter (see Figure~\ref{fig:twoFGViews}, left).
 The major breakthrough in 21~cm cosmology---what enables us to propose HERA now---is 
 the discovery of how 
@@ -663,6 +672,13 @@ first meaningful constraints on EoR via 21~cm emission
 %ii. direction dependent gains?
 
 
+
+%  ___         _           
+% |   \ ___ __(_)__ _ _ _  
+% | |) / -_|_-< / _` | ' \ 
+% |___/\___/__/_\__, |_||_|
+%               |___/      
+
 \section{HERA design and project} % 8 pages
 
 \subsection{Lessons learned recap} % 0.5 page
@@ -821,19 +837,19 @@ timescales for delay-space contamination arising from reflections.
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[b]{0.46\textwidth}
+	%\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=0.9\textwidth]{plots/Engineering/nvsd.png}
-		\caption{Costing model for a fixed sensitivity and varying the diameter.   The arrows indicate the regions of 
-				increasing systematics and delay-space contamination.}
-		\label{fig:nvsd} 
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.46\textwidth}
+%		\caption{Costing model for a fixed sensitivity and varying the diameter.   The arrows indicate the regions of 
+%				increasing systematics and delay-space contamination.}
+%		\label{fig:nvsd} 
+	%\end{subfigure}
+	%\quad
+	%\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=0.8\textwidth]{plots/Engineering/focalEff.png}
-		\caption{Analytical model efficiency of a parabolic element as a function of focal height and diameter.   The delay 
-				contamination specification is $f<5$m.}
-		\label{fig:disheffic}
-	\end{subfigure}
+%		\caption{Analytical model efficiency of a parabolic element as a function of focal height and diameter.   The delay 
+%				contamination specification is $f<5$m.}
+%		\label{fig:disheffic}
+	%\end{subfigure}
 	\caption{Cost and performance variational analysis data for the element.}
 \end{figure}
 
@@ -875,17 +891,17 @@ physical measurements of the prototype to validate and refine the element.
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[b]{0.46\textwidth}
+	%\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=0.85\textwidth]{plots/dish.png}
-		\caption{CAD model of 14m dish with screening and some supports removed to show detail.}
-		\label{fig:dish} 
-	\end{subfigure}
-\quad
-	\begin{subfigure}[b]{0.46\textwidth}
+	%	\caption{CAD model of 14m dish with screening and some supports removed to show detail.}
+	%	\label{fig:dish} 
+	%\end{subfigure}
+%\quad
+	%\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/hera_beam.png}
-		\caption{Analytical model beam patterns at 10m, 12m and 14m.}
-		\label{fig:beam} 
-	\end{subfigure}
+	%	\caption{Analytical model beam patterns at 10m, 12m and 14m.}
+	%	\label{fig:beam} 
+	%\end{subfigure}
 	\caption{HERA element and beam pattern.}
 \end{figure}
 
@@ -929,7 +945,7 @@ To minimize cross-talk, metal screens are strung between every pole/post, which 
 The dishes have a rim-to-rim spacing of 30cm to allow the screen to be slightly angled to minimize standing waves.
 
 % XXX
-====> There is nothing on the configuration yet.
+XXX There is nothing on the configuration yet.
 
 \vspace{-0.25in}
 \subsubsection{Signal Path}
@@ -949,23 +965,23 @@ performance \citep{parsons_et_al2010}.
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[b]{0.3\textwidth}
+	%\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{plots/new_antenna_closeup.jpg}
-		\caption{Photograph of the PAPER antenna positioned above the trough reflector.}
-		\label{fig:element}
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.3\textwidth}
+	%	\caption{Photograph of the PAPER antenna positioned above the trough reflector.}
+	%	\label{fig:element}
+	%\end{subfigure}
+	%\quad
+	%\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/recv_node.png}
-		\caption{Receiver modules in a node refrigerator.}
-		\label{fig:recv_node} 
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.3\textwidth}
+	%	\caption{Receiver modules in a node refrigerator.}
+%		\label{fig:recv_node} 
+%	\end{subfigure}
+%	\quad
+%	\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=0.8\textwidth]{plots/Engineering/digital.png}
-		\caption{Digital equipment (ADC/correlator) in container.}
-		\label{fig:digital} 
-	\end{subfigure}
+%		\caption{Digital equipment (ADC/correlator) in container.}
+%		\label{fig:digital} 
+%	\end{subfigure}
 	\caption{Photographs of existing instrument components to be used.}
 \end{figure}
 
@@ -1006,15 +1022,15 @@ $k_\parallel=0.1h {\rm Mpc}^{-1}$ are not dominated by foreground contamination.
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[b]{0.46\textwidth}
+	%\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=\textwidth]{plots/heracles.png}
-		\caption{Picture of the existing construction prototype in California.}
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.46\textwidth}
+	%	\caption{Picture of the existing construction prototype in California.}
+	%\end{subfigure}
+	%\quad
+	%\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/heraclesNA.png}
-		\caption{Initial reflection measurements from the prototype.}
-	\end{subfigure}
+	%	\caption{Initial reflection measurements from the prototype.}
+	%\end{subfigure}
 	\caption{Prototype antenna and initial results.}
 	\label{fig:heracles}
 \end{figure}
@@ -1044,17 +1060,17 @@ Figure \ref{fig:config} shows the configuration of the 61 antennas including the
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	\begin{subfigure}[b]{0.35\textwidth}
+	%\begin{subfigure}[b]{0.35\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/hex_61.png}
 		\caption{Configuration of the 61-element array.  Note the rectangular container to scale on right.}
-		\label{fig:config}
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.6\textwidth}
+	%	\label{fig:config}
+	%\end{subfigure}
+	%\quad
+	%\begin{subfigure}[b]{0.6\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/optics.png}
-		\caption{Cross-section and optics of an element.}
-		\label{fig:optics}
-	\end{subfigure}
+	%	\caption{Cross-section and optics of an element.}
+%		\label{fig:optics}
+%	\end{subfigure}
 	\caption{Configuration and optics.}
 	\label{fig:config_optics}
 \end{figure}
@@ -1280,7 +1296,7 @@ Town and the the South African internet provider (Tenet) to attain
 these fast transfer speeds, which will allow for data transfer via the
 internet. Once network capacity is exceeded, portable, inexpensive,
 network-attached storage devices will be used to house data during
-trasnport by air-freight shipping. Shipping of these NAS devices will
+transport by air-freight shipping. Shipping of these NAS devices will
 occur during all observing seasons as protection against network
 dropouts.
 
@@ -1349,17 +1365,24 @@ binned in local sidereal time, and averaged. This intermediate
 averaging scheme will also generate an accurate visibility-based sky
 model for the instrument once calibration is applied.
 
-\subsubsection{Continuum and removal}
+\subsubsection{Foreground Modeling and Removal}
+% Morales
 
-A high dynamic range imaging pipeline based on the Fast Holographic Deconvolution (FHD) pipeline of the MWA will be adapted for HERA.  The result will be sky maps with full Stokes information that can be used not only for better foreground suppression, but also as an interesting data product in itself.  We plan to perform detailed studies of the polarized sky, such as characterizing the distribution of rotation measures.  Updates to source catalogs and the Global Sky Model \cite{deoliveira2008} will provide reference sky models for both HERA and other low-frequency instruments.
+A high dynamic range imaging pipeline based on the Fast Holographic Deconvolution (FHD) pipeline of the MWA will be adapted for HERA.  The result will be sky maps with full Stokes information that can be used not only for better foreground suppression, but also as an interesting data product in itself.  We plan to perform detailed studies of the polarized sky, such as characterizing the distribution of rotation measures.  Updates to source catalogs and the Global Sky Model \cite{deoliveira2008} will provide reference sky models for both HERA and other low-frequency instruments. The goal will be to generate a model suitable for direct subtraction of foregrounds. 
+
 
 \subsubsection{Power spectrum and related measurements}
 
 In early power spectrum measurements, we will employ the conservative delay-spectrum approach to power spectrum estimation used in PAPER.  This visibility-based approach, when coupled with a foreground-avoidance strategy, will be sufficient for an unambiguous early detection of the $21~\textrm{cm}$ power spectrum should results from current-generation experiments prove marginal (see Figure \ref{fig:PspecSensitivity} and Table \ref{tab:signif}).  Further development plans will target the incorporation of optimal quadratic estimators in both visibility and image spaces, incorporating a fully covariant description of the foreground wedge.  This will enable statistical foreground mitigation techniques in addition to those based on foreground modeling (for example, from FHD).  Finally, we plan to explore Bayesian techniques for power spectrum estimation, building on the considerable progress already made on Gibbs-sampling imaging for interferometers \cite{sutter_et_al2014}.  Any techniques developed should be equally applicable to measurements in both the reionization epoch and the Dark Ages.
 
 To provide verification of our power spectrum constraints, we also plan to develop a simulator of the full HERA instruments, incorporating foregrounds and reionization models to output visibilities.
+\subsubsection{HI Imaging}
+Deep images will be summed to map HI emission (as described by Section \ref{sec:imaging_HI}) during reionization.   Foreground removal will follow the same basic plan as the power spectrum strategy.  Initially, residual images will be generated using the same conservatively foreground filtered and averaged data as input to an imager (e.g. FHD).  A subsequent, more sensitive method will use the image domain residuals generated by subtracting a foreground model.  Work on this method parallels the development of the precision foreground imaging and removal.
 
-\subsubsection{HI imaging}
+Sensitivity and significance of the images will be estimated by further developing the simulations shown in figure \ref{sec:imaging_HI}.  
+
+
+
 % Jacobs
 
 \subsubsection{Array monitoring/maintenance: daily, weekly health monitoring}
@@ -1414,6 +1437,13 @@ ii. other
 \end{itemize}
 \end{itemize}
 
+
+%  ___                  _           ___                     _      
+% | _ )_ _ ___  __ _ __| |___ _ _  |_ _|_ __  _ __  __ _ __| |_ ___
+% | _ \ '_/ _ \/ _` / _` / -_) '_|  | || '  \| '_ \/ _` / _|  _(_-<
+% |___/_| \___/\__,_\__,_\___|_|   |___|_|_|_| .__/\__,_\__|\__/__/
+%                                            |_|        
+
 \section{Broader Impacts} % 1 page
 % Aguirre
 
@@ -1460,6 +1490,12 @@ On the HERA timescale, a number of new observations will come online that would 
  
 D. Casper open source: good example to build from
 
+
+%  ___                                
+% / __|_  _ _ __  _ __  __ _ _ _ _  _ 
+% \__ \ || | '  \| '  \/ _` | '_| || |
+% |___/\_,_|_|_|_|_|_|_\__,_|_|  \_, |
+%                                |__/ 
 
 \section{VI. Summary: why us and why now?} % 0.5 pages
 % Parsons
