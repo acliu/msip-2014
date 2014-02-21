@@ -7,8 +7,8 @@
 \usepackage{natbib}
 \usepackage{natbibspacing}
 \usepackage{enumitem}
-%\usepackage{caption}
-%\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{float}
 \setlength{\bibspacing}{0pt}
 \setlength{\parskip}{0pt}
@@ -105,28 +105,31 @@ the reionization signal from the strong radio continuum foreground
 emission.  These techniques, which are based on a new
 understanding of the interplay of foreground and instrumental systematics
 in the context of a three-dimensional cosmological intensity-mapping experiment,
-have yielded a critical breakthrough.  As dicussed below, {\bf we are now able to remove 
+have yielded a critical breakthrough.  As discussed below, {\bf we are now able to remove 
 foregrounds to the limits of our sensitivity with these instruments},
 and this is culminating in the first physically meaningful upper limits
 on the power spectrum of 21~cm emission from reionization \citep{parsons_et_al2013}.
 
-Current generation HERA experiements are fully constructed and have been engaged in observations
+Current generation 21~cm reionization experiments (LOFAR, MWA, PAPER) are fully constructed and have been engaged in observations
 that will soon reach the sensitivity limits of these instruments.  Meanwhile,
 the principles that have yielded this breakthrough in foreground removal
 have given us new insight into how
-21~cm reionization experiments should be designed.  With these insights, we have developed a new 14~m diameter antenna element 
+21~cm reionization experiments should be designed.  Based on these insights, we have developed a new 14~m diameter antenna element 
 that is optimized both for
 sensitivity and for minimizing foreground systematics.  
-We place these elements on a hexagonal grid that is maximally compact,
-and minimize the length of the analog signal path, 
-producing a scalable design that can deliver
-levels of sensitivity and foreground removal that are transformative for
-the studying reionization.  
-An instrument based on this design can move the field of 21~cm reionization
-well past the first detection of the cosmological signal to the detailed characterization of 
+Arranging these elements in a compact hexagonal grid yields an array that
+facilitates calibration, leverages proven foreground removal techniques, and is scalable
+to large collecting areas.
+%We place these elements on a hexagonal grid that is maximally compact,
+%and minimize the length of the analog signal path, 
+%producing a scalable design that can deliver
+%levels of sensitivity and foreground removal that are transformative for
+%the studying reionization.  
+An instrument based on this design has the sensitivity to transform the field of 21~cm reionization,
+going well past the first detection of the cosmological signal to the detailed characterization of 
 its power spectrum, constraining reionization parameters at the $\sim$10\% level \citep{pober_et_al2014}.
 
-Using this scalable design, we are now ready to build the instrument
+With this scalable design, we are now ready to build the instrument
 that delivers HERA-II science
 a cost that is substantially below what was originally envisioned in NWNH.
 We propose to build the next generation of HERA,
@@ -144,7 +147,8 @@ to 30), when the first stars and black holes warm the primordial IGM. Ultimately
 HERA-331 will have the sensitivity to
 image directly the largest scale structures in the IGM during reionization.
 \end{itemize}
-The proposed program produces a sequence of dedicated experiments
+Drawing on the heritage of PAPER and the MWA, the proposed program incrementally builds a 
+sequence of dedicated experiments
 optimized to fulfill the NWNH goal of characterizing the evolution of
 the HI 21~cm power spectrum during cosmic reionization. In
 its final stages, HERA may be capable of imaging the primordial
@@ -165,7 +169,7 @@ output of HERA in meaningful ways.
 % \__ \/ _| / -_) ' \/ _/ -_)
 % |___/\__|_\___|_||_\__\___|
 
-\section{Science} %total = 8 pages
+\section{Intellectual Merit and Scientific Justification} %total = 8 pages
 
 \subsection{Introduction}    % 1 page + 1 fig = simulated Tb cube + PS evolution
 % Furlanetto, Carilli
@@ -427,10 +431,10 @@ Beyond a focus on individual objects, it may also be possible to cross-correlate
 % | |__/ -_|_-<_-</ _ \ ' \(_-<
 % |____\___/__/__/\___/_||_/__/
 
-\section{Why build HERA now, and the lessons from MWA \& PAPER}
+\section{Achievements Under Prior NSF Support} % this is a required section of the proposal
+%\section{Why build HERA now, and the lessons from MWA \& PAPER}
 %\subsection{Where we are right now: PAPER, MWA}  % 2 pages
 %\section{Foregrounds \& Lessons Learned from PAPER and MWA} 
-% ARP: I think i prefer how the preproposal fused all of this in a section.  Very hard to talk about only 1 aspect at a time
 
 
 \begin{figure}[t]\centering
@@ -442,6 +446,9 @@ filter that removes forground emission within the wedge.  Color scale indicates 
 This filter has been shown to suppress
 foreground systematics by 4 orders of magnitude, leaving residuals demonstrably noise-dominated.
 }\label{fig:waterfall} \end{figure}
+
+XXX overview of support for PAPER, MWA, OMNISCOPE, LEDA, and results for each of these.  Should get grant numbers.
+Go into other grants?
 
 The key challenge of 21~cm cosmological reionization experiments is 
 balancing the collecting area needed to detect the faint 21~cm reionization signal
@@ -678,7 +685,7 @@ first meaningful constraints on EoR via 21~cm emission
 % |___/\___/__/_\__, |_||_|
 %               |___/      
 
-\section{HERA design and project} % 8 pages
+\section{HERA Project Design} % 8 pages
 
 \subsection{Lessons learned recap} % 0.5 page
 The HERA collaboration has made significant progress on multiple approaches in dealing with
@@ -836,19 +843,19 @@ timescales for delay-space contamination arising from reflections.
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	%\begin{subfigure}[b]{0.46\textwidth}
+	\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=0.9\textwidth]{plots/Engineering/nvsd.png}
-%		\caption{Costing model for a fixed sensitivity and varying the diameter.   The arrows indicate the regions of 
-%				increasing systematics and delay-space contamination.}
-%		\label{fig:nvsd} 
-	%\end{subfigure}
-	%\quad
-	%\begin{subfigure}[b]{0.46\textwidth}
+		\caption{Costing model for a fixed sensitivity and varying the diameter.   The arrows indicate the regions of 
+				increasing systematics and delay-space contamination.}
+		\label{fig:nvsd} 
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=0.8\textwidth]{plots/Engineering/focalEff.png}
-%		\caption{Analytical model efficiency of a parabolic element as a function of focal height and diameter.   The delay 
-%				contamination specification is $f<5$m.}
-%		\label{fig:disheffic}
-	%\end{subfigure}
+		\caption{Analytical model efficiency of a parabolic element as a function of focal height and diameter.   The delay 
+				contamination specification is $f<5$m.}
+		\label{fig:disheffic}
+	\end{subfigure}
 	\caption{Cost and performance variational analysis data for the element.}
 \end{figure}
 
@@ -890,17 +897,17 @@ physical measurements of the prototype to validate and refine the element.
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	%\begin{subfigure}[b]{0.46\textwidth}
+	\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=0.85\textwidth]{plots/dish.png}
-	%	\caption{CAD model of 14m dish with screening and some supports removed to show detail.}
-	%	\label{fig:dish} 
-	%\end{subfigure}
-%\quad
-	%\begin{subfigure}[b]{0.46\textwidth}
+		\caption{CAD model of 14m dish with screening and some supports removed to show detail.}
+		\label{fig:dish} 
+	\end{subfigure}
+\quad
+	\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/hera_beam.png}
-	%	\caption{Analytical model beam patterns at 10m, 12m and 14m.}
-	%	\label{fig:beam} 
-	%\end{subfigure}
+		\caption{Analytical model beam patterns at 10m, 12m and 14m.}
+		\label{fig:beam} 
+	\end{subfigure}
 	\caption{HERA element and beam pattern.}
 \end{figure}
 
@@ -964,23 +971,23 @@ performance \citep{parsons_et_al2010}.
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	%\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{plots/new_antenna_closeup.jpg}
-	%	\caption{Photograph of the PAPER antenna positioned above the trough reflector.}
-	%	\label{fig:element}
-	%\end{subfigure}
-	%\quad
-	%\begin{subfigure}[b]{0.3\textwidth}
+		\caption{Photograph of the PAPER antenna positioned above the trough reflector.}
+		\label{fig:element}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/recv_node.png}
-	%	\caption{Receiver modules in a node refrigerator.}
-%		\label{fig:recv_node} 
-%	\end{subfigure}
-%	\quad
-%	\begin{subfigure}[b]{0.3\textwidth}
+		\caption{Receiver modules in a node refrigerator.}
+		\label{fig:recv_node} 
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.3\textwidth}
 		\includegraphics[width=0.8\textwidth]{plots/Engineering/digital.png}
-%		\caption{Digital equipment (ADC/correlator) in container.}
-%		\label{fig:digital} 
-%	\end{subfigure}
+		\caption{Digital equipment (ADC/correlator) in container.}
+		\label{fig:digital} 
+	\end{subfigure}
 	\caption{Photographs of existing instrument components to be used.}
 \end{figure}
 
@@ -1021,15 +1028,15 @@ $k_\parallel=0.1h {\rm Mpc}^{-1}$ are not dominated by foreground contamination.
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	%\begin{subfigure}[b]{0.46\textwidth}
+	\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=\textwidth]{plots/heracles.png}
-	%	\caption{Picture of the existing construction prototype in California.}
-	%\end{subfigure}
-	%\quad
-	%\begin{subfigure}[b]{0.46\textwidth}
+		\caption{Picture of the existing construction prototype in California.}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/heraclesNA.png}
-	%	\caption{Initial reflection measurements from the prototype.}
-	%\end{subfigure}
+		\caption{Initial reflection measurements from the prototype.}
+	\end{subfigure}
 	\caption{Prototype antenna and initial results.}
 	\label{fig:heracles}
 \end{figure}
@@ -1059,17 +1066,17 @@ Figure \ref{fig:config} shows the configuration of the 61 antennas including the
 % AAARRGGHH!
 \begin{figure}[h]
 	\centering
-	%\begin{subfigure}[b]{0.35\textwidth}
+	\begin{subfigure}[b]{0.35\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/hex_61.png}
 		\caption{Configuration of the 61-element array.  Note the rectangular container to scale on right.}
-	%	\label{fig:config}
-	%\end{subfigure}
-	%\quad
-	%\begin{subfigure}[b]{0.6\textwidth}
+		\label{fig:config}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.6\textwidth}
 		\includegraphics[width=\textwidth]{plots/Engineering/optics.png}
-	%	\caption{Cross-section and optics of an element.}
-%		\label{fig:optics}
-%	\end{subfigure}
+		\caption{Cross-section and optics of an element.}
+		\label{fig:optics}
+	\end{subfigure}
 	\caption{Configuration and optics.}
 	\label{fig:config_optics}
 \end{figure}
@@ -1097,11 +1104,6 @@ time
 \item detailed characterization of cross-coupling and reflections between antennas using cross-correlation data and imaging 
 \item fold calibrated data on the basis of redundancy and multiple observing days to obtain a high-sensitivity delay spectrum capable of verifying absence of low-level reflections at higher delays. 
 \end{itemize}
-
-%%%%%%%%%%%%MRI VERSION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 
 
 \subsubsection{Analog System}
@@ -1351,6 +1353,15 @@ to the computational nodes.
 \caption{\label{tab:data_vol} Summary of data volume and data rates for three completed PAPER observations, and each year of HERA observations.}
 \end{table}
 
+\subsection{Monitor and Control}
+
+XXX flesh out
+
+Top-level interface for controling and monitoring major subsystems. 
+Collection of monitor data from nodes, switch, correlator, data compression, and data transfer subsystems.
+Incorporation of calibration data from real-time application of redundant calibration (cite section), as well as
+other calibration, imaging, and assessment subsystems.
+
 \subsection{Analysis and Science}
 
 Beyond the construction and data-taking aspects of HERA, this proposal incorporates a full data analysis effort, culminating in the publication of a suite of science papers connecting observations to the theory of cosmic dawn.
@@ -1378,17 +1389,31 @@ To provide verification of our power spectrum constraints, we also plan to devel
 \subsubsection{HI imaging}
 % Jacobs
 
+XXX need something here
+
 \subsubsection{Array monitoring/maintenance: daily, weekly health monitoring}
 % de Boer
 
-\subsubsection{Aspirations [move to facilities section?]}
+In addition to Monitor and Control subsystem, which aggregates routine checks that are run automatically as
+part of the data compressiong and transfer pipeline, there is a need for deeper analysis
+exploring the data for more subtle defects, as well as monitoring progress toward sensitivity goals.
+We have set aside time for students at each institution, rotating among institutions, and managed at MIT,
+for performing such data exercises.
+Combine this with information from monitor database to identify hardware and subsystem failures.
+Aggregate lists of systems requiring maintenance attention, which are then handled by system owners
+in coordination with appropriate members of their teams.
 
-i. FFT correlator
+%\subsubsection{Aspirations [move to facilities section?]}
+%
+%i. FFT correlator
+%ii. other
 
-ii. other
-
-\subsection{Four-Year Schedule and deliverables} % 0.5 page
+\subsection{Schedule and Milestones} % 0.5 page
 % De Boer
+
+4 year proposal.
+Cycle of development, testing, critical design review, deployment, commissioning, observation.
+Refer to Project Management Plan for detail.
 
 \begin{itemize}[noitemsep,nolistsep]
 \item{Year 1:} Infrastructure, Prototyping, Contract Preparation (FY 2015).      
@@ -1430,6 +1455,13 @@ ii. other
 \end{itemize}
 \end{itemize}
 
+\subsection{Assessment}
+
+Point to Project Management Plan for details of milestones and design review criteria for each subsystem.
+Each subsystem is tested prior to a critical design review that assesses the readiness of each subsystem.
+Deployment and integration is coupled with commissioning activities that verify communication and control over defined interfaces.
+Calibration 
+
 
 %  ___                  _           ___                     _      
 % | _ )_ _ ___  __ _ __| |___ _ _  |_ _|_ __  _ __  __ _ __| |_ ___
@@ -1440,14 +1472,40 @@ ii. other
 \section{Broader Impacts} % 1 page
 % Aguirre
 
+%XXX Figure of students/interns
+
 %A. pre and post-doctoral students
 \subsection{Student Education}
+%proposals must include, and will be evaluated on, a substantial component of
+%student training and involvement of a diverse and inclusive workforce in
+%instrumentation, facility development, or data management/analysis.
 
 The HERA program will train new instrumentalists at the graduate and undergraduate levels, increase the
 diversity of US graduate programs by engaging South African students and preparing them for admission to US degree programs, and make major data products available publicly as a benefit to the community.
 
-The project involves graduate students in all stages of HERA development and observation. We will also fund an
-undergraduate specialist position at UC Berkeley's RAL, offered annually, mentoring the individual in the skills required to pursue graduate research in instrumentation.
+Focus on UCB. 
+Point to founding of CASPER at UCB.
+Involving undergraduate, RAL intern, grad students, and postdocs, working alongside seasoned veteran engineers in a laboratory setting.
+Recruiting of engineering students into science.
+Focus on both development, testing, and documentation phases of instrument development.  
+Involvement in design reviews.
+Harnessing energy of young students, combining with the stability and discipline.
+Synergy with Parsons' CAREER grant supporting pedagogical videos and other resources, integrated with relevant
+research topics.
+
+Through CASPER, via mail-lists, visiting students, workshops, dissemination of engineering expertise to a community broader
+even than the set of students and engineers supported under this proposal.
+Annual workshops.
+Hosting visiting students (reference next section). Cite past cases: Manley, Landon, Zhang (Omniscope).
+Mention specific success cases in progressing careers of instrumentalists: Parsons, Siemion, Ali, Hsyu, Leung, etc.
+
+Although a critical core of instrument development and construction takes place at UC Berkeley, where it may be tightly
+integrated and managed, each institution contributes necessary instrumentation, computing, monitor/control, data management, and
+analysis software to the project.  
+For these subsystems, students and postdocs take a leading role in development and testing.
+Required participation in critical design reviews.
+Involvement of students at all institutions in deployment, commissioning, and observing.
+
 
 %B. South Africa connection
 \subsection{South African Connection}
@@ -1471,8 +1529,19 @@ Specifically, we propose that each year of the grant, an exchange would be organ
 \subsubsection{Broader Outreach in SA}
 
 PAPER has an admirable history of enlisting interns from South African universities as part of major engineering deployments, with the work applied as practical training within their academic program.
+Plans for incorporating outreach and education tours of SA universities as part of regular site visits.
 
-\subsection{Impacts for the Broader Astronomy Community}
+
+
+%  ___                __ _ _      
+% | _ ) ___ _ _  ___ / _(_) |_ ___
+% | _ \/ -_) ' \/ -_)  _| |  _(_-<
+% |___/\___|_||_\___|_| |_|\__/__/
+
+\section{Benefits to the Astronomical Community}
+%\subsection{Impacts for the Broader Astronomy Community}
+
+XXX need some more here
 
 %i. Data access: transients, SETI, ionosphere
 The HERA measurements will be released to the community after an 18-month proprietary period and hosted at MIT (see Section \ref{sec:DataProducts}).  These data products will include foreground-subtracted cubes for
@@ -1481,7 +1550,12 @@ cross-correlation, deep images of reionization from HERA~568, compressed visibil
 % ii. Cross correlation: CMBpol, CO/CII IM
 On the HERA timescale, a number of new observations will come online that would benefit from cross-comparison with the power spectra and images produced by HERA (see Section \ref{sec:CrossCorrelation}). For example, HERA will provide the large-scale reionization environment for pointed JWST or ALMA galaxy observations and can offer cross-correlations with both WFIRST near-IR surveys \citep{lidz_et_al2009} and CMB polarization observations \citep{tashiro_et_al2010}.
  
-D. Casper open source: good example to build from
+CASPER.
+Cite high rate of adoption of CASPER hardware in the community.
+Delivering a next generation of signal processing platform.
+Development of heterogeneous computing systems involving CPUs, GPUs, and FPGAs, including DSP libraries, data handling, and control software.
+Sharing of LEDA GPU code \citep{clarke_et_al2012} with PAPER's FPGA processors, data handling, and control software.
+Continued support and development for the benefit of the radio astronomy instrumentation community.
 
 
 %  ___                                
@@ -1500,18 +1574,18 @@ and analysis
 tools needed to suppress the contamination. The discovery and
 characterization of the EoR Window and the development of precision foreground
 mitigation techniques have shown that foregrounds can be suppressed to the current
-thermal noise level (\S \ref{LessonsSec}; \citealt{parsons_et_al2013}). While the MWA
-and PAPER are pushing hard to detect the EoR power spectrum, %budget constraints have
+thermal noise level (\S \ref{LessonsSec}; \citealt{parsons_et_al2013}). While the MWA,
+PAPER, and LOFAR are pushing hard to detect the EoR power spectrum, %budget constraints have
 %dictated that 
-a marginal detection is the best these instruments can achieve.
+a marginal detection is the best these instruments are likely to achieve.
 HERA will both ensure a high significance detection of the \HI 21~cm 
-signal as
+signal, as
 well as provide powerful constraints on the rise and fall of reionization, how
-early stars and structure formed, and physical processes at the end of the
+early stars and structure formed, and which physical processes dominated heating at the end of the
 cosmic dark ages (Figures \ref{fig:x_i_Xray} \& \ref{fig:eor_pspec}).
 
 As envisioned in NWNH, the US EoR projects (PAPER, MWA, EDGES, MITEoR) have
-pooled their expertise to develop the second generation HERA observatory. This
+pooled their expertise to develop the second generation HERA experiment. This
 has created a collaborative team with a deep well of scientific
 experience---the majority of papers on EoR observations are authored by members
 of the HERA team. By leveraging this expertise, the HERA design is significantly
