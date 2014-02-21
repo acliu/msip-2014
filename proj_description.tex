@@ -50,7 +50,7 @@
 Innovations Program}
 
 \begin{figure}[H]\centering
-\includegraphics[width=6in]{plots/hera_array.png}
+\includegraphics[width=6in]{plots/hera_dish.png}
 \caption{The proposed array of 331 14~m-diameter zenith-pointing dishes in the Karoo Radio Astronomy Reserve
 in the Northern Cape of South Africa.
 }\label{fig:hera_array} \end{figure}
@@ -1100,12 +1100,6 @@ time
 \item fold calibrated data on the basis of redundancy and multiple observing days to obtain a high-sensitivity delay spectrum capable of verifying absence of low-level reflections at higher delays. 
 \end{itemize}
 
-%%%%%%%%%%%%MRI VERSION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
 \subsubsection{Analog System}
 ii. 14m elements + broad band (active) dipole feed
 % de Boer, Bradley
@@ -1392,47 +1386,85 @@ i. FFT correlator
 ii. other
 
 \subsection{Four-Year Schedule and deliverables} % 0.5 page
-% De Boer
+A more detailed scheduled is contained in the project management plan, but Table \ref{tab:scheduleSummary} gives an overview
+of the milestones and deliverables.
 
-\begin{itemize}[noitemsep,nolistsep]
-\item{Year 1:} Infrastructure, Prototyping, Contract Preparation (FY 2015).      
-\begin{itemize}[noitemsep,nolistsep]
-\item Install basic infrastructure (ground leveling, power, network connectivity) for new infrastructure
-\item Incorporate existing PAPER-128 antennas, correlator, and housing container.
-\item Install additional prototypes in Green Bank and test.
-\item Define final design package for element construction
-\item Start developing improved HERA baluns, receivers, feeds, nodes, and in-situ antenna calibration system.
-\item Continue delay-spectrum, FHD, and optimal estimator software development.
-\item Develop polarization capable software for beam/leakage studies.
-\end{itemize}
-\item{Year 2:} Hardware Commissioning and Deep Foreground Survey (FY 2016).  
-\begin{itemize}[noitemsep,nolistsep]
-\item Observations using PAPER antennas in an imaging configuration.
-\item Determine on-sky beam response of HERA antennas to facilitate future source subtraction efforts.
-\item Finalize site infrastructure (high-bandwidth optical network, surveying, trenching).
-\item Commission new feeds, receivers, nodes, and calibration systems in Green Bank and SA.
-\item Complete HERA-127 construction
-\item Initial delay-spectrum, FHD, and optimal estimator software ready for HERA 127 analysis.
-\item Full end-to-end simulations of analysis pipelines.
-\end{itemize}
-\item{Year 3:} HERA 127 and Detecting the Rise and Fall of Reionization (FY 2017).  
-\begin{itemize}[noitemsep,nolistsep]
-\item HERA 127 complete. Science observations begin using the PAPER correlator.
-\item Begin deployment of HERA 331. Install new node electronics and a 331-element, GPU-based correlator in the Karoo Array Processing Building (KAPB).
-\item Install new data storage infrastructure in the KAPB.
-\item Upgrade the UPenn analysis cluster.
-\item Finish construction of HERA 331
-\item Apply proven delay-spectrum analysis techniques to HERA 127 observations to constrain the timing and duration of reionization.
-\item Multi-pipeline analysis of HERA 127 observations to compare pipeline strengths/weaknesses.
-\end{itemize}
-\item{Year 4:} HERA 331 and Measuring the Evolution of the First Galaxies (FY 2018).           
-\begin{itemize}[noitemsep,nolistsep]
-\item HERA 331 complete. Begin science observations Oct. 2017.\item Begin multi-pipeline analysis of data to characterize the evolution of the power spectrum and determining properties of the first galaxies. 
-\item Continue analysis software development: optimize existing algorithms and develop imaging-based subtraction techniques for expanding the EoR window
-\item Create high-fidelity maps/data cubes of the HERA field for cross-correlation studies
-\item Cosmological simulations for extracting reionization physics from power spectrum measurements
-\end{itemize}
-\end{itemize}
+\begin{table}[h]
+\centering
+\caption{Schedule Overview}
+\label{tab:scheduleSummary}
+\begin{tabular}{| p{1.5in} | p{1.5in} | p{1.5in} | p{1.5in} |}\hline
+\textbf{Year 1}:  FY2015   &  \textbf{Year 2}:  FY2016  &  \textbf{Year 3}:  FY2017 & \textbf{Year 4}:  FY2018 \\ \hline
+Infrastructure, prototyping and contract preparation. &
+Hardware commissioning and deep foreground survey &
+HERA-127 observations:  detecting the rise and fall of reionization &
+HERA-331 observations and measuring the evolution of the first galaxies \\
+\begin{itemize}[noitemsep,nolistsep,leftmargin=12pt]
+\item Basic infrastructure
+\item GB, SA prototypes
+\item Design package
+\item Polarization software
+\end{itemize} &
+\begin{itemize}[noitemsep,nolistsep,leftmargin=12pt]
+\item HERA beam pattern
+\item HERA-127
+\item Delay-spectrum/FHD software
+\item Analysis pipelines
+\end{itemize} &
+\begin{itemize}[noitemsep,nolistsep,leftmargin=12pt]
+\item HERA-127 observations
+\item Electronics upgrade
+\item HERA-331
+\item HERA-127 analysis
+\end{itemize} &
+\begin{itemize}[noitemsep,nolistsep,leftmargin=12pt]
+\item HERA-331 observations
+\item Cross-correlations
+\item Cosmological simulations
+\end{itemize} \\ \hline
+\end{tabular}
+\end{table}
+
+
+%\begin{itemize}[noitemsep,nolistsep]
+%\item{Year 1:} Infrastructure, Prototyping, Contract Preparation (FY 2015).      
+%\begin{itemize}[noitemsep,nolistsep]
+%\item Install basic infrastructure (ground leveling, power, network connectivity) for new infrastructure
+%\item Incorporate existing PAPER-128 antennas, correlator, and housing container.
+%\item Install additional prototypes in Green Bank and test.
+%\item Define final design package for element construction
+%\item Start developing improved HERA baluns, receivers, feeds, nodes, and in-situ antenna calibration system.
+%\item Continue delay-spectrum, FHD, and optimal estimator software development.
+%\item Develop polarization capable software for beam/leakage studies.
+%\end{itemize}
+%\item{Year 2:} Hardware Commissioning and Deep Foreground Survey (FY 2016).  
+%\begin{itemize}[noitemsep,nolistsep]
+%\item Observations using PAPER antennas in an imaging configuration.
+%\item Determine on-sky beam response of HERA antennas to facilitate future source subtraction efforts.
+%\item Finalize site infrastructure (high-bandwidth optical network, surveying, trenching).
+%\item Commission new feeds, receivers, nodes, and calibration systems in Green Bank and SA.
+%\item Complete HERA-127 construction
+%\item Initial delay-spectrum, FHD, and optimal estimator software ready for HERA 127 analysis.
+%\item Full end-to-end simulations of analysis pipelines.
+%\end{itemize}
+%\item{Year 3:} HERA 127 and Detecting the Rise and Fall of Reionization (FY 2017).  
+%\begin{itemize}[noitemsep,nolistsep]
+%\item HERA 127 complete. Science observations begin using the PAPER correlator.
+%\item Begin deployment of HERA 331. Install new node electronics and a 331-element, GPU-based correlator in the Karoo Array Processing Building (KAPB).
+%\item Install new data storage infrastructure in the KAPB.
+%\item Upgrade the UPenn analysis cluster.
+%\item Finish construction of HERA 331
+%\item Apply proven delay-spectrum analysis techniques to HERA 127 observations to constrain the timing and duration of reionization.
+%\item Multi-pipeline analysis of HERA 127 observations to compare pipeline strengths/weaknesses.
+%\end{itemize}
+%\item{Year 4:} HERA 331 and Measuring the Evolution of the First Galaxies (FY 2018).           
+%\begin{itemize}[noitemsep,nolistsep]
+%\item HERA 331 complete. Begin science observations Oct. 2017.\item Begin multi-pipeline analysis of data to characterize the evolution of the power spectrum and determining properties of the first galaxies. 
+%\item Continue analysis software development: optimize existing algorithms and develop imaging-based subtraction techniques for expanding the EoR window
+%\item Create high-fidelity maps/data cubes of the HERA field for cross-correlation studies
+%\item Cosmological simulations for extracting reionization physics from power spectrum measurements
+%\end{itemize}
+%\end{itemize}
 
 
 %  ___                  _           ___                     _      
