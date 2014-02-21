@@ -265,12 +265,21 @@ The primary construction location is in the South African Karoo Astronomy Reserv
 and operated since 2009.  The South African SKA organization (``SKA-SA'') is a key partner and has a great deal of
 infrastructure and support on-site and for the site and a close working relationship exists between the partners.
 
-% XXX what does maximize mean below?
-The project is phased and designed to maximize off-site sub-assemblies, which are then shipped to site for subsequent
-installation.  The on-site installation has an overall On-Site Manager (which rotates among a small number of expert
-staff) supervising two 6-8 member crews, each with a crew chief.  Primary sub-assemblies are the hub casts, pole/post end-caps 
-(which hold the surface support spars and rim pieces and contain locational markers), PVC support sub-assemblies 
-for the surface, feed, feed-backplane, central cone, node enclosure.XXX
+The project is phased in its delivery (see Figure \ref{fig:phasesSchedule} and
+designed such that most sub-assemblies are built off-site and then shipped to site
+for subsequent installation. The on-site installation has an overall On-Site Manager
+(which rotates among a small number of expert staff) supervising two 6-8 member
+crews, each with a crew chief. Primary sub-assemblies are the hub casts, pole/post
+end-caps (which hold the surface support spars and rim pieces and contain locational
+markers), PVC support sub-assemblies for the surface, feed, feed-backplane, central
+cone, and the node enclosure. These are shown in Table \ref{tab:subassycontracts}.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=\textwidth]{plots/phases.png}
+\caption{Phases and top-level activities of construction}
+\label{fig:phasesSummary}
+\end{figure}
 
 \begin{table}[tbh]
 \centering
@@ -311,12 +320,20 @@ chiefs.
 \item KAPB electronics [**]
 \item Commissioning [**]
 \end{enumerate}
-
 The overall schedule and milestones are summarized in Section \ref{sec:schedule}.
 
-XXX discussion of testing and commissioning?
-XXX somthing about digital team doing first-pass commissioning
+HERA-127 will use the same electronics as PAPER, so commissioning and debugging of the physical
+hardware should be straightforward, so commissioning is more confined to the analysis.  As in PAPER,
+the experienced digital team from Berkeley will commission the hardware in the new location.
 
+With HERA-331, the new node electronics begin to be incorporated, so commissioning will involve
+other aspects that will utilze both US-based experts, as well as the local experts in Cape Town and Durban.
+Commissioning on the nodes will begin with installation of the first node, rather than requiring all nodes
+to be installed.
+
+When the new processor is installed and full use of the full signal path is commenced, US-based staff
+will spend extensive time on location commissioning the full system.  Initially, the digital experts will
+provide full hardware funcationality, then science staff and students will use the system on-site to debug.
 
 \section{Management of Operations}
 \label{sec:operations}
@@ -444,9 +461,9 @@ listed below.
 \end{itemize}
 \end{itemize}
 
-\section{WBS Summary}
-\label{sec:wbs}
-The labor estimate was generated from a very detailed ``bottom's up'' task summary, which maps to the milestones to generate the work breakdown structure.
+%\section{WBS Summary}
+%\label{sec:wbs}
+%The labor estimate was generated from a very detailed ``bottom's up'' task summary, which maps to the milestones to generate the work breakdown structure.
 
 \section{Risk}
 \label{sec:risk}
@@ -476,7 +493,14 @@ HERA given the design heritage.  The principle remaining risk relates to polariz
 The following sections will briefly discuss project risks.
 
 \subsection{Analysis/Science}
-Phased, based on now well-understood but conservative delay-space approach.
+The analysis will proceed in phased stages as well.  The now well-understood but 
+conservative delay-space approach will be implemented from the start, and the sensitivity of
+HERA is such that this approach should yield much of the science.  If the foreground
+subtraction techniques can be made to work, then the science is greatly enhanced.
+
+As mentioned above in the context of the white paper, polarization leakage is a key
+risk to all of the approaches.  To help lower this risk, their is a focus on understanding and
+constraining the impacts of the instrumental response.
 
 Increased RFI as the SKA-SA construction activities continue to be on-going and 
 ramp up is a risk.  HERA will only observe at night, so active construction will be
