@@ -132,20 +132,22 @@ its power spectrum, constraining reionization parameters at the $\sim$10\% level
 With this scalable design, we are now ready to build the instrument
 that delivers HERA-II science
 a cost that is substantially below what was originally envisioned in NWNH.
-We propose to build the next generation of HERA,
+We propose a four-year plan to conduct the next generation HERA experiment,
 observing in the 50--225~MHz band, in two stages:
 \begin{itemize}[noitemsep,nolistsep]
 
-\item HERA~127 will measure the rise and fall of the EoR power
-spectrum, constraining the timing and duration of reionization.
+\item HERA~127, deployed at the end of the second year of this proposal, will measure the rise and fall of the 
+21~cm reionization power spectrum, constraining the timing and duration of reionization.
 
-\item HERA~331 will measure EoR fluctuations over a variety of spatial
+\item HERA~331, deployed at the end of the third year, will measure fluctuations in the 21~cm
+signal over a variety of spatial
 scales to determine the nature and distribution of the first galaxies
 that dominate cosmic reionization. HERA~331 will also extend precision
 power-spectrum observations back to the end of the 'Dark Ages' ($z \sim 20$
-to 30), when the first stars and black holes warm the primordial IGM. Ultimately,
-HERA-331 will have the sensitivity to
-image directly the largest scale structures in the IGM during reionization.
+to 30), when the first stars and black holes warm the primordial IGM. 
+% ARP: these designs already said below
+%Ultimately, HERA-331 will have the sensitivity to
+%image directly the largest scale structures in the IGM during reionization.
 \end{itemize}
 Drawing on the heritage of PAPER and the MWA, the proposed program incrementally builds a 
 sequence of dedicated experiments
@@ -276,7 +278,7 @@ that $\xHI$ decreases versus redshift) for a fiducial
 reionization history (black line).
 At redshifts 8--12
 21~cm emission may be the only precise probe of $\xHI$.
-Right: At low frequencies, HERA opens a window to
+Right: At low frequencies, HERA probes
 pre-reionization physics at the end of the Dark Ages. Plotted are power spectrum amplitudes (at $k =
 0.15h$~Mpc$^{-1}$) for various IGM heating models \citep{mesinger_et_al2013},
 with predicted sensitivities.
@@ -338,12 +340,12 @@ redshift.
 
 \begin{figure}[t]\centering
 \includegraphics[width=3in]{plots/Pspec/eor_pspec_2014.png}
-\includegraphics[width=3in]{plots/Pspec/pk_k3pk.png}
+\includegraphics[width=3in]{plots/Pspec/pk_k3pk.png} % XXX trim out left subpanel
 \caption{Left: Power-spectrum sensitivities for three stages of
 HERA (solid) relative to a fiducial ionization model (dotted line; $\xHI=0.37$, $z=9.0$).  
 Sensitivity curves reflect a staged array size and
 a staged improvement in analysis software that expands the range
-of modes falling into the EoR Window \label{fig:PspecSensitivity}
+of modes falling into the EoR Window. % XXX haven't described EoR window yet
 Right: The current reigning upper limit on the 21~cm reionization power spectrum,
 obtained with a 32-element PAPER deployment \citep{parsons_et_al2013}.  These upper limits
 were used to constrain the brightness temperature of the IGM at $z\sim8$, showing
@@ -392,6 +394,7 @@ sight.  The brightest structures in the redshift 8 input simulation are detectab
 
 \begin{figure}[!ht]\centering
 \includegraphics[width=\textwidth]{plots/Imaging/HERA_FoV_and_sim.jpg}%HERA_331_z8_SNR_annotated.jpg}
+% XXX need to cut this down to just the imaging sim, I think
 \caption{\small
 With sensitivity highly concentrated at the largest scales, HERA is capable of directly imaging HI during reionization.  Shown here is the HERA ``stripe''.  At 150~MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300~m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50`$Gpc^3$.  The stripe includes the GOODS-South field \citep{dickinson_et_al2003}, one of the best studied regions of sky.  Shown here is a simulation of EoR emission \citep{mcquinn_et_al2007} as imaged by HERA with noise equivalent to 100 hours of observation.  
 Contours enclose regions with signal to noise above 10.  The regions detected on scales of $\sim$100~Mpc are bracket the size scales probed by deep galaxy surveys (cf. the GOODs-South survey volume where 179 objects about $z=7$ have been detected, representing $\sim45\%$ of all such objects over the entire sky.)}  \label{fig:imaging}
@@ -426,7 +429,7 @@ With high sensitivity throughout the observing band, HERA represents an opportun
 \label{sec:CrossCorrelation}
 %vii. Cross-correlation science: 
 
-The ability of HERA to image makes possible an exciting range of cross-correlation science.  For example, HERA will provide the large-scale reionization environment for pointed JWST or ALMA 
+The ability of HERA to image makes an exciting range of cross-correlation science possible.  For example, HERA will provide the large-scale reionization environment for pointed JWST or ALMA 
 galaxy observations and can offer cross-correlations with near-IR surveys \citep{lidz_et_al2009}.  With a resolution of 60~Mpc and survey area of 1 Gpc$^2$ HERA images will probe structure on scales well beyond any deep, high redshift field contemplated. For comparison, note that the entire Great Observatories Origins Deep Survey (GOODS) \citep{dickinson_et_al2003}, where 45\% out of all $394$ objects at $z > 7$ have been found, is only 15{\arcmin} (30~Mpc ) across. Using deep HERA images it will be possible to determine the reionization context of targeted observations of early galaxies. Knowing whether an observed galaxy is in a region that previously reionized (center of large HII bubble), recently reionized (edge of HII bubble), or is forming from pristine neutral gas dramatically increases the science return of proposed multi-band observations.
 
 Beyond a focus on individual objects, it may also be possible to cross-correlate with other diffuse tracers of large scale structure.  A number of studies have proposed cross-correlation with molecular CO \cite{lidz_et_al2011} and atomic CII \citep{gong_et_al2011} lines, and prototypes of these experiments may be operating on the HERA timescale.  Such probes have the advantage of having different systematics compared to HERA, potentially allowing clean measurements of the underlying signal.
@@ -481,13 +484,13 @@ analysis techniques, a scalable correlator architecture that has enabled arrays 
 with Moore's Law, and a data compression scheme that reduces data volume by a factor of $\sim$40 without impacting
 reionization science.  Perhaps most importantly, PAPER pioneered the delay-spectrum foreground avoidance technique \cite{parsons_et_al2012b}
 that in recent PAPER observations has been demonstrated to suppress foregrounds by at least 4 orders of magnitude 
-(Figure \ref{fig:PspecSensitivity}; \citealt{parsons_et_al2013}).  The resulting power spectrum is the most stringent upper
+(Figure \ref{fig:eor_pspec}; \citealt{parsons_et_al2013}).  The resulting power spectrum is the most stringent upper
 limit on reionization by almost two orders of magnitude in mK$^2$, and was used to show that the early IGM must have
 been heated prior to reionization --- presumably by emission from high-mass X-ray binaries.
 
 \item{MWA:} (NSF grants \#0457585, \#082132, \#1109257) 
 The MWA is a dipole-based aperture array synthesis telescope designed
-to operate in the 80 to 300 MHz frequency range.
+to operate in the 80--300~MHz frequency range.
 It is located at the
 Murchison Radio-astronomy Observatory (MRO) in Western Australia, the
 planned site of the future SKA low-band
@@ -507,14 +510,15 @@ have been extensively documented and investigated
 in existing literature.
 The US MWA team has been a world leader in the application of 
 foreground subtraction for
-enlarging the EoR window---qualitatively increasing the science
+enlarging the EoR window---qualitatively increasing the science % XXX EoR window used before defined
 reach of the power spectrum and enabling imaging of reionization (Figure
-\ref{fig:PspecSensitivity}). The resulting analysis is more complex than the
+\ref{fig:eor_pspec}). The resulting analysis is more complex than the
 delay-spectrum approach (e.g.\ \citealt{hazelton_et_al2013}) but naturally
 removes polarized foregrounds \citep{moore_et_al2013} and enables the
 comparison with observations at other bands. Recent MWA observations have
-demonstrated foreground subtraction to the thermal noise limit 
-within regions of the foreground wedge that is illustrated in Figure \ref{fig:twoFGViews}.
+demonstrated the use of image-based modeling (Figure \ref{fig:twoFGViews}, left) to
+subtract foregrounds to the thermal noise limit 
+within certain regions of the foreground wedge (Figure \ref{fig:twoFGViews}, right). % XXX this mention of wedge comes before description
 
 \item{MITEoR:} (NSF grants \#0908848, \#1105835) MITEoR is a novel effort aimed at
 examining new cross-correlation and calibration techniques for low-frequency radio telescope
@@ -542,7 +546,7 @@ these projects also have a strong record of ground-breaking research, with a siz
 Finally, HERA's leadership brings substantial experience
 collaborating internationally, managing the design, development, testing, and integration of complex systems,
 adhering to project timelines and budgets, and setting incremental development and deployment plans that
-ensure that progress is made predictably, with time to adapt to contingencies.
+ensure that progress is made on a predictable schedule, with time to adapt to contingencies.
 
 
 \subsection{Lessons for HERA}
@@ -562,12 +566,13 @@ The key challenge of 21~cm cosmological reionization experiments is
 balancing the collecting area needed to detect the faint 21~cm reionization signal
 with the precision needed to suppress
 % XXX this figure doesn't really quantify # of orders of magnitude
-foregrounds (see Figure~\ref{fig:twoFGViews}, left) that are $\sim$5 orders of magnitude brighter \cite{deolivieracosta_et_al2008}.
+foregrounds that are $\sim$5 orders of magnitude brighter \cite{deolivieracosta_et_al2008}.
 The major breakthrough in 21~cm cosmology---what enables us to propose HERA now---is 
 the discovery of how 
 instrumentation and analysis can exploit the 
 spectral smoothness of foregrounds
-to open up an `EoR Window'.  These advances have been pioneered by the MWA and PAPER teams \citep{morales_et_al2012,parsons_et_al2012b,vedantham_2012,Datta_2010,hazelton_et_al2013,pober_et_al2013,parsons_et_al2013,dillon_et_al2013b}, and enable us to design a targeted HERA instrument that can reveal the details of reionization (Figure \ref{fig:x_i_vs_z}) and image the largest structures (Figure \ref{fig:imaging}).
+to open up an `EoR Window'.  
+%These advances have been pioneered by the MWA and PAPER teams \citep{morales_et_al2012,parsons_et_al2012b,vedantham_2012,Datta_2010,hazelton_et_al2013,pober_et_al2013,parsons_et_al2013,dillon_et_al2013b}, and enable us to design a targeted HERA instrument that can reveal the details of reionization (Figure \ref{fig:x_i_vs_z}) and image the largest structures (Figure \ref{fig:imaging}).
 % XXX better phrase for "EoR window"?
 As illustrated in Figure \ref{fig:waterfall}, these advances have been used to suppress foreground emission by 4
 orders of magnitude in PAPER observations,
@@ -689,9 +694,9 @@ HERA uses these lessons perform the science of reionization, at a much lower cos
 \begin{figure}[!ht] \centering
 %\includegraphics[width=6.5in]{plots/MWApretty.png} \includegraphics[width=3.6
 %in]{plots/MWApretty.png}
-\includegraphics[height=2.3in]{plots/MWApretty_crop.png} 
+\includegraphics[height=2.3in]{plots/MWApretty_crop.png} % XXX replace with MWA pic from FoV fig
 %\includegraphics[width=2.4 in]{plots/wedge_tall.png}
-\includegraphics[height=2.3in]{plots/wedge_tall_wide.png} \caption{\small [I'd replace left panel with MWA PS and direct comparison, now that we have an image in another figure. MM] Left:
+\includegraphics[height=2.3in]{plots/wedge_tall_wide.png} \caption{\small Left:
 Foregrounds imaged on the MWA using FHD software.
 This image spans $\sim$$30^{\circ}$ and
 includes point-source and diffuse emission (the Vela and Puppis SNRs are in the
@@ -828,7 +833,7 @@ first meaningful constraints on EoR via 21~cm emission
 %in hand (as shown in Figure \ref{fig:pk_k3pk}), with upper limits
 %that are beginning to rule out cold reionization scenarios \citep{parsons_et_al2013}.
 
-This HERA-331 proposal targets a 331-element array that incorporates
+This HERA proposal targets a 331-element array that incorporates
 our proven foreground avoidance techniques while improving
 dramatically the sensitivity relative to current experiments.  With a
 new understanding of how antenna size and separation affect
@@ -1509,7 +1514,7 @@ A high dynamic range imaging pipeline based on the Fast Holographic Deconvolutio
 
 \subsubsection{Power spectrum and related measurements}
 
-In early power spectrum measurements, we will employ the conservative delay-spectrum approach to power spectrum estimation used in PAPER.  This visibility-based approach, when coupled with a foreground-avoidance strategy, will be sufficient for an unambiguous early detection of the $21~\textrm{cm}$ power spectrum should results from current-generation experiments prove marginal (see Figure \ref{fig:PspecSensitivity} and Table \ref{tab:signif}).  Further development plans will target the incorporation of optimal quadratic estimators \citep{liu_tegmark2011,dillon_et_al2013a} in both visibility and image spaces, incorporating a fully covariant description of the foreground wedge.  This will enable statistical foreground mitigation techniques in addition to those based on foreground modeling (for example, from FHD).  Finally, we plan to explore Bayesian techniques for power spectrum estimation, building on the considerable progress already made on Gibbs-sampling imaging for interferometers \cite{sutter_et_al2014}.  Any techniques developed should be equally applicable to measurements in both the reionization epoch and the Dark Ages.
+In early power spectrum measurements, we will employ the conservative delay-spectrum approach to power spectrum estimation used in PAPER.  This visibility-based approach, when coupled with a foreground-avoidance strategy, will be sufficient for an unambiguous early detection of the $21~\textrm{cm}$ power spectrum should results from current-generation experiments prove marginal (see Figure \ref{fig:eor_pspec} and Table \ref{tab:signif}).  Further development plans will target the incorporation of optimal quadratic estimators \citep{liu_tegmark2011,dillon_et_al2013a} in both visibility and image spaces, incorporating a fully covariant description of the foreground wedge.  This will enable statistical foreground mitigation techniques in addition to those based on foreground modeling (for example, from FHD).  Finally, we plan to explore Bayesian techniques for power spectrum estimation, building on the considerable progress already made on Gibbs-sampling imaging for interferometers \cite{sutter_et_al2014}.  Any techniques developed should be equally applicable to measurements in both the reionization epoch and the Dark Ages.
 
 To provide verification of our power spectrum constraints, we also plan to develop a simulator of the full HERA instruments, incorporating foregrounds and reionization models to output visibilities.
 
