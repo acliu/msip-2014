@@ -312,7 +312,7 @@ Figure~\ref{fig:x_i_vs_z}.
 
 During the Dark Ages prior to reionization, 21~cm observations provided by HERA
 will begin to explore the rate and density of massive black holes formed in the
-early universe \citep{pritchard_loeb2010} via their X-ray emission (see Figure \ref{fig:Xray}), 
+early universe \citep{pritchard_loeb2010} via their X-ray emission (see Figure \ref{fig:x_i_vs_z}, right panel), 
 how velocity streaming between baryonic 
 matter and the dark matter halos affected early structure formation and the onset
 of Ly$\alpha$ emission \citep{visbal_et_al2012}, and will lay the groundwork for future
@@ -394,7 +394,7 @@ sight.  The brightest structures in the redshift 8 input simulation are detectab
 \includegraphics[width=\textwidth]{plots/Imaging/HERA_FoV_and_sim.jpg}%HERA_331_z8_SNR_annotated.jpg}
 \caption{\small
 With sensitivity highly concentrated at the largest scales, HERA is capable of directly imaging HI during reionization.  Shown here is the HERA ``stripe''.  At 150~MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300~m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50`$Gpc^3$.  The stripe includes the GOODS-South field \citep{dickinson_et_al2003}, one of the best studied regions of sky.  Shown here is a simulation of EoR emission \citep{mcquinn_et_al2007} as imaged by HERA with noise equivalent to 100 hours of observation.  
-Contours enclose regions with signal to noise above 10.  The regions detected on scales of $\sim$100~Mpc are bracket the size scales probed by deep galaxy surveys (cf. the GOODs-South survey volume where 179 objects about $z=7$ have been detected, representing $\sim45\%$ of all such objects over the entire sky.)  \label{fig:imaging}}
+Contours enclose regions with signal to noise above 10.  The regions detected on scales of $\sim$100~Mpc are bracket the size scales probed by deep galaxy surveys (cf. the GOODs-South survey volume where 179 objects about $z=7$ have been detected, representing $\sim45\%$ of all such objects over the entire sky.)}  \label{fig:imaging}
 \end{figure}    
 
 %\subsubsection{Imaging as a probe of non-gaussianity}
@@ -448,6 +448,7 @@ Beyond a focus on individual objects, it may also be possible to cross-correlate
 %\section{Why build HERA now, and the lessons from MWA \& PAPER}
 %\subsection{Where we are right now: PAPER, MWA}  % 2 pages
 %\section{Foregrounds \& Lessons Learned from PAPER and MWA} 
+\label{sec:Lessons}
 
 \begin{figure}[t]\centering
 \includegraphics[width=6.5in]{plots/PAPER_and_MWA_and_HERA.jpg}
@@ -499,9 +500,9 @@ Zealand, and consists of
 condensed but highly randomized layout (Figure \ref{fig:hera_dish}, upper left;
 \citealt{tingay_et_al2013_trunc}). The randomized layout and synthesis rotation
 from tracked observations provide a filled $uv$-plane and excellent
-full-polarization imaging of the foregrounds (Figure \ref{{fig:imaging}}).
-The MWA's hardware performance \citep{bowman_et_al2007}, calibration pipeline
-\citep{mitchell_et_al2008}, and foreground subtraction strategy \citep{morales_et_al2006}
+full-polarization imaging of the foregrounds.
+The MWA's hardware performance \citep{bowman_et_al2007a}, calibration pipeline
+\citep{mitchell_et_al2008}, and foreground subtraction strategy \citep{morales_et_al2006a}
 have been extensively documented and investigated
 in existing literature.
 The US MWA team has been a world leader in the application of 
@@ -1186,7 +1187,7 @@ FX correlator architectures require.
 
 HERA's nodes each consist of a single, RFI-tight enclosure housing 16 dual-polarization receiver modules, 
 6 data acquisition (DAQ(, %XXX or whatever we call them
-modules, power supplies, cooling, and small server for monitor and control (see Figure \ref{fig:node_arch}).  HERA-331 will employ
+modules, power supplies, cooling, and small server for monitor and control.  HERA-331 will employ
 26 nodes, each capable of processing the signals from 16 antenna elements.
 DAQ modules, which are currently under development, and are in the advanced stages of schematic design and layout,
 act as both the digitizer and F-Engine in HERA's FX correlator architecture.  Each DAQ
@@ -1730,7 +1731,7 @@ and analysis
 tools needed to suppress the contamination. The discovery and
 characterization of the EoR Window and the development of precision foreground
 mitigation techniques have shown that foregrounds can be suppressed to the current
-thermal noise level (\S \ref{LessonsSec}; \citealt{parsons_et_al2013}). While the MWA,
+thermal noise level (\S \ref{sec:Lessons}; \citealt{parsons_et_al2013}). While the MWA,
 PAPER, and LOFAR are pushing hard to detect the EoR power spectrum, %budget constraints have
 %dictated that 
 a marginal detection is the best these instruments are likely to achieve.
