@@ -448,14 +448,18 @@ Beyond a focus on individual objects, it may also be possible to cross-correlate
 %\section{Foregrounds \& Lessons Learned from PAPER and MWA} 
 
 \begin{figure}[t]\centering
-\includegraphics[width=6in]{plots/waterfall_filtered.png}
-\caption{\small 
-Waterfall plots illustrating, as a function of time and frequency, PAPER visibilities
-measured on a 30-m baseline before (left) and after (right) the application of a 
-filter that removes forground emission within the wedge.  Color scale indicates amplitude in $\log_{10}({\rm Jy})$.
-This filter has been shown to suppress
-foreground systematics by 4 orders of magnitude, leaving residuals demonstrably noise-dominated.
-}\label{fig:waterfall} \end{figure}
+\includegraphics[width=6.5in]{plots/PAPER_and_MWA_and_HERA.jpg}
+\caption{\small
+The MWA (top left) and PAPER (bottom left) arrays, each currently deployed with 128 elements.
+The 14-m HERA element (right) dramatically improves sensitivity while 
+constraining the path length and amplitude of reflections to ensure that foreground
+isolation is not substantially degraded.
+%The core of HERA~331 consists of a redundant hexagonal array with
+%outrigger antennas (not shown) for imaging and foreground mitigation.
+}
+\label{fig:hera_dish}
+\end{figure}
+
 
 The HERA project team consists of PIs and technical leaders from four NSF-funded projects targeting the 21cm signal
 at high redshifts:
@@ -540,6 +544,17 @@ ensure that progress is made predictably, with time to adapt to contigencies.
 
 \subsection{Lessons for HERA}
 
+\begin{figure}[t]\centering
+\includegraphics[width=6in]{plots/waterfall_filtered.png}
+\caption{\small 
+Waterfall plots illustrating, as a function of time and frequency, PAPER visibilities
+measured on a 30-m baseline before (left) and after (right) the application of a 
+filter that removes forground emission within the wedge.  Color scale indicates amplitude in $\log_{10}({\rm Jy})$.
+This filter has been shown to suppress
+foreground systematics by 4 orders of magnitude, leaving residuals demonstrably noise-dominated.
+}\label{fig:waterfall} \end{figure}
+
+
 The key challenge of 21~cm cosmological reionization experiments is 
 balancing the collecting area needed to detect the faint 21~cm reionization signal
 with the precision needed to suppress
@@ -613,20 +628,6 @@ Holographic Deconvolution imaging software
 \citep{sullivan_et_al2012_trunc} and the imaging power spectrum
 software from the MWA, and the backend computing infrastructure from PAPER.
 
-HERA follows the vision delineated in NWNH where the MWA and PAPER
-characterized the foreground emission and performed the first deep
-integrations, followed by a more powerful instrument that drew on the lessons
-learned and merged the scientific teams. The MWA, PAPER, and LOFAR have all
-recently started deep integrations with hopes of detecting the 21~cm
-signal.
-However, as detailed in
-\cite{pober_et_al2014}, these instruments are likely to achieve
-at best only marginal detections of power from reionization.
-While this might qualify as a ``detection'' if the signal is strong, the
-\emph{science} of reionization observations is beyond their reach. 
-However, the profound contributions of MWA and PAPER should not be overlooked. PAPER and the MWA have succeeded magnificently in characterizing the foreground emission, discovering the EoR window, and understanding how to remove foreground contamination from the measurements. Further, they have developed and retired the risk associated with all of HERA's major systems. 
-HERA uses these lessons perform the science of reionization, at a much lower cost than assumed in NWNH.
-
 \begin{table}
 \centering
 \begin{tabular}{c||r||r|r} 
@@ -641,6 +642,21 @@ SKA1 Low Core & 833,190 & 97.92 & 284.85 \\
 \caption{Power spectrum signal-to-noise (``number of sigmas") at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
 \label{tab:signif}
 \end{table}
+
+
+HERA follows the vision delineated in NWNH where the MWA and PAPER
+characterized the foreground emission and performed the first deep
+integrations, followed by a more powerful instrument that drew on the lessons
+learned and merged the scientific teams. The MWA, PAPER, and LOFAR have all
+recently started deep integrations with hopes of detecting the 21~cm
+signal.
+However, as summarized in Table \ref{tab:signif} (see \citealt{pober_et_al2014} for more details),
+these instruments are likely to achieve
+at best only marginal detections of power from reionization.
+While this might qualify as a ``detection'' if the signal is strong, the
+\emph{science} of reionization observations is beyond their reach. 
+However, the profound contributions of MWA and PAPER should not be overlooked. PAPER and the MWA have succeeded magnificently in characterizing the foreground emission, discovering the EoR window, and understanding how to remove foreground contamination from the measurements. Further, they have developed and retired the risk associated with all of HERA's major systems. 
+HERA uses these lessons perform the science of reionization, at a much lower cost than assumed in NWNH.
 
 
 %Observations with PAPER and the MWA have confirmed the presence of the EoR Window
@@ -785,28 +801,31 @@ first meaningful constraints on EoR via 21~cm emission
 
 \section{HERA Project Design} % 8 pages
 
-\subsection{Lessons learned recap} % 0.5 page
-The HERA collaboration has made significant progress on multiple approaches in dealing with
-foregrounds.
-Based on a ``delay-spectrum'' understanding of
-the mechanism for how instrumental responses modulate foregrounds on
-spectral scales of cosmological interest \citep{parsons_et_al2012b},
-PAPER has optimized its instrument to focus on regions in Fourier
-space that have weak coupling to foregrounds caused by the
-interferometer.  These regions are determined both by chromatic
-instrumental responses and by the inherent frequency structure of the
-foregrounds.  An `EoR window' has been identified in the Fourier
-(wavenumber) space of spectral and angular power spectra that is
-inherently free of continuum emission, without explicit continuum
-subtraction in either the image or spectral domain \citep{pober_et_al2013,morales_et_al2012,Datta_2010}
-This window allows for continuum
-`avoidance' rather than subtraction. Observations based on this new
-approach have already demonstrated that the extremely stringent level
-of foreground suppression needed to access the 21~cm signal is largely
-in hand (as shown in Figure \ref{fig:pk_k3pk}), with upper limits
-that are beginning to rule out cold reionization scenarios \citep{parsons_et_al2013}.
+%\subsection{Lessons learned recap} % 0.5 page
 
-HERA-331 proposal targets a 331-element array that incorporates
+% XXX possibly pull some of the sentences below for HERA Lessons section above.
+
+%The HERA collaboration has made significant progress on multiple approaches in dealing with
+%foregrounds.
+%Based on a ``delay-spectrum'' understanding of
+%the mechanism for how instrumental responses modulate foregrounds on
+%spectral scales of cosmological interest \citep{parsons_et_al2012b},
+%PAPER has optimized its instrument to focus on regions in Fourier
+%space that have weak coupling to foregrounds caused by the
+%interferometer.  These regions are determined both by chromatic
+%instrumental responses and by the inherent frequency structure of the
+%foregrounds.  An `EoR window' has been identified in the Fourier
+%(wavenumber) space of spectral and angular power spectra that is
+%inherently free of continuum emission, without explicit continuum
+%subtraction in either the image or spectral domain \citep{pober_et_al2013,morales_et_al2012,Datta_2010}
+%This window allows for continuum
+%`avoidance' rather than subtraction. Observations based on this new
+%approach have already demonstrated that the extremely stringent level
+%of foreground suppression needed to access the 21~cm signal is largely
+%in hand (as shown in Figure \ref{fig:pk_k3pk}), with upper limits
+%that are beginning to rule out cold reionization scenarios \citep{parsons_et_al2013}.
+
+This HERA-331 proposal targets a 331-element array that incorporates
 our proven foreground avoidance techniques while improving
 dramatically the sensitivity relative to current experiments.  With a
 new understanding of how antenna size and separation affect
@@ -821,19 +840,6 @@ with PAPER-style dipole feeds (see Figure \ref{fig:hera_dish}.  The
 short (4.5m) focal height of these dishes is central to limiting the
 path length of reflections whose time-delay gives rise to chromatic
 instrumental systematics.
-
-\begin{figure}[t]\centering
-\includegraphics[width=6.5in]{plots/PAPER_and_MWA_and_HERA.jpg}
-\caption{\small
-The MWA (top left) and PAPER (bottom left) arrays, each currently deployed with 128 elements.
-The 14-m HERA element (right) dramatically improves sensitivity while 
-constraining the path length and amplitude of reflections to ensure that foreground
-isolation is not substantially degraded.
-%The core of HERA~331 consists of a redundant hexagonal array with
-%outrigger antennas (not shown) for imaging and foreground mitigation.
-}
-\label{fig:hera_dish}
-\end{figure}
 
 % AAARRGGHH!
 %\begin{figure}[!ht]
@@ -1053,7 +1059,7 @@ To minimize cross-talk, metal screens are strung between every pole/post, which 
 The dishes have a rim-to-rim spacing of 30cm to allow the screen to be slightly angled to minimize standing waves.
 
 % XXX
-XXX There is nothing on the configuration yet.
+%XXX There is nothing on the configuration yet.
 
 \vspace{-0.25in}
 \subsubsection{Signal Path}
@@ -1104,112 +1110,9 @@ into the CASPER suite of hardware and firmware, is currently in layout at NRAO. 
 takes the output from the PAMs, digitizes and channelizes it before putting it on optical fiber
 for transmission to the Karoo Array Processing Building.
 
-\vspace{-0.25in}
-\subsection{Prototype Construction and Testing}
-\vspace{-6pt}
 
-One prototype of the antenna has been constructed near the Radio Astronomy Lab in California. 
-This prototype serves as an important first construction test-bed and is currently being used to do 
-initial network analyzer measurements (Fig. \ref{fig:heracles}).
-This proposal calls for the construction of two additional prototype dishes alongside
-the PAPER array deployed at the NRAO site near Green Bank, WV.
-These dishes will be tested
-with a network analyzer in situ, and will be cross-correlated with PAPER elements using
-the correlator currently deployed on site, in order to measure
-the element performance and optimize the design.  The goal of this effort is to ensure
-that all signal reflections
-are attenuated by a factor of -60 dB by the time that they are capable of entering the signal path
-at a delays greater than 50 ns.  While signal reflections will be inevitable with such a dish
-design, the quality of the impedance match at the feed,
-the presence of structures that reduces resonances between
-the feed and the dish, and control of the focal height of the parabola are all aspects
-of the design that can
-be manipulated to help achieve this specification, ensuring that reionization modes above
-$k_\parallel=0.1h {\rm Mpc}^{-1}$ are not dominated by foreground contamination.
-
-% AAARRGGHH!
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[width=\textwidth]{plots/heracles.png}
-		\caption{Picture of the existing construction prototype in California.}
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[width=\textwidth]{plots/Engineering/heraclesNA.png}
-		\caption{Initial reflection measurements from the prototype.}
-	\end{subfigure}
-	\caption{Prototype antenna and initial results.}
-	\label{fig:heracles}
-\end{figure}
-
-These additional prototypes will be important to finalize the specific construction techniques to be 
-used in the final antenna construction contract in South Africa.
-
-\vspace{-0.25in}
-\subsection{Array Construction}
-\vspace{-6pt}
-%XXX: why do we only discuss HERA-61 here?
-Construction of HERA-61 consists of five primary steps: 
-\begin{enumerate}[noitemsep,nolistsep]
-\item site preparation and surveying 
-\item pole installation by contracted labor with specialized utility pole equipment 
-\item hub placement and height adjustment
-\item remainder of construction of each element, following description above, using local labor 
-\item moving the feeds and cables from the existing PAPER dipoles to new ground screens by project staff
-\end{enumerate}
-
-The contractors and immediate supervisors will be based in South Africa.  Supervision staff 
-will be part of the extensive support infrastructure in place at the site to support South African SKA activities.
-As mentioned above, the tall poles are shared amongst the antennas in the tight configuration.  
-Therefore, 61 antennas requires only 75 poles rather than 61x3=183.  These are standard telephone/power 
-utility poles and a great deal of  expertise and infrastructure exists to install these in remote settings.  
-Figure \ref{fig:config} shows the configuration of the 61 antennas including the tall pole locations and \ref{fig:optics} shows a cross-section of an element.
-
-% AAARRGGHH!
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[b]{0.35\textwidth}
-		\includegraphics[width=\textwidth]{plots/Engineering/hex_61.png}
-		\caption{Configuration of the 61-element array.  Note the rectangular container to scale on right.}
-		\label{fig:config}
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.6\textwidth}
-		\includegraphics[width=\textwidth]{plots/Engineering/optics.png}
-		\caption{Cross-section and optics of an element.}
-		\label{fig:optics}
-	\end{subfigure}
-	\caption{Configuration and optics.}
-	\label{fig:config_optics}
-\end{figure}
-
-Except for two custom metal assemblies, the remainder of the construction materials are standard wood, 
-metal and PVC parts.  The two custom assemblies are simple small welded metal assemblies for the end of 
-rim support pieces (quantity 12) and the feed and feed backplane (quantity 1).  The PVC and wood sub-assemblies 
-will be constructed off-site where material and labor is readily accessible and shipped to site.  The 
-construction of these sub-assemblies, pre-cut wood and PVC, and wire mesh pieces will be done on-site under 
-contract.  Project staff will then move over the existing PAPER feeds and cables and commission the array.  
-
-\vspace{-0.25in}
-\subsection{Commissioning}
-\vspace{-6pt}
-Note that since all of the electronics are already deployed and working, commissioning will consist of verifying the existing performance but within the new electromagnetic environment presented by the new ground screens.  Below is
-an explicit list of commissioning tasks:
-\begin{itemize}[noitemsep,nolistsep]
-\item equalization of signal levels and repairing of reflections and misbehaving signal paths due to cabling using auto-correlation data 
-\item measure system temperature from raw level of auto-correlation data as it varies diurnally.
-\item measure relative width of primary beam using source transits for XX and YY polarizations 
-\item use established sky model from PAPER and correlation with known PAPER feeds to 
-determine absolute gain as a function of direction for new dishes. 
-\item use redundancy to solve for phase and gain calibration parameters, measure stability of parameters versus 
-time 
-\item detailed characterization of cross-coupling and reflections between antennas using cross-correlation data and imaging 
-\item fold calibrated data on the basis of redundancy and multiple observing days to obtain a high-sensitivity delay spectrum capable of verifying absence of low-level reflections at higher delays. 
-\end{itemize}
-
-\subsubsection{Analog System}
-ii. 14m elements + broad band (active) dipole feed
+%\subsubsection{Analog System}
+%ii. 14m elements + broad band (active) dipole feed
 % de Boer, Bradley
 
 \subsubsection{Digital System}
@@ -1270,25 +1173,25 @@ FX correlator architectures require.
 
 \paragraph{Node}
 
-\begin{figure}[!ht]\centering
-%\includegraphics[width=6.5in]{plots/node_arch.png}
-\caption{
-XXX something about nodes here.  Maybe also block diagram of NRAO digitizer board.
-}\label{fig:node_arch}
-\end{figure}
+%\begin{figure}[!ht]\centering
+%%\includegraphics[width=6.5in]{plots/node_arch.png}
+%\caption{
+%XXX something about nodes here.  Maybe also block diagram of NRAO digitizer board.
+%}\label{fig:node_arch}
+%\end{figure}
 
 HERA's nodes each consist of a single, RFI-tight enclosure housing 16 dual-polarization receiver modules, 
-6 data acquisition (DAQ, XXX or whatever we call them)
+6 data acquisition (DAQ(, %XXX or whatever we call them
 modules, power supplies, cooling, and small server for monitor and control (see Figure \ref{fig:node_arch}).  HERA-331 will employ
-21 nodes (XXX probably more like 25), each capable of processing the signals from 16 antenna elements.
+26 nodes, each capable of processing the signals from 16 antenna elements.
 DAQ modules, which are currently under development, and are in the advanced stages of schematic design and layout,
 act as both the digitizer and F-Engine in HERA's FX correlator architecture.  Each DAQ
 is responsible for digitizing 6 input signals (3 antennas, dual-polarization) at a rate
 of 500 Msps, for a Nyquist bandwidth of 0--250 MHz.  This band is channelized into 2048 channels
-using a Polyphase Filter Bank running on the DAQ's relatively inexpensive Xilinx Kintex XXX FPGA.
+using a Polyphase Filter Bank running on the DAQ's relatively inexpensive Xilinx Kintex FPGA.
 The FPGA forms data packets out of 100 MHz of channels selected throughout the band, each represented
 with an 8-bit fixed-point complex number.  The aggregated bandwidth of 4.8 Gbps per board is transmitted in
-10-Gb Ethernet format over a single SFP+ port, through a XXX optical transceiver module, onto an optical
+10-Gb Ethernet format over a single SFP+ port, through a CWDM optical transceiver module, onto an optical
 fiber that runs back to a central container adjacent to the array.  
 % XXX don't know if this next part is strictly necessar to say, or just cute.
 This transmitted bandwidth is approximately
@@ -1302,7 +1205,7 @@ HERA's central container houses two significant subsystems.  The first is a timi
 that is responsible for maintaining a GPS-disciplined oscillator and distributing timing
 signals (the sampling clock and 1PPS synchronization) to each of the nodes.  The second
 subsystem is a straight-forward passive fiber optic patch panel that is responsible for coupling
-the optical network attached to the nodes into a 192 (XXX)-filament optical fiber bundle
+the optical network attached to the nodes into a 192-filament optical fiber bundle 
 % XXX need to check costing again on full parallel tx vs color mux with tuned transceivers
 that attaches the container to the downstream portion of the correlator system.
 
@@ -1313,7 +1216,7 @@ in advanced stages of construction for MeerKAT, and will house the switch and X 
 complete the HERA correlator system.  The fiber optic bundle that enters the KAPB will patch
 into local fiber optic cables 
 % XXX and possible demux here
-that each terminate in optical transceivers that plug into a 240-port (XXX) 10 GbE switch.
+that each terminate in optical transceivers that plug into a 240-port 10 GbE switch.
 Such switches, while large, are readily available commercially today.  Also connected to
 this switch are 30 servers, each hosting two dual-GPU graphics cards and two dual
 10 GbE network interface cards, which implement the cross-multiplication (X-Engine) component
@@ -1326,7 +1229,7 @@ these servers in the third year of the project.
 Assuming 8-second integrations from the correlator, the raw data output of the
 correlator while operating will be, assuming a 100-MHz correlated bandwidth, 1.8 Gbps.
 These raw visibilities will be assembled in order by four servers
-and recorded to a XXX TB RAID storage system at full rate in the Miriad UV
+and recorded to a 1.5 PB RAID storage system at full rate in the Miriad UV
 file format.
 
 % XXX need to discuss the plan for how data are shipped over to UPenn here. see below
@@ -1455,14 +1358,129 @@ to the computational nodes.
 \caption{\label{tab:data_vol} Summary of data volume and data rates for three completed PAPER observations, and each year of HERA observations.}
 \end{table}
 
-\subsection{Monitor and Control}
+\subsubsection{Monitor and Control}
 
-XXX flesh out
+%XXX flesh out
 
 Top-level interface for controling and monitoring major subsystems. 
 Collection of monitor data from nodes, switch, correlator, data compression, and data transfer subsystems.
 Incorporation of calibration data from real-time application of redundant calibration (cite section), as well as
 other calibration, imaging, and assessment subsystems.
+
+%\subsubsection{Array monitoring/maintenance: daily, weekly health monitoring}
+% de Boer
+
+In addition to Monitor and Control subsystem, which aggregates routine checks that are run automatically as
+part of the data compressiong and transfer pipeline, there is a need for deeper analysis
+exploring the data for more subtle defects, as well as monitoring progress toward sensitivity goals.
+We have set aside time for students at each institution, rotating among institutions, and managed at MIT,
+for performing such data exercises.
+Combine this with information from monitor database to identify hardware and subsystem failures.
+Aggregate lists of systems requiring maintenance attention, which are then handled by system owners
+in coordination with appropriate members of their teams.
+
+\vspace{-0.25in}
+\subsection{Prototype Construction and Testing}
+\vspace{-6pt}
+
+One prototype of the antenna has been constructed near the Radio Astronomy Lab in California. 
+This prototype serves as an important first construction test-bed and is currently being used to do 
+initial network analyzer measurements (Fig. \ref{fig:heracles}).
+This proposal calls for the construction of two additional prototype dishes alongside
+the PAPER array deployed at the NRAO site near Green Bank, WV.
+These dishes will be tested
+with a network analyzer in situ, and will be cross-correlated with PAPER elements using
+the correlator currently deployed on site, in order to measure
+the element performance and optimize the design.  The goal of this effort is to ensure
+that all signal reflections
+are attenuated by a factor of -60 dB by the time that they are capable of entering the signal path
+at a delays greater than 50 ns.  While signal reflections will be inevitable with such a dish
+design, the quality of the impedance match at the feed,
+the presence of structures that reduces resonances between
+the feed and the dish, and control of the focal height of the parabola are all aspects
+of the design that can
+be manipulated to help achieve this specification, ensuring that reionization modes above
+$k_\parallel=0.1h {\rm Mpc}^{-1}$ are not dominated by foreground contamination.
+
+% AAARRGGHH!
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=\textwidth]{plots/heracles.png}
+		\caption{Picture of the existing construction prototype in California.}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.46\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/heraclesNA.png}
+		\caption{Initial reflection measurements from the prototype.}
+	\end{subfigure}
+	\caption{Prototype antenna and initial results.}
+	\label{fig:heracles}
+\end{figure}
+
+These additional prototypes will be important to finalize the specific construction techniques to be 
+used in the final antenna construction contract in South Africa.
+
+\vspace{-0.25in}
+\subsection{Array Construction}
+\vspace{-6pt}
+Construction of HERA elements in the array consists of five primary steps: 
+\begin{enumerate}[noitemsep,nolistsep]
+\item site preparation and surveying 
+\item pole installation by contracted labor with specialized utility pole equipment 
+\item hub placement and height adjustment
+\item remainder of construction of each element, following description above, using local labor 
+\item moving the feeds and cables from the existing PAPER dipoles to new ground screens by project staff
+\end{enumerate}
+
+The contractors and immediate supervisors will be based in South Africa.  Supervision staff 
+will be part of the extensive support infrastructure in place at the site to support South African SKA activities.
+As mentioned above, the tall poles are shared amongst the antennas in the tight configuration.  
+These are standard telephone/power 
+utility poles and a great deal of  expertise and infrastructure exists to install these in remote settings.  
+Figure \ref{fig:config} shows the antenna configuration, including the tall pole locations and \ref{fig:optics} shows a cross-section of an element.
+
+% AAARRGGHH!
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.35\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/hex_61.png} % XXX update this
+		\caption{Configuration of the 331-element array.  Note the rectangular container to scale on right.}
+		\label{fig:config}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.6\textwidth}
+		\includegraphics[width=\textwidth]{plots/Engineering/optics.png}
+		\caption{Cross-section and optics of an element.}
+		\label{fig:optics}
+	\end{subfigure}
+	\caption{Configuration and optics.}
+	\label{fig:config_optics}
+\end{figure}
+
+Except for two custom metal assemblies, the remainder of the construction materials are standard wood, 
+metal and PVC parts.  The two custom assemblies are simple small welded metal assemblies for the end of 
+rim support pieces (quantity 12) and the feed and feed backplane (quantity 1).  The PVC and wood sub-assemblies 
+will be constructed off-site where material and labor is readily accessible and shipped to site.  The 
+construction of these sub-assemblies, pre-cut wood and PVC, and wire mesh pieces will be done on-site under 
+contract.  Project staff will then move over the existing PAPER feeds and cables and commission the array.  
+
+\vspace{-0.25in}
+\subsection{Commissioning}
+\vspace{-6pt}
+Note that since all of the electronics are already deployed and working, commissioning will consist of verifying the existing performance but within the new electromagnetic environment presented by the new ground screens.  Below is
+an explicit list of commissioning tasks:
+\begin{itemize}[noitemsep,nolistsep]
+\item equalization of signal levels and repairing of reflections and misbehaving signal paths due to cabling using auto-correlation data 
+\item measure system temperature from raw level of auto-correlation data as it varies diurnally.
+\item measure relative width of primary beam using source transits for XX and YY polarizations 
+\item use established sky model from PAPER and correlation with known PAPER feeds to 
+determine absolute gain as a function of direction for new dishes. 
+\item use redundancy to solve for phase and gain calibration parameters, measure stability of parameters versus 
+time 
+\item detailed characterization of cross-coupling and reflections between antennas using cross-correlation data and imaging 
+\item fold calibrated data on the basis of redundancy and multiple observing days to obtain a high-sensitivity delay spectrum capable of verifying absence of low-level reflections at higher delays. 
+\end{itemize}
 
 \subsection{Analysis and Science}
 
@@ -1493,24 +1511,13 @@ Deep images will be summed to map HI emission (as described by Section \ref{sec:
 
 Sensitivity and significance of the images will be estimated by further developing the simulations shown in figure \ref{sec:imaging_HI}.  
 
-XXX need something here
-
-\subsubsection{Array monitoring/maintenance: daily, weekly health monitoring}
-% de Boer
-
-In addition to Monitor and Control subsystem, which aggregates routine checks that are run automatically as
-part of the data compressiong and transfer pipeline, there is a need for deeper analysis
-exploring the data for more subtle defects, as well as monitoring progress toward sensitivity goals.
-We have set aside time for students at each institution, rotating among institutions, and managed at MIT,
-for performing such data exercises.
-Combine this with information from monitor database to identify hardware and subsystem failures.
-Aggregate lists of systems requiring maintenance attention, which are then handled by system owners
-in coordination with appropriate members of their teams.
+%XXX need something here
 
 %\subsubsection{Aspirations [move to facilities section?]}
 %
 %i. FFT correlator
 %ii. other
+
 
 \subsection{Schedule and Milestones} % 0.5 page
 % De Boer
@@ -1683,7 +1690,7 @@ Plans for incorporating outreach and education tours of SA universities as part 
 \section{Benefits to the Astronomical Community}
 %\subsection{Impacts for the Broader Astronomy Community}
 
-XXX need some more here
+%XXX need some more here
 
 %i. Data access: transients, SETI, ionosphere
 The HERA measurements will be released to the community after an 18-month proprietary period and hosted at MIT (see Section \ref{sec:DataProducts}).  These data products will include foreground-subtracted cubes for
@@ -1707,7 +1714,7 @@ Continued support and development for the benefit of the radio astronomy instrum
 % |___/\_,_|_|_|_|_|_|_\__,_|_|  \_, |
 %                                |__/ 
 
-\section{VI. Summary: why us and why now?} % 0.5 pages
+\section{Summary} % 0.5 pages
 % Parsons
 
 This HERA proposal follows the vision for 21~cm observations laid out in NWNH.
