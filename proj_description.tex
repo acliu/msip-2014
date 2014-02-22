@@ -931,31 +931,34 @@ Many competing factors set the area of the collecting element. Among them are
 sensitivity, cost, minimum baseline, efficiency and delay values of internal
 reflections, as just mentioned. Using the derived sensitivity for a redundant array
 \citep{parsons_et_al2012a} and a reasonably complete costing model, one can compute
-the cost/performance for a fixed sensitivity as a function of diameter. Figure
-\ref{fig:nvsd} shows this function normalized to a 14-meter antenna, indicating a
-fairly broad minimum extending from about 14 to 22 meters. Arrows indicate the
-direction of increasing systematics and delay-space contamination. Within this range,
+the cost/performance for a fixed sensitivity as a function of diameter. 
+%Figure \ref{fig:nvsd} shows this function normalized to a 14-meter antenna, indicating a
+The cost function normalized to a 14-meter antenna shows a
+fairly broad minimum extending from about 14 to 22 meters. 
+%Arrows indicate the
+%direction of increasing systematics and delay-space contamination. 
+Within this range,
 smaller elements are preferred because of increased field of view and lower
 timescales for delay-space contamination arising from reflections.
 
-% AAARRGGHH!
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[width=0.9\textwidth]{plots/Engineering/nvsd.png}
-		\caption{Costing model for a fixed sensitivity and varying the diameter.   The arrows indicate the regions of 
-				increasing systematics and delay-space contamination.}
-		\label{fig:nvsd} 
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[width=0.8\textwidth]{plots/Engineering/focalEff.png}
-		\caption{Analytical model efficiency of a parabolic element as a function of focal height and diameter.   The delay 
-				contamination specification is $f<5$m.}
-		\label{fig:disheffic}
-	\end{subfigure}
-	\caption{Cost and performance variational analysis data for the element.}
-\end{figure}
+% ARP: lack room for this figure.
+%\begin{figure}[h]
+%	\centering
+%	\begin{subfigure}[b]{0.46\textwidth}
+%		\includegraphics[width=0.9\textwidth]{plots/Engineering/nvsd.png}
+%		\caption{Costing model for a fixed sensitivity and varying the diameter.   The arrows indicate the regions of 
+%				increasing systematics and delay-space contamination.}
+%		\label{fig:nvsd} 
+%	\end{subfigure}
+%	\quad
+%	\begin{subfigure}[b]{0.46\textwidth}
+%		\includegraphics[width=0.8\textwidth]{plots/Engineering/focalEff.png}
+%		\caption{Analytical model efficiency of a parabolic element as a function of focal height and diameter.   The delay 
+%				contamination specification is $f<5$m.}
+%		\label{fig:disheffic}
+%	\end{subfigure}
+%	\caption{Cost and performance variational analysis data for the element.}
+%\end{figure}
 
 % FOLLOWING SEEMS TOO DETAILED FOR A PROPOSAL
 %To distinguish between measured sky delays and instrumental-induced delays at a required threshold ($R_T$) dB, 
@@ -977,8 +980,9 @@ To maximize sensitivity, we wish to maximize the efficiency of the
 HERA element, while still thresholding the delays at which reflections couple
 back into the feeds. The design for the proposed HERA element is set
 at $14~m$-diameter dish with a focal height of $4.5$~m, which currently gives us
-good total efficiency (see Fig \ref{fig:disheffic}) while staying within the delay-response constraint. 
-Analytical models of the beam pattern are shown in Figure \ref{fig:beam}.
+good total efficiency %(see Fig \ref{fig:disheffic}) 
+while staying within the delay-response constraint. 
+%Analytical models of the beam pattern are shown in Figure \ref{fig:beam}.
 Full electromagnetic modeling will be coupled with 
 physical measurements of the prototype to validate and refine the element.
 
@@ -992,22 +996,22 @@ physical measurements of the prototype to validate and refine the element.
 %spectrum) are corrupted. This uncertainty, coupled with increasing systematic affects for shorter 
 %baselines (hence smaller diameters), favors larger diameter antennas.
 
-% AAARRGGHH!
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[width=0.85\textwidth]{plots/dish.png}
-		\caption{CAD model of 14m dish with screening and some supports removed to show detail.}
-		\label{fig:dish} 
-	\end{subfigure}
-\quad
-	\begin{subfigure}[b]{0.46\textwidth}
-		\includegraphics[width=\textwidth]{plots/Engineering/hera_beam.png}
-		\caption{Analytical model beam patterns at 10m, 12m and 14m.}
-		\label{fig:beam} 
-	\end{subfigure}
-	\caption{HERA element and beam pattern.}
-\end{figure}
+%% ARP: no room for this figure.
+%\begin{figure}[h]
+%	\centering
+%	\begin{subfigure}[b]{0.46\textwidth}
+%		\includegraphics[width=0.85\textwidth]{plots/dish.png}
+%		\caption{CAD model of 14m dish with screening and some supports removed to show detail.}
+%		\label{fig:dish} 
+%	\end{subfigure}
+%\quad
+%	\begin{subfigure}[b]{0.46\textwidth}
+%		\includegraphics[width=\textwidth]{plots/Engineering/hera_beam.png}
+%		\caption{Analytical model beam patterns at 10m, 12m and 14m.}
+%		\label{fig:beam} 
+%	\end{subfigure}
+%	\caption{HERA element and beam pattern.}
+%\end{figure}
 
 %The $k$-mode for a $14m$ baseline is $k = 0.023$, given by $k_{H} =
 %\frac{B}{c}\frac{dk}{d\eta}$, where $B$ is the length of the baseline, 14m in
@@ -1024,7 +1028,7 @@ support posts are installed between each pair of poles.  A 2$^{\prime\prime}$ PV
 terminates at each pole and post.  These spars are supported at each end and one point in the middle at the 
 proper height and angle.  The intervening PVC pipe essentially acts as a smoothing filter between those 
 points, noting also that a beam with point loads attains nearly the quadratic shape desired.  The CAD model is 
-shown in Figure \ref{fig:dish}.  
+shown in the right panel of Figure \ref{fig:hera_dish}.  
 
 The tall ($\sim$ 7m) poles provide locational accuracy (in all three dimensions) for the overall array installation.  
 Using conventional commercial pole-installation techniques the poles are installed first for the entire array.  
