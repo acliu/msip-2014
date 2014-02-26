@@ -483,7 +483,8 @@ pristine neutral gas provides important contextual information on early galaxy f
 
 The HI images can be ross-correlate with other diffuse 
 tracers of large scale structure.  A number of studies have proposed cross-correlation with large scale intensity
-mapping of molecular  CO \cite{lidz_et_al2011} and atomic CII \citep{gong_et_al2011} lines. 
+mapping of molecular  CO \cite{lidz_et_al2011} and atomic CII \citep{gong_et_al2011} lines. These studies
+trace the large scale galaxy distribution -- the sources of reionization. 
 Prototypes of these experiments 
 may be operating on the HERA timescale.  Such probes have the advantage of having different systematics 
 compared to HERA, potentially allowing clean measurements of the underlying signal.
@@ -525,14 +526,13 @@ The HERA project team consists of PIs and technical leaders from four NSF-funded
 at high redshifts:
 \begin{itemize}[noitemsep,nolistsep]
 % XXX list PIs/tech leads as well?
-\item{PAPER:} (NSF grants \#1129258, \#0804508, \#0607838, and \#0505354) PAPER efforts began humbly with a 4-element
-array deployed in Green Bank, WV.  Following a cycle of incremental
-development, testing, and deployment, PAPER has upgraded and optimized nearly every aspect of its system, using the Green Bank site
-for technical development and testing.  In 2009, PAPER deployed a 16-element, single-polarization interferometer in South Africa
-near the planned site of the Square Kilometre Array (SKA) mid-band telescope.  
-Since then, PAPER has doubled its size annually for four years running.  As of Nov. 2013, PAPER's primary science
-deployment in South Africa consists of 128 dual-polarization, zenith-pointing dipoles arrayed in a sparse redundant configuration
-(Figure \ref{fig:hera_dish}, bottom left; \citealt{parsons_et_al2012a}).  PAPER pioneered the use of redundant configurations
+
+\item{PAPER:} (NSF grants \#1129258, \#0804508, \#0607838, and \#0505354) PAPER has followed a
+staged development approach, maintaining a test array in Green Bank, WV for technical development and testing, with subequent 
+deployment to the science array in the SKA radio quiet zone in the Karoo, South Africa.  Starting with a 16 element
+array in 2009 in the Karoo, PAPER has doubled its size annually for four years running, culminating in the current
+128 element array (Figure \ref{fig:hera_dish}, bottom left; \citealt{parsons_et_al2012a}).  
+PAPER pioneered the use of redundant configurations
 to maximize array sensitivity for power-spectrum measurements, the use of drift-scanning elements with associated powerful
 analysis techniques, a scalable correlator architecture that has enabled arrays to inexpensively grow exponentially
 with Moore's Law, and a data compression scheme that reduces data volume by a factor of $\sim$40 without impacting
@@ -548,32 +548,22 @@ The MWA is a dipole-based aperture array synthesis telescope designed
 to operate in the 80--300~MHz frequency range.
 It is located at the
 Murchison Radio-astronomy Observatory (MRO) in Western Australia, the
-planned site of the future SKA low-band
-telescope, and is one of three telescopes designated as a pathfinder
-for the SKA. 
-The MWA has been developed by an international collaboration,
-including partners from the United States, India, Australia, and New
-Zealand, and consists of
-128 digitally steerable antenna tiles arranged in a centrally
+site of the future SKA low. The MWA has been developed by an international collaboration,
+consisting of 128 digitally steerable antenna tiles arranged in a centrally
 condensed but highly randomized layout (Figure \ref{fig:hera_dish}, upper left;
-\citealt{tingay_et_al2013_trunc}). The randomized layout and synthesis rotation
-from tracked observations provide a filled $uv$-plane and excellent
-full-polarization imaging of the foregrounds.
+\citealt{tingay_et_al2013_trunc}), providing full UV coverage for imaging.
 The MWA's hardware performance \citep{bowman_et_al2007a}, calibration pipeline
 \citep{mitchell_et_al2008}, and foreground subtraction strategy \citep{morales_et_al2006a}
-have been extensively documented and investigated
-in existing literature.
-The US MWA team has been a world leader in the application of 
-foreground subtraction for
-enlarging the EoR window---qualitatively increasing the science % XXX EoR window used before defined
-reach of the power spectrum and enabling imaging of reionization (Figure
+are well documented. The US MWA team has been a world leader in the application of 
+foreground subtraction for enlarging the EoR window for power spectral studies, 
+and enabling imaging of reionization (Figure
 \ref{fig:eor_pspec}). The resulting analysis is more complex than the
 delay-spectrum approach (e.g.\ \citealt{hazelton_et_al2013}) but naturally
 removes polarized foregrounds \citep{moore_et_al2013} and enables the
 comparison with observations at other bands. Recent MWA observations have
 demonstrated the use of image-based modeling (Figure \ref{fig:twoFGViews}, left) to
-subtract foregrounds to the thermal noise limit 
-within certain regions of the foreground wedge (Figure \ref{fig:twoFGViews}, right). % XXX this mention of wedge comes before description
+subtract foregrounds to the thermal noise limit within certain regions of the foreground wedge 
+(Figure \ref{fig:twoFGViews}, right). % XXX this mention of wedge comes before description
 
 \item{MITEoR:} (NSF grants \#0908848, \#1105835) MITEoR is a novel effort aimed at
 examining new cross-correlation and calibration techniques for low-frequency radio telescope
@@ -588,7 +578,9 @@ LEDA has pioneered the application of graphics processing units (GPUs) in correl
 and deploying a heterogeneous computing system that fully correlates 256 dual-polarization elements.  This
 technology has been adopted into recent PAPER correlator deployments, and will be applied to HERAs correlator
 and data compression system.
+
 \end{itemize}
+
 Other successful efforts by members of the HERA project team include the EDGES experiment (NSF grants \#0905990, \#1207761),
 the Center for Astronomy Signal Processing and Electronics Research (NSF grant \#0906040), the Advanced Multibeam
 Spectrometer for the GBT (NSF grant \#1006509), and numerous other efforts.
