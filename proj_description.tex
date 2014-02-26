@@ -51,7 +51,8 @@ Innovations Program}
 
 \begin{figure}[H]\centering
 \includegraphics[width=6in]{plots/hera_array.png}
-\caption{The proposed array of 331 14~m-diameter zenith-pointing dishes in the Karoo Radio Astronomy Reserve
+\caption{\small
+The proposed array of 331 14~m-diameter zenith-pointing dishes in the Karoo Radio Astronomy Reserve
 in the Northern Cape of South Africa.
 }\label{fig:hera_array} \end{figure}
 
@@ -315,7 +316,7 @@ and at higher neutral fractions (wider redshift range), than is possible with ot
 be used to move beyond characterizing the timing and duration of reionization to
 explore which galaxies dominate the integrated UV luminosity density, what the escape fraction
 of UV photons is in early galaxies, and how feedback from early star formation affects low-mass galaxies and 
-the integrated  global ionization profile versus redshift (see section XXX on parameter estimation). 
+the integrated  global ionization profile versus redshift (see section \ref{sec:ParamEst} on parameter estimation). 
 
 \subsubsection{Detecting and characterizing the power spectrum}
 \label{sec:detectPspec}
@@ -351,6 +352,7 @@ different physics.  Such a high sensitivity measurement would also allow one to 
 testing rather than assuming  the underlying theoretical framework and starting to image the large neutral bubbles during reionization.
 
 \subsubsection{Astrophysical parameters from the power spectrum}
+\label{sec:ParamEst}
 %\emph{iii. Various covariance analyses: constraints on different physical processes (Liu/Pober analysis). but
 %please -- keep this down to a couple of incisive figures and fiducial models. wall paper doesn't sell very well. }
 % Liu, Pober, Dillon
@@ -368,7 +370,8 @@ than 5\% with a conservative approach to foregrounds, and even better with expli
 
 \begin{figure*}[t]\centering
 \includegraphics[width=\textwidth]{plots/Pspec/OPTMIDellipses.pdf}
-\caption{Pairwise $2\sigma$ error ellipses for $T_{\rm vir}$, $\zeta$, and $R_\textrm{mfp}$, in each case divided by their fiducial values.  HERA-331 projections using existing foreground avoidance techniques are shown in red, while projections using more advanced foreground modeling techniques are shown in black.  The former represent $\sim 5\%$ constraints, while the latter represent $\sim 1\%$ constraints.\label{fig:ErrorEllipses}}
+\caption{\small
+Pairwise $2\sigma$ error ellipses for $T_{\rm vir}$, $\zeta$, and $R_\textrm{mfp}$, in each case divided by their fiducial values.  HERA-331 projections using existing foreground avoidance techniques are shown in red, while projections using more advanced foreground modeling techniques are shown in black.  The former represent $\sim 5\%$ constraints, while the latter represent $\sim 1\%$ constraints.\label{fig:ErrorEllipses}}
 \end{figure*}
 
 
@@ -695,7 +698,8 @@ LOFAR NL Core & 35,762 & 2.76 & 17.37 \\
 \textbf{HERA-331} & \textbf{50,900} & \textbf{25.44} & \textbf{87.20} \\
 SKA1 Low Core & 833,190 & 97.92 & 284.85 \\
 \end{tabular}
-\caption{Power spectrum signal-to-noise (``number of sigmas") at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
+\caption{\small
+Power spectrum signal-to-noise (``number of sigmas") at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
 \label{tab:signif}
 \end{table}
 
@@ -921,7 +925,8 @@ instrumental systematics.
 \centering
 		\includegraphics[width=0.45\textwidth]{plots/HERA_331_pos.png}
 		\includegraphics[width=0.45\textwidth]{plots/HERA_331_uv_clipped.png}
-\caption{Left: Configuration of HERA-331, with 331 dishes in a maximally-dense hexagonal core and 18 outrigger dishes.  Right: The resulting $uv$-coverage is fully-sampled to $\sim 200\lambda$ [XXX: is this the ``official" figure to quote?]}
+\caption{\small
+Left: Configuration of HERA-331, with 331 dishes in a maximally-dense hexagonal core and 18 outrigger dishes.  Right: The resulting $uv$-coverage is fully-sampled to $\sim 200\lambda$ [XXX: is this the ``official" figure to quote?]}
 \label{fig:uv_coverage}
 \end{figure}
 
@@ -984,7 +989,8 @@ Figure \ref{fig:blockDiagram} shows a block diagram of the system.
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{plots/Engineering/HERA_high_level_block_diagram.png}
-\caption{Block diagram of the HERA system.}
+\caption{\small
+Block diagram of the HERA system.}
 \label{fig:blockDiagram} 
 \end{figure}
 
@@ -1178,7 +1184,8 @@ performance \citep{parsons_et_al2010}.
 		\includegraphics[width=0.24\textwidth]{plots/Engineering/digital.png}
 		%\label{fig:digital} 
 	%\end{subfigure}
-	\caption{Photographs of existing instrument components to be used in the HERA design.
+	\caption{\small
+	Photographs of existing instrument components to be used in the HERA design.
     Left: the PAPER antenna positioned above the trough reflector.
     Center: Receiver modules in a node refrigerator.
     Right: Digital equipment (ADC/correlator) in container.}\label{fig:components}
@@ -1217,7 +1224,7 @@ of Moore's Law.
 
 \begin{figure}[!ht]\centering
 \includegraphics[width=6.5in]{plots/casper_boards.jpg}
-\caption{
+\caption{\small
 Five generations of CASPER technology (progressing left to right) have been used to rapidly
 develop, test, and deploy DSP instrumentation for radio astronomy.  Correlators,
 beam formers, and spectrometers all use a common set of hardware modules, along with a library
@@ -1441,7 +1448,8 @@ to the computational nodes.
          Data Rate, Compressed (Mbps) &  0.64 &  2.56 &   10.2 &    0.9 &    10.0 &    68.0 \\
     \hline
 \end{tabular}
-\caption{\label{tab:data_vol} Summary of data volume and data rates for three completed PAPER observations, and each year of HERA observations.}
+\caption{\small
+\label{tab:data_vol} Summary of data volume and data rates for three completed PAPER observations, and each year of HERA observations.}
 \end{table}
 
 \subsubsection{Monitor and Control}
@@ -1498,7 +1506,8 @@ $k_\parallel=0.1h {\rm Mpc}^{-1}$ are not dominated by foreground contamination.
 	%\begin{subfigure}[b]{0.46\textwidth}
 		\includegraphics[width=0.46\textwidth]{plots/Engineering/heraclesNA.png}
 	%\end{subfigure}
-	\caption{Prototype antenna and initial results.
+	\caption{\small
+	Prototype antenna and initial results.
 		Left: the existing construction prototype in California.
         Right: Initial reflection measurements from the prototype.}
 	\label{fig:heracles}
@@ -1539,7 +1548,8 @@ The right panel shows a cross-section of an element.
 		\includegraphics[width=0.6\textwidth]{plots/Engineering/optics.png}
 		%\label{fig:optics}
 	%\end{subfigure}
-\caption{Left: the configuration of the 331-element array.  Note the rectangular container to scale on right.
+\caption{\small
+Left: the configuration of the 331-element array.  Note the rectangular container to scale on right.
 		Right: a cross-section and optics of an element.}
 	\label{fig:config_optics}
 \end{figure}
