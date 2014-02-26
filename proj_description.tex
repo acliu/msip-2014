@@ -396,12 +396,21 @@ sight.  The brightest structures in the redshift 8 input simulation are detectab
 % \end{figure}
 
 \begin{figure}[!ht]\centering
-\includegraphics[width=\textwidth]{plots/Imaging/HERA_FoV_and_sim.jpg}%HERA_331_z8_SNR_annotated.jpg}
+\includegraphics[width=\textwidth]{plots/Imaging/HERA_331_z8_SNR_annotated.jpg}%HERA_331_z8_SNR_annotated.jpg}
 % XXX need to cut this down to just the imaging sim, I think
 \caption{\small
-With sensitivity highly concentrated at the largest scales, HERA is capable of directly imaging HI during reionization.  Shown here is the HERA ``stripe''.  At 150~MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300~m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50`$Gpc^3$.  The stripe includes the GOODS-South field \citep{dickinson_et_al2003}, one of the best studied regions of sky.  Shown here is a simulation of EoR emission \citep{mcquinn_et_al2007} as imaged by HERA with noise equivalent to 100 hours of observation.  
-Contours enclose regions with signal to noise above 10.  The regions detected on scales of $\sim$100~Mpc are bracket the size scales probed by deep galaxy surveys (cf. the GOODs-South survey volume where 179 objects about $z=7$ have been detected, representing $\sim45\%$ of all such objects over the entire sky.)}  \label{fig:imaging}
+With sensitivity highly concentrated at the largest scales, HERA is capable of directly imaging HI during reionization.  Shown here is a simulation of EoR emission \citep{mcquinn_et_al2007} as imaged by HERA with noise equivalent to 100 hours of observation.  
+Contours enclose regions with signal to noise above 10.  The regions detected on scales of $\sim$100~Mpc bracket the size scales probed by deep galaxy surveys.  At 150~MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300~m across, HERA will have the collecting area of Arecibo but with $500\times$ the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50`$Gpc^3$.  The survey area includes the GOODS-South field \citep{dickinson_et_al2003} (denoted by the black rectangle).  As one of the best studied regions of sky, the GOODs-South survey volume includes 179 known objects above $z=7$, which represents $\sim45\%$ of all such objects over the entire sky.}  \label{fig:imaging}
 \end{figure}    
+
+%
+%\begin{figure}[!ht]\centering
+%\includegraphics[width=\textwidth]{plots/Imaging/HERA_FoV_and_sim.jpg}%HERA_331_z8_SNR_annotated.jpg}
+%% XXX need to cut this down to just the imaging sim, I think
+%\caption{\small
+%With sensitivity highly concentrated at the largest scales, HERA is capable of directly imaging HI during reionization.  Shown here is the HERA ``stripe''.  At 150~MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300~m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50`$Gpc^3$.  The stripe includes the GOODS-South field \citep{dickinson_et_al2003}, one of the best studied regions of sky.  Shown here is a simulation of EoR emission \citep{mcquinn_et_al2007} as imaged by HERA with noise equivalent to 100 hours of observation.  
+%Contours enclose regions with signal to noise above 10.  The regions detected on scales of $\sim$100~Mpc are bracket the size scales probed by deep galaxy surveys (cf. the GOODs-South survey volume where 179 objects about $z=7$ have been detected, representing $\sim45\%$ of all such objects over the entire sky.)}  \label{fig:imaging}
+%\end{figure}    
 
 %\subsubsection{Imaging as a probe of non-gaussianity}
 %\emph{a) Imaging as a probe of non-Gaussianity and topology of reionization (Fig from Watkinson \& Pritchard)
@@ -902,10 +911,19 @@ Where PAPER's elements lack collecting area and are smaller than
 strictly required for foreground isolation, and the majority of MWA
 and LOFAR elements are spaced too widely to avoid foregrounds,
 HERA-331 employs an extremely compact array of 14-m parabolic dishes
-with PAPER-style dipole feeds (see Figure \ref{fig:hera_dish}.  The
-short (4.5m) focal height of these dishes is central to limiting the
-path length of reflections whose time-delay gives rise to chromatic
+with PAPER-style dipole feeds (see Figure \ref{fig:hera_dish}).  The dishes
+are placed in a compact hexagonal configuration of 331 dishes supplemented by 18 outrigger dishes to achieve dense and
+highly-redundant $uv$-sampling (see Figures \ref{fig:uv_coverage} and \ref{fig:config_optics}).  The dishes have a short (4.5m) focal height to limit the
+path length of reflections, whose time-delay gives rise to chromatic
 instrumental systematics.
+
+\begin{figure}[!ht]
+\centering
+		\includegraphics[width=0.45\textwidth]{plots/HERA_331_pos.png}
+		\includegraphics[width=0.45\textwidth]{plots/HERA_331_uv_clipped.png}
+\caption{Left: Configuration of HERA-331, with 331 dishes in a maximally-dense hexagonal core and 18 outrigger dishes.  Right: The resulting $uv$-coverage is fully-sampled to $\sim 200\lambda$ [XXX: is this the ``official" figure to quote?]}
+\label{fig:uv_coverage}
+\end{figure}
 
 % AAARRGGHH!
 %\begin{figure}[!ht]
@@ -1766,14 +1784,13 @@ Plans for incorporating outreach and education tours of SA universities as part 
 \section{Benefits to the Astronomical Community}
 %\subsection{Impacts for the Broader Astronomy Community}
 
-%XXX need some more here
-
 %i. Data access: transients, SETI, ionosphere
-The HERA measurements will be released to the community after an 18-month proprietary period and hosted at MIT (see Section \ref{sec:DataProducts}).  These data products will include foreground-subtracted cubes for
-cross-correlation, deep images of reionization from HERA~568, compressed visibilities for re-analysis, snapshot continuum images for transient observations (including SETI and the ionosphere), and wide-field maps from the survey made in the first two years.
+The HERA measurements will be released to the community after an 18-month proprietary period and hosted on a public server at MIT (see Section \ref{sec:DataProducts}).  A large number of data products will be available.  Imaging products will include coarse real-time calibrated snapshot images in addition to high dynamic range survey maps from the FHD pipeline.  Calibrated, compressed, LST-binned visibilities will also be made public for re-analysis.  Higher cadence data sets will not be hosted publicly in a continuous fashion due to data transfer limitations, but will be available to any users upon request.
+
+A number of derived data products will also be made accessible.  Source catalogs will be provided, and a Global Sky Model of diffuse foregrounds will be updated with new observations and released.  Foreground-subtracted data cubes of high-redshift $21\,\textrm{cm}$ intensity maps and the associated ionization field will be available for cross-correlation studies, as well as to provide context for high redshift optical and IR studies.
 
 % ii. Cross correlation: CMBpol, CO/CII IM
-On the HERA timescale, a number of new observations will come online that would benefit from cross-comparison with the power spectra and images produced by HERA (see Section \ref{sec:CrossCorrelation}). For example, HERA will provide the large-scale reionization environment for pointed JWST or ALMA galaxy observations and can offer cross-correlations with  the WFIRST near-IR surveys \citep{lidz_et_al2009}.
+%On the HERA timescale, a number of new observations will come online that would benefit from cross-comparison with the power spectra and images produced by HERA (see Section \ref{sec:CrossCorrelation}). For example, HERA will provide the large-scale reionization environment for pointed JWST or ALMA galaxy observations and can offer cross-correlations with  the WFIRST near-IR surveys \citep{lidz_et_al2009}.
  
 CASPER.
 Cite high rate of adoption of CASPER hardware in the community.
