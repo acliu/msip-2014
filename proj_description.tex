@@ -902,10 +902,19 @@ Where PAPER's elements lack collecting area and are smaller than
 strictly required for foreground isolation, and the majority of MWA
 and LOFAR elements are spaced too widely to avoid foregrounds,
 HERA-331 employs an extremely compact array of 14-m parabolic dishes
-with PAPER-style dipole feeds (see Figure \ref{fig:hera_dish}.  The
-short (4.5m) focal height of these dishes is central to limiting the
-path length of reflections whose time-delay gives rise to chromatic
+with PAPER-style dipole feeds (see Figure \ref{fig:hera_dish}).  The dishes
+are placed in a compact hexagonal configuration of 331 dishes supplemented by 18 outrigger dishes to achieve dense and
+highly-redundant $uv$-sampling (see Figures \ref{fig:uv_coverage} and \ref{fig:config_optics}).  The dishes have a short (4.5m) focal height to limit the
+path length of reflections, whose time-delay gives rise to chromatic
 instrumental systematics.
+
+\begin{figure}[!ht]
+\centering
+		\includegraphics[width=0.45\textwidth]{plots/HERA_331_pos.png}
+		\includegraphics[width=0.45\textwidth]{plots/HERA_331_uv_clipped.png}
+\caption{Left: Configuration of HERA-331, with 331 dishes in a maximally-dense hexagonal core and 18 outrigger dishes.  Right: The resulting $uv$-coverage is fully-sampled to $\sim 200\lambda$ [XXX: is this the ``official" figure to quote?]}
+\label{fig:uv_coverage}
+\end{figure}
 
 % AAARRGGHH!
 %\begin{figure}[!ht]
