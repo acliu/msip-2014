@@ -1536,19 +1536,15 @@ contract.  Project staff will then move over the existing PAPER feeds and cables
 \vspace{-0.25in}
 \subsection{Commissioning}
 \vspace{-6pt}
-Note that since all of the electronics are already deployed and working, commissioning will consist of verifying the existing performance but within the new electromagnetic environment presented by the new ground screens.  Below is
-an explicit list of commissioning tasks:
-\begin{itemize}[noitemsep,nolistsep]
-\item equalization of signal levels and repairing of reflections and misbehaving signal paths due to cabling using auto-correlation data 
-\item measure system temperature from raw level of auto-correlation data as it varies diurnally.
-\item measure relative width of primary beam using source transits for XX and YY polarizations 
-\item use established sky model from PAPER and correlation with known PAPER feeds to 
-determine absolute gain as a function of direction for new dishes. 
-\item use redundancy to solve for phase and gain calibration parameters, measure stability of parameters versus 
-time 
-\item detailed characterization of cross-coupling and reflections between antennas using cross-correlation data and imaging 
-\item fold calibrated data on the basis of redundancy and multiple observing days to obtain a high-sensitivity delay spectrum capable of verifying absence of low-level reflections at higher delays. 
-\end{itemize}
+Commissioning the telescope will focus on verification of previously tested subsystem level component in their as-deployed configuration (e.g. testing node functionality). It will also serve as the final step in the system-level integration process, where the different subsystems are integrated into a functioning whole.  Commissioning activities will employ the highly successful build/commission model used by both PAPER and MWA. The PAPER team has commissioned 7 unique arrays, each with different correlators and configurations while the MWA, a much larger system designed for many operational modes, was successfully commissioned on schedule during a single coordinated effort.
+ In both cases observers tracked the incremental build-out process, performing observations in a ``science-like mode'' and making adjustments as needed. The resulting modifications during this period resulted in dramatically improved instrument performance.  
+
+The HERA construction plan calls for a three stage process, beginning with all-PAPER electronics and the staged addition of new subsystems: nodes, monitor and control, correlator, data management all of which are driven by the top level science requirements which enable the staged addition of more elements or bandwidth. For example the nodes are required to meet the number of antennae, with 24 nodes this will be the largest distributed system yet, reliability, achieved by online monitor and control with suitable reporting interfaces will be the key design specification to meet.  Addition of the first nodes will occur in year 2 in advance of the construction of HERA 127. The commissioning process will include a portion of the deployment and integration of each system with a particular focus on integrating the system as a whole and testing the effects of the addition of new components into the existing system.  
+
+Development and operation of a routine test package will be the core of the commissioning process with a focus on meeting top level science requirements and the resulting specifications.  The most important of these are maximizing up-time, decreasing time-to-science, and optimizing for reionization science.  To maximize up-time the commissioning goal will be to aggregate sources of information about array health from all subsystems and provide an accurate state of the system report visible and understandable to the entire project.  Decreasing time-to-science is achieved in two ways. First the array is tuned as much as possible, to be well calibrated and need as little post-processing as possible.  Second, useful post-processing steps are incorporated into the online portions of the correlation and analysis. These might take the form of generating meta-data products (such as RFI flags or noise estimates) or direct modification of data, such as online application of redundant calibration parameters.  Provision of the on-site QA server is specifically in support of these activities.
+
+Optimization for reionization science is achieved by making and reducing early science observations. This process includes many critical projects, such complex gain calibration (using redundancy and sky models), mapping of the beam pattern by comparison with PAPER elements and catalogs, establishing an absolute calibration, making images, cataloging visible sources. Crucially, it includes measuring signal reflections, cross-couplings and other possible artifacts using power spectrum analysis techniques. The end result will be an ongoing program of online deep integrations that will provide a near-real-time high-sensitivity delay spectrum verifying the absence of low-level reflections in the reionization window.
+
 
 \subsection{Analysis and Science}
 
