@@ -1283,19 +1283,6 @@ the transition to the HERA-331 system.
 
 \subsubsection{Digital System}
 
-Digital signal processing (DSP) electronics --- particularly the digital correlator ---
-have historically been one of the most complex and expensive aspects of any radio interferometer.
-Correlators have commonly been
-developed independently for each project, with a substantial investment
-of time and money to engineer
-custom solutions for hardware, physical interconnect,
-communication protocols, and control software. The complexity of such development
-leads to lengthy incubation times and an
-associated loss of timely scientific research. Furthermore, the large
-engineering investments involved leave few resources
-for upgrading systems that fall quickly into obsolescence as a result
-of Moore's Law.
-
 \begin{figure}[!ht]\centering
 \includegraphics[width=6.5in]{plots/casper_boards.jpg}
 \caption{\small
@@ -1307,35 +1294,31 @@ of parametrized DSP algorithms, that can be easily upgraded to incorporate new t
 }\label{fig:casper_boards}
 \end{figure}
 
-This is changing.  The Collaboration for Astronomy Signal Processing and Electronics Research
-(CASPER; \citealt{parsons_et_al2006}) was founded seven years ago at Berkeley
-by Werthimer and Parsons as a program 
-to open-source and share the development of real-time signal processing engines for astronomy.
-CASPER now has world-wide participation that is
-transcending the radio astronomy community to include physics, engineering,
-medical, and genomics research, with
-over 500 members at 73 institutions, and, as illustrated in
-Figure \ref{fig:casper_boards}, five generations of DSP hardware.
-% XXX something about GPUs here?
-As a result of the CASPER's cumulative body of open-source hardware designs, DSP libraries, instrument
-architectures, and control software,
-correlator development --- formerly the Achilles heel of building interferometers ---
-is now widely viewed as a solved problem.  PAPER, on a modest budget, has developed and deployed new correlators
+HERA's digital system continues in the vein of PAPER's digital correlators.
+Although correlators have historically been one of the most complex,
+expensive, and risky aspects of developing a radio interferometer, this is no longer the case.
+The Collaboration for Astronomy Signal Processing and Electronics Research
+(CASPER; \citealt{parsons_et_al2006}), founded seven years ago at Berkeley
+by Werthimer and Parsons, open-sourced the development of digital signal processing (DSP) engines for astronomy.
+CASPER now has world-wide participation,
+with over 500 members at 73 institutions, and 
+five generations of DSP hardware (see Figure \ref{fig:casper_boards}). 
+On a modest budget, PAPER has applied CASPER technology to develop and deploy new correlators
 annually for five years running, each quadrupling the computational capacity of its predecessor.
 HERA will continue this incremental development cycle, following the packet-switched
 FX correlator architecture described in \citet{parsons_et_al2008} that has been
 extended in recent PAPER and LEDA deployments (see Figure \ref{fig:components}, right panel)
-to rely on a heterogeneous system FPGA and graphics processing units (GPUs)
-to efficiently achieve the required data processing bandwidth \citep{clark_et_al2011}.
+to use leverage the computing strengths of both FPGAs and GPUs \citep{clark_et_al2011}.
 
-Under HERA, this correlator architecture will continue to evolve.  In order to meet HERA's science requirements,
-which specify that the analog signal path must be shorter that XXX m in order to limit the time constant of any signal reflections
-that arise in the system, digitization at the front-end of the correlator must occur in the field, close to the antenna
-elements.  This specification, along with a growing need for modularity to scale with the number of parallel signal paths,
-lead HERA to adopt a node-based architecture for amplification, digitization, channelization, and digital
+While HERA-127 will use the existing PAPER correlator directly, for
+HERA-331, this correlator architecture will continue to evolve.  As discussed in previous sections,
+HERA's science requirements dictate a maximum analog signal path.  As a consequence,
+digitization needs to happen close to the antenna
+elements in the field.  This specification, along with a growing need for modularity to scale with the number of parallel signal paths,
+leads HERA to adopt a node-based architecture for amplification, digitization, channelization, and digital
 transmission in the field that builds on HERA's MWA heritage.  This architecture is merged with PAPER's clean 
 architecture for real-sampling and channelizing the entire analog passband at once, packetizing the data into
-10 Gb Ethernet format, and relying on commercial switches to perform the frequency/antenna corner-turn that is
+10 Gb Ethernet format, and relying on commercial switches to perform the frequency/antenna corner-turn that
 FX correlator architectures require. 
 
 \paragraph{Node}
@@ -1347,45 +1330,39 @@ FX correlator architectures require.
 %}\label{fig:node_arch}
 %\end{figure}
 
-%A new board called the Smart Network ADC Processor (SNAP) board, to be incorporated 
-%into the CASPER suite of hardware and firmware, is currently in layout at NRAO.  SNAP
-%takes the output from the PAMs, digitizes and channelizes it before putting it on optical fiber
-%for transmission to the Karoo Array Processing Building.
 
-HERA's nodes each consist of a single, RFI-tight enclosure housing 16 dual-polarization receiver modules, 
-6 data acquisition (DAQ), %XXX or whatever we call them
-modules, power supplies, cooling, and small server for monitor and control.  HERA-331 will employ
-26 nodes, each capable of processing the signals from 16 antenna elements.
-DAQ modules, which are currently under development, and are in the advanced stages of schematic design and layout,
-act as both the digitizer and F-Engine in HERA's FX correlator architecture.  Each DAQ
-is responsible for digitizing 6 input signals (3 antennas, dual-polarization) at a rate
-of 500 Msps, for a Nyquist bandwidth of 0--250 MHz.  This band is channelized into 2048 channels
-using a Polyphase Filter Bank running on the DAQ's relatively inexpensive Xilinx Kintex FPGA.
-The FPGA forms data packets out of 100 MHz of channels selected throughout the band, each represented
-with an 8-bit fixed-point complex number.  The aggregated bandwidth of 4.8 Gbps per board is transmitted in
-10-Gb Ethernet format over a single SFP+ port, through a CWDM optical transceiver module, onto an optical
-fiber that runs back to a central container adjacent to the array.  
-% XXX don't know if this next part is strictly necessar to say, or just cute.
-This transmitted bandwidth is approximately
-half of the link capacity; the spare capacity will support a transmitted bandwith
-of 200 MHz in the event that Moore's Law delivers X-Engine processors capable of support
-this additional processing when they purchased in the third year of the project.
+HERA-331 will employ RFI-tight node enclosures that each contain the final gain and digitization stages for
+signals from 18 antennas, along with power supplies, cooling, and a small server for monitor/control.  
+As part of HERA development,
+a new board called the Smart Network ADC Processor (SNAP) board will be incorporated 
+into the CASPER suite of hardware and firmware. This inexpensive board was co-designed by UC Berkeley and NRAO to be
+both digitizer and F-engine in HERA's FX correlator architecture,
+and is currently in layout at NRAO.  Each SNAP board 
+digitizes and channelizes a 50--250 MHz band for 6 input signals (3 antennas, dual-polarization).
+A 100-MHz band of selectable channels is transmitted over optical fiber
+to a central container (see below), and on to the Karoo Array Processing Building (KAPB).  Development and integration of the SNAP
+design and the node system will be led at UC Berkeley and after a Critical Design Review, will be fabricated
+under subcontracts to industry partners in the third project year, and deployed as part of the HERA-331 system.
+Development activities under this proposal include porting the CASPER toolflow to
+the SNAP board, designing and testing the FPGA firmware,
+the integrating and testing of all components in the node subsystem, and providing a monitor/control
+access interface.  If time allows, optional development may include doubling the transmitted bandwidth.
 
 \paragraph{Central Container}
 
-HERA's central container houses two significant subsystems.  The first is a timing subsystem
+HERA's central container sits adjacent to the array and houses two significant subsystems.  The first is a timing subsystem
 that is responsible for maintaining a GPS-disciplined oscillator and distributing timing
 signals (the sampling clock and 1PPS synchronization) to each of the nodes.  The second
-subsystem is a straight-forward passive fiber optic patch panel that is responsible for coupling
+subsystem is a passive fiber optic patch panel that couples
 the optical network attached to the nodes into a 192-filament optical fiber bundle 
-% XXX need to check costing again on full parallel tx vs color mux with tuned transceivers
-that attaches the container to the downstream portion of the correlator system.
+that carries the signals on to the KAPB. 
 
 \paragraph{Karoo Array Processing Building (KAPB)}
 
 The KAPB is currently
-in advanced stages of construction for MeerKAT, and will house the switch and X Engines that
-complete the HERA correlator system.  The fiber optic bundle that enters the KAPB will patch
+in advanced stages of construction for MeerKAT, and will house the switch and processors
+that 
+complete the HERA correlator system.  The fiber optic bundle that enters the KAPB patch
 into local fiber optic cables 
 % XXX and possible demux here
 that each terminate in optical transceivers that plug into a 240-port 10 GbE switch.
@@ -1397,12 +1374,8 @@ is extrapolated from current GPU servers deployed on PAPER, assuming no improvem
 speeds for transfering data into the GPU cores, but assuming that the computational
 capacity of such GPU cores doubles according to Moore's Law prior to the purchase of
 these servers in the third year of the project.
-
-Assuming 8-second integrations from the correlator, the raw data output of the
-correlator while operating will be, assuming a 100-MHz correlated bandwidth, 1.8 Gbps.
-These raw visibilities will be assembled in order by four servers
-and recorded to a 1.5 PB RAID storage system at full rate in the Miriad UV
-file format.
+Output data from the correlator are written to the data storage system described
+in the following section.
 
 % XXX need to discuss the plan for how data are shipped over to UPenn here. see below
 
