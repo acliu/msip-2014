@@ -788,42 +788,6 @@ constraint can (and must) be incorporated into the fundamental design of any fut
 %%\citep{sullivan_et_al2012_trunc} and the imaging power spectrum
 %%software from the MWA, and the backend computing infrastructure from PAPER.
 
-\begin{table}
-\centering
-\begin{tabular}{c||r||r|r} 
-Instrument & Collecting Area (m$^2$) & Foreground avoidance & Foreground modeling \\
-\hline
-PAPER & 528 & 1.93 & 8.86 \\
-MWA & 896 & 2.46 & 6.40 \\
-LOFAR NL Core & 35,762 & 2.76 & 17.37 \\
-\textbf{HERA-331} & \textbf{50,900} & \textbf{25.44} & \textbf{87.20} \\
-SKA1 Low Core & 833,190 & 97.92 & 284.85 \\
-\end{tabular}
-\caption{\small
-Power spectrum signal-to-noise (``number of sigmas") at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
-\label{tab:signif}
-\end{table}
-
-
-% XXX expand this into a larger discussion of where HERA fits in with other activities?
-HERA follows the vision delineated in NWNH where the MWA and PAPER
-characterized the foreground emission and performed the first deep
-integrations, followed by a more powerful instrument that drew on the lessons
-learned and merged the scientific teams. The MWA, PAPER, and LOFAR have all
-recently started deep integrations with hopes of detecting the 21~cm
-signal.
-However, as summarized in Table \ref{tab:signif} (see \citealt{pober_et_al2014} for more details),
-these instruments are likely to achieve
-at best only marginal detections of power from reionization.
-While this might qualify as a ``detection'' if the signal is strong, the
-\emph{science} of reionization observations is beyond their reach. 
-However, the profound contributions of MWA and PAPER should not be overlooked. PAPER and the MWA have succeeded magnificently in characterizing the foreground emission, discovering the EoR window, and understanding how to remove foreground contamination from the measurements. Further, they have developed and retired the risk associated with all of HERA's major systems. 
-HERA uses these lessons perform the science of reionization, at a much lower cost than assumed in NWNH.
-% XXX keep mentioning
-% that this proposal is cheaper than NWNH suggested but never give either that
-% number nor your estimated cost.
-
-
 
 %Observations with PAPER and the MWA have confirmed the presence of the EoR Window
 %\citep{pober_et_al2013,dillon_et_al2013b}, and recent PAPER observations
@@ -977,6 +941,23 @@ HERA uses these lessons perform the science of reionization, at a much lower cos
 % based on known techniques,
 % but supporting a battery of foreground mitigation techniques.
 
+\begin{table}
+\centering
+\begin{tabular}{c||r||r|r} 
+Instrument & Collecting Area (m$^2$) & Foreground avoidance & Foreground modeling \\
+\hline
+PAPER & 528 & 1.93 & 8.86 \\
+MWA & 896 & 2.46 & 6.40 \\
+LOFAR NL Core & 35,762 & 2.76 & 17.37 \\
+\textbf{HERA-331} & \textbf{50,900} & \textbf{25.44} & \textbf{87.20} \\
+SKA1 Low Core & 833,190 & 97.92 & 284.85 \\
+\end{tabular}
+\caption{\small
+Power spectrum signal-to-noise (``number of sigmas") at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
+\label{tab:signif}
+\end{table}
+
+
 As described in \S\ref{sec:Lessons}, 21cm reionization efforts have achieved a
 pivotal new understanding of how instrumental characteristics give rise the
 wedge of emission shown in Figure \ref{fig:twoFGViews}.  Furthermore, we have
@@ -988,10 +969,31 @@ within a wedge of known size, and to specify the sensitivity needed to obtain
 high-significance detections of the 21cm reionization power spectrum under the
 conservative assumption that all foreground-dominated wavemodes within the
 wedge must be projected out of our measurements.
+As summarized in Table \ref{tab:signif} (see \citealt{pober_et_al2014} for more details),
+based on these assumptions, current instruments are likely to achieve,
+at best, only marginal detections of power from reionization.
+% XXX expand this into a larger discussion of where HERA fits in with other activities?
+
+%HERA follows the vision delineated in NWNH where the MWA and PAPER
+%characterized the foreground emission and performed the first deep
+%integrations, followed by a more powerful instrument that drew on the lessons
+%learned and merged the scientific teams. The MWA, PAPER, and LOFAR have all
+%recently started deep integrations with hopes of detecting the 21~cm
+%signal.
+%However, as summarized in Table \ref{tab:signif} (see \citealt{pober_et_al2014} for more details),
+%these instruments are likely to achieve
+%at best only marginal detections of power from reionization.
+%While this might qualify as a ``detection'' if the signal is strong, the
+%\emph{science} of reionization observations is beyond their reach. 
+%However, the profound contributions of MWA and PAPER should not be overlooked. PAPER and the MWA have succeeded magnificently in characterizing the foreground emission, discovering the EoR window, and understanding how to remove foreground contamination from the measurements. Further, they have developed and retired the risk associated with all of HERA's major systems. 
+%HERA uses these lessons perform the science of reionization, at a much lower cost than assumed in NWNH.
+%% XXX keep mentioning
+%% that this proposal is cheaper than NWNH suggested but never give either that
+%% number nor your estimated cost.
 
 This HERA proposal targets two arrays: a 127-element array that borrows heavily
 from components of the PAPER experiment, and an upgraded 331-element array that
-incorporates several performance optimizations.  The specifications of HERA-127
+incorporates several performance optimizations.  As listed in Table \ref{tab:signif}, the specifications of HERA-127
 and HERA-331 have been set to meet precisely the requirements for obtaining,
 respectively, a 10$\sigma$ detection of the 21cm reionizaton signal, and a
 25$\sigma$ detection of the power spectrum of fluctuations in the 21~cm signal
