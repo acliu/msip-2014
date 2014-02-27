@@ -1409,8 +1409,6 @@ architecture for real-sampling and channelizing the entire analog passband at on
 10 Gb Ethernet format, and relying on commercial switches to perform the frequency/antenna corner-turn that
 FX correlator architectures require. 
 
-\paragraph{Node}
-
 %\begin{figure}[t]\centering
 %%\includegraphics[width=6.5in]{plots/node_arch.png}
 %\caption{
@@ -1419,7 +1417,8 @@ FX correlator architectures require.
 %\end{figure}
 
 
-HERA-331 will employ RFI-tight node enclosures that each contain the final gain and digitization stages for
+\noindent
+{\bf Node}. HERA-331 will employ RFI-tight node enclosures that each contain the final gain and digitization stages for
 signals from 18 antennas, along with power supplies, cooling, and a small server for monitor/control.  
 As part of HERA development,
 a new board called the Smart Network ADC Processor (SNAP) board will be incorporated 
@@ -1436,8 +1435,8 @@ the SNAP board, designing and testing the FPGA firmware,
 the integrating and testing of all components in the node subsystem, and providing a monitor/control
 access interface.  If time allows, optional development may include doubling the transmitted bandwidth.
 
-\paragraph{Central Container}
-
+\noindent
+{\bf Central Container}.
 HERA's central container sits adjacent to the array and houses two significant subsystems.  The first is a timing subsystem
 that is responsible for maintaining a GPS-disciplined oscillator and distributing timing
 signals (the sampling clock and 1PPS synchronization) to each of the nodes.  The second
@@ -1445,8 +1444,8 @@ subsystem is a passive fiber optic patch panel that couples
 the optical network attached to the nodes into a 192-filament optical fiber bundle 
 that carries the signals on to the KAPB. 
 
-\paragraph{Karoo Array Processing Building (KAPB)}
-
+\noindent
+{\bf Karoo Array Processing Building (KAPB)}.
 The KAPB is currently
 in advanced stages of construction for MeerKAT, and will house the switch and processors
 that 
