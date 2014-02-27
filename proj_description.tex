@@ -285,9 +285,13 @@ to the detection of anisotropies in the CMB.
 %}\label{fig:EoRsims} \end{figure}
 
 \begin{figure}[t]\centering
-\includegraphics[width=0.95\textwidth]{plots/cubes/cubesAndPspecs.pdf}
+\includegraphics[height=2.5in]{plots/cubes/cubesAndPspecs.pdf}
 \caption{\small 
-Left panels: simulated $21\,\textrm{cm}$ brightness temperature distributions at $z=11.5$, $10.5$, $9.5$, and $8.5$, each box measuring $\sim 280 \times 280\,h^{-1}\textrm{Mpc}$.  Right panel: Corresponding evolution of the $21\,\textrm{cm}$ power spectrum.  HERA will characterize the power spectrum in detail (\S\ref{sec:detectPspec}) as well as provide images of the ionized bubbles (\S\ref{sec:imaging_HI}).
+Left: Simulated 21~cm brightness temperature distributions spanning $\sim 280 \times 280\,h^{-1}\textrm{Mpc}$.
+at $z=11.5$, $10.5$, $9.5$, and $8.5$.
+Right: Corresponding evolution of the 21~cm power spectrum.  HERA
+will characterize the power spectrum in detail (\S\ref{sec:detectPspec}), as well as
+provide images of the ionized bubbles (\S\ref{sec:imaging_HI}).
 }\label{fig:EoRsims} \end{figure}
 
 Decades of effort has gone into modeling the complex astrophysics of reionization
@@ -641,37 +645,39 @@ ensure that progress is made on a predictable schedule, with time to adapt to co
 \caption{\small 
 Waterfall plots illustrating, as a function of time and frequency, PAPER visibilities
 measured on a 30-m baseline before (left) and after (right) the application of a 
-filter that removes forground emission within the wedge.  Color scale indicates amplitude in $\log_{10}({\rm Jy})$.
-This filter has been shown to suppress
-foreground systematics by 4 orders of magnitude, leaving residuals demonstrably noise-dominated.
+delay filter that removes forground emission within the wedge.  Color scale indicates amplitude in $\log_{10}({\rm Jy})$.
+This filter suppresses
+foreground systematics by at least 4 orders of magnitude, leaving residuals demonstrably noise-dominated.
 }\label{fig:waterfall} \end{figure}
 
 
-The key challenge of 21~cm cosmological reionization experiments is 
-balancing the collecting area needed to detect the faint 21~cm reionization signal
+The key challenge of 21~cm reionization experiments is 
+balancing the collecting area needed to detect the faint reionization signal
 with the precision needed to suppress
-% XXX this figure doesn't really quantify # of orders of magnitude
-foregrounds that are $\sim$5 orders of magnitude brighter \cite{deolivieracosta_et_al2008}.
-The major breakthrough in 21~cm cosmology---what enables us to propose HERA now---is 
+foregrounds that are $\sim$5 orders of magnitude brighter \citep{deolivieracosta_et_al2008}.
+Previously, it was assumed that careful calibration and image-based model subtraction would be the keys to overcoming these foregrounds.
+While such efforts are being actively pursued, and are likely to be important to the field in the future,
+it has become clear that the community underestimated the challenges associated with this approach.
+The major breakthrough for 21~cm reionization experiments---what enables us to propose HERA now---is 
 the discovery of how 
-instrumentation and analysis can exploit the 
-spectral smoothness of foregrounds
-to open up an `EoR Window'.  
+instrumentation and analysis can instead exploit the 
+spectral smoothness of foregrounds 
+to open up a window for accessing the reionization signal. 
 %These advances have been pioneered by the MWA and PAPER teams \citep{morales_et_al2012,parsons_et_al2012b,vedantham_2012,Datta_2010,hazelton_et_al2013,pober_et_al2013,parsons_et_al2013,dillon_et_al2013b}, and enable us to design a targeted HERA instrument that can reveal the details of reionization (Figure \ref{fig:x_i_vs_z}) and image the largest structures (Figure \ref{fig:imaging}).
-% XXX better phrase for "EoR window"?
-As illustrated in Figure \ref{fig:waterfall}, these advances have been used to suppress foreground emission by 4
+As illustrated in Figure \ref{fig:waterfall}, these advances have been used to suppress foreground emission by at least 4
 orders of magnitude in PAPER observations,
 with results that begin ruling out certain reionization scenarios
 \citep{parsons_et_al2013}.
 
-Observations for 21~cm cosmology experiments are best understood in
-Fourier space.  Because the \HI emission is a
-narrow spectral line, the observed frequency of the emission can be mapped to
-redshift or line-of-sight distance to provide an observed volume $\{x,y,z\}$ in
-comoving Mpc. This observed volume is Fourier transformed into a 3D
-wavenumber cube $\k\equiv\{k_{x}, k_{y}, k_{z}\}$. For graphical simplicity, the angular
-wavenumbers are typically averaged ($\{k_{x},k_{y}\}\rightarrow\kperp$) to
-produce line-of-sight wavenumber $\kpar$ vs.\ angular $\kperp$. 
+%Observations for 21~cm cosmology experiments are best understood in Fourier space.  
+For redshifted (21~cm) line emission, each observing frequency maps to
+a line-of-sight distance.  Hence, measurements as a function of frequency and angle 
+to enable 21~cm reionization experiments to map a cosmological volume $\{x,y,z\}$ in
+comoving Mpc.  For power-spectrum measurements, this observed volume is Fourier transformed into a 
+wavenumber cube $\k\equiv\{k_{x}, k_{y}, k_{z}\}$, where 
+$\kperp\equiv\{k_{x},k_{y}\}$ represents angular Fourier modes that are directly
+related to the $(u,v)$ modes sampled by baselines of an interferometer, and $\kpar\equiv k_{z}$ is
+a line-of-sight wavenumber.
 %Interferometric measurements are of the angular Fourier modes in many
 %frequency channels (visibilities), so in the absence of widefield effects only
 %a Fourier transform in the frequency direction and a coordinate mapping is
@@ -681,80 +687,106 @@ The expected statistical isotropy of the signal allows measurements in $k$-space
 squared and averaged in shells to produce the spherical power spectrum
 shown in Figure \ref{fig:eor_pspec}.
 
-Through a concerted theoretical and observational campaign by the PAPER and MWA teams
-\citep{morales_et_al2012,parsons_et_al2012b,vedantham_2012,Datta_2010,hazelton_et_al2013,pober_et_al2013,parsons_et_al2013,dillon_et_al2013b}
-we now understand that foreground contamination can be confined to a `wedge' in
-$\kpar$ vs.\ $\kperp$, as demonstrated by the PAPER observations in the
-righthand panel of of Figure \ref{fig:twoFGViews}. 
-%MM: a figure showing results from both arrays would be really powerful here.
-This wedge is the result of
-the smooth spectrum foregrounds 
-%XXX SF: I would make this more obvious.  I recommend replacing this sentence with something like (with my naive understanding): "This sharp division occurs because foregrounds have smooth spectra (which cause the sources to manifest at small $\kpar$), some of which is projected into the transverse direction ($\kperp$) through the instrument's well-understood chromatic properties."
-(low $\kpar$) interacting with the inherent
-chromaticity of an interferometer. 
-This leaves the region above the wedge free from 
-foreground emission---a window through which we can observe the EoR. 
-As demonstrated in the right-hand panel of Figure \ref{fig:waterfall}, removal of the foreground wedge 
-directly suppresses foregrounds by at least 4 orders of magnitude.
-We now understand the source of the EoR window, how we can increase the 21~cm signal region, and have seen the window in observations with both PAPER and the MWA \citep{pober_et_al2013,dillon_et_al2013b}.
-
-The time is now ripe for an experiment that builds from the technical heritage
-of PAPER, the MWA, MITEoR, and LEDA, and incorporates into the design of the
-instrument new insights relating to the interplay of sensitivity and the
-foreground wedge.  HERA's new 14-m dish, whose design is motivated by the core
-tenets delay-spectrum foreground avoidance, is foundational to this effort.
-These elements, arranged redundantly in a compact hexagonal grid, enable both the
-delay-spectrum foreground avoidance and calibration from PAPER (redundant
-baselines, proven performance, low risk) and the foreground subtraction and
-imaging from the MWA (filled $uv$~coverage, higher sensitivity and immunity to
-polarized foregrounds).
-
-HERA's signal path includes the dipole and balun from PAPER, with refinements
-to broaden the spectral response to lower frequencies and optimally illuminate
-the parabolic reflector.  Digital nodes near the antennas limit cable
-reflections, and incorporate design elements of the MWA, PAPER's CASPER-based
-digitization and filtering, and the hybrid FPGA/GPU correlator architecture
-used by PAPER, the MWA, and LEDA.  HERA's software includes the Monitor \&
-Control and meta-data systems from the MWA
-redundant calibration pipelines from MITEoR and PAPER, delay-spectrum analysis from PAPER, Fast
-Holographic Deconvolution imaging software
-\citep{sullivan_et_al2012_trunc} and the imaging power spectrum
-software from the MWA, and the backend computing infrastructure from PAPER.
-
-\begin{table}
-\centering
-\begin{tabular}{c||r||r|r} 
-Instrument & Collecting Area (m$^2$) & Foreground avoidance & Foreground modeling \\
-\hline
-PAPER & 528 & 1.93 & 8.86 \\
-MWA & 896 & 2.46 & 6.40 \\
-LOFAR NL Core & 35,762 & 2.76 & 17.37 \\
-\textbf{HERA-331} & \textbf{50,900} & \textbf{25.44} & \textbf{87.20} \\
-SKA1 Low Core & 833,190 & 97.92 & 284.85 \\
-\end{tabular}
-\caption{\small
-Power spectrum signal-to-noise (``number of sigmas") at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
-\label{tab:signif}
-\end{table}
+\begin{figure}[t] \centering
+%\includegraphics[width=6.5in]{plots/MWApretty.png} \includegraphics[width=3.6
+%in]{plots/MWApretty.png}
+\includegraphics[height=2.02in]{plots/Foregrounds/MWA_EoR0_2min.jpg}
+%\includegraphics[width=2.4 in]{plots/wedge_tall.png}
+\includegraphics[height=2.02in]{plots/wedge_tall_wide.png} \caption{\small Left:
+Foregrounds imaged on the MWA.
+This image spans $\sim$$8^{\circ} \times 8^{\circ} $ and
+lies within the HERA survey area. Imaging methods provide a key capability for reducing
+polarization leakage and foreground systematics.  
+Right: Foreground contamination in line-of-sight $\kpar$ vs.\ angular $\kperp$
+as observed using PAPER \citep{pober_et_al2013}.
+Foregrounds are bright within a wedge (lower right) and then fall 
+precipitously to become thermal-noise limited.
+%in the ``EoR window" (blue/black 
+%region), where measurements are thermal-noise limited.  
+The width of the wedge derives both from an instrument-dependent component 
+(solid black line) and an additional component relating to the inherent spectral smoothness
+of foregrounds.
+%Bright foregrounds occupy
+%a wedge (lower right) that extends beyond a fundamental analytic limit
+%(solid black) by a margin dictated by the chromatic properties of the foregrounds
+%and the instrument, and then falls precipitously
+%in the EoR Window (blue
+%region), where measurements are currently thermal noise limited. 
+%This insight has led to the
+%first meaningful constraints on EoR via 21~cm emission
+%\citep{parsons_et_al2013}.
+}\label{fig:twoFGViews} \end{figure}
 
 
-HERA follows the vision delineated in NWNH where the MWA and PAPER
-characterized the foreground emission and performed the first deep
-integrations, followed by a more powerful instrument that drew on the lessons
-learned and merged the scientific teams. The MWA, PAPER, and LOFAR have all
-recently started deep integrations with hopes of detecting the 21~cm
-signal.
-However, as summarized in Table \ref{tab:signif} (see \citealt{pober_et_al2014} for more details),
-these instruments are likely to achieve
-at best only marginal detections of power from reionization.
-While this might qualify as a ``detection'' if the signal is strong, the
-\emph{science} of reionization observations is beyond their reach. 
-However, the profound contributions of MWA and PAPER should not be overlooked. PAPER and the MWA have succeeded magnificently in characterizing the foreground emission, discovering the EoR window, and understanding how to remove foreground contamination from the measurements. Further, they have developed and retired the risk associated with all of HERA's major systems. 
-HERA uses these lessons perform the science of reionization, at a much lower cost than assumed in NWNH.
-% XXX keep mentioning
-% that this proposal is cheaper than NWNH suggested but never give either that
-% number nor your estimated cost.
+%Imaging-based approaches combine baseline measurements to
+%invert the $\kpar\Leftrightarrow(u,v)$ modes natively
+%sampled by an interferometer, and then aim to calibrate out the inherent chromaticity of an
+%interferometer's $(u,v)$-sampling to enable the accurate subtraction of foreground models.
+Rather than inverting interferometric baseline measurements to produce images,
+a powerful new approach has been developed and tested by the PAPER
+and MWA teams that instead directly Fourier transforms these measurements separately along the frequency axis,
+effectively producing a wavenumber cube while retaining the ability to handle inteferometric
+chromaticity on a per-baseline basis.  Because of the way smooth-spectrum foregrounds
+interact with baselines of different lengths, it turns out this flexibility handle
+baselines separately is critical.
+Through a concerted theoretical and observational campaign by PAPER and the MWA
+\citep{morales_et_al2012,parsons_et_al2012b,vedantham_2012,Datta_2010,hazelton_et_al2013,pober_et_al2013,parsons_et_al2013,dillon_et_al2013b},
+we now understand that foreground contamination is confined to a `wedge' in
+$\kpar$ vs.\ $\kperp$, as demonstrated by the PAPER observations in 
+Figure \ref{fig:twoFGViews} (right).  Moreover, because the $\kpar$ direction (obtained by
+Fourier-transforming along the frequency axis) is effectively an ``inverse frequency'' (e.g. time delay),
+the form of this wedge can be understood analytically as arising from the relative delay between sky signals
+entering each antenna in an interferometric baseline from different directions.
 
+Our new understanding of the foreground wedge has two powerful consequences.
+Firstly, as illustrated in Figure \ref{fig:waterfall}, the foreground wedge can
+removed with a baseline-dependent filter that removes emission within a well-defined range of spectral smoothness.
+This filter directly suppresses foregrounds by at least
+4 orders of magnitude,  
+and leaves the region above the wedge free from 
+foreground emission---a window through which we can observe the reionization signal.
+Secondly, by understanding signal delay as the mechanism that gives rise to the wedge,
+it is now possible, for the first time, to map foreground removal requirements 
+to the precise instrumental characteristics that are required.  The most direct instrumental
+constraint comes from that fact that, to access $\k$-modes in the range $0.1<k<0.2h\ {\rm Mpc}^{-1}$
+where 21~cm reionization experiments can be most sensitive, {\bf the signal delay between antennas
+contributing to this measurement cannot exceed 120 ns}.  As discussed in \S\ref{sec:design}, this
+constraint can (and must) be incorporated into the fundamental design of any future 21~cm reionization instrument.
+
+%%MM: a figure showing results from both arrays would be really powerful here.
+%This wedge is the result of
+%the smooth spectrum foregrounds 
+%%XXX SF: I would make this more obvious.  I recommend replacing this sentence with something like (with my naive understanding): "This sharp division occurs because foregrounds have smooth spectra (which cause the sources to manifest at small $\kpar$), some of which is projected into the transverse direction ($\kperp$) through the instrument's well-understood chromatic properties."
+%(low $\kpar$) interacting with the inherent
+%chromaticity of an interferometer. 
+%This leaves the region above the wedge free from 
+%foreground emission---a window through which we can observe the EoR. 
+%As demonstrated in the right-hand panel of Figure \ref{fig:waterfall}, removal of the foreground wedge 
+%directly suppresses foregrounds by at least 4 orders of magnitude.
+%We now understand the source of the EoR window, how we can increase the 21~cm signal region, and have seen the window in observations with both PAPER and the MWA \citep{pober_et_al2013,dillon_et_al2013b}.
+%
+%%The time is now ripe for an experiment that builds from the technical heritage
+%%of PAPER, the MWA, MITEoR, and LEDA, and incorporates into the design of the
+%%instrument new insights relating to the interplay of sensitivity and the
+%%foreground wedge.  HERA's new 14-m dish, whose design is motivated by the core
+%%tenets delay-spectrum foreground avoidance, is foundational to this effort.
+%%These elements, arranged redundantly in a compact hexagonal grid, enable both the
+%%delay-spectrum foreground avoidance and calibration from PAPER (redundant
+%%baselines, proven performance, low risk) and the foreground subtraction and
+%%imaging from the MWA (filled $uv$~coverage, higher sensitivity and immunity to
+%%polarized foregrounds).
+%
+%%HERA's signal path includes the dipole and balun from PAPER, with refinements
+%%to broaden the spectral response to lower frequencies and optimally illuminate
+%%the parabolic reflector.  Digital nodes near the antennas limit cable
+%%reflections, and incorporate design elements of the MWA, PAPER's CASPER-based
+%%digitization and filtering, and the hybrid FPGA/GPU correlator architecture
+%%used by PAPER, the MWA, and LEDA.  HERA's software includes the Monitor \&
+%%Control and meta-data systems from the MWA
+%%redundant calibration pipelines from MITEoR and PAPER, delay-spectrum analysis from PAPER, Fast
+%%Holographic Deconvolution imaging software
+%%\citep{sullivan_et_al2012_trunc} and the imaging power spectrum
+%%software from the MWA, and the backend computing infrastructure from PAPER.
 
 
 %Observations with PAPER and the MWA have confirmed the presence of the EoR Window
@@ -780,34 +812,6 @@ HERA uses these lessons perform the science of reionization, at a much lower cos
 %Together, these advances provide the necessary foreground suppression and
 %a game-changing level of sensitivity at a fraction of the
 %cost anticipated in the HERA roadmap.
-
-\begin{figure}[t] \centering
-%\includegraphics[width=6.5in]{plots/MWApretty.png} \includegraphics[width=3.6
-%in]{plots/MWApretty.png}
-\includegraphics[height=2.02in]{plots/Foregrounds/MWA_EoR0_2min.jpg}
-%\includegraphics[width=2.4 in]{plots/wedge_tall.png}
-\includegraphics[height=2.02in]{plots/wedge_tall_wide.png} \caption{\small Left:
-Foregrounds imaged on the MWA.
-This image spans $\sim$$8^{\circ} \times 8^{\circ} $ and
-lies within the HERA survey area. Imaging methods provide a key capability for reducing
-polarization leakage and foreground systematics.  
-Right: Foreground contamination in line-of-sight $\kpar$ vs.\ angular $\kperp$
-as observed using PAPER \citep{pober_et_al2013}.
-Foregrounds are bright within a ``wedge" (lower right) and then fall 
-precipitously in the ``EoR window" (blue/black 
-region), where measurements are thermal-noise limited.  The wedge's location can 
-be estimated analytically (solid black line), but the foregrounds leak out by a margin 
-dictated by the chromatic properties of both the foregrounds and the instrument.
-%Bright foregrounds occupy
-%a wedge (lower right) that extends beyond a fundamental analytic limit
-%(solid black) by a margin dictated by the chromatic properties of the foregrounds
-%and the instrument, and then falls precipitously
-%in the EoR Window (blue
-%region), where measurements are currently thermal noise limited. 
-This insight has led to the
-first meaningful constraints on EoR via 21~cm emission
-\citep{parsons_et_al2013}.
-}\label{fig:twoFGViews} \end{figure}
 
 % XXX possibly pull some of the sentences below for HERA Lessons section above.
 
@@ -920,6 +924,7 @@ first meaningful constraints on EoR via 21~cm emission
 
 \vspace{-0.2in}
 \section{HERA Project Design} % 8 pages
+\label{sec:design}
 
 % XXX address this:
 % the proposal would be more convincing as an
@@ -936,6 +941,24 @@ first meaningful constraints on EoR via 21~cm emission
 % based on known techniques,
 % but supporting a battery of foreground mitigation techniques.
 
+\begin{table}
+\centering
+\begin{tabular}{c||r||r|r} 
+Instrument & Collecting Area (m$^2$) & Foreground avoidance & Foreground modeling \\
+\hline
+PAPER & 528 & 1.93 & 8.86 \\
+MWA & 896 & 2.46 & 6.40 \\
+LOFAR NL Core & 35,762 & 2.76 & 17.37 \\
+\textbf{HERA-127} & \textbf{19,500} & \textbf{10.88} & \textbf{35.65} \\
+\textbf{HERA-331} & \textbf{50,900} & \textbf{25.44} & \textbf{87.20} \\
+SKA1 Low Core & 833,190 & 97.92 & 284.85 \\
+\end{tabular}
+\caption{\small
+Power spectrum signal-to-noise (``number of sigmas") at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
+\label{tab:signif}
+\end{table}
+
+
 As described in \S\ref{sec:Lessons}, 21cm reionization efforts have achieved a
 pivotal new understanding of how instrumental characteristics give rise the
 wedge of emission shown in Figure \ref{fig:twoFGViews}.  Furthermore, we have
@@ -947,10 +970,31 @@ within a wedge of known size, and to specify the sensitivity needed to obtain
 high-significance detections of the 21cm reionization power spectrum under the
 conservative assumption that all foreground-dominated wavemodes within the
 wedge must be projected out of our measurements.
+As summarized in Table \ref{tab:signif} (see \citealt{pober_et_al2014} for more details),
+based on these assumptions, current instruments are likely to achieve,
+at best, only marginal detections of power from reionization.
+% XXX expand this into a larger discussion of where HERA fits in with other activities?
+
+%HERA follows the vision delineated in NWNH where the MWA and PAPER
+%characterized the foreground emission and performed the first deep
+%integrations, followed by a more powerful instrument that drew on the lessons
+%learned and merged the scientific teams. The MWA, PAPER, and LOFAR have all
+%recently started deep integrations with hopes of detecting the 21~cm
+%signal.
+%However, as summarized in Table \ref{tab:signif} (see \citealt{pober_et_al2014} for more details),
+%these instruments are likely to achieve
+%at best only marginal detections of power from reionization.
+%While this might qualify as a ``detection'' if the signal is strong, the
+%\emph{science} of reionization observations is beyond their reach. 
+%However, the profound contributions of MWA and PAPER should not be overlooked. PAPER and the MWA have succeeded magnificently in characterizing the foreground emission, discovering the EoR window, and understanding how to remove foreground contamination from the measurements. Further, they have developed and retired the risk associated with all of HERA's major systems. 
+%HERA uses these lessons perform the science of reionization, at a much lower cost than assumed in NWNH.
+%% XXX keep mentioning
+%% that this proposal is cheaper than NWNH suggested but never give either that
+%% number nor your estimated cost.
 
 This HERA proposal targets two arrays: a 127-element array that borrows heavily
 from components of the PAPER experiment, and an upgraded 331-element array that
-incorporates several performance optimizations.  The specifications of HERA-127
+incorporates several performance optimizations.  As listed in Table \ref{tab:signif}, the specifications of HERA-127
 and HERA-331 have been set to meet precisely the requirements for obtaining,
 respectively, a 10$\sigma$ detection of the 21cm reionizaton signal, and a
 25$\sigma$ detection of the power spectrum of fluctuations in the 21~cm signal
@@ -1240,7 +1284,8 @@ with a staged incorporation of new elements for night-time observing.
 
 \begin{figure}[t]
 \centering
-		\includegraphics[height=2.5in]{plots/HERA_331_pos.png}
+		%\includegraphics[height=2.5in]{plots/HERA_331_pos.png}
+		\includegraphics[height=2.5in]{plots/hera352.png}
 		\includegraphics[height=2.5in]{plots/HERA_331_uv_clipped.png}
 \caption{\small
 Left: Configuration of HERA-331, with 331 dishes in a maximally-dense hexagonal core and 21 outrigger dishes.  Right: The resulting $uv$-coverage is fully-sampled to $\sim 400\lambda$ %[XXX: is this the ``official" figure to quote?]}
