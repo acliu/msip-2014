@@ -1493,24 +1493,28 @@ The main data center at Penn will house all of the maximally compressed data fro
 \vspace{-0.2in}
 \subsubsection{Monitor and Control}
 
+The University of Washington team lead the development of the MWA Monitor and Control system (M\&C; \citealt{tingay_et_al2013_trunc}), and the HERA M\&C will be a direct port of this very successful software. The M\&C system is responsible for observation scheduling, array startup and shutdown, and monitoring of all the field systems. In the process the M\&C system collects large amounts of meta data which are crucial for identifying subtle biases in the cosmological data. 
+
+The MWA M\&C system already has the capacity to handle the HERA instrument and meta data, and given the shared heritage of many of the systems adaptation for HERA will be straightforward. 
+
 %XXX flesh out
 
-Top-level interface for controlling and monitoring major subsystems. 
-Collection of monitor data from nodes, switch, correlator, data compression, and data transfer subsystems.
-Incorporation of calibration data from real-time application of redundant calibration (cite section), as well as
-other calibration, imaging, and assessment subsystems.
-
-%\subsubsection{Array monitoring/maintenance: daily, weekly health monitoring}
-% de Boer
-
-In addition to Monitor and Control subsystem, which aggregates routine checks that are run automatically as
-part of the data compression and transfer pipeline, there is a need for deeper analysis
-exploring the data for more subtle defects, as well as monitoring progress toward sensitivity goals.
-We have set aside time for students at each institution, rotating among institutions, and managed at MIT,
-for performing such data exercises.
-Combine this with information from monitor database to identify hardware and subsystem failures.
-Aggregate lists of systems requiring maintenance attention, which are then handled by system owners
-in coordination with appropriate members of their teams.
+%Top-level interface for controlling and monitoring major subsystems. 
+%Collection of monitor data from nodes, switch, correlator, data compression, and data transfer subsystems.
+%Incorporation of calibration data from real-time application of redundant calibration (cite section), as well as
+%other calibration, imaging, and assessment subsystems.
+%
+%%\subsubsection{Array monitoring/maintenance: daily, weekly health monitoring}
+%% de Boer
+%
+%In addition to Monitor and Control subsystem, which aggregates routine checks that are run automatically as
+%part of the data compression and transfer pipeline, there is a need for deeper analysis
+%exploring the data for more subtle defects, as well as monitoring progress toward sensitivity goals.
+%We have set aside time for students at each institution, rotating among institutions, and managed at MIT,
+%for performing such data exercises.
+%Combine this with information from monitor database to identify hardware and subsystem failures.
+%Aggregate lists of systems requiring maintenance attention, which are then handled by system owners
+%in coordination with appropriate members of their teams.
 
 %\vspace{-0.25in}
 %\subsection{Prototype Construction and Testing}
