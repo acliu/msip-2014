@@ -1234,56 +1234,47 @@ be of significant importance for improving the match between the XX and YY polar
 and helping eliminate polarization leakage.
 % XXX once we mention polarization leakage, we better hit it head on...
 
-\vspace{-0.25in}
-\subsubsection{Signal Path}
-\vspace{-6pt}
-The signal path will utilize the front-end (feed and LNA, left panel of Figure \ref{fig:components})
-and post-amplifier gain modules directly
-from PAPER, although additional studies will be carried out to improve the feed
-response below 100 MHz. The amplifier/baluns and post-amplifier modules already have
-the ability to work over an extended lower end. The front-end amplifier has a low
-noise figure with moderate gain, high dynamic range to tolerate RFI, unconditional
-stability to ensure oscillation-free operation, well-matched impedance to both the
-antenna and cable, well-understood temperature dependence, a mechanically rugged
-mechanical design, low susceptibility to electrostatic discharge, low power
-consumption, and low fabrication cost. It is housed in a metal enclosure affixed to
-the antenna to form a very rugged, reliable, low-cost unit with excellent RF
-performance \citep{parsons_et_al2010}.
 
-% AAARRGGHH!
+\vspace{-0.25in}
+\subsubsection{Analog Signal Path}
+\vspace{-6pt}
+
 \begin{figure}[h]
-	\centering
-	%\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=0.3\textwidth]{plots/new_antenna_closeup.jpg}
-		%\label{fig:element}
-	%\end{subfigure}
-	%\quad
-	%\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=0.3\textwidth]{plots/Engineering/recv_node.png}
-		%\label{fig:recv_node} 
-	%\end{subfigure}
-	%\quad
-	%\begin{subfigure}[b]{0.3\textwidth}
-		\includegraphics[width=0.24\textwidth]{plots/Engineering/digital.png}
-		%\label{fig:digital} 
-	%\end{subfigure}
-	\caption{\small
-	Photographs of existing instrument components to be used in the HERA design.
+    \centering
+        \includegraphics[height=1.5in]{plots/new_antenna_closeup.jpg}
+        \includegraphics[height=1.5in]{plots/Engineering/recv_node.png}
+        \includegraphics[height=1.5in]{plots/Engineering/digital.png}
+    \caption{\small
+    Photographs of existing instrument components to be used in the HERA design.
     Left: the PAPER antenna positioned above the trough reflector.
     Center: Receiver modules in a node refrigerator.
     Right: Digital equipment (ADC/correlator) in container.}\label{fig:components}
 \end{figure}
 
-The signal is transported to the node via a 35-meter run of 50 $\Omega$ coaxial
-cables. It will terminate on a bulkhead plate on the face of the RFI-tight and
-air-conditioned node. Inside, dual-channel post-amplifier modules (PAMs) (Fig.
-\ref{fig:components}, center) amplify and band-limit the signal. Inside the RFI-tight node,
-the PAMs themselves are housed in RF-shielded boxes.
+HERA's analog signal path inherits directly from PAPER.
+In keeping with a philosophy of
+incremental change,
+HERA-127 will re-use the tested and commissioned feed, LNA, cables, and post-amplifier gain modules
+(left and center panels of Figure \ref{fig:components}) that are currently being
+used to good effect in PAPER-128 \citep{parsons_et_al2010}.  Existing PAPER feeds will be attached to new
+reflector screens that are suspended over the elements, but will otherwise remain unmodified.
+A parallel development effort an NRAO, led by Bradley, will aim to improving the feed response below
+100 MHz 
+and to improve the match between polarization beams in the feed-element system.  
+Additional
+minor modifications to the analog signal path will include transitioning from a 75$\Omega$ to a
+shorter 50$\Omega$ cabling system and replacing 100--200 MHz bandpass filters with 50--250 MHz equivalents.
+This wider analog bandwidth will be used in HERA analysis to improve the extrapolation of smooth foreground
+emission over a broader range, and to explore HERA's capability as a Dark-Ages science instrument.
+After a Critical Design Review, the results of these development efforts will be incorporated in
+the transition to the HERA-331 system.  
 
-A new board called the Smart Network ADC Processor (SNAP) board, to be incorporated 
-into the CASPER suite of hardware and firmware, is currently in layout at NRAO.  SNAP
-takes the output from the PAMs, digitizes and channelizes it before putting it on optical fiber
-for transmission to the Karoo Array Processing Building.
+%The signal is transported to the node via a 35-meter run of 50 $\Omega$ coaxial
+%cables. It will terminate on a bulkhead plate on the face of the RFI-tight and
+%air-conditioned node. Inside, dual-channel post-amplifier modules (PAMs) (Fig.
+%\ref{fig:components}, center) amplify and band-limit the signal. Inside the RFI-tight node,
+%the PAMs themselves are housed in RF-shielded boxes.
+%
 
 
 %\subsubsection{Analog System}
@@ -1356,8 +1347,13 @@ FX correlator architectures require.
 %}\label{fig:node_arch}
 %\end{figure}
 
+%A new board called the Smart Network ADC Processor (SNAP) board, to be incorporated 
+%into the CASPER suite of hardware and firmware, is currently in layout at NRAO.  SNAP
+%takes the output from the PAMs, digitizes and channelizes it before putting it on optical fiber
+%for transmission to the Karoo Array Processing Building.
+
 HERA's nodes each consist of a single, RFI-tight enclosure housing 16 dual-polarization receiver modules, 
-6 data acquisition (DAQ(, %XXX or whatever we call them
+6 data acquisition (DAQ), %XXX or whatever we call them
 modules, power supplies, cooling, and small server for monitor and control.  HERA-331 will employ
 26 nodes, each capable of processing the signals from 16 antenna elements.
 DAQ modules, which are currently under development, and are in the advanced stages of schematic design and layout,
