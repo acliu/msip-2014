@@ -1,0 +1,9 @@
+This is a silly workaround for Fortran's refusal to parse the filenames properly
+
+cube1 --> xH_nohalos_nf0.010654_eff31.5_HIIfilter1_Mmin2.3e+08_RHIImax30_z7.50_200_400Mpc
+cube2 --> xH_nohalos_nf0.201894_eff31.5_HIIfilter1_Mmin1.9e+08_RHIImax30_z8.50_200_400Mpc
+cube3 --> xH_nohalos_nf0.521457_eff31.5_HIIfilter1_Mmin1.7e+08_RHIImax30_z9.50_200_400Mpc
+cube4 --> xH_nohalos_nf0.719722_eff31.5_HIIfilter1_Mmin1.4e+08_RHIImax30_z10.50_200_400Mpc
+cube5 --> xH_nohalos_nf0.834170_eff31.5_HIIfilter1_Mmin1.3e+08_RHIImax30_z11.50_200_400Mpc
+
+ps1, ps2, ps3, ps4, ps5 give the corresponding power spectra
