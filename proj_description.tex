@@ -342,10 +342,10 @@ with predicted sensitivities.
 
 As a high-sensitivity instrument with broad frequency coverage, HERA can
 paint an uninterrupted picture through reionization, back to the end of 
-the Dark Ages. This capability leverages the coupling of
-21~cm emission to the properties of the first galaxies that
-are inaccessible through other means,  and will be transformative for
-studying the imprint of the very first galaxies in the Ly-$\alpha$ and X-ray backgrounds.  
+the Dark Ages. This capability
+will be transformative for
+studying the imprint of the very first galaxies in the Ly-$\alpha$ and X-ray backgrounds, providing measurements on the properties of the first galaxies that
+are inaccessible through other means.
 Figure~\ref{fig:x_i_vs_z} illustrates how HERA will
 determine the ionization history of our universe much more precisely,
 and at higher neutral fractions (wider redshift range), than is possible with other existing techniques.  
@@ -353,10 +353,11 @@ These measurements can
 be used to move beyond characterizing the timing and duration of reionization to
 explore which galaxies dominate the integrated UV luminosity density, what the escape fraction
 of UV photons is in early galaxies, and how feedback from early star formation affects low-mass galaxies and 
-the integrated  global ionization profile versus redshift (see \S\ref{sec:ParamEst} regarding parameter estimation). 
+the integrated  global ionization profile versus redshift (see \S\ref{sec:ParamEst} regarding parameter estimation).
+%JCP: the above sentence has two "ands": and how feedback from early star formation... and the integrated global ionization profile... is this a mistake? or is there some connection between these two things I don't understand? 
 At earlier epochs ($z \sim 15$ to 20), the sensitivity of the 21~cm line 
 to the IGM temperature provides a unique probe of processes that warm the neutral IGM at the
-end of the dark ages.  HERA will have the low frequency coverage and
+end of the dark ages.  As shown in the right-hand panel of Figure \ref{fig:x_i_vs_z}, HERA will have the low frequency coverage and
 sensitivity to study these earliest phases of star and black hole formation -- an epoch that may be otherwise
 untestable using other techniques.
 
@@ -369,7 +370,7 @@ untestable using other techniques.
 \begin{figure}[t]\centering
 \includegraphics[width=3in]{plots/Pspec/eor_pspec_2014.png}
 \includegraphics[width=3in]{plots/Pspec/pk_k3pk.png} % XXX trim out left subpanel
-\caption{\small Left: HERA's power-spectrum sensitivity (solid)
+\caption{\small Left: HERA's power-spectrum sensitivity at the $2\sigma$ level (solid)
 relative to a fiducial ionization model (dotted line; $\xHI=0.37$, $z=9.0$).  
 Sensitivities reflect staged array size and
 improving analysis software that expands the range
@@ -380,12 +381,15 @@ constrain the brightness temperature of the IGM at $z\sim8$, showing
 a departure from adiabatic cooling presumed to be indicative of X-ray heating.
 }\label{fig:eor_pspec}
 \end{figure}
+%JCP: the purple line in the RHS isn't mentioned in the caption.  It's also confusing that it's in one panel but not the other.
 
 A season of observing with HERA-127 will yield high-significance constraints on the 21 cm power 
-spectrum across a wide range of k modes and redshifts \citep{pober_et_al2014}.  Figure \ref{fig:eor_pspec} shows a $z=9$ power spectrum modeled by the 21cmFAST software \citep{mesinger_et_al2011}, 
+spectrum across a wide range of k modes and redshifts \citep{pober_et_al2014}.
+% JCP: I don't actually talk about HERA 127 in the paper, but the cite is OK by me 
+Figure \ref{fig:eor_pspec} shows a $z=9$ power spectrum modeled by the 21cmFAST software \citep{mesinger_et_al2011}, 
 along with $2\sigma$ HERA sensitivities.  Using a conservative ``foreground avoidance" 
 approach pioneered by PAPER \citep{parsons_et_al2013}, we find that 
-a 127-element HERA array (``HERA-127") can achieve a $> 10\sigma$ detection over a broad range of redshifts.  Subsequent observing with 331 elements (``HERA-331") boosts this to $>25\sigma$.  With detailed foreground modeling techniques developed for the MWA, the overall significance rises to $90\sigma$, along with new access lower $k$ modes and therefore qualitatively different physics.  Such a high sensitivity measurement would also allow one to go beyond constraining parameters, testing rather than assuming the underlying theoretical framework
+a 127-element HERA array (``HERA-127") can achieve a $>~10\sigma$ detection over a broad range of redshifts.  Subsequent observing with 331 elements (``HERA-331") boosts this to $>25\sigma$.  With detailed foreground modeling techniques developed for the MWA, the overall significance rises to $90\sigma$, along with new access lower $k$ modes and therefore qualitatively different physics.  Such a high sensitivity measurement would also allow one to go beyond constraining parameters, testing rather than assuming the underlying theoretical framework.
 
 \compress
 \subsubsection{Astrophysical parameters from the power spectrum}
@@ -421,8 +425,8 @@ of 50~$\mu$Jy/beam (synthesized beam FWHM $\sim 24'$) compared with typical brig
 which predict peaks of up to 400~$\mu$Jy/beam.
 
 As was the case with the power spectrum, noise and foreground residuals are important limiting factors.  Fortunately, many of the same foreground avoidance and foreground modeling schemes used for power spectrum estimation can also be applied to imaging.  In Figure \ref{fig:imaging} we demonstrate the 
-resultant sensitivity of imaging in a foreground avoidance scheme, assuming a conservative 1MHz of effective bandwidth, or 12 Mpc along the line of 
-sight.  The brightest structures in the redshift 8 input simulation are detectable at the SNR$>10$ level.
+resultant sensitivity of imaging in a foreground avoidance scheme, assuming a conservative 1~MHz of effective bandwidth, or 12 Mpc along the line of 
+sight.  The brightest structures in the redshift 8 input simulation are detectable at the SNR$~>~10$ level.
 
 % \begin{figure}[t]\centering
 % \includegraphics[width=\textwidth]{plots/Imaging/HERA_FoV.jpg}
@@ -435,11 +439,12 @@ sight.  The brightest structures in the redshift 8 input simulation are detectab
 % XXX need to cut this down to just the imaging sim, I think
 \caption{\small
 With sensitivity highly concentrated at the largest scales, 
-HERA-331 will have the sensitivity to directly image HI during reionization.  Shown here is a simulation of EoR emission \citep{mcquinn_et_al2007} as imaged by HERA in 100 hours of observation.  
-Contours enclose regions with signal to noise above 10.  
+HERA-331 will be able to directly image HI during reionization.  Shown here is a simulation of EoR emission \citep{mcquinn_et_al2007} as imaged by HERA in 100 hours of observation.  
+Black contours enclose regions with signal to noise above 10.  
 %The regions detected on scales of $\sim$100~Mpc bracket the size scales probed by deep galaxy surveys.  At 150~MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  
 With a nearly completely sampled aperture over 300~m across, HERA will have the collecting area of Arecibo but with $500\times$ the survey speed. Each night, HERA drift scans 2600 square degrees.%, for a survey volume of 50`$Gpc^3$.  
 %The survey area includes the GOODS-South field \citep{dickinson_et_al2003} (denoted by the black rectangle).  As one of the best studied regions of sky, the GOODs-South survey volume includes 179 known objects above $z=7$, which represents $\sim45\%$ of all such objects over the entire sky.
+% JCP: the last two sentences repeat things already said in the text
 }  \label{fig:imaging}
 \end{figure}    
 
@@ -507,8 +512,8 @@ Knowing whether an observed galaxy is in a region that  was
 previously reionized (center of large HII bubble), recently reionized (edge of HII bubble), or is forming from 
 pristine HI provides important contextual information on early galaxy formation.
 HI images can be cross-correlated with other diffuse 
-tracers of large scale structure.  A number of studies have proposed cross-correlation with large scale intensity
-mapping of molecular  CO \cite{lidz_et_al2011} and atomic CII \citep{gong_et_al2011} lines. These studies
+tracers of large scale structure.  A number of studies have proposed cross-correlation of 21~cm surveys with large scale intensity
+mapping of molecular  CO \citep{lidz_et_al2011} and atomic CII \citep{gong_et_al2011} lines. These studies
 trace the large scale galaxy distribution -- the sources of reionization. 
 Prototypes of these experiments 
 may be operating on the HERA timescale. Such probes have different systematics 
