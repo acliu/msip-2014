@@ -1370,6 +1370,7 @@ the transition to the HERA-331 system.
 
 \vspace{-0.2in}
 \subsubsection{Digital System}
+\label{sec:digital}
 
 \begin{figure}[t]\centering
 \includegraphics[width=6.5in]{plots/casper_boards.jpg}
@@ -1470,25 +1471,59 @@ in the following section.
 % Aguirre, Moore
 
 \vspace{-0.2in}
-\subsubsection{Data Storage, Compression, and Transfer}
+\subsubsection{Data Storage, Compression, Transfer, and Computing}
 
-The raw data rate from the correlator for HERA-331 will be 1.3 Gbps and will generate 1.2 PB of raw data over the observing season.  These considerations mandate a compression scheme to make handling and analysis of the data tractable.  PAPER has implemented a data compression scheme (see Appendix A of \citealt{parsons_et_al2013}) that can be applied to HERA visibilities
-to reduce data volume by approximately a factor of 20 without impacting reionization science capabilities.  This compression technique, which is based on delay/delay-rate filtering
-\citep{parsons_backer2009}, is applied uniformly to all visibilities in the array, and does not require (or produce) detailed calibration information.  The net effect is to reduce the frequency and time resolution of the data, while not requiring real-time calibration 
-and imposing minimal restrictions on how the data are analyzed and calibrated afterward.  Because HERA will not conduct daytime observations, owing to the level of interference introduced by the active Sun, the X-Engine servers will be available to perform data compression during the daytime.  Leveraging the capacity and flexibility of their
-graphics cards for high-performance computing, these servers will read back the previous night's observations, perform RFI flagging, apply the necessary transformation and filtering, and will output compressed visibility data back to disk.
+HERA's data management system is responsible for recording raw data from the
+correlator, compressing that data in real-time, applying routine calibration
+and analysis pipelines, and transferring data products to 
+a high-performance computing cluster at U. Pennsylvania (UPenn).
+UPenn will lead the procurement
+and deployment of three data storage systems:
+\begin{itemize}[noitemsep,nolistsep]
+\item a 1.5 PB system deployed in the KAPB for archiving all 1.2 PB of raw data and 60 TB of compressed data, 
+% XXX did I get this right about removable storage, or are the NAS things something separate?
+% portable, inexpensive, network-attached storage devices will be used to transfer data by air-freight shipping. 
+\item a 250 TB RAID array with removable storage units that are used to ship compressed data products to the US, and
+\item a permanent 500 TB system at UPenn associated with a computing cluster that
+holds compressed data products and serves as the analysis engine for HERA collaborators.
+\end{itemize}
+\noindent
+This effort leverages existing infrastructure at UPenn, with support
+for the expansion the data storage, and upgrading to a 32-node computing cluster.  This cluster will support the
+bulk of the analysis by HERA collaborators (see \S\ref{sec:analysis}) that requires access to the full set of HERA observations.
 
-Quality assurance (QA) of the data is performed by a computing cluster in the KAPB separate from the correlator, which monitors the status of the instrument and the data flow from correlator to storage, as well as transfer to the US.  This QA also includes the generation of RFI statistics, measuring instrument repeatability from day-to-day, and preliminary calibration solutions.  This cluster maintains a database of observations logged and transferred, together with metadata on obtained from the QA process.  In addition to the maximally-compressed data from delay/delay-rate filtering, which forms the core of the analysis effort, the QA server will also generate LST-averaged data in South Africa by averaging $\sim 10$ successive days at full frequency and time resolution.
+%The main data center at Penn will house all of the maximally compressed data from all seasons of HERA, as well as the LST-averaged data.  The storage system is sized so that there is a factor of 4 overhead for work on the maximally-compressed data set, and a factor of 2 on the LST-averaged. The 500 TB data storage will be coupled to a 32-node cluster which performs the tasks of calibration and averaging to further reduce the data volume.  This cluster will support the bulk of the analysis requiring the full data set.  Subsets will be served off to collaborators from this system.  The entire data storage and transfer plan for HERA draws heavily on the experience with PAPER data.
 
-HERA will require two data storage facilities: local storage in the KAPB, and a US-based storage facility, located at Penn. An eventual 1.5 PB system in the KAPB will house all raw data (1.2 PB) in addition to the maximally-compressed data. A 250 TB RAID will house the LST-averaged data and be used to transfer this data back to the US.  This represents a compromise between bringing all raw data to the US and only working on the maximally compressed data. An additional permanent 250 TB system at Penn will be able to to house the various compressed data products forming the core of the analysis and will serve these to the collaborating institutions in the US.
+The data compression scheme at the heart of the data management system
+has been implemented for PAPER (\citealt{parsons_et_al2013};
+Appendix A), and will be applied to HERA visibilities to reduce data volume by
+a factor of $\sim$20 without impacting reionization science
+capabilities.  This compression technique, which is based on delay/delay-rate
+filtering \citep{parsons_backer2009}, is applied uniformly to all visibilities
+in the array, does not require (or produce) detailed calibration
+information, and is minimally restrictive for how data are analyzed and calibrated afterward.
+Data compression is run on the same GPU servers
+that implement the correlator X-Engines (\S\ref{sec:digital}).  Since HERA only observes at night,
+these processors would otherwise be unused.  UC Berkeley is responsible for porting
+the existing data compression pipeline to target these servers.
+
+Data quality assurance (QA) is performed in real time on an additional modest 
+computing cluster in the
+KAPB.  UPenn will lead the deployment and support of the hardware system that
+manages data transfer, applies routine calibration pipelines (see \S\ref{sec:calibration}) and quality
+checks, and aggregates correlation-based metrics of array performance in real-time.  The QA system
+furnishes this information into the separate monitor and control system (\S\ref{sec:monitor}).
+A modest amount of data transfer is possible over the internet; PAPER's data transfer rate from the Karoo
+to UPenn varies, but peaks around 40 Mbps.  The QA system will drive internet data transfer, but
+will employ network-attached storage devices, transfered by air-freight shipping, to ensure full data transfer to UPenn.
 
 %ii. transport to data centers
-In order to transfer maximally-compressed data over the internet in a timely manner, a network speed of around the instantaneous compressed data rate is required.  Negotiations with the IT SKASA and the South African internet provider (Tenet) have achieved transfer speeds between the PAPER site and the United States have been measured to be up to 40 Mbps, which easily
-accommodates the first two seasons of HERA observations.  In all seasons, however, portable, inexpensive, network-attached storage devices will be used to transfer data by air-freight shipping. 
+%In order to transfer maximally-compressed data over the internet in a timely manner, a network speed of around the instantaneous compressed data rate is required.  Negotiations with the IT SKASA and the South African internet provider (Tenet) have achieved transfer speeds between the PAPER site and the United States have been measured to be up to 40 Mbps, which easily
+%accommodates the first two seasons of HERA observations.  In all seasons, however, portable, inexpensive, network-attached storage devices will be used to transfer data by air-freight shipping. 
 
 %iii. data centers: access?
 
-The main data center at Penn will house all of the maximally compressed data from all seasons of HERA, as well as the LST-averaged data.  The storage system is sized so that there is a factor of 4 overhead for work on the maximally-compressed data set, and a factor of 2 on the LST-averaged. The 500 TB data storage will be coupled to a 32-node cluster which performs the tasks of calibration and averaging to further reduce the data volume.  This cluster will support the bulk of the analysis requiring the full data set.  Subsets will be served off to collaborators from this system.  The entire data storage and transfer plan for HERA draws heavily on the experience with PAPER data.
+%The main data center at Penn will house all of the maximally compressed data from all seasons of HERA, as well as the LST-averaged data.  The storage system is sized so that there is a factor of 4 overhead for work on the maximally-compressed data set, and a factor of 2 on the LST-averaged. The 500 TB data storage will be coupled to a 32-node cluster which performs the tasks of calibration and averaging to further reduce the data volume.  This cluster will support the bulk of the analysis requiring the full data set.  Subsets will be served off to collaborators from this system.  The entire data storage and transfer plan for HERA draws heavily on the experience with PAPER data.
 
 \vspace{-0.2in}
 \subsubsection{Monitor and Control}
@@ -1590,7 +1625,7 @@ Optimization for reionization science is achieved by making and reducing early s
 
 
 \vspace{-0.2in}
-\subsection{Analysis and Science}
+\subsection{Software, Analysis, and Science}
 
 Beyond the construction and data-taking aspects of HERA, this proposal incorporates a full data analysis effort, culminating in the publication of a suite of science papers connecting observations to the theory of cosmic dawn.
 
