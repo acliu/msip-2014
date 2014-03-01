@@ -601,9 +601,30 @@ delay-space approach will be implemented from the start, and the sensitivity of 
 is such that this approach should yield much of the science. If the foreground
 subtraction techniques can be made to work, then the science is greatly enhanced.
 
-As mentioned above in the context of the white paper, polarization leakage is a key
-risk to all of the approaches.  To help reduce this risk, this is a key early focus on understanding and
-constraining the impacts of the instrumental response via the prototypes.
+As mentioned above in the context of the white paper, polarization leakage is a key risk to all of the approaches.  
+% A potentially important source of contaminating foregrounds may be Faraday-rotated, polarized emission which leaks into the estimate of the intrinsically unpolarized EoR signal.  
+It is the spectral structure introduced by Faraday rotation of polarized sources that is most problematic, as this can be confused with the structure due to reionization.  
+%The amount of Faraday rotation is characterized by the rotation measure (RM) with the phase angle of rotation of Q + i U pseudo-vector being RM lambda^2.  
+Farady rotation measure (RM) translates reasonably directly to particular k-modes at a given redshift (and thus lambda), with the range of concern for HERA lying in the range $20 < RM < 40$.
+%To help reduce this risk, this is a key early focus on understanding and
+%constraining the impacts of the instrumental response via the prototypes.
+% 
+% The dipole feeds used by HERA (and PAPER) are intrinsically sensitive to linear polarization, and do not have radiation patterns that are axisymmetric around the zenith.  For feeds of this kind, the leakage of Stokes Q into I on any baseline will certainly arise due to the intrinsic mismatch in beam pattern.  In addition, any electromagnetic cross-coupling or mechanical misalignment will also produce leakage between the Stokes parameters.  These latter factors may be simulated and measured, and mitigated by careful design and construction.  We will endeavor to do this with the design of HERA feed.  Preliminary simulations indicate the mismatch between X and Y polarizations is not as extreme as with PAPER (as described in Moore et al 2013).   We will characterize the HERA feeds via simulation and measurement, and in particular by calibrating the primary beam accurately with drift scan sources (Pober et al 2012) and other methods.
+% 
+% However, any residual errors, including the intrinsic beam mismatch, are a source of concern for reionization measurements.  The most direct solution is the careful calibration of the leakage, and the subtraction of polarized sources from visibilities before estimation of the power spectrum.   Because the Stokes parameters are fundamentally defined for sources in the image plane, it is not possible to do this subtraction in its full generality for an individual baseline, as the  correction for the primary beam of the antenna elements requires information nearby in the uv-plane.  HERA has the advantage of producing a densely sampled uv-plane, and having moderate angular resolution, so that it is possible to calibrate from known sources and produce high-fidelity images.
+% 
+% What is not known well known is the number of polarized point sources which might have to be modeled and subtracted, nor the complexity of diffuse emission.  
+Current work (Bernardi et al 2013) suggests that diffuse emission from the Galaxy may not have large RM, and thus may not affect k-modes of interest, and the number of strongly polarized point sources may be considerably less than naive extrapolations would indicate, with a corresponding  decrease in the amplitude of polarization power which can leak.  Both the MWA and PAPER are hard at work characterizing the polarized sky, and HERA will continue this work.  
+%We will also explore optimal methods for modeling and subtracting polarized sources.
+
+To retire the risk to its science program posed by polarization leakage, HERA will take the following approach:
+\begin{enumerate}
+\item mitigation of polarization leakage in the design and construction of the dipole feeds
+\item calibration and characterization of leakage, especially that due to the intrinsic mismatch between X and Y linear polarization beams in the early stages of construction
+\item characterization of the polarized sky through imaging (both diffuse emission and point sources) and through the power spectrum to quantify the magnitude and nature of the problem, both in terms of the brightness and rotation measure distribution of contaminating sources
+\item development of modeling and subtraction of polarized sources to remove them from EoR power spectrum analysis
+\end{enumerate}
+
 
 Increased RFI as the SKA-SA construction activities continue to be on-going and 
 ramp up is a risk.  HERA will only observe at night, so active construction will be
