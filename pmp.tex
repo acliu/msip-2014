@@ -55,6 +55,8 @@
 %would have contributions from sources other than NSF, this section should clearly state both the total 
 %cost, and the amount being requested from NSF.  
 
+Killer introductory text to explain why we are so great.
+
 \section{Collaboration and Governance}
 HERA builds upon the organization, tools and collaborations developed within the now
 merged PAPER and MWA-US groups, as envisioned in the roadmap developed for New
@@ -461,19 +463,18 @@ The overall budget is given in Table \ref{tab:expenses}.  This represents the fu
 \label{sec:schedule}
 The schedule is primarily tracked by setting a fairly large number of high-level
 milestones that get tracked in the {\tt ProjectBook}. These map to staff in a work
-breakdown schedule, which is tracked in MS Project. The high-level milestones are
+breakdown structure, which is tracked in MS Project. The high-level milestones are
 listed below, which amplifies on Figure \ref{fig:scheduleSummary}.  Some on-going
 high-level analysis activities are also included.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FOCUS ON BELOW%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}[itemsep=-4pt,parsep=-4pt]
+\begin{itemize}[itemsep=-4pt,parsep=0pt]
 \item Year 1:  Infrastructure, Prototyping, Contract Preparation (FY 2015).
-\begin{itemize}[itemsep=-4pt]
+\begin{itemize}[itemsep=-4pt,parsep=0pt]
 \item Basic infrastructure (ground leveling, power, network connectivity) installed.
 \item Existing PAPER-128 antennas, correlator, and housing container incorporated with HERA infrastructure.
 \item Additional HERA prototypes installed and tested in Green Bank.
-\item Continue delay-spectrum, FHD, and optimal estimator software development.
 \item Polarization-capable software algorithms for beam/leakage studies developed.
+\item Continue delay-spectrum, FHD, and optimal estimator software development.
 \end{itemize}
 \item Year 2:  Hardware Commissioning and Deep Foreground Survey (FY 2016). 
 \begin{itemize}[itemsep=-4pt]
@@ -481,36 +482,51 @@ high-level analysis activities are also included.
 \item HERA Analog CDR
 \item Observations using PAPER antennas in an imaging configuration started and completed.
 \item On-sky beam response of HERA antennas measured and calibrated.
-\item Remaining site infrastructure (high-bandwidth optical network, surveying, trenching) finalized.  HERA 128 construction completed by Oct. 2016.
+\item Remaining site infrastructure (high-bandwidth optical network, surveying, trenching) finalized.
 \item New feeds, receivers, nodes, and calibration systems in Green Bank and SA commissioned.
 \item Initial delay-spectrum, FHD, and optimal estimator software finished and ready for HERA 127 analysis.
 \item Full end-to-end simulations of analysis pipelines completed.
 \end{itemize}
 \item Year 3:  HERA 127 and Detecting the Rise and Fall of Reionization (FY 2017). 
 \begin{itemize}[itemsep=-4pt]
-\item HERA 127 complete. Science observations begin Oct. 2016 using the PAPER correlator, ending in May 2017.
-\item Deployment of HERA 331. New node electronics and a 331-element, GPU-based correlator in the Karoo Array Processing Building (KAPB) installed.  Construction finished Oct. 2017.
+\item Observations using HERA-127 with PAPER electronics started and completed.
+\item Deployment of HERA 331. New node electronics and a 331-element, GPU-based correlator in the Karoo Array Processing Building (KAPB) installed.
 \item New data storage infrastructure in the KAPB installed.
 \item UPenn analysis cluster upgraded. 
-\item Analysis of HERA 127 observations using proven delay-spectrum analysis techniques, publishing results constraining the timing and duration of reionization. 
+\item Analysis of HERA 127 observations using proven delay-spectrum analysis techniques, in press results constraining the timing and duration of reionization. 
 \item Simultaneous multi-pipeline analysis of HERA 127 observations to compare pipeline strengths/weaknesses performed.
 \end{itemize}
 \item Year 4:  HERA 331 and Measuring the Evolution of the First Galaxies (FY 2018). 
 \begin{itemize}[itemsep=-4pt]
-\item HERA 331 complete. Science observations begin Oct. 2017. 
+\item Observations using HERA 331 started and completed.
 \item Multi-pipeline analysis of HERA 331 data characterizes the evolution of the power spectrum and measures properties of the first galaxies. 
 \item Imaging-based subtraction algorithms for expanding the EoR window developed and optimized.
-\item High-fidelity maps/data cubes of the HERA field for cross-correlation studies created and released to the community. %JCP maybe not released to the community this year?
+\item High-fidelity maps/data cubes of the HERA field for cross-correlation studies created.
 \item Cosmological simulations for extracting reionization physics from power spectrum measurements completed.
 \end{itemize}
 \end{itemize}
 
 \section{Effort Summary}
 \label{sec:wbs}
-The labor estimate was generated from a very detailed ``bottom's up'' task summary, which maps to the milestones to generate the work breakdown structure as well as to the institution.  Table \ref{tab:fte}
-shows a breakdown per instituition per funded activity type:   development, deployment/testing, management, commissioning/support, and calibration/analysis/science.
+The labor estimate was generated from a detailed ``bottom's up'' task analysis, which maps to the milestones to generate the work breakdown structure.  Table \ref{tab:ftetot} shows the effort totals per institution and classification and Table \ref{tab:fte} shows a breakdown per instituition per funded activity type:   development, deployment/testing, management, commissioning/support, and calibration/analysis/science.
 
 \begin{table}[htb]
+\centering
+\caption{Effort by institution, labor type and total over project life (4 years).}
+\label{tab:ftetot}
+\begin{tabular}{| p{0.6in}  |  p{0.5in}  |p{0.5in}  |p{0.5in}  |p{0.5in}  |p{0.5in}  |p{0.5in}  |p{0.5in}  | p{0.5in}  |} \hline
+                 &  ASU & UCB    &  UCLA  &  MIT  & NRAO  &  Penn  & UW  & TOTAL \\ \hline
+Faculty     &  0.33  & 0.25    &   0.25   &  0.29  &              & 0.33    & 0.33  &  1.79  \\ \hline
+Staff         &  0.60  & 14.60  &              &  0.75  &  1.8      &            &           &  17.75  \\ \hline
+Post-doc  &   4.00 &  2.00   &              &   4.00  &            &            &  3.0    &   13.00  \\ \hline
+Grad        &   4.00  & 8.00   &   4.00     &  4.00  &  3.0     & 12.00   &  8.0    &  43.00 \\ \hline
+TOTAL     &   8.93  & 24.85  &  4.25    &   9.04  &  4.8     &  12.33  & 11.33  & 75.54 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Effort distribution over project life (4 years).}
+\label{tab:fte}
 \begin{tabular}{| p{1in} | p{1in} | p{0.5in} | p{3in} |} \hline
 \textbf{Institution}  &  \textbf{Activity Type}  &  \textbf{Effort (FTE)} & \textbf{Description} \\ \hline
 \multirow{4}{*}{Arizona State} & Development    & 0.40 & Tech for abs-cal control \\ 
@@ -548,21 +564,6 @@ shows a breakdown per instituition per funded activity type:   development, depl
                                                 & Commissioning   & 8.11 &  \\ \hline
                                                 & Analysis         & 32.02 &  \\ 
 \end{tabular}
-\caption{Effort distribution over project life (4 years).}
-\label{tab:fte}
-\end{table}
-
-\begin{table}[htb]
-\begin{tabular}{| p{0.6in}  |  p{0.5in}  |p{0.5in}  |p{0.5in}  |p{0.5in}  |p{0.5in}  |p{0.5in}  |p{0.5in}  | p{0.5in}  |} \hline
-                 &  ASU & UCB    &  UCLA  &  MIT  & NRAO  &  Penn  & UW  & TOTAL \\ \hline
-Faculty     &  0.33  & 0.25    &   0.25   &  0.29  &              & 0.33    & 0.33  &  1.79  \\ \hline
-Staff         &  0.60  & 14.60  &              &  0.75  &  1.8      &            &           &  17.75  \\ \hline
-Post-doc  &   4.00 &  2.00   &              &   4.00  &            &            &  3.0    &   13.00  \\ \hline
-Grad        &   4.00  & 8.00   &   4.00     &  4.00  &  3.0     & 12.00   &  8.0    &  43.00 \\ \hline
-TOTAL     &   8.93  & 24.85  &  4.25    &   9.04  &  4.8     &  12.33  & 11.33  & 75.54 \\ \hline
-\end{tabular}
-\caption{Effort by institution, labor type and total.}
-\label{tab:ftetot}
 \end{table}
 
 \section{Risk}
