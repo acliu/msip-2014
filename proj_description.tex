@@ -562,12 +562,13 @@ at high redshifts:
 staged development approach, maintaining a test array in Green Bank, WV for technical development and testing, with subsequent 
 deployment to the science array in the SKA radio quiet zone in the Karoo, South Africa.  Starting with a 16 element
 array in 2009 in the Karoo, PAPER has doubled its size annually for four years running, culminating in the current
-128 element array (Figure \ref{fig:hera_dish}, bottom left; \citealt{parsons_et_al2012a}).  
+128 element array (Figure \ref{fig:hera_dish}, bottom left; \citealt{parsons_et_al2012a}).
+%JCP: Parsons 2012a seems like an odd cite here... Parsons 2010? 
 PAPER pioneered the use of redundant antenna configurations
 for power-spectrum measurements, the use of drift-scanning elements,
 a scalable correlator architecture,
 and real-time 40-fold data compression based on delay/delay-rate filtering.
-PAPER pioneered the delay-spectrum foreground avoidance technique \cite{parsons_et_al2012b},
+PAPER pioneered the delay-spectrum foreground avoidance technique \citep{parsons_et_al2012b},
 and applied it to observations (Fig. \ref{fig:eor_pspec}; \citealt{parsons_et_al2013}).
 The resulting power spectrum improved the best upper
 limit on reionization by almost two orders of magnitude in mK$^2$, and was used to show that the early IGM must have
@@ -642,7 +643,7 @@ Waterfall plots illustrating, as a function of time and frequency, PAPER visibil
 measured on a 30-m baseline before (left) and after (right) the application of a 
 delay filter that removes forground emission within the wedge.  Color scale indicates amplitude in $\log_{10}({\rm Jy})$.
 This filter suppresses
-foreground systematics by at least 4 orders of magnitude, leaving residuals demonstrably noise-dominated.
+foreground systematics by at least 4 orders of magnitude, leaving residuals demonstrably noise-dominated, and preserving the epoch of reionization signal.
 }\label{fig:waterfall} \end{figure}
 
 
@@ -653,7 +654,7 @@ foregrounds that are $\sim$5 orders of magnitude brighter \citep{deolivieracosta
 Previously, it was assumed that careful calibration and image-based model subtraction would be the keys to overcoming these foregrounds.
 While such efforts are being actively pursued, and are likely to be important to the field in the future,
 it has become clear that the community underestimated the challenges associated with this approach.
-The major breakthrough for 21~cm reionization experiments---what enables us to propose HERA now---is 
+The major breakthrough for 21~cm reionization experiments --- what enables us to propose HERA now --- is 
 the discovery of how 
 instrumentation and analysis can instead exploit the 
 spectral smoothness of foregrounds 
@@ -695,12 +696,13 @@ polarization leakage and foreground systematics.
 Right: Foreground contamination in line-of-sight $\kpar$ vs.\ angular $\kperp$
 as observed using PAPER \citep{pober_et_al2013}.
 Foregrounds are bright within a wedge (lower right) and then fall 
-precipitously to become thermal-noise limited.
+precipitously, leaving other modes thermal-noise limited.
 %in the ``EoR window" (blue/black 
 %region), where measurements are thermal-noise limited.  
-The width of the wedge derives both from an instrument-dependent component 
+The width of the wedge derives both from an instrument-independent component 
 (solid black line) and an additional component relating to the inherent spectral smoothness
-of foregrounds.
+of both the foregrounds and the instrument response.
+%JCP: I changed "instrument-dependent" to "instrument-independent" -- not sure what was meant when this was written, but I think its currently more honest.
 %Bright foregrounds occupy
 %a wedge (lower right) that extends beyond a fundamental analytic limit
 %(solid black) by a margin dictated by the chromatic properties of the foregrounds
@@ -722,7 +724,7 @@ a powerful new approach has been developed and tested by the PAPER
 and MWA teams that instead directly Fourier transforms these measurements separately along the frequency axis,
 effectively producing a wavenumber cube while retaining the ability to handle inteferometric
 chromaticity on a per-baseline basis.  Because of the way smooth-spectrum foregrounds
-interact with baselines of different lengths, it turns out this flexibility handle
+interact with baselines of different lengths, it turns out this flexibility to handle
 baselines separately is critical.
 Through a concerted theoretical and observational campaign by PAPER and the MWA
 \citep{morales_et_al2012,parsons_et_al2012b,vedantham_2012,Datta_2010,hazelton_et_al2013,pober_et_al2013,parsons_et_al2013,dillon_et_al2013b},
@@ -739,7 +741,7 @@ removed with a baseline-dependent filter that removes emission within a well-def
 This filter directly suppresses foregrounds by at least
 4 orders of magnitude,  
 and leaves the region above the wedge free from 
-foreground emission---a window through which we can observe the reionization signal.
+foreground emission --- a window through which we can observe the reionization signal.
 Secondly, by understanding signal delay as the mechanism that gives rise to the wedge,
 it is now possible, for the first time, to map foreground removal requirements 
 to the precise instrumental characteristics that are required.  The most direct instrumental
@@ -747,6 +749,7 @@ constraint comes from that fact that, to access $\k$-modes in the range $0.1<k<0
 where 21~cm reionization experiments can be most sensitive, {\bf the signal delay between antennas
 contributing to this measurement cannot exceed 120 ns}.  As discussed in \S\ref{sec:design}, this
 constraint can (and must) be incorporated into the fundamental design of any future 21~cm reionization instrument.
+%JCP: is this the signal delay between antennas or within an antenna???
 
 %%MM: a figure showing results from both arrays would be really powerful here.
 %This wedge is the result of
@@ -953,6 +956,7 @@ Power spectrum signal-to-noise (``number of sigmas") at $z=9.5$ for various inst
 \label{tab:signif}
 \end{table}
 
+%JCP: we switch here from 21~cm ro 21cm.  
 
 As described in \S\ref{sec:Lessons}, 21cm reionization efforts have achieved a
 pivotal new understanding of how instrumental characteristics give rise the
@@ -991,7 +995,7 @@ This HERA proposal targets two arrays: a 127-element array that borrows heavily
 from components of the PAPER experiment, and an upgraded 331-element array that
 incorporates several performance optimizations.  As listed in Table \ref{tab:signif}, the specifications of HERA-127
 and HERA-331 have been set to meet precisely the requirements for obtaining,
-respectively, a 10$\sigma$ detection of the 21cm reionizaton signal, and a
+respectively, a 10$\sigma$ detection of the 21cm reionization signal across a broad range of redshifts, and a
 25$\sigma$ detection of the power spectrum of fluctuations in the 21~cm signal
 capable of determining the nature and distribution of the first galaxies that
 dominate cosmic reionization.  The sensitivity requirements of these arrays are
