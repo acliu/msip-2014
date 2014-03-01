@@ -1101,8 +1101,9 @@ Block diagram of the HERA system.}
 Although deceptively simple, the novel design of HERA's antenna element
 (Fig. \ref{fig:hera_dish}, right panel) represents the critical advance
 that enables HERA to achieve its science goals.  This 14-m
-fixed zenith-pointing parabolic dish yields more than 20 times
-the sensitivity of a PAPER element, but does so without substantially degrading
+fixed zenith-pointing parabolic dish yields more than 10 times the
+sensitivity of an MWA tile (and more 20 times
+that of a PAPER element), but does so without substantially degrading
 our ability to isolate and remove foreground emission on the basis of
 spectral smoothness.  As described above, this is done by limiting by 
 the timescale of signal delays and reflections to under 120 ns.
@@ -1111,9 +1112,9 @@ Since the time it takes radio emission to propagate between adjacent antennas
 represents a significant portion of this time budget, HERA elements must be placed close together.
 Recent work characterizing foregrounds suggests that 
 antenna separations of $8\lambda \approx 15$m are
-well-behaved to current limits \citep{pober_et_al2013b,parsons_et_al2013}. This influences our
+well-behaved to current limits \citep{pober_et_al2013,parsons_et_al2013}. This influences our
 choice of a 14-m dish diameter,
-which incurs 42 ns of signal delay between antennas.
+which incurs 42 ns of signal delay between adjacent antennas.
 The focal height of the dish is influenced both by the illumination pattern of the prime-focus
 feed (which must effectively illuminate the reflector), and the fact that reflections
 between the feed and the element%,
@@ -1132,11 +1133,12 @@ headroom for reflections arising in the analog signal path.
 Cost is another design constraint, including the price of construction
 materials, assembly in a remote area, and maintenance over the operational
 lifetime of the array.  Care has been taken to select robust and inexpensive
-construction materials (PVC, concrete, utility poles, 0.25" wire cloth) and a
-design an assembly methodology that delivers the required positional
+construction materials (PVC, concrete, utility poles, 0.25" wire cloth) and an assembly methodology that delivers the required positional
 accuracy of 10 cm and surface accuracy of 2 cm given standard expertise in construction
 practices for the subcontracted teams that will set the poles and construct the
-elements in the field.  Given the sensitivity and signal delay requirements, the size of HERA
+elements in the field.  
+%JCP: "required positional accuracy" -- what drives the requirement?
+Given the sensitivity and signal delay requirements, the size of HERA
 dishes optimizes a global costing curve that includes the costs of the elements,
 the signal path, correlation, data storage, and processing.
 
@@ -1486,12 +1488,12 @@ holds compressed data products and serves as the analysis engine for HERA collab
 \end{itemize}
 \noindent
 This effort leverages existing infrastructure at UPenn, with support
-for the expansion the data storage, and upgrading to a 30-node computing cluster.  This cluster will support the bulk of the analysis by HERA collaborators (see \S\ref{sec:analysis}) that requires access to the full set of HERA observations.
+for the expansion of the data storage and for upgrading to a 30-node computing cluster.  This cluster will support the bulk of the analysis by HERA collaborators (see \S\ref{sec:analysis}) that requires access to the full set of HERA observations.
 
 %The main data center at Penn will house all of the maximally compressed data from all seasons of HERA, as well as the LST-averaged data.  The storage system is sized so that there is a factor of 4 overhead for work on the maximally-compressed data set, and a factor of 2 on the LST-averaged. The 500 TB data storage will be coupled to a 32-node cluster which performs the tasks of calibration and averaging to further reduce the data volume.  This cluster will support the bulk of the analysis requiring the full data set.  Subsets will be served off to collaborators from this system.  The entire data storage and transfer plan for HERA draws heavily on the experience with PAPER data.
 
 The data compression scheme at the heart of the data management system
-has been implemented for PAPER (\citealt{parsons_et_al2013};
+has been implemented for PAPER (\citealt{parsons_et_al2013},
 Appendix A), and will be applied to HERA visibilities to reduce data volume by
 a factor of $\sim$20 without impacting reionization science
 capabilities.  This compression technique, which is based on delay/delay-rate
@@ -1511,7 +1513,7 @@ checks, and aggregates correlation-based metrics of array performance in real-ti
 furnishes this information into the separate monitor and control system (\S\ref{sec:monitor}).
 A modest amount of data transfer is possible over the internet; PAPER's data transfer rate from the Karoo
 to UPenn varies, but peaks around 40 Mbps.  The QA system will drive internet data transfer, but
-NAS devices and RAID storage, transfered by air-freight shipping, will ensure full data transfer to UPenn.
+NAS devices and RAID storage, transferred by air-freight shipping, will ensure full data transfer to UPenn.
 
 %ii. transport to data centers
 %In order to transfer maximally-compressed data over the internet in a timely manner, a network speed of around the instantaneous compressed data rate is required.  Negotiations with the IT SKASA and the South African internet provider (Tenet) have achieved transfer speeds between the PAPER site and the United States have been measured to be up to 40 Mbps, which easily
@@ -1623,13 +1625,13 @@ lead commissioning efforts until a subset of the full HERA
 array has been fully integrated and tested.  Once a baseline of functionality is established,
 more antennas and upgraded subsystems can be incorporated incrementally as they are available.
 These commissioning activities follow the highly successful
-build/commission model used by both PAPER and MWA,% The PAPER team has
+build/commission model used by both PAPER and MWA, % The PAPER team has
 %commissioned 7 unique arrays, each with different correlators and
 %configurations while the MWA, a much larger system designed for many
 %operational modes, was successfully commissioned on schedule during a single
 %coordinated effort.  
 where observers tracked the incremental build-out
-process, performed observations in a ``science-like mode'', and made
+process, performed observations in a ``science-like mode,'' and made
 adjustments as needed. The resulting modifications during this period resulted
 in dramatically improved instrument performance.  
 
@@ -1640,13 +1642,13 @@ and resulting specifications.  %The most important of these are maximizing
 These tasks will exercise the Monitor and Control subsystem (M\&C; \S\ref{sec:monitor})
 and the Quality Assurance data processor (QA; \S\ref{sec:data}), 
 aggregatng sources of
-information about array health from all subsystems and provide an accurate
+information about array health from all subsystems and providing an accurate
 state of the system report visible and understandable to the entire project.
 Tests and pipelines developed during commissioning will be folded into
 the routine analysis that reports to the M\&C system.  As systems stabilize,
 useful post-processing steps such as redundancy-based calibration and automated
-imaging will be incorporated into the on-site QA server that is specifically
-for this purpose.
+imaging will be incorporated into the on-site QA server.
+%that is specifically for this purpose.
 
 %Optimization for reionization science is achieved by making and reducing early
 %science observations. This process includes many critical projects, such
@@ -1664,13 +1666,14 @@ for this purpose.
 \subsection{Software, Analysis, and Science}
 \label{sec:analysis}
 
-Beyond the construction and data-taking aspects of HERA, this proposal incorporates a full data analysis effort, culminating in the publication of a suite of science papers connecting observations to the theory of cosmic dawn.
+Beyond the construction and data-taking aspects of HERA, this proposal incorporates a full data analysis effort, culminating in the publication of a suite of science papers connecting observations to the physics of cosmic dawn.
 
 \compress
 \subsubsection{Calibration}
 \label{sec:calibration}
 
 Building off the success of PAPER and MITEoR in such efforts, we will implement a real-time redundancy-based calibration pipeline.  The instantaneous calibration solutions provided by this pipeline allows one to quickly identify hardware misbehaviors, in addition to producing coarse real-time images.  The absolute calibration of these images will be fixed using a combination of self-calibration techniques and absolute-calibration baluns.  Increasingly detailed imaging efforts will then allow the development of empirical beam models (based on both sky models and octocopter signals) to complement electromagnetic simulations.  This is particularly important for characterizing the polarization response, which may affect estimates of polarization leakage.
+%JCP: affect estimates? or correct for the effects of?
 
 Second, once data quality is assured, multi-day periods of data may be
 binned in local sidereal time, and averaged. This intermediate
@@ -1691,13 +1694,13 @@ A high dynamic range imaging pipeline based on the Fast Holographic Deconvolutio
 In early power spectrum measurements, we will employ the conservative delay-spectrum approach to power spectrum estimation used in PAPER.  This visibility-based approach, when coupled with a foreground-avoidance strategy, will be sufficient for an unambiguous early detection of the $21~\textrm{cm}$ power spectrum should results from current-generation experiments prove marginal (Fig. \ref{fig:eor_pspec} and Table \ref{tab:signif}).  Further development plans will target the incorporation of optimal quadratic estimators \citep{liu_tegmark2011,dillon_et_al2013a} in both visibility and image spaces, incorporating a fully covariant description of the foreground wedge.  This will enable statistical foreground mitigation techniques in addition to those based on foreground modeling (for example, from FHD).  Finally, we plan to explore Bayesian techniques for power spectrum estimation, building on the considerable progress already made on Gibbs-sampling imaging for interferometers \cite{sutter_et_al2014}.  Any 
 techniques developed should be equally applicable to measurements in both the reionization epoch and the Dark Ages.
 
-To provide verification of our power spectrum constraints, we also plan to develop a simulator of the full HERA instruments, incorporating foregrounds and reionization models to output visibilities.
+To provide verification of our power spectrum constraints, we also plan to develop an end-to-end simulator of the full HERA instrument, incorporating foregrounds and reionization models to output visibilities.
 
 \compress
 \subsubsection{HI Imaging}
 Deep images will be summed to map HI emission (as described by \S\ref{sec:imaging_HI}) during reionization.   Foreground removal will follow the same basic plan as the power spectrum strategy.  Initially, residual images will be generated using the same conservatively foreground filtered and averaged data as input to an imager (e.g. FHD).  A subsequent, more sensitive method will use the image domain residuals generated by subtracting a foreground model.  Work on this method parallels the development of the precision foreground imaging and removal.
 
-Sensitivity and significance of the images will be estimated by further developing the simulations shown in figure \ref{sec:imaging_HI}.  
+Sensitivity and significance of the images will be estimated by further developing the simulations shown in Figure \ref{fig:imaging}.  
 
 %XXX need something here
 
@@ -1711,7 +1714,7 @@ Sensitivity and significance of the images will be estimated by further developi
 \subsection{Schedule} % 0.5 page
 % De Boer
 
-This is a 4 year proposal, with recurring cycles of development, testing, review, deployment, commissioning, observation.   Deployment and integration is coupled with commissioning activities that verify communication and control over defined interfaces.  A more detailed schedule is provided in the project management plan, but Fig. \ref{fig:timeline} provides an overview of the project timeline. 
+This is a 4 year proposal, with recurring cycles of development, testing, review, deployment, commissioning, observation.   Deployment and integration is coupled with commissioning activities that verify communication and control over defined interfaces.  A more detailed schedule is provided in the project management plan, but Figure \ref{fig:timeline} provides an overview of the project timeline. 
 %The PMP provides details of milestones and design review criteria for each subsystem.
 
 \begin{figure}[ht]\centering
@@ -1975,7 +1978,9 @@ redshift optical and IR studies.
 
 This HERA proposal follows the vision for 21~cm observations laid out in NWNH, with the US EoR
 projects (PAPER, MWA, EDGES, MITEoR) pooling their expertise to develop a second-generation
-instrument.  The resulting team comes with a deep well of scientific experience---the majority of papers on EoR observations are written by the HERA team.  This expertise has led to rapid progress in the last few years, with current instruments having fulfilled their primary goal envisioned in NWNH: characterizing and suppressing astrophysical foregrounds through hardware and analysis development, to the point where thermal noise limits have been reached.  MWA, PAPER, and LOFAR are now pushing hard to detect the EoR power spectrum, but at best, the detection will be marginal.  Through judicious leveraging of the EoR window and related foreground mitigation techniques, HERA will not only ensure a high significance detection of the \HI 21~cm signal, but will also provide strong constraints on the reionization history \citep{pober_et_al2014}, early structure formation, and heating processes at the end of the
+instrument.  The resulting team comes with a deep well of scientific experience --- the majority of papers on EoR observations are written by the HERA team.
+%JCP: is this true?  certainly US papers on EoR observations... but counting GMRT & LOFAR, I wager not.
+This expertise has led to rapid progress in the last few years, with current instruments having fulfilled their primary goal envisioned in NWNH: characterizing and suppressing astrophysical foregrounds through hardware and analysis development, to the point where thermal noise limits have been reached.  MWA, PAPER, and LOFAR are now pushing hard to detect the EoR power spectrum, but at best, the detection will be marginal.  Through judicious leveraging of the EoR window and related foreground mitigation techniques, HERA will not only ensure a high significance detection of the \HI 21~cm signal, but will also provide strong constraints on the reionization history \citep{pober_et_al2014}, early structure formation, and heating processes at the end of the
 cosmic dark ages (Figs. \ref{fig:x_i_vs_z} \& \ref{fig:eor_pspec}).
 
 With the lessons learned from current-generation instruments, we are now ready to build the HERA
