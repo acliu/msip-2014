@@ -1664,43 +1664,92 @@ imaging will be incorporated into the on-site QA server.
 \subsection{Software, Analysis, and Science}
 \label{sec:analysis}
 
-Beyond the construction and data-taking aspects of HERA, this proposal incorporates a full data analysis effort, culminating in the publication of a suite of science papers connecting observations to the physics of cosmic dawn.
+Beyond the construction and data-taking aspects of HERA, this proposal
+incorporates a full data analysis effort, culminating in the publication of a
+suite of science papers connecting observations to the physics of cosmic dawn.
 
-\compress
-\subsubsection{Calibration}
-\label{sec:calibration}
+% XXX something about resources allocated to software development
 
-Building off the success of PAPER and MITEoR in such efforts, we will implement a real-time redundancy-based calibration pipeline.  The instantaneous calibration solutions provided by this pipeline allows one to quickly identify hardware misbehaviors, in addition to producing coarse real-time images.  The absolute calibration of these images will be fixed using a combination of self-calibration techniques and absolute-calibration baluns.  Increasingly detailed imaging efforts will then allow the development of empirical beam models (based on both sky models and octocopter signals) to complement electromagnetic simulations.  This is particularly important for characterizing the polarization response, which may affect estimates of polarization leakage.
-%JCP: affect estimates? or correct for the effects of?
+%\compress
+%\subsubsection{Calibration}
+\label{sec:calibration} % XXX
 
-Second, once data quality is assured, multi-day periods of data may be
-binned in local sidereal time, and averaged. This intermediate
-averaging scheme will also generate an accurate visibility-based sky
-model for the instrument once calibration is applied.
+{\bf Calibration and Snapshot Imaging}. MIT will lead 
+the development of a real-time redundancy-based calibration pipeline based on related
+MITEoR and PAPER efforts.
+These instantaneous calibration solutions are provided to
+the Monitor and Control system to enable 
+hardware misbehaviors to be quickly identified, and also support the
+real-time imaging pipeline.  Absolute calibration is fixed with
+a combination of self-calibration techniques and absolutely calibrated baluns developed at ASU and NRAO.
+%Once data quality is assured, multi-day observations 
+%binned in local sidereal time, and averaged. This intermediate
+%averaging scheme will also generate an accurate visibility-based sky
+%model for the instrument once calibration is applied.
+Offline, detailed imaging efforts feed into developiing
+empirical beam models that
+complement electromagnetic simulations.  The polarization beam models
+produced will determine whether polarization leakage can be formally retired as 
+a risk, and lay the foundation for imaging-based foreground suppression that
+corrects any remaining leakage effects.
 
-\compress
-\subsubsection{Foreground Modeling and Removal}
-\label{sec:DataProducts}
+%\compress
+%\subsubsection{Foreground Modeling and Removal}
+\label{sec:DataProducts} % XXX
 
-A high dynamic range imaging pipeline based on the Fast Holographic Deconvolution (FHD; \citealt{sullivan_et_al2012}) pipeline of the MWA will be adapted for HERA.  The result will be sky maps with full Stokes information that can be used not only for better foreground suppression, but also as an interesting data product in itself.  We plan to perform detailed studies of the polarized sky, such as characterizing the distribution of rotation measures.  Updates to source catalogs and the Global Sky Model \citep{deoliveira2008} will provide reference sky models for both HERA and other low-frequency instruments. The goal will be to generate a model suitable for direct subtraction of foregrounds. 
+{\bf Foreground Modeling and Removal}. A high dynamic range imaging pipeline
+based on the Fast Holographic Deconvolution (FHD; \citealt{sullivan_et_al2012})
+pipeline of the MWA will be adapted for HERA by the U. Washington team.  The result will be sky maps with
+full Stokes information that can be used not only to directly subtract foregrounds,
+but also as an interesting data product in itself.  We plan to
+perform detailed studies of the polarized sky, such as characterizing the
+distribution of rotation measures.  Data from HERA, PAPER, and the MWA will be used
+to update source catalogs and the Global
+Sky Model \citep{deoliveira2008}, providing reference sky models for both
+HERA and other low-frequency instruments. %The goal will be to generate a model
+%suitable for direct subtraction of foregrounds. 
 
 % XXX need more data products here
 
-\compress
-\subsubsection{Power spectrum and related measurements}
+%\compress
+%\subsubsection{Power spectrum and related measurements}
 
-In early power spectrum measurements, we will employ the conservative delay-spectrum approach to power spectrum estimation used in PAPER.  This visibility-based approach, when coupled with a foreground-avoidance strategy, will be sufficient for an unambiguous early detection of the $21~\textrm{cm}$ power spectrum should results from current-generation experiments prove marginal (Fig. \ref{fig:eor_pspec} and Table \ref{tab:signif}).  Further development plans will target the incorporation of optimal quadratic estimators \citep{liu_tegmark2011,dillon_et_al2013a} in both visibility and image spaces, incorporating a fully covariant description of the foreground wedge.  This will enable statistical foreground mitigation techniques in addition to those based on foreground modeling (for example, from FHD).  Finally, we plan to explore Bayesian techniques for power spectrum estimation, building on the considerable progress already made on Gibbs-sampling imaging for interferometers \cite{sutter_et_al2014}.  Any 
-techniques developed should be equally applicable to measurements in both the reionization epoch and the Dark Ages.
+{\bf Power Spectra}. UC Berkeley leads early power spectrum measurements using the conservative
+delay-spectrum approach used in PAPER.  This
+visibility-based approach, when coupled with a foreground-avoidance strategy,
+will be sufficient for an unambiguous early detection of the 21~cm
+power spectrum should results from current-generation experiments prove
+marginal (Fig. \ref{fig:eor_pspec} and Table \ref{tab:signif}).  Development of
+the power-spectrum pipeline with focus on incorporating
+a fully covariant description of the foreground wedge
+\citep{liu_tegmark2011,dillon_et_al2013a}, as well as
+exploring Bayesian techniques for power spectrum estimation, building on the considerable
+progress already made on Gibbs-sampling imaging for interferometers \citep{sutter_et_al2014}.
+In addition to the statistical foreground mitigation techniques provided by optimal quatratic
+power-spectrum estimation, U. Washington will lead the application of 
+foreground modeling (e.g., FHD) for expanding the range of modes available for power spectrum analysis.
+Techniques developed should be equally applicable
+to measurements in both the reionization epoch and at higher redshifts.  MIT will lead the application
+of these tools for pre-reionization science.
 
-To provide verification of our power spectrum constraints, we also plan to develop an end-to-end simulator of the full HERA instrument, incorporating foregrounds and reionization models to output visibilities.
+{\bf Simulation}. To provide verification of power spectrum constraints, ASU leads the
+development an end-to-end simulator of the full HERA instrument, incorporating
+foregrounds and reionization models to output visibilities.  UCLA will also lead
+a parametrized reionization simulation effort that, coupled with the instrument
+simulator, will be critical for connecting power-spectrum constraints to the estimating
+of the underlying astrophysical models.
 
-\compress
-\subsubsection{HI Imaging}
-Deep images will be summed to map HI emission (as described by \S\ref{sec:science}) during reionization.   Foreground removal will follow the same basic plan as the power spectrum strategy.  Initially, residual images will be generated using the same conservatively foreground filtered and averaged data as input to an imager (e.g. FHD).  A subsequent, more sensitive method will use the image domain residuals generated by subtracting a foreground model.  Work on this method parallels the development of the precision foreground imaging and removal.
+%\compress
+%\subsubsection{HI Imaging}
 
-Sensitivity and significance of the images will be estimated by further developing the simulations shown in Figure \ref{fig:imaging}.  
-
-%XXX need something here
+{\bf HI Imaging}. In addition to supplying models for suppressing foregrounds,
+deep imaging will aim to map HI emission during reionization (see \S\ref{sec:science}).
+Initially, conservative filtering of the foreground wedge will be applied to data that
+are imaged.  These results will be compared with the residuals from imaging-based
+foreground suppression to explore the limitations of 
+precision foreground imaging and removal.  The imaging-based techniques mature, the resultant
+maps will be released for cross-correlation with other probes of reionization.
+%XXX work breakdown?
 
 %\subsubsection{Aspirations [move to facilities section?]}
 %
