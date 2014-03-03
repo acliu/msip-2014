@@ -708,12 +708,12 @@ polarization leakage and foreground systematics within the wedge for HERA observ
 %invert the $\kpar\Leftrightarrow(u,v)$ modes natively
 %sampled by an interferometer, and then aim to calibrate out the inherent chromaticity of an
 %interferometer's $(u,v)$-sampling to enable the accurate subtraction of foreground models.
-Rather than inverting interferometric baseline measurements to produce images,
+Rather than inverting interferometric measurements to make images,
 a powerful new approach has been developed and tested by the PAPER
-and MWA teams that instead directly Fourier transforms these measurements separately along the frequency axis,
-effectively producing a wavenumber cube while retaining the ability to handle inteferometric
+and MWA teams that instead directly Fourier transforms each baseline separately along the frequency axis,
+effectively producing a wavenumber cube while still handling inteferometric
 chromaticity on a per-baseline basis.  Because of the way smooth-spectrum foregrounds
-interact with baselines of different lengths, it turns out this flexibility to handle
+interact with baselines of different lengths, this flexibility to handle
 baselines separately is critical.
 Through a concerted theoretical and observational campaign by PAPER and the MWA
 \citep{morales_et_al2012,parsons_et_al2012b,vedantham_2012,Datta_2010,hazelton_et_al2013,pober_et_al2013,parsons_et_al2013,dillon_et_al2013b},
@@ -723,6 +723,9 @@ Figure \ref{fig:twoFGViews} (right).  Moreover, because the $\kpar$ direction (o
 Fourier-transforming along the frequency axis) is effectively an ``inverse frequency'' (e.g. time delay),
 the form of this wedge can be understood analytically as arising from the relative delay between sky signals
 entering each antenna in an interferometric baseline from different directions.
+(Faraday-rotated emission from extragalactic sources may introduce additional foreground emission outside the wedge \citep{moore_et_al2013};
+we discuss plans for mitigating polarization leakage and removing this source
+of contamination in the Analysis/Science Risk section of the Project Managment Plan.)
 
 Our new understanding of the foreground wedge has two powerful consequences.
 Firstly, as illustrated in Figure \ref{fig:waterfall}, the foreground wedge can
