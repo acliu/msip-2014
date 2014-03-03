@@ -56,8 +56,8 @@
 %cost, and the amount being requested from NSF.  
 
 This project management plan provides an overview of the governance and management approach for HERA.
-A key feature to mitigate risk is to take a phased approach in both the construction and analysis, to provide low-risk
-first stages, then proceed to build on that result to increase the site and performance of the array and of the subsequent
+A key feature to mitigate risk is to take a phased approach in both the construction and analysis to provide low-risk
+first stages, then proceed to build on that result to increase the size and performance of the array and of the subsequent
 scientific processing.  This document will start with the overview of governance, then management, then provide
 summaries of the budget, effort and risk.
 
@@ -265,6 +265,68 @@ be organized by the Project Manager and include at least one external expert.  C
 only relate to the Element and Node.
 
 
+\subsection{Management of Operations}
+\label{sec:operations}
+
+Because HERA is a fully-correlated, drift-scan instrument, there are no operational
+decisions that need to be made for observing. Hence, HERA does not require a Time
+Allocation Committee. Managing routine operation of the HERA instrument consists of
+ensuring the functionality of all subsystems and the flow of information between
+them. The inclusion of specific Quality Assurance servers (QAservers) greatly
+facilitates core functionality. "Observers" will be appointed amongst the
+collaborators on a rotating basis, who will manage operations, drawing on the
+resources and information available through the monitor and control system. Coverage
+will be overseen by the Project Manager. System failures will be identified in real
+time and referred to the system owner for diagnosis, repair, and testing.
+
+
+\subsection{Analysis Management}
+\label{sec:analysis}
+
+One of the absolute key deliverables is an analysis pipeline that can yield the science.  This is the primary area of
+research and the greatest scientific risk.  The HERA collaboration has established
+a three-tiered ranking system for grouping analysis development activities according to priority and risk.
+
+Tier 1 activities are lower risk, and are considered essential to project success.  Each analysis activity
+in this tier is led at a single institution, proceeds according to an established timeline, and is managed
+similarly to other essential systems in the project.  Examples of Tier 1 analysis activities include:
+establishing a real-time redundancy-based calibration pipeline, interfacing with existing synthesis imaging
+software packages to produce images and maps of foregrounds, developing a fully covariant treatment of
+the delay-spectrum power spectrum, and applying this pipeline to measuring the power spectrum of reionization
+outside of the foreground wedge at high significance.
+The Analysis Manager is responsible to evaluating
+and managing progress on Tier 1 analysis activities and reporting to the Project Manager.
+
+Tier 2 activities are higher risk, and augment the science case of the project.  Activities in
+this tier are spread among institutions, with complementary efforts proceeding in parallel to
+reduce risk.  Tier 2 activities proceed according to a more flexible timeline, and are incorporated
+into routine analysis pipelines as they become available.  Examples of Tier 2 analysis activities
+include:
+developing alternate imaging pipelines aimed at suppressing systematics within the foreground wedge
+to gain higher significance power spectrum detections over a broader range of scales, developing
+techniques to directly image reionization structures, and exploring whether HERA measurements at
+higher redshifts can be used to produce meaningful constraints on the state of the IGM during
+our cosmic dawn prior to reionization.  The Analysis Manager is responsible for managing and coordinating
+parallel Tier 2 analysis activities, and reporting progress to the Project Manager.
+
+Finally, Tier 3 includes analysis activities that are considered ancillary or too risky to
+be included in HERA's focused science case.
+Activities in these areas are not supported directly under this proposal, but may be pursued as
+contributed efforts by associated institutions.  Examples of Tier 3 analysis activities include
+ionospheric studies, surveying for transient events, other miscellaneous foreground studies, and
+examination of higher-order statistics of reionization.  While not directly supported by this proposal,
+these activities will nonetheless report progress to the Analysis manager to ensure
+robust communication of active analysis efforts within the HERA collaboration.
+
+Inheriting from the MWA, HERA will hold annual ``busy weeks'', organized by the Analysis Manager in
+conjuction with the annual project meetings.  These busy weeks gather a critical
+mass of collaborators engaged in the development of analysis software together in a manner conducive to
+transferring expertise and sharing software and science interactively.  Busy weeks will typically
+have a priority list of development activities, set by the Analysis Manager, that will be 
+focused on, with many collaborators contributing
+ideas and code toward these priority activities.
+
+
 \section{Array Construction}
 \label{sec:construction}
 As mentioned above, the construction is approached in phases, with defined functionality (hardware 
@@ -384,67 +446,6 @@ Initially, the digital experts will provide full hardware funcationality, then s
 The other deployed is the computing cluster based at the University of Pennsylvanis, which currently hosts the existing
 PAPER cluster {\em Shredder}.  Shredder is adequate for the HERA-127 phase, but a new cluster and storage will be
 purchased for HERA-331.  This will be purchased as late as possible to derive maximum benefit from Moore's Law.
-
-\section{Management of Operations}
-\label{sec:operations}
-
-Because HERA is a fully-correlated, drift-scan instrument, there are no operational
-decisions that need to be made for observing. Hence, HERA does not require a Time
-Allocation Committee. Managing routine operation of the HERA instrument consists of
-ensuring the functionality of all subsystems and the flow of information between
-them. The inclusion of specific Quality Assurance servers (QAservers) greatly
-facilitates core functionality. "Observers" will be appointed amongst the
-collaborators on a rotating basis, who will manage operations, drawing on the
-resources and information available through the monitor and control system. Coverage
-will be overseen by the Project Manager. System failures will be identified in real
-time and referred to the system owner for diagnosis, repair, and testing.
-
-
-\section{Analysis Management}
-\label{sec:analysis}
-
-One of the absolute key deliverables is an analysis pipeline that can yield the science.  This is the primary area of
-research and the greatest scientific risk.  The HERA collaboration has established
-a three-tiered ranking system for grouping analysis development activities according to priority and risk.
-
-Tier 1 activities are lower risk, and are considered essential to project success.  Each analysis activity
-in this tier is led at a single institution, proceeds according to an established timeline, and is managed
-similarly to other essential systems in the project.  Examples of Tier 1 analysis activities include:
-establishing a real-time redundancy-based calibration pipeline, interfacing with existing synthesis imaging
-software packages to produce images and maps of foregrounds, developing a fully covariant treatment of
-the delay-spectrum power spectrum, and applying this pipeline to measuring the power spectrum of reionization
-outside of the foreground wedge at high significance.
-The Analysis Manager is responsible to evaluating
-and managing progress on Tier 1 analysis activities and reporting to the Project Manager.
-
-Tier 2 activities are higher risk, and augment the science case of the project.  Activities in
-this tier are spread among institutions, with complementary efforts proceeding in parallel to
-reduce risk.  Tier 2 activities proceed according to a more flexible timeline, and are incorporated
-into routine analysis pipelines as they become available.  Examples of Tier 2 analysis activities
-include:
-developing alternate imaging pipelines aimed at suppressing systematics within the foreground wedge
-to gain higher significance power spectrum detections over a broader range of scales, developing
-techniques to directly image reionization structures, and exploring whether HERA measurements at
-higher redshifts can be used to produce meaningful constraints on the state of the IGM during
-our cosmic dawn prior to reionization.  The Analysis Manager is responsible for managing and coordinating
-parallel Tier 2 analysis activities, and reporting progress to the Project Manager.
-
-Finally, Tier 3 includes analysis activities that are considered ancillary or too risky to
-be included in HERA's focused science case.
-Activities in these areas are not supported directly under this proposal, but may be pursued as
-contributed efforts by associated institutions.  Examples of Tier 3 analysis activities include
-ionospheric studies, surveying for transient events, other miscellaneous foreground studies, and
-examination of higher-order statistics of reionization.  While not directly supported by this proposal,
-these activities will nonetheless report progress to the Analysis manager to ensure
-robust communication of active analysis efforts within the HERA collaboration.
-
-Inheriting from the MWA, HERA will hold annual ``busy weeks'', organized by the Analysis Manager in
-conjuction with the annual project meetings.  These busy weeks gather a critical
-mass of collaborators engaged in the development of analysis software together in a manner conducive to
-transferring expertise and sharing software and science interactively.  Busy weeks will typically
-have a priority list of development activities, set by the Analysis Manager, that will be 
-focused on, with many collaborators contributing
-ideas and code toward these priority activities.
 
 
 
@@ -575,11 +576,13 @@ TOTAL     &   8.93  & 24.85  &  4.25    &   9.04  &  4.8     &  12.33  & 11.33  
 \section{Risk}
 \label{sec:risk}
 Risk manifests itself in two broad categories: (1) construction/array risks and (2)
-analysis/science risks. The risks to actually achieving the overall outcomes are
-primarily contained within the analysis/science risks. Construction/array risks are
-more manifest, but are generally addressable by changes in budget (some
-reprioritization or de-scoping) or schedule (re-phasing, possibly leveraging more of
-the PAPER signal path later in the project period).
+analysis/science risks. As mentioned in the Introduction, risk is largely mitigated by the phased approach
+whereby first stages are (a) smaller in scope (but still scientifically productive), (b) reuse earlier equipment/
+techniques, and (c) aren't single point failures ({\em i.e.} significant activity and commissioning milestones 
+can be met with fewer elements or descoped systems which can continue to be deployed in parallel.)
+%Construction/array risks are more manifest, but are generally addressable by changes
+%in budget (some reprioritization or de-scoping) or schedule (re-phasing, possibly
+%leveraging more of the PAPER signal path later in the project period).
 
 As mentioned above, risk is recorded and tracked in the {\tt ProjectBook} which has tools 
 to list and flowdown risk records into the documentation.  The risk register will be 
@@ -592,13 +595,44 @@ ionospheric distortion, Faraday rotation, foreground subtraction and instrument 
 Of these, most are now well-understood and/or greatly reduced.  The key one in this regard is
 the understand of the ``wedge'' and the now demonstrated foreground avoidance techniques.
 Retirement of this risk is one key motivator for proceeding with this proposal in this
-timeframe.  Large-N correlation and real-time calibration and imaging is also largely a
-retired risk, as evidenced by many arrays now deployed around the world.  Ionospheric
-distortion issues have not been an issue for existing arrays, a result which will hold for
-HERA given the design heritage.  The principle remaining risk relates to polarization leakage.
+timeframe.  
 
-The following sections will briefly discuss project risks.  The risk register will continue to be
-actively maintained in the {\tt ProjectBook}.
+Large-N correlation and real-time calibration and imaging is also largely a retired
+risk, as evidenced by many arrays now deployed around the world by techniques
+directly related to the HERA architecture. Ionospheric distortion issues have not
+been an issue for existing arrays, a result which will hold for HERA given the design
+heritage. The principle remaining risk relates to polarization leakage, which is
+discussed below.
+
+\subsection{Construction/Array Risk}
+The primary risks associated with the construction and operation of the array relate
+to the remote location, both in construction and operation. This is largely mitigated
+by the amount of infrastructure and support provided by SKA-SA in their activities.
+Additionally, the collaboration is actively working with partners who can help bear
+the cost risk.  The next mitigation would be to reduce the scope of the array.
+
+The technology and construction itself is all low risk, as it is either fairly standard and/or
+has been used by team members at the location.  A new board under development (the Smart Networked
+ADC Processor, SNAP, is currently in layout) injects some risk since it is not complete, however there
+is a robust fall-back to use the existing set of CASPER boards that are currently in use on-site for this
+purpose. 
+
+Potential delays in deplying the SNAP board and node are further 
+mitigated by initially using the existing PAPER-128 system, which can accommodate the first 
+HERA-127 phase.  Delays in deploying up-to a target (e.g. 127, 331, 352) can be handled by
+observing with the existing antennas while the reminder are deployed.  This means that the
+construction approach will be to produce smaller tranches of working elements on a node-by-node
+basis, rather than relying on completing every element on a full assembly line basis.
+
+To keep the construction cost low and as this is a limited-lifetime experiments, 
+the philosophy has been to maintain/repair and/or operate with fewer elements rather
+than attempt to make it bullet-proof. This means that severe weather could damage the
+elements. Experience with the PAPER dipoles has been excellent in this regard, and no
+severe wind or water damage has occurred. Given the readily accessible
+construction materials, damage is relatively cheap to fix. For minor damage, local
+staff can likely repair (and in a large array, we can handle some non-functional
+elements), while major damage would likely need a trip and assessment by US-based
+experts.
 
 \subsection{Analysis/Science Risk}
 As in addressing risk on the hardware development, the analysis will proceed in
@@ -609,7 +643,8 @@ subtraction techniques can be made to work, then the science is greatly enhanced
 
 As mentioned above in the context of the white paper, polarization leakage is a key risk to all of the approaches.  
 % A potentially important source of contaminating foregrounds may be Faraday-rotated, polarized emission which leaks into the estimate of the intrinsically unpolarized EoR signal.  
-It is the spectral structure introduced by Faraday rotation of polarized sources that is most problematic, as this can be confused with the structure due to reionization.  
+The spectral structure introduced by Faraday rotation of polarized sources is the most problematic, as it can be confused 
+with the structure expected from reionization.  
 %The amount of Faraday rotation is characterized by the rotation measure (RM) with the phase angle of rotation of Q + i U pseudo-vector being RM lambda^2.  
 Faraday rotation measure (RM) translates reasonably directly to particular k-modes at a given redshift (and thus lambda), with the range of concern for HERA lying in the range $20 < RM < 40$.
 %To help reduce this risk, this is a key early focus on understanding and
@@ -631,7 +666,6 @@ To retire the risk to its science program posed by polarization leakage, HERA wi
 \item development of modeling and subtraction of polarized sources to remove them from EoR power spectrum analysis
 \end{enumerate}
 
-
 Increased RFI as the SKA-SA construction activities continue to be on-going and 
 ramp up is a risk.  HERA will only observe at night, so active construction will be
 minimal during observing periods, and RFI will be more confined to workers quarters.
@@ -641,34 +675,5 @@ a robust spectrum management zone, and the SKA-SA is very committed to
 keeping the site RFI characteristics excellent.  They have a full-time RFI monitor
 who is fully supported by on-site staff and they are very proactive in monitoring
 and investigating issues.
-
-\subsection{Construction/Array Risk}
-The primary risks associated with the construction and operation of the array relate
-to the remote location, both in construction and operation. This is largely mitigated
-by the amount of infrastructure and support provided by SKA-SA in their activities.
-
-The technology and construction itself is all low risk, as it is either fairly standard and/or
-has been used by team members at location.  A new board under development (the Smart Networked
-ADC Processor, SNAP, is currently in layout) has some risk since it is not complete, however there
-is a robust fall-back to use the existing set of CASPER boards that are currently in use on-site for this
-purpose.  As mentioned above, the primary risk here is in cost of building in a remote location.
-There are two primary mitigations to this risk:  accruing additional partners who can help bear
-the cost risk and descoping the array.
-
-Delays in deplying the SNAP board and node are
-mitigated by initially using the existing PAPER-128 system, which can accommodate the first 
-HERA-127 phase.  Delays in deploying up-to a target (e.g. 127, 331, 352) can be handled by
-observing with the existing antennas while the reminder are deployed.  This means that the
-construction approach will be to produce smaller tranches of working elements on a node-by-node
-basis, rather than relying on completing every element on a full assembly line basis.
-
-To keep the construction cost low the philosophy has been to maintain/repair rather
-than attempt to make it bullet-proof. This means that severe weather could damage the
-elements. Experience with the PAPER dipoles has been excellent in this regard, and no
-severe wind or water damage has been noticed. Given the readily accessible
-construction materials, damage is relatively cheap to fix. For minor damage, local
-staff can likely repair (and in a large array, we can handle some non-functional
-elements), while major damage would likely need a trip and assessment by US-based
-experts.
 
 \end{document}
