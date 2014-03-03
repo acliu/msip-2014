@@ -182,9 +182,10 @@ p.plot([k_h, k_h], [1e-10, 1e20], 'k--')
 
 
 p.gca().set_yscale('log', nonposy='clip')
-p.xlabel(r'$k\ [h\ {\rm Mpc}^{-1}]$')
-p.ylabel(r'$k^3/2\pi^2\ P(k)\ [{\rm mK}^2]$')
+p.xlabel(r'$k\ [h\ {\rm Mpc}^{-1}]$', fontsize=14)
+#p.ylabel(r'$k^3/2\pi^2\ P(k)\ [{\rm mK}^2]$')
+p.ylabel(r'$\Delta^2(k)\ [{\rm mK}^2]$', fontsize=14)
 p.ylim(3e-1,3e10)
-p.xlim(0, 0.6)
+p.xlim(0, 0.5)
 p.grid()
 p.show()
