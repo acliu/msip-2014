@@ -25,7 +25,8 @@
 
 
 \newcommand{\compress}{\vspace{-0.3in}}
-
+\newcommand{\captionbaseline}{\renewcommand{\baselinestretch}{0.9}} 
+\newcommand{\Caption}[4]{\vspace{#1}\renewcommand{\baselinestretch}{#2}\caption{#4}\vspace{#3}}
 
 \def\kperp{k_{\bot}}
 \def\kpar{k_{\|}}
@@ -51,10 +52,9 @@ Innovations Program}
 
 \begin{figure}[H]\centering
 \includegraphics[width=6in]{plots/hera331perspect2.jpg}
-\caption{\small
+\Caption{-0.1in}{0.9}{-0.1in}{\small
 The proposed array of 331 14~m-diameter zenith-pointing dishes in the Karoo Radio Astronomy Reserve
-in the Northern Cape of South Africa.
-}\label{fig:hera_array} \end{figure}
+in the Northern Cape of South Africa.}\label{fig:hera_array} \end{figure}
 
 % Parsons, Carilli
 % A statement of which of the four categories of MSIP is most appropriate
@@ -279,19 +279,20 @@ observational cosmology.
 %\includegraphics[width=0.23\textwidth]{plots/Pspec/z8sim.pdf}
 %\includegraphics[width=0.23\textwidth]{plots/Pspec/z75sim.pdf}
 %\includegraphics[width=0.23\textwidth]{plots/Pspec/pspecEvolve.pdf}
-%\caption{\small 
+%\Caption{-0.2in}{0.9}{-0.2in}{\small 
 %First three panels from left: simulated $21\,\textrm{cm}$ brightness temperature distributions at $z=9$, $8$, and $7.5$.  Rightmost panel: Evolution of the $21\,\textrm{cm}$ power spectrum from $z=9.25$ to $z=7$.  HERA will characterize the power spectrum in detail (Section \ref{sec:science}) as well as provide images of the ionized bubbles (Section \ref{sec:science}).
 %}\label{fig:EoRsims} \end{figure}
 
 \begin{figure}[t]\centering
 \includegraphics[height=2.5in]{plots/cubes/cubesAndPspecs.pdf}
-\caption{\small 
+\Caption{-0.2in}{0.9}{-0.1in}{\small 
 Left: Simulated 21~cm brightness temperature distributions spanning $\sim 280 \times 280\,h^{-1}\textrm{Mpc}$.
 at $z=11.5$, $10.5$, $9.5$, and $8.5$.
 Right: Corresponding evolution of the 21~cm power spectrum.  HERA
 characterizes the power spectrum in detail, as well as
-providing images of the ionized bubbles (\S\ref{sec:science}).
-}\label{fig:EoRsims} \end{figure}
+providing images of the ionized bubbles (\S\ref{sec:science}).}
+%\hline
+\label{fig:EoRsims} \end{figure}
 
 Decades of effort have gone into modeling the complex astrophysics of reionization
 (e.g. \citealt{shapiro_giroux1987, haiman_loeb1997, furlanetto_et_al2004, santos_et_al2010}). Figure \ref{fig:EoRsims} shows a 
@@ -320,7 +321,7 @@ to advance our understanding of early galaxy formation and cosmic reionization.}
 %\includegraphics[height=2.25in]{plots/constraints_crop.pdf}
 \includegraphics[height=2.25in,trim=0.8cm 9cm 1.75cm 3.6cm,clip]{plots/IonizationHistory/HERA331_ion_hist.pdf}
 \includegraphics[height=2.25in]{plots/Xray/HERA_II_compare_kp1_whoriz_20pt.pdf}
-\caption{\small
+\Caption{-0.2in}{0.9}{-0.2in}{\small
 Left:
 Existing
 constraints on neutral fraction ($\xHI$) versus redshift (adapted from \citealt{robertson_2013}), along with
@@ -363,7 +364,7 @@ untestable, even with JWST.
 \begin{figure}[t]\centering
 \includegraphics[height=2.25in]{plots/Pspec/eor_pspec_2014.png}
 \includegraphics[height=2.25in]{plots/Pspec/pk_k3pk.png} % XXX trim out left subpanel
-\caption{\small Left: HERA's power-spectrum sensitivity (solid)
+\Caption{-0.2in}{0.9}{-0.2in}{\small Left: HERA's power-spectrum sensitivity (solid)
 relative to a fiducial ionization model (dotted line; $\xHI=0.37$, $z=9.0$).
 Sensitivities reflect staged array size and
 improving analysis software that expands the range
@@ -408,7 +409,7 @@ explicit foreground modeling \citep{pober_et_al2014}.
 
 \begin{figure*}[t]\centering
 \includegraphics[width=\textwidth]{plots/Pspec/OPTMIDellipses.pdf}
-\caption{\small
+\Caption{-0.2in}{0.9}{-0.2in}{\small
 Pairwise $2\sigma$ error ellipses for $T_{\rm vir}$, $\zeta$, and $R_\textrm{mfp}$, in each case divided by their fiducial values.  HERA-331 projections using existing foreground avoidance techniques are shown in red, while projections using more advanced foreground modeling techniques are shown in black.  The former represent $\sim 5\%$ constraints, while the latter represent $\sim 1\%$ constraints.\label{fig:ErrorEllipses}}
 \end{figure*}
 
@@ -428,12 +429,12 @@ sight.  The brightest structures in the $z=8$ input simulation are detectable at
 
 % \begin{figure}[t]\centering
 % \includegraphics[width=\textwidth]{plots/Imaging/HERA_FoV.jpg}
-% \caption{The HERA stripe.  At 150MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50 $Gpc^3$.  The stripe includes the GOODs south field, one of the best studied regions of sky. \label{fig:HERA_FoV}}
+% \Caption{-0.2in}{0.9}{-0.2in}{The HERA stripe.  At 150MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50 $Gpc^3$.  The stripe includes the GOODs south field, one of the best studied regions of sky. \label{fig:HERA_FoV}}
 % \end{figure}
 
 \begin{figure}[t]\centering
 \includegraphics[height=2.5in]{plots/Imaging/HERA_331_z8_SNR_annotated.jpg}%HERA_331_z8_SNR_annotated.jpg}
-\caption{\small
+\Caption{-0.2in}{0.9}{-0.2in}{\small
 With sensitivity concentrated at the largest scales and a survey area of 2600 square degrees,
 HERA-331 has the sensitivity to directly image HI during reionization.  Contours indicate 10$\sigma$ detections of
 a simulated reionization field \citep{mcquinn_et_al2007} with a 100-hour observation.
@@ -446,7 +447,7 @@ a simulated reionization field \citep{mcquinn_et_al2007} with a 100-hour observa
 %
 %\begin{figure}[t]\centering
 %\includegraphics[width=\textwidth]{plots/Imaging/HERA_FoV_and_sim.jpg}%HERA_331_z8_SNR_annotated.jpg}
-%\caption{\small
+%\Caption{-0.2in}{0.9}{-0.2in}{\small
 %With sensitivity highly concentrated at the largest scales, HERA is capable of directly imaging HI during reionization.  Shown here is the HERA ``stripe''.  At 150~MHz ($z=8.5$) the HERA field of view is 8\arcdeg.  With a nearly completely sampled aperture over 300~m across, HERA will have the collecting area of Arecibo but with 500x the survey speed. Each night it will drift scan 2600 square degrees for a survey volume of 50`$Gpc^3$.  The stripe includes the GOODS-South field \citep{dickinson_et_al2003}, one of the best studied regions of sky.  Shown here is a simulation of EoR emission \citep{mcquinn_et_al2007} as imaged by HERA with noise equivalent to 100 hours of observation.
 %Contours enclose regions with signal to noise above 10.  The regions detected on scales of $\sim$100~Mpc are bracket the size scales probed by deep galaxy surveys (cf. the GOODs-South survey volume where 179 objects about $z=7$ have been detected, representing $\sim45\%$ of all such objects over the entire sky.)}  \label{fig:imaging}
 %\end{figure}
@@ -463,7 +464,7 @@ a simulated reionization field \citep{mcquinn_et_al2007} with a 100-hour observa
 % Liu, Dillon, Hewitt
 %\begin{figure}[t]\centering
 %\includegraphics{plots/Xray/HERA_II_compare_kp1_whoriz_20pt.pdf}
-%\caption{\small
+%\Caption{-0.2in}{0.9}{-0.2in}{\small
 %At low frequencies, HERA opens a window to
 %pre-reionization physics at the end of the Dark Ages. Plotted are power spectrum amplitudes (at $k =
 %0.15h$~Mpc$^{-1}$) for various IGM heating models \citep{mesinger_et_al2013},
@@ -543,7 +544,7 @@ compared to HERA, so cross-correlations provide clean measurements of the underl
 
 \begin{figure}[t]\centering
 \includegraphics[width=6.5in]{plots/PAPER_and_MWA_and_HERA.jpg}
-\caption{\small
+\Caption{-0.2in}{0.9}{-0.2in}{\small
 The MWA (top left) and PAPER (bottom left) arrays, each currently deployed with 128 elements.
 The 14-m HERA element (right) dramatically improves sensitivity while 
 constraining the path length and amplitude of reflections to ensure that foreground
@@ -638,7 +639,7 @@ ensure that progress is made on a predictable schedule, with time to adapt to co
 
 \begin{figure}[t]\centering
 \includegraphics[width=6in]{plots/waterfall_filtered.png}
-\caption{\small 
+\Caption{-0.2in}{0.9}{-0.2in}{\small 
 Waterfall plots illustrating PAPER visibilities
 measured on a 30-m baseline before (left) and after (right) the application of a 
 delay filter that removes forground emission within the wedge.  Color scale indicates amplitude in $\log_{10}({\rm Jy})$.
@@ -688,7 +689,7 @@ shown in Figure \ref{fig:eor_pspec}.
 %\includegraphics[height=2.02in]{plots/wedge_tall_wide.png} 
 %\includegraphics[height=2.02in]{plots/Foregrounds/MWA_EoR0_2min.jpg}
 \includegraphics[height=2in]{plots/Foregrounds/MWA_wedge_consolidated.jpg}
-\caption{\small Left:
+\Caption{-0.2in}{0.9}{-0.2in}{\small Left:
 PAPER observations \citep{pober_et_al2013} show foreground contamination 
 in line-of-sight $\kpar$ vs.\ angular $\kperp$ to be
 confined to a bright wedge,
@@ -943,7 +944,7 @@ LOFAR NL Core & 35,762 & 2.76 & 17.37 \\
 \textbf{HERA-331} & \textbf{50,900} & \textbf{25.44} & \textbf{87.20} \\
 SKA1 Low Core & 833,190 & 97.92 & 284.85 \\
 \end{tabular}
-\caption{\small
+\Caption{-0.2in}{0.9}{-0.2in}{\small
 Power spectrum signal-to-noise (``number of sigmas") at $z=9.5$ for various instruments, adapted from \citet{pober_et_al2014}.  By leveraging a filled, redundant configuration of dishes with high collecting area, HERA-331 allows high-significance power spectrum measurements using current foreground avoidance techniques, with further enhancements possible with likely advances in foreground modeling.}
 \label{tab:signif}
 \end{table}
@@ -985,7 +986,7 @@ at best, only marginal detections of power from reionization.
 
 \begin{figure}[t]\centering
 \includegraphics[width=5.5in]{otherdocs/schedule.png}
-\caption{\small Timeline of project}
+\Caption{-0.2in}{0.9}{-0.2in}{\small Timeline of project}
 \label{fig:timeline}
 \end{figure}
 
@@ -1007,7 +1008,7 @@ combined with a cost minimization requirement, tightly
 bound the HERA design.
 
 {\bf HERA-331 basic parameters:} maximum baseline 250m (naturally weighted synthesized beam FWHM = $24'$),
-element diameter = 14m (FoV FWHM = 9$^o$?? at 150MHz), frequency range = 50 MHz to 225 MHz ($z_{HI} = 28 to 5.3), 
+element diameter = 14m (FoV FWHM = 9$^o$?? at 150MHz), frequency range = 50 MHz to 225 MHz ($z_{HI} = 28 to 5.3)$, 
 system temperature = 350K?? at 150MHz (point source rms = 50 $\mu$Jy in 100hrs), spectral channel width = 97.7kHz??,
 instantaneous bandwidth = 100MHz??, other?
 
@@ -1034,18 +1035,18 @@ instantaneous bandwidth = 100MHz??, other?
 %%\centering
 %%	\begin{subfigure}[b]{0.46\textwidth}
 %%		\includegraphics[width=\textwidth]{plots/paper_element.jpg}
-%%		\caption{The PAPER element (provides a clean instrumental response as a function
+%%		\Caption{-0.2in}{0.9}{-0.2in}{The PAPER element (provides a clean instrumental response as a function
 %%		of frequency \citep{parsons_et_al2010,parsons_et_al2012b}, which is crucial to
 %%		the foreground isolation shown in Figure \ref{fig:eor_pspec}.}
 %%	\end{subfigure}
 %%	\quad
 %%	\begin{subfigure}[b]{0.46\textwidth}
 %%		\includegraphics[height=1.75in]{plots/hera_dish.png}
-%%		\caption{A 14m dish designed around the feed dramatically improves sensitivity while
+%%		\Caption{-0.2in}{0.9}{-0.2in}{A 14m dish designed around the feed dramatically improves sensitivity while
 %%		constraining the path length and amplitude of reflections to ensure that foreground 
 %%		isolation is not substantially degraded.}
 %%	\end{subfigure}
-%%\caption{PAPER and HERA elements}
+%%\Caption{-0.2in}{0.9}{-0.2in}{PAPER and HERA elements}
 %%\label{fig:hera_dish}
 %%\end{figure}
 %
@@ -1089,7 +1090,7 @@ instantaneous bandwidth = 100MHz??, other?
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{plots/Engineering/HERA_high_level_block_diagram.png}
-\caption{\small
+\Caption{-0.2in}{0.9}{-0.2in}{\small
 Block diagram of the HERA system.}
 \label{fig:blockDiagram} 
 \end{figure}
@@ -1291,7 +1292,7 @@ lead members of the construction subcontract teams for a Project Readiness Revie
 		%\includegraphics[height=2.1in]{plots/hera352rot.png}
 		%\includegraphics[height=2.1in]{plots/HERA_331_uv_clipped.png}
 		\includegraphics[height=2in]{plots/config_uv_consolidated.png}
-\caption{\small
+\Caption{-0.2in}{0.9}{-0.2in}{\small
 Left: Configuration of HERA-331, with 331 dishes in a maximally-dense hexagonal core(yellow) and 21 outrigger dishes (blue).  Right: The resulting $uv$-coverage is fully-sampled to $\sim 400\lambda$ 
 }\label{fig:uv_coverage}
 \end{figure}
@@ -1334,7 +1335,7 @@ polarization leakage.
         \includegraphics[height=1.5in]{plots/new_antenna_closeup.jpg}
         \includegraphics[height=1.5in]{plots/Engineering/recv_node.png}
         \includegraphics[height=1.5in]{plots/Engineering/digital.png}
-    \caption{\small
+    \Caption{-0.2in}{0.9}{-0.2in}{\small
     Existing components re-used in the HERA design include:
     the PAPER dipole antenna (left), 
     receivers in a node module (center), and
@@ -1378,7 +1379,7 @@ the transition to the HERA-331 system.
 
 \begin{figure}[t]\centering
 \includegraphics[width=6.5in]{plots/casper_boards.jpg}
-\caption{\small
+\Caption{-0.2in}{0.9}{-0.2in}{\small
 Five generations of CASPER technology (progressing left to right) have been used to rapidly
 develop, test, and deploy digital instrumentation for radio astronomy.  This technology
 allows the PAPER correlator to be 
