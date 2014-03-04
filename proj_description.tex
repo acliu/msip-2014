@@ -23,6 +23,10 @@
 \citestyle{aa}
 %\usepackage[font=small]{caption}
 
+\newcommand{\Mycite}[1]{{\bf \cite{#1}}}
+\newcommand{\Mycitet}[1]{{\bf \citet{#1}}}
+\newcommand{\Mycitep}[1]{{\bf \citep{#1}}}
+\newcommand{\Mycitealt}[1]{{\bf \citealt{#1}}}
 
 \newcommand{\compress}{\vspace{-0.3in}}
 \newcommand{\captionbaseline}{\renewcommand{\baselinestretch}{0.9}} 
@@ -115,7 +119,7 @@ in the context of a three-dimensional cosmological intensity-mapping experiment,
 have yielded a critical breakthrough.  As discussed below, {\bf we are now able to remove 
 foregrounds to the limits of our sensitivity with these instruments},
 and this is culminating in the first physically meaningful upper limits
-on the power spectrum of 21~cm emission from reionization \citep{parsons_et_al2013}. PAPER
+on the power spectrum of 21~cm emission from reionization \Mycitep{parsons_et_al2013}\footnote{Throughout the proposal, we have indicated work by members of this collaboration in bold.}. PAPER
 and MWA are now performing deep science observations, with the potential to 
 obtain a nominal detection of the HI 21~cm signal within two years. 
 
@@ -258,7 +262,7 @@ in tension with one another, underscoring the difficulty of
 their interpretation and the complexity of the reionization process.
 
 The 21~cm ``spin-flip" transition of  neutral hydrogen has been recognized as potentially the most powerful probe 
-of the cosmic dawn \citep{morales_wyithe2010, furlanetto_et_al2006}, as emphasized in NWNH: 
+of the cosmic dawn \Mycitep{morales_wyithe2010, furlanetto_et_al2006}, as emphasized in NWNH: 
 ``{\it 
 %SF: Is this quote from the RMS panel?  If so, does it appear in the final report?
 The panel concluded that  to explore the discovery area of the epoch of reionization, it is most important to 
@@ -295,8 +299,8 @@ providing images of the ionized bubbles (\S\ref{sec:science}).}
 \label{fig:EoRsims} \end{figure}
 
 Decades of effort have gone into modeling the complex astrophysics of reionization
-(e.g. \citealt{shapiro_giroux1987, haiman_loeb1997, furlanetto_et_al2004, santos_et_al2010}). Figure \ref{fig:EoRsims} shows a 
-simulation of the expected evolution of the HI 21~cm signal during reionization \citep{mesinger_furlanetto2007}. Fluctuations in the signal initially 
+(e.g. \citealt{shapiro_giroux1987, haiman_loeb1997}; \Mycitealt{furlanetto_et_al2004, santos_et_al2010}). Figure \ref{fig:EoRsims} shows a 
+simulation of the expected evolution of the HI 21~cm signal during reionization \Mycitep{mesinger_furlanetto2007}. Fluctuations in the signal initially 
 rise above those expected from the cosmic density field due to the growth of ionized bubbles on a characteristic 
 scale of a few to 10~arcmin. This scale is set by the clustering of early galaxy formation, as well as by 
 propagation effects through the IGM. The signal then declines as the IGM becomes fully ionized.  These theoretical 
@@ -370,7 +374,7 @@ Sensitivities reflect staged array size and
 improving analysis software that expands the range
 of modes free of foreground systematics.
 Right: The current best upper limit on the 21~cm reionization power spectrum,
-obtained with a 32-element PAPER deployment \citep{parsons_et_al2013}.  These upper limits
+obtained with a 32-element PAPER deployment \Mycitep{parsons_et_al2013}.  These upper limits
 constrain the brightness temperature of the IGM at $z\sim8$, showing
 a departure from adiabatic cooling presumed to be indicative of X-ray heating.
 }\label{fig:eor_pspec}
