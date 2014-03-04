@@ -1010,34 +1010,38 @@ requirements for signal delay and collecting area that, when
 combined with a cost minimization requirement, tightly
 bound the HERA design.  The basic parameters are given in Table \ref{tab:BasicParameters}.
 
-
-\begin{table}[h]
-\begin{center}
- \begin{tabular}{l|l}
-    \hline
-    Element diameter & 14 m \\ 
+%\begin{table}[h]
+%\begin{center}
+ \begin{deluxetable}{lcc}
+ \tabletypesize{\small}
+ \tablecaption{HERA-331 basic parameters.}
+ \tablehead{\colhead{Parameter} & \colhead{Design} & \colhead{Performance at 150 MHz}}
+%    \hline
+    \startdata
+    Element diameter / FoV & 14 m & 9\arcdeg \\ 
     %Total collecting area & 54186 m$^2$ \\
-    Minimum baseline length & 14.6 m \\
-    Maximum core baseline length & 306.6 m \\ 
-    Maximum outrigger baseline length & 1066.5 m \\
-    Frequency range  & 50 - 250 MHz digitized \\
-    & 70 - 230 MHz useable \\ 
-    & 100 MHz correlated \\
-    Redshift coverage & 19.2 - 5.2 \\
-    Spectral channel width & 97.7 kHz \\    
-    System temperature & $100 + 120 (\nu/\rm{150~MHz})^{-2.55}$ K\\
-    At 150 MHz ($z=8.5$): & \\
-    ~{   }Naturally weighted synthesized beam FWHM & $24\arcmin$ \\
-    ~{   }Uniformly weighted synthesized beam FWHM & $9\arcmin$ \\
-    ~{   }Field of view FWHM & 9\arcdeg \\
-    ~{   }Point source RMS & 50 $\mu$Jy in 100 hrs \\
-    \hline
- \end{tabular}
-\Caption{-0.1in}{0.9}{-0.4in}{HERA-331 basic parameters}
+    Min baseline length / largest scale & 14.6 m & 7.8\arcdeg \\
+    Max core baseline length / synthesized beam & 306.6 m & 24\arcmin \\ 
+    Max outrigger baseline length  & 1066.5 m & 9\arcmin \\
+    Frequency / redshift range  & 50 - 250 MHz digitized \\
+    & 70 - 230 MHz useable & 19.2 - 5.2 \\ 
+    & 100 MHz correlated & \\
+    Spectral channel width & 97.7 kHz & \\    
+    System temperature / sensitivity & $100 + 120 (\nu/\rm{150~MHz})^{-2.55}$ K 
+    & 50 $\mu \rm{Jy}~\rm{beam}^{-1}~\sqrt{\rm{hour}}$ \\
+%     At 150 MHz ($z=8.5$): & \\
+%     ~{   }Naturally weighted synthesized beam FWHM & $24\arcmin$ \\
+%     ~{   }Uniformly weighted synthesized beam FWHM & $9\arcmin$ \\
+%     ~{   }Field of view FWHM & 9\arcdeg \\
+%     ~{   }Point source RMS & 50 $\mu$Jy in 100 hrs \\
+  \enddata
+%    \hline
+ %\end{deluxetable}
+%\Caption{-0.1in}{0.9}{-0.4in}{HERA-331 basic parameters.  Design parameters are connected to the derived instrument performance at 150 MHz.}
 \label{tab:BasicParameters}
 \vspace{.2in}
-\end{center}
-\end{table}
+\end{deluxetable}
+%\end{table}
 
 %incorporates
 %our proven foreground avoidance techniques while improving
