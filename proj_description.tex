@@ -22,11 +22,8 @@
 \pagestyle{empty}
 \citestyle{aa}
 %\usepackage[font=small]{caption}
-
-\newcommand{\Mycite}[1]{{\bf \cite{#1}}}
-\newcommand{\Mycitet}[1]{{\bf \citet{#1}}}
-\newcommand{\Mycitep}[1]{{\bf \citep{#1}}}
-\newcommand{\Mycitealt}[1]{{\bf \citealt{#1}}}
+\captionsetup[table]{labelsep=space}
+\captionsetup[figure]{labelsep=space}
 
 \newcommand{\compress}{\vspace{-0.3in}}
 \newcommand{\captionbaseline}{\renewcommand{\baselinestretch}{0.9}} 
@@ -119,9 +116,10 @@ in the context of a three-dimensional cosmological intensity-mapping experiment,
 have yielded a critical breakthrough.  As discussed below, {\bf we are now able to remove 
 foregrounds to the limits of our sensitivity with these instruments},
 and this is culminating in the first physically meaningful upper limits
-on the power spectrum of 21~cm emission from reionization \Mycitep{parsons_et_al2013}\footnote{Throughout the proposal, we have indicated work by members of this collaboration in bold.}. PAPER
-and MWA are now performing deep science observations, with the potential to 
-obtain a nominal detection of the HI 21~cm signal within two years. 
+on the power spectrum of 21~cm emission from reionization \citep{parsons_et_al2013}.
+%PAPER
+%and MWA are now performing deep science observations, with the potential to 
+%obtain a nominal detection of the HI 21~cm signal within two years. 
 
 % last sentence above could go - cc; agreed - JCP
 % Carilli: I think the paragraph below is a bit repeditive. 
@@ -140,14 +138,17 @@ obtain a nominal detection of the HI 21~cm signal within two years.
 %facilitates calibration, leverages proven foreground removal techniques, and is scalable
 %to large collecting areas.
 
-Building on lessons learned from MWA and PAPER, we have developed a new 14~m diameter antenna element 
+Using lessons learned from MWA and PAPER, 
+we are now ready to build the instrument
+that delivers HERA-II science at a cost that is substantially below the $\sim$\$60M envisioned in NWNH.
+The proposed HERA-331 experiment is based on
+a new 14~m diameter antenna element we have developed that is
 optimized both for sensitivity and for minimizing foreground systematics.  
-Arranging these elements in a compact hexagonal grid yields an array that
-facilitates calibration, leverages proven foreground removal techniques, and is amenable 
-to multiple approaches to reionization studies. We are now ready to build the instrument
-that delivers HERA-II science at a cost that is substantially below what was originally envisioned in NWNH.
-The proposed HERA-331 experiment has close to two orders of magnitude better
-sensitivity than PAPER and MWA, and a wider frequency range (50 to 225~MHz). 
+A compact hexagonal array of these elements 
+improves sensitivity by nearly two orders of magnitude 
+over the PAPER and MWA, and covers a wider frequency range (50 to 225~MHz).
+This design facilitates calibration, leverages proven foreground removal techniques, and is supports
+multiple approaches to reionization studies. 
 Construction proceeds in two stages, allowing both for technical improvements and the delivery of 
 key science throughout the project period: 
 
@@ -176,12 +177,13 @@ instruments.
 %image directly the largest scale structures in the IGM during reionization.
 \end{itemize}
 
-This proposal is a self-contained package for delivering HERA-II science,
+\noindent
+This proposal is a self-contained package for delivering the core of HERA-II science,
 including telescope development, construction, observing, data analysis,
-and scientific products for each stage of the project.  As described
-in the Project Management Plan, this approach minimizes
-risks associated with external funding contingencies while allowing 
-collaborators to leverage external resources for augmenting HERA's science.
+and scientific products for each stage of the project.  
+This approach minimizes
+risks associated with external funding contingencies while encouraging
+collaborators to leverage resources for augmenting HERA's science.
 
 % XXX document map here?
 
@@ -990,7 +992,7 @@ at best, only marginal detections of power from reionization.
 
 \begin{figure}[t]\centering
 \includegraphics[width=5.5in]{otherdocs/schedule.png}
-\Caption{-0.1in}{0.9}{-0.1in}{\small Timeline of project}
+\Caption{-0.1in}{0.9}{-0.1in}{\small Project timeline showing development phases (orange/blue/purple) and observing periods (green).}
 \label{fig:timeline}
 \end{figure}
 
@@ -1019,7 +1021,7 @@ bound the HERA design.  The basic parameters are given in Table \ref{tab:BasicPa
     %Total collecting area & 54186 m$^2$ \\
     Minimum baseline length & 14.6 m \\
     Maximum core baseline length & 306.6 m \\ 
-    Maximum outrigger baseline length & 1200 m \\
+    Maximum outrigger baseline length & 1066.5 m \\
     Frequency range  & 50 - 250 MHz digitized \\
     & 70 - 230 MHz useable \\ 
     & 100 MHz instantaneous \\
@@ -1034,6 +1036,7 @@ bound the HERA design.  The basic parameters are given in Table \ref{tab:BasicPa
  \end{tabular}
 \Caption{-0.1in}{0.9}{-0.4in}{HERA-331 basic parameters}
 \label{tab:BasicParameters}
+\vspace{.2in}
 \end{center}
 \end{table}
 
@@ -2004,7 +2007,7 @@ young students to develop novel approaches to scientific instrumentation.
 %testing (participating in critical design reviews), and 
 %contribute to deployment, commissioning, and observing.
 
-HERA continues a long history of student training, career development, and public outreach.
+HERA builds on a long history of student training, career development, and public outreach.
 PAPER and the MWA have
 included undergraduate, graduate, and postdoctoral researchers in all
 phases of design, construction, and analysis.  The combined efforts of these
