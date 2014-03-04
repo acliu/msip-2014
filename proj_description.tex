@@ -142,6 +142,17 @@ on the power spectrum of 21~cm emission from reionization \Mycitep{parsons_et_al
 %sensitivity and for minimizing foreground systematics.  
 %Arranging these elements in a compact hexagonal grid yields an array that
 %facilitates calibration, leverages proven foreground removal techniques, and is scalable
+
+\begin{figure}[t]\centering
+\includegraphics[height=2.5in]{plots/cubes/cubesAndPspecs.pdf}
+\Caption{-0.2in}{0.9}{-0.1in}{\small 
+Left: Simulated 21~cm brightness temperature distributions spanning $\sim 280 \times 280\,h^{-1}\textrm{Mpc}$.
+at $z=11.5$, $10.5$, $9.5$, and $8.5$.
+Right: Corresponding evolution of the 21~cm power spectrum.  HERA
+characterizes the power spectrum in detail, as well as
+providing images of the ionized bubbles (\S\ref{sec:science}).}
+%\hline
+\label{fig:EoRsims} \end{figure}
 %to large collecting areas.
 
 Using lessons learned from MWA and PAPER, 
@@ -202,6 +213,27 @@ collaborators to leverage resources for augmenting HERA's science.
 
 \compress
 \section{Scientific Justification and Intellectual Merit} %total = 8 pages
+
+\begin{figure}[t]\centering
+%\includegraphics[height=2.25in]{plots/constraints_crop.pdf}
+\includegraphics[height=2.25in,trim=0.8cm 9cm 1.75cm 3.6cm,clip]{plots/IonizationHistory/HERA331_ion_hist.pdf}
+\includegraphics[height=2.25in]{plots/Xray/HERA_II_compare_kp1_whoriz_20pt.pdf}
+\Caption{-0.1in}{0.9}{-0.1in}{\small
+Left:
+Existing
+constraints on neutral fraction ($\xHI$) versus redshift (adapted from \citealt{robertson_2013}), along with
+predicted HERA-331 constraints (black markers)
+%assuming that $\xHI$ decreases versus redshift
+for a fiducial
+reionization history (black line).
+At $z>8$,
+21~cm emission may be the only precise probe of $\xHI$.
+Right: At lower frequencies, HERA probes
+pre-reionization physics at the end of the Dark Ages. Plotted are power spectrum amplitudes (at $k =
+0.15h$~Mpc$^{-1}$) for various IGM heating models \citep{mesinger_et_al2013},
+with predicted sensitivities.
+}\label{fig:x_i_vs_z} \end{figure}
+
 
 %\subsection{Introduction}    % 1 page + 1 fig = simulated Tb cube + PS evolution
 % Furlanetto, Carilli
@@ -285,6 +317,22 @@ observational cosmology.
 %The direct observation of the primordial IGM via the HI 21~cm line would be an achievement comparable in importance 
 %to the detection of anisotropies in the CMB.
 
+\begin{figure}[t]\centering
+\includegraphics[height=2.25in]{plots/Pspec/eor_pspec_2014.png}
+\includegraphics[height=2.25in]{plots/Pspec/pk_k3pk.png} 
+\Caption{-0.1in}{0.9}{-0.2in}{\small Left: HERA's power-spectrum sensitivity (solid)
+relative to a fiducial ionization model (dotted line; $\xHI=0.37$, $z=9.0$).
+Sensitivities reflect staged array size and
+improving analysis software that expands the range
+of modes free of foreground systematics.
+Right: The current best upper limit on the 21~cm reionization power spectrum,
+obtained with a 32-element PAPER deployment \Mycitep{parsons_et_al2013}.  These upper limits
+constrain the brightness temperature of the IGM at $z\sim8$, showing
+a departure from adiabatic cooling presumed to be indicative of X-ray heating.
+}\label{fig:eor_pspec}
+\end{figure}
+
+
 %\begin{figure}[t]\centering
 %\includegraphics[width=0.23\textwidth]{plots/Pspec/z9sim.pdf}
 %\includegraphics[width=0.23\textwidth]{plots/Pspec/z8sim.pdf}
@@ -293,17 +341,6 @@ observational cosmology.
 %\Caption{-0.2in}{0.9}{-0.2in}{\small 
 %First three panels from left: simulated $21\,\textrm{cm}$ brightness temperature distributions at $z=9$, $8$, and $7.5$.  Rightmost panel: Evolution of the $21\,\textrm{cm}$ power spectrum from $z=9.25$ to $z=7$.  HERA will characterize the power spectrum in detail (Section \ref{sec:science}) as well as provide images of the ionized bubbles (Section \ref{sec:science}).
 %}\label{fig:EoRsims} \end{figure}
-
-\begin{figure}[t]\centering
-\includegraphics[height=2.5in]{plots/cubes/cubesAndPspecs.pdf}
-\Caption{-0.2in}{0.9}{-0.1in}{\small 
-Left: Simulated 21~cm brightness temperature distributions spanning $\sim 280 \times 280\,h^{-1}\textrm{Mpc}$.
-at $z=11.5$, $10.5$, $9.5$, and $8.5$.
-Right: Corresponding evolution of the 21~cm power spectrum.  HERA
-characterizes the power spectrum in detail, as well as
-providing images of the ionized bubbles (\S\ref{sec:science}).}
-%\hline
-\label{fig:EoRsims} \end{figure}
 
 Decades of effort have gone into modeling the complex astrophysics of reionization
 (e.g. \citealt{shapiro_giroux1987, haiman_loeb1997}; \Mycitealt{furlanetto_et_al2004, santos_et_al2010}). Figure \ref{fig:EoRsims} shows a 
@@ -327,26 +364,12 @@ to advance our understanding of early galaxy formation and cosmic reionization.}
 \subsection{Science From Reionization and Cosmic Dawn} % 4 pages total examples using hera 331, plus a number of figures
 \label{sec:science}
 
+\begin{figure*}[t]\centering
+\includegraphics[width=\textwidth]{plots/Pspec/OPTMIDellipses.pdf}
+\Caption{-0.3in}{0.9}{-0.15in}{\small
+Pairwise $2\sigma$ error ellipses for $T_{\rm vir}$, $\zeta$, and $R_\textrm{mfp}$, in each case divided by their fiducial values.  HERA-331 projections using existing foreground avoidance techniques are shown in red, while projections using more advanced foreground modeling techniques are shown in black.  The former represent $\sim 5\%$ constraints, while the latter represent $\sim 1\%$ constraints.\label{fig:ErrorEllipses}}
+\end{figure*}
 
-\begin{figure}[t]\centering
-%\includegraphics[height=2.25in]{plots/constraints_crop.pdf}
-\includegraphics[height=2.25in,trim=0.8cm 9cm 1.75cm 3.6cm,clip]{plots/IonizationHistory/HERA331_ion_hist.pdf}
-\includegraphics[height=2.25in]{plots/Xray/HERA_II_compare_kp1_whoriz_20pt.pdf}
-\Caption{-0.1in}{0.9}{-0.1in}{\small
-Left:
-Existing
-constraints on neutral fraction ($\xHI$) versus redshift (adapted from \citealt{robertson_2013}), along with
-predicted HERA-331 constraints (black markers)
-%assuming that $\xHI$ decreases versus redshift
-for a fiducial
-reionization history (black line).
-At $z>8$,
-21~cm emission may be the only precise probe of $\xHI$.
-Right: At lower frequencies, HERA probes
-pre-reionization physics at the end of the Dark Ages. Plotted are power spectrum amplitudes (at $k =
-0.15h$~Mpc$^{-1}$) for various IGM heating models \citep{mesinger_et_al2013},
-with predicted sensitivities.
-}\label{fig:x_i_vs_z} \end{figure}
 
 As a high-sensitivity instrument with broad frequency coverage, HERA can
 paint an uninterrupted picture of the evolution of the IGM through reionization and into the era of the cosmic dawn.
@@ -371,21 +394,6 @@ untestable, even with JWST.
 %\subsubsection{Detecting and characterizing the power spectrum}
 %\emph{ii. PS sensitivity at fixed z: 127, 331 (Fig)}
 % Pober, Dillon
-
-\begin{figure}[t]\centering
-\includegraphics[height=2.25in]{plots/Pspec/eor_pspec_2014.png}
-\includegraphics[height=2.25in]{plots/Pspec/pk_k3pk.png} 
-\Caption{-0.1in}{0.9}{-0.2in}{\small Left: HERA's power-spectrum sensitivity (solid)
-relative to a fiducial ionization model (dotted line; $\xHI=0.37$, $z=9.0$).
-Sensitivities reflect staged array size and
-improving analysis software that expands the range
-of modes free of foreground systematics.
-Right: The current best upper limit on the 21~cm reionization power spectrum,
-obtained with a 32-element PAPER deployment \Mycitep{parsons_et_al2013}.  These upper limits
-constrain the brightness temperature of the IGM at $z\sim8$, showing
-a departure from adiabatic cooling presumed to be indicative of X-ray heating.
-}\label{fig:eor_pspec}
-\end{figure}
 
 {\bf Power Spectrum Detection}. A season of observing with HERA-127 yields high-significance constraints on the 21~cm power
 spectrum across a wide range of wavenumbers and redshifts \Mycitep{pober_et_al2014}.  
@@ -417,12 +425,6 @@ Figure \ref{fig:ErrorEllipses} shows that we expect
 HERA-331 power spectrum observations to constrain them to better
 than 5\% using proven foreground avoidance techniques, with even stronger constraints from
 explicit foreground modeling \citep{pober_et_al2014}.
-
-\begin{figure*}[t]\centering
-\includegraphics[width=\textwidth]{plots/Pspec/OPTMIDellipses.pdf}
-\Caption{-0.3in}{0.9}{-0.15in}{\small
-Pairwise $2\sigma$ error ellipses for $T_{\rm vir}$, $\zeta$, and $R_\textrm{mfp}$, in each case divided by their fiducial values.  HERA-331 projections using existing foreground avoidance techniques are shown in red, while projections using more advanced foreground modeling techniques are shown in black.  The former represent $\sim 5\%$ constraints, while the latter represent $\sim 1\%$ constraints.\label{fig:ErrorEllipses}}
-\end{figure*}
 
 
 % Jacobs
@@ -1697,7 +1699,9 @@ Beyond the construction and data-taking aspects of HERA, this proposal
 incorporates a full data analysis effort, culminating in the publication of a
 suite of science papers connecting observations to the physics of cosmic dawn.
 These efforts leverage existing software pipelines, with on-going 
-development driven by students and postdocs targeting specific science goals.  
+development driven by students and postdocs targeting specific science goals.
+On the science side, HERA leverages the involvement of a team theory collaborators,
+including Furlanetto, Lidz, Loeb, McQuinn, Mesinger, Oh, Pritchard, Santos, and Sutter.
 
 %\compress
 %\subsubsection{Calibration}
@@ -2046,8 +2050,9 @@ HERA collaborators have a strong record of sharing breakthrough
 innovations with the wider scientific and engineering communities, distributing 
 open-source software (AIPY, DexM), hardware and firmware (CASPER), 
 and instrument architectures (PAPER, LEDA, Omniscope),
-and by publishing innovative analysis approaches (FHD, MOFF,
-Omniscope).  While HERA is an experiment rather than an observatory, its
+publishing innovative analysis approaches (FHD, MOFF,
+Omniscope), and serving in leadership roles for major international communities (SKA, ASKAP, ALMA, MeerKat, Chime).  
+While HERA is an experiment rather than an observatory, its
 results are scientifically and technologically relevant for the
 SKA, and for high-redshift observing with JWST and ALMA.
 %Our benefit to the wider community is: 1. answering important question that is
@@ -2147,16 +2152,15 @@ not only ensures a high significance detection of the \HI 21~cm signal, but
 also provides strong constraints on the reionization history,
 early structure formation, and heating processes at
 the end of the cosmic dark ages.
-
-As stands, there is a broad gap in scale and scientific maturity between
-current experiments and what should be required for future efforts such as
-HERA-III and SKA-low.  This proposal fills this gap, building on the lessons learned
-from current-generation experiments, validating techniques for accessing
-the 21~cm reionization signal, and moving beyond first detection to 
-learning about the astrophysics of reionization.  This proposal comes at an
+%As stands, there is a broad gap in scale and scientific maturity between
+%current experiments and what should be required for future efforts such as
+%HERA-III and SKA-low.  This proposal fills this gap, building on the lessons learned
+%from current-generation experiments, validating techniques for accessing
+%the 21~cm reionization signal, and moving beyond first detection to 
+%learning about the astrophysics of reionization.  
+This proposal comes at an
 opportune time in the field, picking up where PAPER, the MWA, and LOFAR leave
-off, and delivering results on a timescale leads either to US leadership
-in the design of SKA-low, or forms the basis of a separate HERA-III effort.
+off, and delivering results on a timescale that ensures continued US leadership in the field.
 
 Studying the formation of the first luminous structures 
 and how they reionize the Universe is a primary driver for 
